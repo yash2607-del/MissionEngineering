@@ -1,0 +1,363 @@
+/* Polytechnic Page Styles */
+.polytechnic-page {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+/* Hero Section */
+.polytechnic-hero {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 50%, #7e8cc2 100%);
+  color: white;
+  padding: 80px 0;
+  text-align: center;
+}
+
+.hero-title {
+  font-size: 3.5rem;
+  font-weight: 700;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.hero-subtitle {
+  font-size: 1.5rem;
+  font-weight: 300;
+  opacity: 0.95;
+}
+
+/* Section Styles */
+.poly-section {
+  padding: 60px 0;
+}
+
+.section-title {
+  color: #1e3c72;
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 30px;
+  text-align: center;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.section-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 4px;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  border-radius: 2px;
+}
+
+/* Content Cards */
+.content-card {
+  border: none;
+  border-radius: 15px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  margin-bottom: 30px;
+}
+
+.content-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 30px rgba(30, 60, 114, 0.2);
+}
+
+.content-card p {
+  font-size: 1.1rem;
+  line-height: 1.8;
+  color: #555;
+  text-align: justify;
+  margin-bottom: 15px;
+}
+
+/* Table of Contents */
+.poly-toc-section {
+  padding: 40px 0;
+  background: #f8f9fa;
+}
+
+.toc-wrapper {
+  background: white;
+  border-radius: 15px;
+  padding: 40px;
+  box-shadow: 0 5px 25px rgba(30, 60, 114, 0.15);
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.toc-title {
+  color: #1e3c72;
+  font-size: 2.2rem;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 30px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.toc-title::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: linear-gradient(to right, #1e3c72, #2a5298);
+  border-radius: 2px;
+}
+
+.toc-list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.toc-item {
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+  background: #f8f9fa;
+  border-radius: 8px;
+  text-decoration: none;
+  color: #1e3c72;
+  font-weight: 600;
+  font-size: 1.05rem;
+  transition: all 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.toc-item:hover {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  transform: translateX(10px);
+  border-left: 4px solid #7e8cc2;
+  box-shadow: 0 4px 15px rgba(30, 60, 114, 0.3);
+}
+
+.toc-icon {
+  color: #2a5298;
+  margin-right: 15px;
+  font-size: 1.3rem;
+  flex-shrink: 0;
+  transition: all 0.3s ease;
+}
+
+.toc-item:hover .toc-icon {
+  color: #ffd700;
+  transform: translateX(5px);
+}
+
+/* Exams Section */
+.exams-section {
+  background: #e8f4f8;
+}
+
+.exam-card {
+  border: none;
+  border-radius: 10px;
+  box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+}
+
+.exam-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 6px 25px rgba(30, 60, 114, 0.2);
+}
+
+.exam-header {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 15px;
+  text-align: center;
+  border-radius: 10px 10px 0 0 !important;
+}
+
+.exam-points {
+  list-style: none;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.exam-points li {
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #555;
+}
+
+.exam-points li::before {
+  content: '•';
+  position: absolute;
+  left: 0;
+  color: #2a5298;
+  font-weight: bold;
+  font-size: 1.3rem;
+}
+
+.explore-btn {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  border: none;
+  border-radius: 20px;
+  padding: 8px 25px;
+  font-weight: 600;
+  transition: all 0.3s ease;
+  width: 100%;
+}
+
+.explore-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 15px rgba(30, 60, 114, 0.4);
+}
+
+/* Help Section */
+.help-section {
+  margin: 30px 0;
+  padding: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #2a5298;
+}
+
+.help-section h4 {
+  color: #1e3c72;
+  font-weight: 700;
+  margin-bottom: 15px;
+  font-size: 1.5rem;
+}
+
+.numbered-list {
+  padding-left: 20px;
+}
+
+.numbered-list li {
+  padding: 10px 0;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.bulleted-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.bulleted-list li {
+  padding: 8px 0;
+  padding-left: 25px;
+  position: relative;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #555;
+}
+
+.bulleted-list li::before {
+  content: '✓';
+  position: absolute;
+  left: 0;
+  color: #2a5298;
+  font-weight: bold;
+  font-size: 1.2rem;
+}
+
+/* FAQ Section */
+.faq-item {
+  padding: 20px;
+  margin-bottom: 20px;
+  background: #f8f9fa;
+  border-radius: 10px;
+  border-left: 4px solid #2a5298;
+  transition: all 0.3s ease;
+}
+
+.faq-item:hover {
+  transform: translateX(5px);
+  box-shadow: 0 4px 15px rgba(30, 60, 114, 0.15);
+}
+
+.faq-item h5 {
+  color: #1e3c72;
+  font-weight: 600;
+  margin-bottom: 10px;
+  display: flex;
+  align-items: center;
+  font-size: 1.15rem;
+}
+
+.faq-icon {
+  color: #2a5298;
+  margin-right: 12px;
+  font-size: 1.2rem;
+}
+
+.faq-item p {
+  color: #666;
+  line-height: 1.7;
+  margin-bottom: 0;
+  margin-left: 32px;
+  font-size: 1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .toc-wrapper {
+    padding: 30px 20px;
+  }
+
+  .toc-title {
+    font-size: 1.8rem;
+  }
+
+  .toc-item {
+    padding: 12px 15px;
+    font-size: 0.95rem;
+  }
+
+  .toc-icon {
+    font-size: 1.1rem;
+    margin-right: 10px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .poly-section {
+    padding: 40px 0;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
