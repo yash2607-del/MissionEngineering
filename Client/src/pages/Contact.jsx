@@ -1,6 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Form, Button } from 'react-bootstrap';
-import { FaMapMarkerAlt, FaPhone, FaEnvelope } from 'react-icons/fa';
+import { FaMapMarkerAlt, FaPhone, FaEnvelope, FaFacebook, FaTwitter, FaInstagram, FaLinkedin, FaYoutube } from 'react-icons/fa';
 import './Contact.css';
 
 const Contact = () => {
@@ -32,7 +32,28 @@ const Contact = () => {
                   <FaEnvelope size={30} className="contact-icon me-3" />
                   <div>
                     <h5>Email</h5>
-                    <p>info@missionengineering.in</p>
+                    <p>missionengineering@gmail.com</p>
+                  </div>
+                </div>
+
+                <div className="contact-social">
+                  <h5>Follow Us</h5>
+                  <div className="social-icons">
+                    <a href="https://www.facebook.com/missionengineering.in/" target="_blank" rel="noreferrer" className="social-icon">
+                      <FaFacebook size={22} />
+                    </a>
+                    <a href="https://x.com/missionenginee" target="_blank" rel="noreferrer" className="social-icon">
+                      <FaTwitter size={22} />
+                    </a>
+                    <a href="https://www.instagram.com/missionengineering2014/" target="_blank" rel="noreferrer" className="social-icon">
+                      <FaInstagram size={22} />
+                    </a>
+                    <a href="https://www.linkedin.com/company/mission-engineering/" target="_blank" rel="noreferrer" className="social-icon">
+                      <FaLinkedin size={22} />
+                    </a>
+                    <a href="https://www.youtube.com/@MissionEngineering_Official" target="_blank" rel="noreferrer" className="social-icon">
+                      <FaYoutube size={22} />
+                    </a>
                   </div>
                 </div>
               </div>

@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Carousel, Button } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import { FaChalkboardTeacher, FaBook, FaUsers, FaClipboardCheck } from 'react-icons/fa';
 import hero1 from '../assets/hero/mission_hero_1.jpg';
 import hero2 from '../assets/hero/mission_hero_2.png';
@@ -33,7 +34,7 @@ const Home = () => {
             <Carousel.Item key={idx}>
               <div className="hero-image-wrapper">
                 <img
-                  className="d-block w-100 hero-image"
+                  className="d-block w-200 hero-image"
                   src={image}
                   alt={`Mission Engineering Hero ${idx + 1}`}
                 />
@@ -308,7 +309,7 @@ const Home = () => {
                   <div className="test-logo-wrapper">
                     <img src={dtuLogo} alt="DTU LEET TEST SERIES" className="test-logo" />
                   </div>
-                  <Button variant="primary" className="test-btn">View Details</Button>
+                  <Button as={Link} to="/courses#test-series" variant="primary" className="test-btn">View Details</Button>
                 </Card.Body>
               </Card>
             </Col>
@@ -320,7 +321,7 @@ const Home = () => {
                   <div className="test-logo-wrapper">
                     <img src={ipuLogo} alt="IPU LEET TEST SERIES" className="test-logo" />
                   </div>
-                  <Button variant="primary" className="test-btn">View Details</Button>
+                  <Button as={Link} to="/courses#test-series" variant="primary" className="test-btn">View Details</Button>
                 </Card.Body>
               </Card>
             </Col>
@@ -332,7 +333,7 @@ const Home = () => {
                   <div className="test-logo-wrapper">
                     <img src={cuetLogo} alt="CUET LEET TEST SERIES" className="test-logo" />
                   </div>
-                  <Button variant="primary" className="test-btn">View Details</Button>
+                  <Button as={Link} to="/courses#test-series" variant="primary" className="test-btn">View Details</Button>
                 </Card.Body>
               </Card>
             </Col>
@@ -344,7 +345,7 @@ const Home = () => {
                   <div className="test-logo-wrapper">
                     <img src={allIndiaLogo} alt="ALL INDIA LEET TEST SERIES" className="test-logo" />
                   </div>
-                  <Button variant="primary" className="test-btn">View Details</Button>
+                  <Button as={Link} to="/courses#test-series" variant="primary" className="test-btn">View Details</Button>
                 </Card.Body>
               </Card>
             </Col>
@@ -356,7 +357,7 @@ const Home = () => {
                   <div className="test-logo-wrapper">
                     <img src={delhiPolyLogo} alt="DELHI POLYTECHNIC TEST SERIES" className="test-logo" />
                   </div>
-                  <Button variant="primary" className="test-btn">View Details</Button>
+                  <Button as={Link} to="/courses#test-series" variant="primary" className="test-btn">View Details</Button>
                 </Card.Body>
               </Card>
             </Col>
@@ -368,7 +369,7 @@ const Home = () => {
                   <div className="test-logo-wrapper">
                     <img src={upPolyLogo} alt="UP POLYTECHNIC TEST SERIES" className="test-logo" />
                   </div>
-                  <Button variant="primary" className="test-btn">View Details</Button>
+                  <Button as={Link} to="/courses#test-series" variant="primary" className="test-btn">View Details</Button>
                 </Card.Body>
               </Card>
             </Col>
@@ -380,7 +381,7 @@ const Home = () => {
                   <div className="test-logo-wrapper">
                     <img src={biharPolyLogo} alt="BIHAR POLYTECHNIC TEST SERIES" className="test-logo" />
                   </div>
-                  <Button variant="primary" className="test-btn">View Details</Button>
+                  <Button as={Link} to="/courses#test-series" variant="primary" className="test-btn">View Details</Button>
                 </Card.Body>
               </Card>
             </Col>
@@ -392,7 +393,7 @@ const Home = () => {
                   <div className="test-logo-wrapper">
                     <img src={jharkhandPolyLogo} alt="JHARKHAND POLYTECHNIC TEST SERIES" className="test-logo" />
                   </div>
-                  <Button variant="primary" className="test-btn">View Details</Button>
+                  <Button as={Link} to="/courses#test-series" variant="primary" className="test-btn">View Details</Button>
                 </Card.Body>
               </Card>
             </Col>
@@ -411,16 +412,47 @@ const Home = () => {
             <div className="testimonial-scroll-container">
               <div className="testimonial-scroll-content">
                 {[
-                  { name: 'Md. Zahid', rank: 'Rank 1 - Kerala LEET 2021, Rank 6 - IPU LEET 2021', text: 'I, Md. Zahid, have secured AIR 1 in Kerala LEET and Rank 6 in IPU LEET 2021. The guidance from Mission Engineering was exceptional.' },
-                  { name: 'Spandan', rank: 'AIR 1 - DTU LEET 2024', text: 'Mission Engineering helped me achieve AIR 1 in DTU LEET 2024. The faculty and study material were outstanding.' },
-                  { name: 'Sarthak', rank: 'AIR(O) 1 - IPU LEET 2023', text: 'Securing AIR 1 in IPU LEET 2023 was possible because of the excellent coaching at Mission Engineering.' },
-                  { name: 'Kartik', rank: 'AIR 1 - DTU LEET 2023', text: 'The comprehensive test series and expert guidance helped me secure AIR 1 in DTU LEET 2023.' },
-                  { name: 'Md. Akmal', rank: 'AIR 1 - IPU LEET 2022', text: 'Mission Engineering provided me with the best preparation strategy for IPU LEET 2022.' },
-                  { name: 'Md. Asif', rank: 'AIR 1 - Maharashtra LEET 2022', text: 'The personalized attention and quality teaching helped me achieve AIR 1 in Maharashtra LEET 2022.' },
+                  {
+                    name: 'Spandan Choudhury',
+                    rank: 'Rank 1 - DTU LEET 2024, Rank 2 - IPU LEET 2024',
+                    text: 'I, Spandan Choudhury, have secured AIR 1 in DTU LEET 2024 and Rank 2 in IPU LEET 2024 with the dedicated support of Mission Engineering.',
+                  },
+                  {
+                    name: 'Simran Kumari',
+                    rank: 'Rank 1(F) - IPU LEET 2020',
+                    text: 'I, Simran Kumari, have secured AIR 1 (Female) in IPU LEET 2020. The focused guidance and regular tests at Mission Engineering helped me a lot.',
+                  },
+                  {
+                    name: 'Kartik Dadhwal',
+                    rank: 'Rank 1 - DTU LEET 2022, Rank 9 - IPU LEET 2022',
+                    text: 'I, Kartik Dadhwal, have secured AIR 1 in DTU LEET 2022 and Rank 9 in IPU LEET 2022, thanks to the systematic coaching and test series.',
+                  },
+                  {
+                    name: 'Md. Zahid',
+                    rank: 'Rank 1 - Kerala LEET 2021, Rank 6 - IPU LEET 2021',
+                    text: 'I, Md. Zahid, have secured AIR 1 in Kerala LEET and Rank 6 in IPU LEET 2021. The guidance from Mission Engineering was exceptional.',
+                  },
+                  {
+                    name: 'Md. Akmal',
+                    rank: 'Rank 1 - IPU LEET 2022, Rank 2 - DTU LEET 2022',
+                    text: 'I, Md. Akmal, have secured AIR 1 in IPU LEET 2022 and Rank 2 in DTU LEET 2022 with the help of Mission Engineerings expert faculty and study material.',
+                  },
                 ].concat([
-                  { name: 'Md. Zahid', rank: 'Rank 1 - Kerala LEET 2021, Rank 6 - IPU LEET 2021', text: 'I, Md. Zahid, have secured AIR 1 in Kerala LEET and Rank 6 in IPU LEET 2021. The guidance from Mission Engineering was exceptional.' },
-                  { name: 'Spandan', rank: 'AIR 1 - DTU LEET 2024', text: 'Mission Engineering helped me achieve AIR 1 in DTU LEET 2024. The faculty and study material were outstanding.' },
-                  { name: 'Sarthak', rank: 'AIR(O) 1 - IPU LEET 2023', text: 'Securing AIR 1 in IPU LEET 2023 was possible because of the excellent coaching at Mission Engineering.' },
+                  {
+                    name: 'Spandan Choudhury',
+                    rank: 'Rank 1 - DTU LEET 2024, Rank 2 - IPU LEET 2024',
+                    text: 'I, Spandan Choudhury, have secured AIR 1 in DTU LEET 2024 and Rank 2 in IPU LEET 2024 with the dedicated support of Mission Engineering.',
+                  },
+                  {
+                    name: 'Simran Kumari',
+                    rank: 'Rank 1(F) - IPU LEET 2020',
+                    text: 'I, Simran Kumari, have secured AIR 1 (Female) in IPU LEET 2020. The focused guidance and regular tests at Mission Engineering helped me a lot.',
+                  },
+                  {
+                    name: 'Kartik Dadhwal',
+                    rank: 'Rank 1 - DTU LEET 2022, Rank 9 - IPU LEET 2022',
+                    text: 'I, Kartik Dadhwal, have secured AIR 1 in DTU LEET 2022 and Rank 9 in IPU LEET 2022, thanks to the systematic coaching and test series.',
+                  },
                 ]).map((testimonial, idx) => (
                   <Card key={idx} className="testimonial-card">
                     <Card.Body>
@@ -441,46 +473,47 @@ const Home = () => {
             <div className="testimonial-scroll-container">
               <div className="testimonial-scroll-content scroll-reverse">
                 {[
-                  { name: 'Manish', rank: 'Pusa Polytechnic - Mechanical Engineering', text: 'I, Manish, have got selected in Pusa Campus in Mechanical Engineering through Mission Engineering coaching.' },
-                  { name: 'Raj Thakur', rank: 'Final Selection in S&B India', text: 'I, Raj Thakur, have got selected in S&B India. The placement training at Mission Engineering was excellent.' },
-                  { name: 'Rohit Kumar', rank: 'Selected in Maruti Suzuki', text: 'Mission Engineering\'s placement coaching helped me secure a position at Maruti Suzuki.' },
-                  { name: 'Amit Sharma', rank: 'Samsung Engineering', text: 'The interview preparation and technical training helped me get placed at Samsung Engineering.' },
-                  { name: 'Priya Singh', rank: 'Honda Cars India', text: 'I am grateful to Mission Engineering for helping me achieve my dream placement at Honda Cars.' },
-                  { name: 'Vikash Yadav', rank: 'Hero MotoCorp Ltd', text: 'The mock interviews and personality development sessions were crucial for my success at Hero MotoCorp.' },
+                  {
+                    name: 'Raj Thakur',
+                    rank: 'Final Selection in S&B India',
+                    text: 'I, Raj Thakur, have got selected in S&B India with the excellent placement training and guidance provided by Mission Engineering.',
+                  },
+                  {
+                    name: 'Suresh Gola',
+                    rank: 'Final Selection in Maruti Suzuki India Ltd.',
+                    text: 'I, Suresh Gola, have got selected in Maruti Suzuki India Ltd. The placement coaching at Mission Engineering was outstanding.',
+                  },
+                  {
+                    name: 'Jatin Verma',
+                    rank: 'Final Selection in Maruti Suzuki India Ltd.',
+                    text: 'I, Jatin Verma, have got selected in Maruti Suzuki India Ltd. through the comprehensive training program at Mission Engineering.',
+                  },
+                  {
+                    name: 'Pritam',
+                    rank: 'Final Selection In Samsung Engineering and S&B India',
+                    text: 'I, Pritam, have got selected in both Samsung Engineering and S&B India. Mission Engineering helped me achieve this dual placement.',
+                  },
+                  {
+                    name: 'Sanjay Kumar Singh',
+                    rank: 'Final Selection in Maruti Suzuki India Ltd.',
+                    text: 'I, Sanjay Kumar Singh, have got selected in Maruti Suzuki India Ltd. The mock interviews and placement preparation were excellent.',
+                  },
                 ].concat([
-                  { name: 'Manish', rank: 'Pusa Polytechnic - Mechanical Engineering', text: 'I, Manish, have got selected in Pusa Campus in Mechanical Engineering through Mission Engineering coaching.' },
-                  { name: 'Raj Thakur', rank: 'Final Selection in S&B India', text: 'I, Raj Thakur, have got selected in S&B India. The placement training at Mission Engineering was excellent.' },
-                  { name: 'Rohit Kumar', rank: 'Selected in Maruti Suzuki', text: 'Mission Engineering\'s placement coaching helped me secure a position at Maruti Suzuki.' },
-                ]).map((testimonial, idx) => (
-                  <Card key={idx} className="testimonial-card">
-                    <Card.Body>
-                      <div className="testimonial-avatar"></div>
-                      <h5 className="testimonial-name">{testimonial.name}</h5>
-                      <p className="testimonial-rank">{testimonial.rank}</p>
-                      <p className="testimonial-text">{testimonial.text}</p>
-                    </Card.Body>
-                  </Card>
-                ))}
-              </div>
-            </div>
-          </div>
-
-          {/* College Placement Row */}
-          <div className="testimonial-row">
-            <h3 className="testimonial-category-title">COLLEGE PLACEMENT</h3>
-            <div className="testimonial-scroll-container">
-              <div className="testimonial-scroll-content">
-                {[
-                  { name: 'Ankit Verma', rank: 'Placed at TCS - Package 7 LPA', text: 'Mission Engineering\'s semester coaching and placement training helped me secure a great package at TCS.' },
-                  { name: 'Neha Gupta', rank: 'Infosys - Package 6.5 LPA', text: 'The aptitude training and interview preparation were instrumental in my Infosys placement.' },
-                  { name: 'Rahul Mishra', rank: 'Wipro - Package 6 LPA', text: 'Thanks to Mission Engineering for preparing me well for my Wipro placement interview.' },
-                  { name: 'Pooja Malik', rank: 'Tech Mahindra - Package 5.5 LPA', text: 'The comprehensive training program helped me crack Tech Mahindra interview successfully.' },
-                  { name: 'Deepak Singh', rank: 'HCL Technologies - Package 6 LPA', text: 'Mission Engineering\'s guidance was crucial in my journey to HCL Technologies.' },
-                  { name: 'Simran Kaur', rank: 'Cognizant - Package 7 LPA', text: 'The placement coaching and mock interviews boosted my confidence for Cognizant placement.' },
-                ].concat([
-                  { name: 'Ankit Verma', rank: 'Placed at TCS - Package 7 LPA', text: 'Mission Engineering\'s semester coaching and placement training helped me secure a great package at TCS.' },
-                  { name: 'Neha Gupta', rank: 'Infosys - Package 6.5 LPA', text: 'The aptitude training and interview preparation were instrumental in my Infosys placement.' },
-                  { name: 'Rahul Mishra', rank: 'Wipro - Package 6 LPA', text: 'Thanks to Mission Engineering for preparing me well for my Wipro placement interview.' },
+                  {
+                    name: 'Raj Thakur',
+                    rank: 'Final Selection in S&B India',
+                    text: 'I, Raj Thakur, have got selected in S&B India with the excellent placement training and guidance provided by Mission Engineering.',
+                  },
+                  {
+                    name: 'Suresh Gola',
+                    rank: 'Final Selection in Maruti Suzuki India Ltd.',
+                    text: 'I, Suresh Gola, have got selected in Maruti Suzuki India Ltd. The placement coaching at Mission Engineering was outstanding.',
+                  },
+                  {
+                    name: 'Jatin Verma',
+                    rank: 'Final Selection in Maruti Suzuki India Ltd.',
+                    text: 'I, Jatin Verma, have got selected in Maruti Suzuki India Ltd. through the comprehensive training program at Mission Engineering.',
+                  },
                 ]).map((testimonial, idx) => (
                   <Card key={idx} className="testimonial-card">
                     <Card.Body>

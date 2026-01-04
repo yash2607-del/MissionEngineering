@@ -54,11 +54,11 @@ const Footer = () => {
           </Col>
           <Col lg={6} className="mb-2 text-lg-end">
             <div className="social-icons">
-              <a href="#" className="social-icon"><FaFacebook size={24} /></a>
-              <a href="#" className="social-icon"><FaTwitter size={24} /></a>
-              <a href="#" className="social-icon"><FaInstagram size={24} /></a>
-              <a href="#" className="social-icon"><FaLinkedin size={24} /></a>
-              <a href="#" className="social-icon"><FaYoutube size={24} /></a>
+              <a href="https://www.facebook.com/missionengineering.in/" target="_blank" rel="noreferrer" className="social-icon"><FaFacebook size={24} /></a>
+              <a href="https://x.com/missionenginee" target="_blank" rel="noreferrer" className="social-icon"><FaTwitter size={24} /></a>
+              <a href="https://www.instagram.com/missionengineering2014/" target="_blank" rel="noreferrer" className="social-icon"><FaInstagram size={24} /></a>
+              <a href="https://www.linkedin.com/company/mission-engineering/" target="_blank" rel="noreferrer" className="social-icon"><FaLinkedin size={24} /></a>
+              <a href="https://www.youtube.com/@MissionEngineering_Official" target="_blank" rel="noreferrer" className="social-icon"><FaYoutube size={24} /></a>
             </div>
           </Col>
         </Row>

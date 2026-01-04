@@ -58,6 +58,16 @@
   margin: 0;
 }
 
+.contact-social {
+  margin-top: 1.5rem;
+}
+
+.contact-social h5 {
+  font-size: 1.1rem;
+  font-weight: bold;
+  margin-bottom: 0.75rem;
+}
+
 .contact-form {
   background-color: #f8f9fa;
   padding: 2rem;

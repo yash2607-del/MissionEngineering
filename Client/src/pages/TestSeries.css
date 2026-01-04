@@ -1,0 +1,217 @@
+.test-series-page {
+  min-height: 100vh;
+  background: #fff;
+}
+
+/* Main Content Section */
+.test-series-content {
+  padding: 60px 0;
+}
+
+.test-series-main-title {
+  font-size: 2.5rem;
+  font-weight: 900;
+  color: #007bff;
+  text-align: center;
+  margin-bottom: 40px;
+  text-transform: uppercase;
+}
+
+.test-series-intro {
+  margin-bottom: 40px;
+}
+
+.intro-heading {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.intro-text {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 15px;
+  text-align: justify;
+}
+
+.features-section {
+  margin-bottom: 50px;
+}
+
+.features-heading {
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #000;
+  margin-bottom: 20px;
+}
+
+.features-list {
+  padding-left: 20px;
+}
+
+.features-list li {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+  margin-bottom: 12px;
+}
+
+/* Test Series Cards */
+.test-series-cards {
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+
+.test-card {
+  border: 3px solid #007bff;
+  border-radius: 15px;
+  background: white;
+  transition: all 0.3s ease;
+  padding: 30px;
+}
+
+.test-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 16px rgba(0, 123, 255, 0.2);
+}
+
+.test-card-icon {
+  width: 100px;
+  height: 100px;
+  background: white;
+  border: 3px solid #007bff;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 20px;
+}
+
+.test-card-icon i {
+  font-size: 3rem;
+  color: #007bff;
+}
+
+.test-card-title {
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: white;
+  background: #007bff;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-transform: uppercase;
+}
+
+/* App Instructions Section */
+.app-instructions-section {
+  background: #f8f9fa;
+  padding: 60px 0;
+}
+
+.app-heading {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #dc3545;
+  text-align: center;
+  margin-bottom: 50px;
+}
+
+.instruction-row {
+  margin-bottom: 60px;
+  align-items: center;
+}
+
+.instruction-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #007bff;
+  margin-bottom: 20px;
+}
+
+.instruction-desc {
+  font-size: 1rem;
+  line-height: 1.8;
+  color: #333;
+  text-align: justify;
+}
+
+.phone-mockup {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+}
+
+.phone-image {
+  max-width: 100%;
+  height: auto;
+  border-radius: 20px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.phone-screen-placeholder {
+  width: 280px;
+  height: 550px;
+  border: 8px solid #000;
+  border-radius: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: white;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 768px) {
+  .test-series-main-title {
+    font-size: 1.8rem;
+  }
+  
+  .intro-heading {
+    font-size: 1.2rem;
+  }
+  
+  .intro-text,
+  .instruction-desc {
+    font-size: 0.9rem;
+  }
+  
+  .test-card-title {
+    font-size: 0.9rem;
+  }
+  
+  .app-heading {
+    font-size: 1.5rem;
+  }
+  
+  .instruction-title {
+    font-size: 1.2rem;
+  }
+  
+  .instruction-row {
+    margin-bottom: 40px;
+  }
+  
+  .instruction-text-col {
+    order: 2;
+  }
+  
+  .instruction-img-col {
+    order: 1;
+    margin-bottom: 20px;
+  }
+  
+  .phone-image {
+    max-width: 250px;
+  }
+  
+  .phone-screen-placeholder {
+    width: 200px;
+    height: 400px;
+  }
+  
+  .phone-screen-placeholder i {
+    font-size: 60px !important;
+  }
+}
