@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container } from 'react-bootstrap';
+import CourseNavigation from '../components/CourseNavigation';
 import './SemesterCoaching.css';
 
 const SemesterCoaching = () => {
@@ -23,6 +24,8 @@ const SemesterCoaching = () => {
               At our coaching institute, we offer dedicated Polytechnic semester coaching courses that focus on strengthening your understanding of all Polytechnic subjects. Whether you need help with Polytechnic subjects coaching online, we have tailored solutions to meet your needs. Our experienced faculty members help students at every stage of their preparation, ensuring that they are well-prepared for each exam.
             </p>
           </div>
+
+          <CourseNavigation />
 
           {/* Why Choose Section */}
           <div className="content-section">

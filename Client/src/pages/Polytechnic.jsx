@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import CourseNavigation from '../components/CourseNavigation';
 import { FaHandPointRight, FaCheckCircle } from 'react-icons/fa';
 import './Polytechnic.css';
 
@@ -97,6 +98,8 @@ const Polytechnic = () => {
           </Card>
         </Container>
       </section>
+
+        <CourseNavigation />
 
       {/* Table of Contents */}
       <section className="poly-toc-section">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
+import CourseNavigation from '../components/CourseNavigation';
 import { FaCheckCircle, FaBriefcase, FaUserGraduate, FaHandshake, FaChartLine, FaAward, FaUsers, FaLightbulb } from 'react-icons/fa';
 import './Placement.css';
 
@@ -178,6 +179,8 @@ const Placement = () => {
           </Card>
         </Container>
       </section>
+
+        <CourseNavigation />
 
       {/* Importance Section */}
       <section className="placement-section bg-light">

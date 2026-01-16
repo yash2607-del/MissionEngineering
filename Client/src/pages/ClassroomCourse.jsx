@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import CourseNavigation from '../components/CourseNavigation';
 import './ClassroomCourse.css';
 
 const ClassroomCourse = () => {
@@ -89,6 +90,7 @@ const ClassroomCourse = () => {
 
   return (
     <div className="classroom-course-page">
+      <CourseNavigation />
       {/* Course Features Section */}
       <section className="course-features-section">
         <Container>
@@ -156,7 +158,7 @@ const ClassroomCourse = () => {
 
                     <div className="book-seats mt-3">
                       <span className="book-text">Book Your Seats - </span>
-                      <span className="phone-numbers">96 432 432 14</span>
+                      <span className="phone-numbers">96 439 439 14</span>
                     </div>
                   </Card.Body>
                 </Card>

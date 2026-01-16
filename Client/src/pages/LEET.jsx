@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Accordion, Table } from 'react-bootstrap';
+import CourseNavigation from '../components/CourseNavigation';
 import { FaCheckCircle, FaBook, FaUserGraduate, FaChartLine, FaClock, FaQuestionCircle, FaUsers, FaHandPointRight } from 'react-icons/fa';
 import './LEET.css';
 
@@ -156,6 +157,8 @@ const LEET = () => {
           </Card>
         </Container>
       </section>
+
+      <CourseNavigation />
 
       {/* Table of Contents */}
       <section className="table-of-contents">

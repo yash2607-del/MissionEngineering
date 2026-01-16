@@ -1,10 +1,12 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import CourseNavigation from '../components/CourseNavigation';
 import './RecordedCourse.css';
 
 const RecordedCourse = () => {
   return (
     <div className="recorded-course-page">
+      <CourseNavigation />
       <section className="hero-section">
         <Container>
           <h1 className="page-title">RECORDED COURSE</h1>

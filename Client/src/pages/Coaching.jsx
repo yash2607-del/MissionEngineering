@@ -1,11 +1,13 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import { FaGraduationCap, FaBookReader, FaChartLine, FaBriefcase } from 'react-icons/fa';
+import CourseNavigation from '../components/CourseNavigation';
 import './Coaching.css';
 
 const Coaching = () => {
   return (
     <div className="coaching-page">
+      <CourseNavigation />
       <section className="page-header">
         <Container>
           <h1>Our Coaching Programs</h1>
