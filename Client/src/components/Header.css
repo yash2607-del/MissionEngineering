@@ -51,6 +51,43 @@
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+/* LOGIN & SIGNUP - shared button styles */
+.nav-item-login,
+.nav-item-signup {
+  background-color: #ffffff !important;
+  color: #0052a3 !important;
+  border-radius: 4px;
+  padding: 10px 26px !important;
+  font-weight: bolder;
+  font-size: 18px;
+  display: flex !important;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  text-decoration: none !important;
+  height: 42px;
+  min-width: 110px;
+  cursor: pointer;
+}
+
+/* Individual spacing */
+.nav-item-login {
+  margin-left: 50px !important;
+}
+
+.nav-item-signup {
+  margin-left: 10px !important;
+}
+
+/* Hover effect */
+.nav-item-login:hover,
+.nav-item-signup:hover {
+  background-color: #eef0f2 !important;
+  color: #0052a3 !important;
+}
+
+
+
 @media (max-width: 991px) {
   .brand-name {
     font-size: 1.4rem;
@@ -59,5 +96,11 @@
   .custom-{
     padding: 12px 20px !important;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .nav-item-login,
+  .nav-item-signup {
+    margin-left: 0 !important;
+    margin-top: 8px;
   }
 }

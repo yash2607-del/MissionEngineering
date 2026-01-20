@@ -45,10 +45,10 @@ const Header = () => {
               <Nav.Link as={Link} to="/polytechnic" className="nav-item">POLYTECHNIC</Nav.Link>
               <Nav.Link as={Link} to="/placement" className="nav-item">PLACEMENT</Nav.Link>
               <Nav.Link as={Link} to="/semester-coaching" className="nav-item">SEMESTER COACHING</Nav.Link>
-              <Nav.Link as={Link} to="/test-series" className="nav-item">TEST SERIES</Nav.Link>
               <Nav.Link as={Link} to="/fee-structure" className="nav-item">FEE STRUCTURE</Nav.Link>
-              <Nav.Link onClick={handleTestimonialsClick} className="nav-item" style={{ cursor: 'pointer' }}>TESTIMONIALS</Nav.Link>
               <Nav.Link as={Link} to="/contact" className="nav-item">CONTACT US</Nav.Link>
+              <Nav.Link as={Link} to="/login" className="nav-item-login">LOGIN</Nav.Link>
+              <Nav.Link as={Link} to="/signup" className="nav-item-signup">SIGN UP</Nav.Link>
             </Nav>
           </Navbar.Collapse>
         </Container>
