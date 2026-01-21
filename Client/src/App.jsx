@@ -29,6 +29,8 @@ import Signup from './pages/Signup';
 import StudentDashboard from './pages/StudentDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 
+import ProtectedRoute from './auth/ProtectedRoute';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
@@ -41,7 +43,9 @@ function AppContent() {
     location.pathname === '/student-dashboard' ||
     location.pathname === '/admin-dashboard';
 
-  const hideHeader =
+  const hideHeader = 
+    location.pathname === '/login' || 
+    location.pathname === '/signup' ||
     location.pathname === '/student-dashboard' ||
     location.pathname === '/admin-dashboard';
 
@@ -68,6 +72,23 @@ function AppContent() {
           <Route path="/semester-coaching" element={<SemesterCoaching />} />
           <Route path="/login" element={<Login />} />
           <Route path="/signup" element={<Signup />} />
+
+          <Route
+            path="/student-dashboard"
+            element={
+              <ProtectedRoute allowedRoles={['student']}>
+                <StudentDashboard />
+              </ProtectedRoute>
+            }
+          />
+          <Route
+            path="/admin-dashboard"
+            element={
+              <ProtectedRoute allowedRoles={['admin']}>
+                <AdminDashboard />
+              </ProtectedRoute>
+            }
+          />
         </Routes>
       </main>
 

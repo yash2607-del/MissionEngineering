@@ -1,13 +1,25 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
+import { ArrowLeft, Eye, EyeSlash } from 'react-bootstrap-icons';
 import './Login.css';
 
+import { useAuth } from '../auth/useAuth';
+
 const Login = () => {
+  const { login } = useAuth();
+  const navigate = useNavigate();
+  const location = useLocation();
+  const from = location.state?.from;
+
   const [formData, setFormData] = useState({
     email: '',
     password: ''
   });
+
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
 
   const handleChange = (e) => {
     setFormData({
@@ -16,33 +28,40 @@ const Login = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    
-    // Mock authentication - in real app, this would be an API call
-    // For demo purposes, we'll check email to determine role
-    let userRole = 'student';
-    if (formData.email.includes('admin')) {
-      userRole = 'admin';
-    }
-    
-    // Store user info in localStorage (in real app, use secure storage)
-    localStorage.setItem('user', JSON.stringify({
-      email: formData.email,
-      role: userRole,
-      name: userRole === 'admin' ? 'Admin User' : 'John Doe'
-    }));
-    
-    // Redirect based on role
-    if (userRole === 'admin') {
-      window.location.href = '/admin-dashboard';
-    } else {
-      window.location.href = '/student-dashboard';
+    setError('');
+    setLoading(true);
+    try {
+      const user = await login({ email: formData.email, password: formData.password });
+
+      if (from) {
+        navigate(from, { replace: true });
+        return;
+      }
+
+      navigate(user.role === 'admin' ? '/admin-dashboard' : '/student-dashboard', { replace: true });
+    } catch (err) {
+      setError(err?.message || 'Login failed');
+    } finally {
+      setLoading(false);
     }
   };
 
   return (
     <div className="login-page">
+      <div className="auth-back-container">
+        <Container>
+          <button
+            type="button"
+            className="auth-back-btn"
+            onClick={() => navigate('/')}
+          >
+            <ArrowLeft size={20} />
+            <span>Back to Home</span>
+          </button>
+        </Container>
+      </div>
       <Container>
         <Row className="justify-content-center align-items-center min-vh-100">
           <Col md={6} lg={5}>
@@ -54,6 +73,11 @@ const Login = () => {
                 </div>
 
                 <Form onSubmit={handleSubmit}>
+                  {error ? (
+                    <div className="alert alert-danger" role="alert">
+                      {error}
+                    </div>
+                  ) : null}
                   <Form.Group className="mb-3" controlId="formEmail">
                     <Form.Label className="form-label">Email Address</Form.Label>
                     <Form.Control
@@ -69,15 +93,25 @@ const Login = () => {
 
                   <Form.Group className="mb-3" controlId="formPassword">
                     <Form.Label className="form-label">Password</Form.Label>
-                    <Form.Control
-                      type="password"
-                      placeholder="Enter your password"
-                      name="password"
-                      value={formData.password}
-                      onChange={handleChange}
-                      required
-                      className="form-input"
-                    />
+                    <div className="password-input-wrapper">
+                      <Form.Control
+                        type={showPassword ? "text" : "password"}
+                        placeholder="Enter your password"
+                        name="password"
+                        value={formData.password}
+                        onChange={handleChange}
+                        required
+                        className="form-input"
+                      />
+                      <button
+                        type="button"
+                        className="password-toggle-btn"
+                        onClick={() => setShowPassword(!showPassword)}
+                        aria-label={showPassword ? "Hide password" : "Show password"}
+                      >
+                        {showPassword ? <EyeSlash size={20} /> : <Eye size={20} />}
+                      </button>
+                    </div>
                   </Form.Group>
 
                   <div className="d-flex justify-content-between align-items-center mb-4">
@@ -89,8 +123,8 @@ const Login = () => {
                     <Link to="#" className="forgot-link">Forgot Password?</Link>
                   </div>
 
-                  <Button type="submit" className="login-btn w-100 mb-3">
-                    Login
+                  <Button type="submit" className="login-btn w-100 mb-3" disabled={loading}>
+                    {loading ? 'Logging in…' : 'Login'}
                   </Button>
 
                   <div className="text-center">

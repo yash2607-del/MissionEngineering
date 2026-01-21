@@ -1,17 +1,41 @@
-import React, { useState } from 'react';
-import { Container, Row, Col, Card, Button, Nav, Dropdown } from 'react-bootstrap';
+import React, { useState, useEffect } from 'react';
+import { Container, Row, Col, Card, Button, Nav, Dropdown, Alert } from 'react-bootstrap';
 import { Link, useNavigate } from 'react-router-dom';
-import { Person, Book, Gear, BoxArrowRight, BarChart, Clock, Award, Calendar } from 'react-bootstrap-icons';
+import { Person, Book, Gear, BoxArrowRight, BarChart, Clock, Award, Calendar, ArrowLeft } from 'react-bootstrap-icons';
 import './StudentDashboard.css';
+import { useAuth } from '../auth/useAuth';
+import { fetchTests } from '../api/studentApi';
 
 const StudentDashboard = () => {
   const [activeSection, setActiveSection] = useState('overview');
+  const [tests, setTests] = useState([]);
+  const [loading, setLoading] = useState(true);
+  const [error, setError] = useState('');
+  const { token, logout } = useAuth();
   const navigate = useNavigate();
 
   const handleLogout = () => {
-    // Handle logout logic here
+    logout();
     navigate('/');
   };
+
+  useEffect(() => {
+    const loadTests = async () => {
+      try {
+        setLoading(true);
+        setError('');
+        const data = await fetchTests(token);
+        setTests(data.tests || []);
+      } catch (err) {
+        setError(err?.message || 'Failed to load tests');
+        console.error('Error fetching tests:', err);
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    loadTests();
+  }, [token]);
 
   const sidebarItems = [
     { id: 'overview', icon: BarChart, label: 'Overview' },
@@ -28,10 +52,16 @@ const StudentDashboard = () => {
   ];
 
   const renderContent = () => {
+    const totalTests = tests.length;
+    const completedTests = 0; // TODO: Track completed tests
+    const pendingTests = tests.filter(t => t.active).length;
+    const avgScore = '85%'; // TODO: Calculate from actual scores
+
     switch (activeSection) {
       case 'overview':
         return (
           <div className="overview-section">
+            {error && <Alert variant="danger">{error}</Alert>}
             <div className="welcome-banner">
               <h2>Welcome back, Student!</h2>
               <p>Track your progress and access your learning materials</p>
@@ -42,7 +72,7 @@ const StudentDashboard = () => {
                 <Card className="stat-card">
                   <Card.Body className="text-center">
                     <Book className="stat-icon text-primary" size={32} />
-                    <h3>12</h3>
+                    <h3>{totalTests}</h3>
                     <p>Total Tests</p>
                   </Card.Body>
                 </Card>
@@ -51,7 +81,7 @@ const StudentDashboard = () => {
                 <Card className="stat-card">
                   <Card.Body className="text-center">
                     <Award className="stat-icon text-success" size={32} />
-                    <h3>85%</h3>
+                    <h3>{avgScore}</h3>
                     <p>Average Score</p>
                   </Card.Body>
                 </Card>
@@ -60,7 +90,7 @@ const StudentDashboard = () => {
                 <Card className="stat-card">
                   <Card.Body className="text-center">
                     <Clock className="stat-icon text-warning" size={32} />
-                    <h3>3</h3>
+                    <h3>{pendingTests}</h3>
                     <p>Pending Tests</p>
                   </Card.Body>
                 </Card>
@@ -69,7 +99,7 @@ const StudentDashboard = () => {
                 <Card className="stat-card">
                   <Card.Body className="text-center">
                     <BarChart className="stat-icon text-info" size={32} />
-                    <h3>9</h3>
+                    <h3>{completedTests}</h3>
                     <p>Completed</p>
                   </Card.Body>
                 </Card>
@@ -81,24 +111,32 @@ const StudentDashboard = () => {
                 <h4>Recent Tests</h4>
               </Card.Header>
               <Card.Body>
-                <div className="test-list">
-                  {mockTests.slice(0, 3).map(test => (
-                    <div key={test.id} className="test-item">
-                      <div className="test-info">
-                        <h5>{test.title}</h5>
-                        <p>{test.subject} • {test.date} • {test.duration}</p>
-                      </div>
-                      <div className="test-status">
-                        <span className={`status-badge ${test.status.toLowerCase()}`}>
-                          {test.status}
-                        </span>
-                      </div>
+                {loading ? (
+                  <div className="text-center text-muted">Loading tests...</div>
+                ) : tests.length === 0 ? (
+                  <div className="text-center text-muted">No tests available</div>
+                ) : (
+                  <>
+                    <div className="test-list">
+                      {tests.slice(0, 3).map(test => (
+                        <div key={test.id} className="test-item">
+                          <div className="test-info">
+                            <h5>{test.title}</h5>
+                            <p>{test.subject} • {test.date} • {test.duration || 'N/A'}</p>
+                          </div>
+                          <div className="test-status">
+                            <span className="status-badge available">
+                              Available
+                            </span>
+                          </div>
+                        </div>
+                      ))}
                     </div>
-                  ))}
-                </div>
-                <Button variant="primary" className="mt-3" onClick={() => setActiveSection('tests')}>
-                  View All Tests
-                </Button>
+                    <Button variant="primary" className="mt-3" onClick={() => setActiveSection('tests')}>
+                          View All Tests
+                    </Button>
+                  </>
+                )}
               </Card.Body>
             </Card>
           </div>
@@ -107,34 +145,48 @@ const StudentDashboard = () => {
       case 'tests':
         return (
           <div className="tests-section">
+            {error && <Alert variant="danger">{error}</Alert>}
             <h3>Available Tests</h3>
-            <Row>
-              {mockTests.map(test => (
-                <Col md={6} lg={4} key={test.id} className="mb-4">
-                  <Card className="test-card">
-                    <Card.Body>
-                      <h5>{test.title}</h5>
-                      <p className="test-subject">{test.subject}</p>
-                      <div className="test-details">
-                        <p><Clock size={16} /> {test.duration}</p>
-                        <p><Calendar size={16} /> {test.date}</p>
-                      </div>
-                      <div className="test-footer">
-                        <span className={`status-badge ${test.status.toLowerCase()}`}>
-                          {test.status}
-                        </span>
-                        {test.status === 'Available' && (
-                          <Button variant="primary" size="sm">Start Test</Button>
+            {loading ? (
+              <div className="text-center text-muted py-4">Loading tests...</div>
+            ) : tests.length === 0 ? (
+              <div className="text-center text-muted py-4">No tests available at the moment</div>
+            ) : (
+              <Row>
+                {tests.map(test => (
+                  <Col md={6} lg={4} key={test.id} className="mb-4">
+                    <Card className="test-card">
+                      <Card.Body>
+                        <h5>{test.title}</h5>
+                        <p className="test-subject">{test.subject}</p>
+                        <div className="test-details">
+                          <p><Clock size={16} /> {test.duration || 'N/A'}</p>
+                          <p><Calendar size={16} /> {test.date}</p>
+                          {test.questions && <p>Questions: {test.questions}</p>}
+                        </div>
+                        <div className="test-footer">
+                          <span className="status-badge available">
+                            Available
+                          </span>
+                          <Button 
+                            variant="primary" 
+                            size="sm"
+                            onClick={() => window.open(test.link, '_blank')}
+                          >
+                            Start Test
+                          </Button>
+                        </div>
+                        {test.details && (
+                          <div className="mt-2">
+                            <small className="text-muted">{test.details}</small>
+                          </div>
                         )}
-                        {test.status === 'Completed' && (
-                          <Button variant="success" size="sm">View Results</Button>
-                        )}
-                      </div>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              ))}
-            </Row>
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                ))}
+              </Row>
+            )}
           </div>
         );
 
@@ -177,56 +229,56 @@ const StudentDashboard = () => {
 
   return (
     <div className="student-dashboard">
-      <div className="dashboard-header">
-        <Container fluid>
-          <Row className="align-items-center">
-            <Col>
-              <h2>Student Portal</h2>
-            </Col>
-            <Col className="text-end">
-              <Dropdown align="end">
-                <Dropdown.Toggle variant="light" id="user-dropdown">
-                  <Person size={20} className="me-2" />
-                  John Doe
-                </Dropdown.Toggle>
-                <Dropdown.Menu>
-                  <Dropdown.Item onClick={() => setActiveSection('profile')}>
-                    <Person className="me-2" /> Profile
-                  </Dropdown.Item>
-                  <Dropdown.Item onClick={handleLogout}>
-                    <BoxArrowRight className="me-2" /> Logout
-                  </Dropdown.Item>
-                </Dropdown.Menu>
-              </Dropdown>
-            </Col>
-          </Row>
-        </Container>
-      </div>
+      <div className="dashboard-container">
+        {/* Sidebar */}
+        <div className="dashboard-sidebar">
+          <div className="sidebar-header">
+            <button className="back-btn" onClick={() => navigate('/')}>
+              <ArrowLeft size={20} />
+            </button>
+          </div>
+          <Nav className="sidebar-nav flex-column">
+            {sidebarItems.map(item => (
+              <Nav.Item key={item.id}>
+                <Nav.Link
+                  className={activeSection === item.id ? 'active' : ''}
+                  onClick={item.action || (() => setActiveSection(item.id))}
+                >
+                  <item.icon size={20} />
+                  <span>{item.label}</span>
+                </Nav.Link>
+              </Nav.Item>
+            ))}
+          </Nav>
+        </div>
 
-      <Container fluid className="dashboard-content">
-        <Row>
-          <Col md={3} className="sidebar-col">
-            <Nav className="sidebar-nav flex-column">
-              {sidebarItems.map(item => (
-                <Nav.Item key={item.id}>
-                  <Nav.Link
-                    className={activeSection === item.id ? 'active' : ''}
-                    onClick={item.action || (() => setActiveSection(item.id))}
-                  >
-                    <item.icon className="me-2" size={20} />
-                    {item.label}
-                  </Nav.Link>
-                </Nav.Item>
-              ))}
-            </Nav>
-          </Col>
-          <Col md={9} className="content-col">
+        {/* Main Content Area */}
+        <div className="dashboard-main">
+          {/* Dashboard Header */}
+          <div className="dashboard-header">
+            <h1>Student Dashboard</h1>
+            <Dropdown align="end">
+              <Dropdown.Toggle variant="light" id="user-dropdown" className="user-dropdown-btn">
+                <Person size={24} />
+              </Dropdown.Toggle>
+              <Dropdown.Menu>
+                <Dropdown.Item onClick={() => setActiveSection('profile')}>
+                  <Person className="me-2" /> Profile
+                </Dropdown.Item>
+                <Dropdown.Item onClick={handleLogout}>
+                  <BoxArrowRight className="me-2" /> Logout
+                </Dropdown.Item>
+              </Dropdown.Menu>
+            </Dropdown>
+          </div>
+
+          <Container fluid>
             <div className="content-area">
               {renderContent()}
             </div>
-          </Col>
-        </Row>
-      </Container>
+          </Container>
+        </div>
+      </div>
     </div>
   );
 };

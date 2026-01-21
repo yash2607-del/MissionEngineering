@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Form, Button, Card } from 'react-bootstrap';
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
+import { ArrowLeft, Eye, EyeSlash } from 'react-bootstrap-icons';
 import './Signup.css';
 
+import { useAuth } from '../auth/useAuth';
+
 const Signup = () => {
+  const { signup } = useAuth();
+  const navigate = useNavigate();
+
   const [formData, setFormData] = useState({
     fullName: '',
     email: '',
@@ -12,6 +18,11 @@ const Signup = () => {
     confirmPassword: ''
   });
 
+  const [error, setError] = useState('');
+  const [loading, setLoading] = useState(false);
+  const [showPassword, setShowPassword] = useState(false);
+  const [showConfirmPassword, setShowConfirmPassword] = useState(false);
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -19,17 +30,44 @@ const Signup = () => {
     });
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
+    setError('');
     if (formData.password !== formData.confirmPassword) {
       alert('Passwords do not match!');
       return;
     }
-    console.log('Signup submitted:', formData);
+
+    setLoading(true);
+    try {
+      const user = await signup({
+        fullName: formData.fullName,
+        email: formData.email,
+        phone: formData.phone,
+        password: formData.password
+      });
+      navigate('/student-dashboard', { replace: true });
+    } catch (err) {
+      setError(err?.message || 'Signup failed');
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
     <div className="signup-page">
+      <div className="auth-back-container">
+        <Container>
+          <button
+            type="button"
+            className="auth-back-btn"
+            onClick={() => navigate('/')}
+          >
+            <ArrowLeft size={20} />
+            <span>Back to Home</span>
+          </button>
+        </Container>
+      </div>
       <Container>
         <Row className="justify-content-center align-items-center min-vh-100 py-5">
           <Col md={7} lg={6}>
@@ -41,6 +79,11 @@ const Signup = () => {
                 </div>
 
                 <Form onSubmit={handleSubmit}>
+                  {error ? (
+                    <div className="alert alert-danger" role="alert">
+                      {error}
+                    </div>
+                  ) : null}
                   <Form.Group className="mb-3" controlId="formFullName">
                     <Form.Label className="form-label">Full Name</Form.Label>
                     <Form.Control
@@ -80,57 +123,53 @@ const Signup = () => {
                     />
                   </Form.Group>
 
-                  <Form.Group className="mb-3" controlId="formRole">
-                    <Form.Label className="form-label">Select Role</Form.Label>
-                    <div className="role-selection">
-                      <Form.Check
-                        type="radio"
-                        label="Student"
-                        name="role"
-                        value="student"
-                        checked={formData.role === 'student'}
-                        onChange={handleChange}
-                        className="role-radio"
-                      />
-                      <Form.Check
-                        type="radio"
-                        label="Admin"
-                        name="role"
-                        value="admin"
-                        checked={formData.role === 'admin'}
-                        onChange={handleChange}
-                        className="role-radio"
-                      />
-                    </div>
-                  </Form.Group>
-
                   <Row>
                     <Col md={6}>
                       <Form.Group className="mb-3" controlId="formPassword">
                         <Form.Label className="form-label">Password</Form.Label>
-                        <Form.Control
-                          type="password"
-                          placeholder="Create password"
-                          name="password"
-                          value={formData.password}
-                          onChange={handleChange}
-                          required
-                          className="form-input"
-                        />
+                        <div className="password-input-wrapper">
+                          <Form.Control
+                            type={showPassword ? "text" : "password"}
+                            placeholder="Create password"
+                            name="password"
+                            value={formData.password}
+                            onChange={handleChange}
+                            required
+                            className="form-input"
+                          />
+                          <button
+                            type="button"
+                            className="password-toggle-btn"
+                            onClick={() => setShowPassword(!showPassword)}
+                            aria-label={showPassword ? "Hide password" : "Show password"}
+                          >
+                            {showPassword ? <EyeSlash size={20} /> : <Eye size={20} />}
+                          </button>
+                        </div>
                       </Form.Group>
                     </Col>
                     <Col md={6}>
                       <Form.Group className="mb-3" controlId="formConfirmPassword">
                         <Form.Label className="form-label">Confirm Password</Form.Label>
-                        <Form.Control
-                          type="password"
-                          placeholder="Confirm password"
-                          name="confirmPassword"
-                          value={formData.confirmPassword}
-                          onChange={handleChange}
-                          required
-                          className="form-input"
-                        />
+                        <div className="password-input-wrapper">
+                          <Form.Control
+                            type={showConfirmPassword ? "text" : "password"}
+                            placeholder="Confirm password"
+                            name="confirmPassword"
+                            value={formData.confirmPassword}
+                            onChange={handleChange}
+                            required
+                            className="form-input"
+                          />
+                          <button
+                            type="button"
+                            className="password-toggle-btn"
+                            onClick={() => setShowConfirmPassword(!showConfirmPassword)}
+                            aria-label={showConfirmPassword ? "Hide password" : "Show password"}
+                          >
+                            {showConfirmPassword ? <EyeSlash size={20} /> : <Eye size={20} />}
+                          </button>
+                        </div>
                       </Form.Group>
                     </Col>
                   </Row>
@@ -145,7 +184,7 @@ const Signup = () => {
                   </Form.Group>
 
                   <Button type="submit" className="signup-btn w-100 mb-3">
-                    Sign Up
+                    {loading ? 'Creating…' : 'Sign Up'}
                   </Button>
 
                   <div className="text-center">
