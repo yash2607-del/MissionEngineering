@@ -21,6 +21,7 @@
   width: auto;
   object-fit: contain;
   padding: 5px 0;
+  display: block;
 }
 
 .brand-name:hover {
@@ -302,8 +303,13 @@
     padding: 0;
   }
 
+  .brand-name span {
+    display: none !important;
+  }
+
   .brand-logo {
     height: 60px;
+    display: block !important;
   }
 
   .navbar-brand {

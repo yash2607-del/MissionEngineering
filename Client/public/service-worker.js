@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mission-engineering-v2';
+const CACHE_NAME = 'mission-engineering-v3';
 const urlsToCache = [
   '/',
   '/index.html',
