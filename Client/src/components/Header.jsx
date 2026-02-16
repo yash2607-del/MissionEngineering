@@ -99,6 +99,62 @@ const Header = () => {
           <Navbar.Brand as={Link} to="/" className="brand-name">
             Mission Engineering
           </Navbar.Brand>
+          
+          {/* Mobile Notification Icon - Outside Hamburger */}
+          <div className="mobile-notification-wrapper d-lg-none">
+            <Dropdown align="end" onToggle={(isOpen) => isOpen && handleOpenNotifications()}>
+              <Dropdown.Toggle variant="link" className="nav-notification-btn mobile-notification-btn">
+                <Bell size={20} />
+                {unreadCount > 0 ? (
+                  <Badge bg="danger" pill className="nav-notification-badge">
+                    {unreadCount}
+                  </Badge>
+                ) : null}
+              </Dropdown.Toggle>
+
+              <Dropdown.Menu className="nav-notification-menu">
+                <div className="notification-header">Notifications</div>
+
+                <div className="notification-list">
+                  {notifError ? (
+                    <div className="notification-error">
+                      <InfoCircle size={16} className="me-2" />
+                      {notifError}
+                    </div>
+                  ) : null}
+
+                  {(notifications || []).length === 0 ? (
+                    <div className="notification-empty">
+                      No notifications
+                    </div>
+                  ) : (
+                    notifications.slice(0, 5).map((n, index) => {
+                      const timeAgo = getTimeAgo(n.createdAt);
+                      return (
+                        <div key={n.id || index} className="nav-notification-item">
+                          <div className="notification-icon">
+                            <Megaphone size={18} />
+                          </div>
+                          <div className="notification-content">
+                            <div className="notification-title">{n.title}</div>
+                            <div className="notification-message">{n.message}</div>
+                            <div className="notification-time">{timeAgo}</div>
+                          </div>
+                        </div>
+                      );
+                    })
+                  )}
+                </div>
+
+                {!notifError && notifications.length > 0 ? (
+                  <div className="notification-footer">
+                    <button className="show-all-btn">Show all</button>
+                  </div>
+                ) : null}
+              </Dropdown.Menu>
+            </Dropdown>
+          </div>
+
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
@@ -111,7 +167,8 @@ const Header = () => {
               <Nav.Link as={Link} to="/fee-structure" className="nav-item">FEE STRUCTURE</Nav.Link>
               <Nav.Link as={Link} to="/contact" className="nav-item">CONTACT US</Nav.Link>
 
-              <Dropdown align="end" onToggle={(isOpen) => isOpen && handleOpenNotifications()}>
+              {/* Desktop Notification Icon - Inside Nav */}
+              <Dropdown align="end" onToggle={(isOpen) => isOpen && handleOpenNotifications()} className="d-none d-lg-block">
                 <Dropdown.Toggle variant="link" className="nav-notification-btn">
                   <Bell size={20} />
                   {unreadCount > 0 ? (

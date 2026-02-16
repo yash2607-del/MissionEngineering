@@ -27,15 +27,31 @@
   margin: 0;
   padding: 0;
   object-fit: cover;
+  min-height: 400px;
 }
 
 @media (max-width: 768px) {
   .hero-image-wrapper {
     height: auto;
+    min-height: 300px;
   }
   
   .hero-image {
-    object-fit: contain;
+    object-fit: cover;
+    min-height: 300px;
+    max-height: 400px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-image-wrapper {
+    min-height: 250px;
+  }
+  
+  .hero-image {
+    min-height: 250px;
+    max-height: 350px;
+    object-fit: cover;
   }
 }
 
