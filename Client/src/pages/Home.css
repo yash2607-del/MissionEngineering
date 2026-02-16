@@ -37,22 +37,32 @@
   
   .hero-image {
     object-fit: cover;
-    min-height: 350px;
-    max-height: 500px;
-  }
-}
-
-@media (max-width: 768px) {
-  .hero-image {
     min-height: 300px;
     max-height: 450px;
   }
 }
 
-@media (max-width: 576px) {
+@media (max-width: 768px) {
   .hero-image {
+    object-fit: cover;
     min-height: 250px;
     max-height: 400px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-image {
+    object-fit: cover;
+    min-height: 200px;
+    max-height: 350px;
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-image {
+    object-fit: cover;
+    min-height: 180px;
+    max-height: 300px;
   }
 }
 
