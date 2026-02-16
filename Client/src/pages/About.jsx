@@ -1,11 +1,12 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { FaUserTie, FaChartLine, FaHeadset, FaBriefcase, FaHandshake, FaClipboardCheck } from 'react-icons/fa';
+import { FaUserTie, FaChartLine, FaHeadset, FaBriefcase, FaHandshake, FaClipboardCheck, FaLinkedin, FaGithub } from 'react-icons/fa';
 import chairmanPhoto from '../assets/about_photo/chairman.png';
 import viceChairmanPhoto from '../assets/about_photo/vice-chairman.png';
 import ranjanSirPhoto from '../assets/about_photo/rajan-sir(director).png';
 import abhishekSirPhoto from '../assets/about_photo/abhishek-sir(director).png';
+import yashPhoto from '../assets/about_photo/YASH-PHOTO .jpg';
 import './About.css';
 
 const About = () => {
@@ -184,6 +185,45 @@ const About = () => {
                 <p className="member-description">
                   Mission Engineering provides intellectual, artistic and personal interest contributing to their holistic growth. I welcome parents and students to be a part of the Mission Engineering family to share common ideals and aspirations as we build a challenging and enriching educational experience for our students.
                 </p>
+              </div>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
+      {/* Lead Web Developer Section */}
+      <section className="team-member-section">
+        <Container>
+          <Row className="align-items-center">
+            <Col lg={6} md={12} className="team-content-col">
+              <div className="team-content">
+                <h3 className="member-name">Yash Raj</h3>
+                <h2 className="member-title">LEAD WEB DEVELOPER</h2>
+                <div className="social-links mb-3">
+                  <a href="https://www.linkedin.com/in/yashh26/" target="_blank" rel="noopener noreferrer" className="social-icon">
+                    <FaLinkedin size={30} />
+                  </a>
+                  <a href="https://github.com/yash2607-del" target="_blank" rel="noopener noreferrer" className="social-icon">
+                    <FaGithub size={30} />
+                  </a>
+                </div>
+                <p className="member-description">
+                  I am a Computer Science and Engineering student at Jaypee Institute of Information Technology (JIIT), Noida, and a MERN Stack Developer with strong expertise in MongoDB, Express.js, React.js, and Node.js. I specialize in building modern, responsive, and scalable web applications using the MERN stack and industry best practices.
+                </p>
+                <p className="member-description">
+                  I was responsible for the complete end-to-end development of the Mission Engineering website, including UI/UX design, development, deployment, and hosting. My focus is on delivering fast, secure, and high-performance web solutions that provide a seamless and reliable user experience across all devices.
+                </p>
+              </div>
+            </Col>
+            <Col lg={6} md={12} className="team-photo-col">
+              <div className="team-photo-wrapper">
+                <div className="circular-frame">
+                  <img src={yashPhoto} alt="Yash Raj - Lead Web Developer" className="team-photo" />
+                  <div className="frame-decoration top-left"></div>
+                  <div className="frame-decoration top-right"></div>
+                  <div className="frame-decoration bottom-left"></div>
+                  <div className="frame-decoration bottom-right"></div>
+                </div>
               </div>
             </Col>
           </Row>

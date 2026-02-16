@@ -125,6 +125,17 @@
   outline: none;
 }
 
+/* Validation Error Styles */
+.form-input.is-invalid {
+  border-color: #dc3545;
+}
+
+.invalid-feedback {
+  color: #dc3545;
+  font-size: 0.875rem;
+  margin-top: 4px;
+}
+
 .remember-check {
   font-size: 0.9rem;
   color: #666;

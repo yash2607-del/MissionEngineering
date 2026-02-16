@@ -99,7 +99,10 @@ const Polytechnic = () => {
         </Container>
       </section>
 
-        <CourseNavigation />
+      <div className="courses-heading-container">
+        <h2 className="courses-heading">Courses We Offer</h2>
+      </div>
+      <CourseNavigation />
 
       {/* Table of Contents */}
       <section className="poly-toc-section">

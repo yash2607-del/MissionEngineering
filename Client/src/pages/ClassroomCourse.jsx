@@ -90,6 +90,9 @@ const ClassroomCourse = () => {
 
   return (
     <div className="classroom-course-page">
+      <div className="courses-heading-container">
+        <h2 className="courses-heading">Courses We Offer</h2>
+      </div>
       <CourseNavigation />
       {/* Course Features Section */}
       <section className="course-features-section">

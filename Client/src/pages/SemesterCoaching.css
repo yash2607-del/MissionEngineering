@@ -1,7 +1,7 @@
 /* Semester Coaching Page Styles */
 .semester-coaching-page {
   font-family: Arial, sans-serif;
-  background: #ffffff;
+  background: #f8f9fa;
 }
 
 /* Header Section */
@@ -13,7 +13,7 @@
 
 .semester-main-title {
   color: white;
-  font-size: 2rem;
+  font-size: 2.5rem;
   font-weight: 700;
   margin: 0;
   line-height: 1.4;
@@ -25,33 +25,231 @@
 }
 
 .content-section {
-  margin-bottom: 40px;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
 .content-text {
   color: #333;
-  font-size: 1rem;
-  line-height: 1.8;
+  font-size: 1.15rem;
+  line-height: 1.9;
   text-align: justify;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
 }
 
-/* Section Headings */
-.section-heading {
+/* Main Section Heading */
+.main-section-heading {
   color: #0d5ba6;
-  font-size: 1.5rem;
+  font-size: 2.2rem;
   font-weight: 700;
-  margin-bottom: 20px;
+  text-align: center;
+  margin: 50px 0 20px;
+}
+
+/* Subsection Heading */
+.subsection-heading {
+  color: #0d5ba6;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-align: center;
+  margin: 30px 0 25px;
+}
+
+/* Intro Text */
+.intro-text {
+  color: #333;
+  font-size: 1.15rem;
+  line-height: 1.9;
+  text-align: justify;
+  margin: 0 auto 40px;
+  max-width: 1100px;
+}
+
+/* Why Choose Section */
+.why-choose-section {
+  margin-bottom: 60px;
+}
+
+.benefits-row {
   margin-top: 30px;
 }
 
-/* Subjects Headings */
-.subjects-heading {
+.benefit-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  text-align: center;
+  padding: 20px;
+}
+
+.benefit-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  border-color: #0d5ba6;
+}
+
+.benefit-icon {
+  font-size: 3rem;
   color: #0d5ba6;
-  font-size: 1.3rem;
-  font-weight: 700;
   margin-bottom: 15px;
-  margin-top: 20px;
+}
+
+.benefit-title {
+  color: #0d5ba6;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.benefit-description {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Mission Section */
+.mission-section {
+  margin-bottom: 60px;
+}
+
+/* Strengths Section */
+.strengths-row {
+  margin-top: 30px;
+}
+
+.strength-card {
+  background: white;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  text-align: center;
+  padding: 20px;
+}
+
+.strength-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(13, 91, 166, 0.2);
+  border-color: #0d5ba6;
+}
+
+.strength-icon {
+  font-size: 3rem;
+  color: #0d5ba6;
+  margin-bottom: 15px;
+}
+
+.strength-title {
+  color: #0d5ba6;
+  font-size: 1.2rem;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+.strength-description {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Branches Section */
+.branches-section {
+  margin-bottom: 60px;
+}
+
+.branch-card {
+  background: white;
+  border: 2px solid #e3f2fd;
+  border-radius: 12px;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 8px rgba(13, 91, 166, 0.08);
+  height: 450px;
+  display: flex;
+  flex-direction: column;
+}
+
+.branch-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 24px rgba(13, 91, 166, 0.15);
+  border-color: #0d5ba6;
+}
+
+.branch-card .card-body {
+  padding: 18px;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+.branch-content {
+  flex: 1;
+  overflow-y: auto;
+  overflow-x: hidden;
+  padding-right: 5px;
+  margin-top: 5px;
+}
+
+.branch-content::-webkit-scrollbar {
+  width: 5px;
+}
+
+.branch-content::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 5px;
+}
+
+.branch-content::-webkit-scrollbar-thumb {
+  background: #0d5ba6;
+  border-radius: 5px;
+}
+
+.branch-content::-webkit-scrollbar-thumb:hover {
+  background: #084080;
+}
+
+.branch-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 12px;
+  padding-bottom: 10px;
+  border-bottom: 2px solid #e3f2fd;
+  flex-shrink: 0;
+}
+
+.branch-icon {
+  font-size: 2rem;
+  margin-right: 10px;
+  color: #0d5ba6;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  background: #e3f2fd;
+  border-radius: 8px;
+  flex-shrink: 0;
+}
+
+.branch-title {
+  color: #0d5ba6;
+  font-size: 1.15rem;
+  font-weight: 700;
+  margin: 0;
+  line-height: 1.2;
+}
+
+.semester-group {
+  margin-bottom: 10px;
+}
+
+.semester-heading {
+  color: #0d5ba6;
+  font-size: 0.95rem;
+  font-weight: 600;
+  margin-bottom: 5px;
+  padding-left: 3px;
 }
 
 /* Subjects Lists */
@@ -63,39 +261,92 @@
 
 .subjects-list li {
   color: #333;
-  font-size: 1rem;
-  line-height: 1.8;
-  padding: 5px 0;
-  padding-left: 20px;
+  font-size: 0.9rem;
+  line-height: 1.4;
+  padding: 3px 0 3px 22px;
   position: relative;
 }
 
 .subjects-list li::before {
-  content: '•';
+  content: '✓';
   position: absolute;
   left: 0;
   color: #0d5ba6;
   font-weight: bold;
-  font-size: 1.2rem;
+  font-size: 1rem;
+  line-height: 1.4;
 }
 
 /* Responsive Design */
+@media (max-width: 992px) {
+  .branch-card {
+    height: 420px;
+  }
+  
+  .branch-card .card-body {
+    padding: 16px;
+  }
+  
+  .branch-title {
+    font-size: 1.1rem;
+  }
+}
+
 @media (max-width: 768px) {
   .semester-main-title {
+    font-size: 1.8rem;
+  }
+
+  .main-section-heading {
     font-size: 1.5rem;
   }
 
-  .section-heading {
-    font-size: 1.3rem;
+  .intro-text {
+    font-size: 1.05rem;
+    text-align: left;
+    padding: 0 15px;
   }
 
-  .subjects-heading {
+  .content-text {
+    font-size: 1.05rem;
+    text-align: left;
+    padding: 0 15px;
+  }
+
+  .benefit-icon {
+    font-size: 2.5rem;
+  }
+
+  .benefit-title {
     font-size: 1.1rem;
   }
 
-  .content-text,
-  .subjects-list li {
-    font-size: 0.95rem;
+  .strength-icon {
+    font-size: 2.5rem;
+  }
+
+  .strength-title {
+    font-size: 1.1rem;
+  }
+  .branch-card {
+    height: 400px;
+  }
+  .branch-header {
+    flex-direction: row;
+    text-align: left;
+    align-items: center;
+  }
+
+  .branch-icon {
+    margin-right: 12px;
+    margin-bottom: 0;
+    width: 45px;
+    height: 45px;
+    font-size: 1.8rem;
+  }
+
+  .branch-title {
+    font-size: 1.1rem;
   }
 
   .semester-header {
@@ -109,19 +360,52 @@
 
 @media (max-width: 576px) {
   .semester-main-title {
+    font-size: 1.5rem;
+  }
+
+  .main-section-heading {
     font-size: 1.3rem;
   }
 
-  .section-heading {
-    font-size: 1.2rem;
+  .intro-text {
+    font-size: 1rem;
+    text-align: left;
+    padding: 0 15px;
   }
 
-  .subjects-heading {
+  .content-text {
+    font-size: 1rem;
+    text-align: left;
+    padding: 0 15px;
+  }
+
+  .benefit-icon {
+    font-size: 2rem;
+  }
+
+  .branch-card {
+    height: 380px;
+  }
+
+  .branch-card .card-body {
+    padding: 14px;
+  }
+
+  .branch-icon {
+    font-size: 1.6rem;
+    width: 40px;
+    height: 40px;
+  }
+
+  .branch-title {
     font-size: 1rem;
   }
 
-  .content-text,
   .subjects-list li {
     font-size: 0.9rem;
+  }
+
+  .subsection-heading {
+    font-size: 1.3rem;
   }
 }

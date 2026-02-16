@@ -20,17 +20,44 @@ const Login = () => {
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const [showPassword, setShowPassword] = useState(false);
+  const [validationErrors, setValidationErrors] = useState({});
+
+  const validateEmail = (email) => {
+    const emailRegex = /^[a-zA-Z0-9._-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,6}$/;
+    return emailRegex.test(email);
+  };
 
   const handleChange = (e) => {
+    const { name, value } = e.target;
     setFormData({
       ...formData,
-      [e.target.name]: e.target.value
+      [name]: value
     });
+    
+    // Clear validation error for this field
+    if (validationErrors[name]) {
+      setValidationErrors({
+        ...validationErrors,
+        [name]: ''
+      });
+    }
   };
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     setError('');
+    
+    // Validate email
+    const errors = {};
+    if (!validateEmail(formData.email)) {
+      errors.email = 'Please enter a valid email address';
+    }
+    
+    if (Object.keys(errors).length > 0) {
+      setValidationErrors(errors);
+      return;
+    }
+    
     setLoading(true);
     try {
       const user = await login({ email: formData.email, password: formData.password });
@@ -82,13 +109,18 @@ const Login = () => {
                     <Form.Label className="form-label">Email Address</Form.Label>
                     <Form.Control
                       type="email"
-                      placeholder="Enter your email"
+                      placeholder="Enter your email (e.g., user@gmail.com)"
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
                       required
-                      className="form-input"
+                      className={`form-input ${validationErrors.email ? 'is-invalid' : ''}`}
                     />
+                    {validationErrors.email && (
+                      <div className="invalid-feedback d-block">
+                        {validationErrors.email}
+                      </div>
+                    )}
                   </Form.Group>
 
                   <Form.Group className="mb-3" controlId="formPassword">

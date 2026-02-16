@@ -124,6 +124,32 @@
   margin-bottom: 25px;
 }
 
+/* Social Links */
+.social-links {
+  display: flex;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.social-icon {
+  color: #0052a3;
+  transition: all 0.3s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  background: #e3f2fd;
+}
+
+.social-icon:hover {
+  color: #ffffff;
+  background: linear-gradient(135deg, #0052a3 0%, #003d7a 100%);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 15px rgba(0, 82, 163, 0.3);
+}
+
 .member-description {
   font-size: 1rem;
   color: #4a5568;

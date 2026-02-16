@@ -4,7 +4,66 @@ import CourseNavigation from '../components/CourseNavigation';
 import { FaCheckCircle, FaBriefcase, FaUserGraduate, FaHandshake, FaChartLine, FaAward, FaUsers, FaLightbulb } from 'react-icons/fa';
 import './Placement.css';
 
+// Import placement topper images
+import prachiSoniImg from '../assets/coaching-placement-toppers/Prachi Soni.JPG';
+import prabhsimarSinghImg from '../assets/coaching-placement-toppers/PrabhSimar Singh.JPG';
+import pritamImg from '../assets/coaching-placement-toppers/Pritam.png';
+import aakashImg from '../assets/coaching-placement-toppers/Aakash.JPG';
+import jatinVermaImg from '../assets/coaching-placement-toppers/Jatin Verma.JPG';
+import nitinImg from '../assets/coaching-placement-toppers/Nitin.JPG';
+import rajThakurImg from '../assets/coaching-placement-toppers/Raj Thakur.JPG';
+import sanjayImg from '../assets/coaching-placement-toppers/Sanjay.JPG';
+import sureshGolaImg from '../assets/coaching-placement-toppers/Suresh Gola.JPG';
+
 const Placement = () => {
+  const placementToppers = [
+    {
+      name: 'Prachi Soni',
+      company: 'Maruti Suzuki',
+      image: prachiSoniImg
+    },
+    {
+      name: 'Prabhsimar Singh',
+      company: 'Maruti Suzuki',
+      image: prabhsimarSinghImg
+    },
+    {
+      name: 'Pritam',
+      company: 'Maruti Suzuki',
+      image: pritamImg
+    },
+    {
+      name: 'Aakash',
+      company: 'Top Company',
+      image: aakashImg
+    },
+    {
+      name: 'Jatin Verma',
+      company: 'Top Company',
+      image: jatinVermaImg
+    },
+    {
+      name: 'Nitin',
+      company: 'Top Company',
+      image: nitinImg
+    },
+    {
+      name: 'Raj Thakur',
+      company: 'Top Company',
+      image: rajThakurImg
+    },
+    {
+      name: 'Sanjay',
+      company: 'Top Company',
+      image: sanjayImg
+    },
+    {
+      name: 'Suresh Gola',
+      company: 'Top Company',
+      image: sureshGolaImg
+    }
+  ];
+
   const placementProcess = [
     {
       step: 1,
@@ -180,7 +239,10 @@ const Placement = () => {
         </Container>
       </section>
 
-        <CourseNavigation />
+      <div className="courses-heading-container">
+        <h2 className="courses-heading">Courses We Offer</h2>
+      </div>
+      <CourseNavigation />
 
       {/* Importance Section */}
       <section className="placement-section bg-light">
@@ -349,6 +411,10 @@ const Placement = () => {
           </Row>
         </Container>
       </section>
+
+   
+     
+          
 
       {/* Top Recruiters */}
       <section className="placement-section bg-light">

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
+import CourseNavigation from '../components/CourseNavigation';
 import './TestSeries.css';
 import phone1 from '../assets/test-series-phone/me-phone-1.jpg';
 import phone2 from '../assets/test-series-phone/me-phone-2.jpg';
@@ -22,6 +23,11 @@ const TestSeries = () => {
 
   return (
     <div className="test-series-page">
+      <div className="courses-heading-container">
+        <h2 className="courses-heading">Courses We Offer</h2>
+      </div>
+      <CourseNavigation />
+      
       {/* Main Content Section */}
       <section className="test-series-content">
         <Container>
