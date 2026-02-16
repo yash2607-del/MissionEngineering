@@ -16,6 +16,13 @@
   font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
+.brand-logo {
+  height: 50px;
+  width: auto;
+  object-fit: contain;
+  padding: 5px 0;
+}
+
 .brand-name:hover {
   color: #f3e490 !important;
 }
@@ -292,12 +299,24 @@
 @media (max-width: 991px) {
   .brand-name {
     font-size: 1.4rem;
+    padding: 0 10px;
+  }
+
+  .brand-logo {
+    height: 45px;
+  }
+
+  .navbar-brand {
+    margin-right: 0 !important;
+  }
+
+  .container-fluid {
+    padding: 0 15px;
   }
 
   .mobile-notification-wrapper {
     display: flex;
     align-items: center;
-    order: 3;
     margin-left: auto;
     margin-right: 10px;
   }
@@ -314,7 +333,8 @@
   }
 
   .navbar-toggler {
-    order: 4;
+    margin-left: 0;
+    padding: 8px 10px;
   }
   
   .custom-navbar .nav-item {

@@ -3,6 +3,7 @@ import { Badge, Navbar, Nav, Container, Dropdown } from 'react-bootstrap';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Bell, Megaphone, InfoCircle } from 'react-bootstrap-icons';
 import './Header.css';
+import missionLogo from '../assets/hero/mission_logo.png';
 
 import { useAuth } from '../auth/useAuth';
 import { fetchNotifications } from '../api/studentApi';
@@ -97,7 +98,8 @@ const Header = () => {
       <Navbar expand="lg" className="custom-navbar">
         <Container fluid>
           <Navbar.Brand as={Link} to="/" className="brand-name">
-            Mission Engineering
+            <span className="d-none d-lg-inline">Mission Engineering</span>
+            <img src={missionLogo} alt="Mission Engineering" className="brand-logo d-lg-none" />
           </Navbar.Brand>
           
           {/* Mobile Notification Icon - Outside Hamburger */}
