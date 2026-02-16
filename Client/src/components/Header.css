@@ -299,31 +299,28 @@
 @media (max-width: 991px) {
   .brand-name {
     font-size: 1.4rem;
-    padding: 0 10px;
-    flex: 0 0 auto;
+    padding: 0;
   }
 
   .brand-logo {
-    height: 45px;
+    height: 60px;
   }
 
   .navbar-brand {
     margin-right: 0 !important;
+    flex: 0 0 auto;
   }
 
   .container-fluid {
     padding: 0 15px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
   }
 
   .mobile-notification-wrapper {
     display: flex !important;
     align-items: center;
-    flex: 0 0 auto;
     margin-left: auto;
     margin-right: 10px;
+    flex: 0 0 auto;
   }
 
   .mobile-notification-btn {
@@ -331,9 +328,6 @@
     padding: 8px 12px !important;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 8px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
   }
 
   .mobile-notification-btn:hover {
@@ -341,7 +335,6 @@
   }
 
   .navbar-toggler {
-    margin-left: 0;
     padding: 8px 10px;
     flex: 0 0 auto;
   }
