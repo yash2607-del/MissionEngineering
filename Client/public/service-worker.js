@@ -1,4 +1,4 @@
-const CACHE_NAME = 'mission-engineering-v1';
+const CACHE_NAME = 'mission-engineering-v2';
 const urlsToCache = [
   '/',
   '/index.html',
@@ -21,6 +21,11 @@ self.addEventListener('install', (event) => {
 
 // Fetch event - serve from cache, fallback to network
 self.addEventListener('fetch', (event) => {
+  // Only cache http/https requests, skip chrome-extension and other schemes
+  if (!event.request.url.startsWith('http')) {
+    return;
+  }
+
   event.respondWith(
     caches.match(event.request)
       .then((response) => {
@@ -41,11 +46,17 @@ self.addEventListener('fetch', (event) => {
             caches.open(CACHE_NAME)
               .then((cache) => {
                 cache.put(event.request, responseToCache);
+              })
+              .catch((err) => {
+                console.log('Cache put error:', err);
               });
 
             return response;
           }
-        );
+        ).catch((err) => {
+          console.log('Fetch error:', err);
+          throw err;
+        });
       })
   );
 });
