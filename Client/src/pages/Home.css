@@ -1,5 +1,5 @@
 .hero-section {
-  padding: 0;
+  padding: 10px 0;
   position: relative;
   background-color: transparent;
   margin: 0;
@@ -13,29 +13,32 @@
   overflow: hidden;
   background-color: transparent;
   margin: 0;
-  padding: 0;
+  padding: 0 20px;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
 .hero-image {
-  width: 100%;
-  max-width: 100%;
+  width: 90%;
+  max-width: 90%;
   height: auto;
   display: block;
-  margin: 0;
+  margin: 0 auto;
   padding: 0;
-  object-fit: cover;
-  min-height: 450px;
+  object-fit: contain;
+  min-height: auto;
 }
 
 @media (max-width: 992px) {
   .hero-image-wrapper {
     height: auto;
+    padding: 0 15px;
   }
   
   .hero-image {
+    width: 90%;
+    max-width: 90%;
     object-fit: contain;
     min-height: auto;
     max-height: none;
@@ -43,7 +46,13 @@
 }
 
 @media (max-width: 768px) {
+  .hero-image-wrapper {
+    padding: 0 10px;
+  }
+
   .hero-image {
+    width: 100%;
+    max-width: 100%;
     object-fit: contain;
     min-height: auto;
     max-height: none;
@@ -51,15 +60,17 @@
 }
 
 @media (max-width: 576px) {
-  .hero-image {
-    object-fit: contain;
-    min-height: auto;
-    max-height: none;
+  .hero-section {
+    padding: 5px 0;
   }
-}
 
-@media (max-width: 480px) {
+  .hero-image-wrapper {
+    padding: 0 5px;
+  }
+
   .hero-image {
+    width: 100%;
+    max-width: 100%;
     object-fit: contain;
     min-height: auto;
     max-height: none;
@@ -72,7 +83,9 @@
   }
 
   .hero-image {
-    min-height: 500px;
+    width: 90%;
+    max-width: 90%;
+    min-height: auto;
   }
 }
 

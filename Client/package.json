@@ -6,6 +6,8 @@
   "scripts": {
     "dev": "vite",
     "build": "vite build",
+    "clean": "rm -rf dist",
+    "prebuild": "npm run clean",
     "lint": "eslint .",
     "preview": "vite preview"
   },
