@@ -6,8 +6,7 @@ import {
 
 import {
   FaMapMarkerAlt, FaPhone, FaEnvelope,
-  FaFacebook, FaTwitter, FaInstagram,
-  FaLinkedin, FaYoutube
+  
 } from 'react-icons/fa';
 
 import { useForm } from '@formspree/react';
@@ -40,6 +39,13 @@ const Contact = () => {
 
   return (
     <div className="contact-page">
+      {/* Page Header */}
+      <section className="page-header">
+        <Container>
+          <h1>Contact Us</h1>
+          <p className="lead">We'd love to hear from you. Get in touch with us today!</p>
+        </Container>
+      </section>
 
       <section className="contact-content py-5">
         <Container>

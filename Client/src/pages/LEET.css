@@ -642,6 +642,10 @@
 
 /* Responsive Design */
 @media (max-width: 768px) {
+  .leet-hero {
+    padding: 50px 20px;
+  }
+
   .hero-title {
     font-size: 2.5rem;
   }
@@ -694,6 +698,10 @@
 }
 
 @media (max-width: 576px) {
+  .leet-hero {
+    padding: 40px 15px;
+  }
+
   .hero-title {
     font-size: 2rem;
   }

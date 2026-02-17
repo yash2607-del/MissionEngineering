@@ -293,6 +293,10 @@
 }
 
 @media (max-width: 768px) {
+  .semester-header {
+    padding: 40px 15px;
+  }
+
   .semester-main-title {
     font-size: 1.8rem;
   }

@@ -51,7 +51,7 @@ const Home = () => {
             <Carousel.Item key={idx}>
               <div className="hero-image-wrapper">
                 <img
-                  className="d-block w-200 hero-image"
+                  className="d-block w-100 hero-image"
                   src={image}
                   alt={`Mission Engineering Hero ${idx + 1}`}
                 />
