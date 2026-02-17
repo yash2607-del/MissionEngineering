@@ -32,7 +32,7 @@ export default defineConfig({
         entryFileNames: 'assets/js/[name]-[hash].js',
       }
     },
-    cssCodeSplit: true,
+    cssCodeSplit: false,
   },
   server: {
     hmr: {
