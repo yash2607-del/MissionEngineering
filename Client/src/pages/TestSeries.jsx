@@ -2,12 +2,14 @@ import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import CourseNavigation from '../components/CourseNavigation';
 import './TestSeries.css';
-import phone1 from '../assets/test-series-phone/me-phone-1.jpg';
-import phone2 from '../assets/test-series-phone/me-phone-2.jpg';
-import phone3 from '../assets/test-series-phone/me-phone-3.jpg';
-import phone4 from '../assets/test-series-phone/me-phone-4.jpg';
-import phone5 from '../assets/test-series-phone/me-phone-5.jpg';
-import phone6 from '../assets/test-series-phone/me-phone-6.jpg';
+import { images } from '../../data';
+
+const phone1 = images.testSeriesPhone.phone1;
+const phone2 = images.testSeriesPhone.phone2;
+const phone3 = images.testSeriesPhone.phone3;
+const phone4 = images.testSeriesPhone.phone4;
+const phone5 = images.testSeriesPhone.phone5;
+const phone6 = images.testSeriesPhone.phone6;
 
 const TestSeries = () => {
   const testSeriesCards = [

@@ -3,10 +3,12 @@ import { Badge, Navbar, Nav, Container, Dropdown } from 'react-bootstrap';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Bell, Megaphone, InfoCircle } from 'react-bootstrap-icons';
 import './Header.css';
-import missionLogo from '../assets/hero/mission_logo.png';
+import { images } from '../../data';
 
 import { useAuth } from '../auth/useAuth';
 import { fetchNotifications } from '../api/studentApi';
+
+const missionLogo = images.hero.missionLogo;
 
 const Header = () => {
   const navigate = useNavigate();

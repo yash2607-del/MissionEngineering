@@ -3,17 +3,17 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 import CourseNavigation from '../components/CourseNavigation';
 import { FaCheckCircle, FaBriefcase, FaUserGraduate, FaHandshake, FaChartLine, FaAward, FaUsers, FaLightbulb } from 'react-icons/fa';
 import './Placement.css';
+import { images } from '../../data';
 
-// Import placement topper images
-import prachiSoniImg from '../assets/coaching-placement-toppers/Prachi Soni.JPG';
-import prabhsimarSinghImg from '../assets/coaching-placement-toppers/PrabhSimar Singh.JPG';
-import pritamImg from '../assets/coaching-placement-toppers/Pritam.png';
-import aakashImg from '../assets/coaching-placement-toppers/Aakash.JPG';
-import jatinVermaImg from '../assets/coaching-placement-toppers/Jatin Verma.JPG';
-import nitinImg from '../assets/coaching-placement-toppers/Nitin.JPG';
-import rajThakurImg from '../assets/coaching-placement-toppers/Raj Thakur.JPG';
-import sanjayImg from '../assets/coaching-placement-toppers/Sanjay.JPG';
-import sureshGolaImg from '../assets/coaching-placement-toppers/Suresh Gola.JPG';
+const prachiSoniImg = images.placementToppers.prachiSoni;
+const prabhsimarSinghImg = images.placementToppers.prabhsimarSingh;
+const pritamImg = images.placementToppers.pritam;
+const aakashImg = images.placementToppers.aakash;
+const jatinVermaImg = images.placementToppers.jatinVerma;
+const nitinImg = images.placementToppers.nitin;
+const rajThakurImg = images.placementToppers.rajThakur;
+const sanjayImg = images.placementToppers.sanjay;
+const sureshGolaImg = images.placementToppers.sureshGola;
 
 const Placement = () => {
   const placementToppers = [

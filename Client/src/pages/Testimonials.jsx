@@ -2,14 +2,14 @@ import React from 'react';
 import { Container, Card } from 'react-bootstrap';
 import { FaStar } from 'react-icons/fa';
 import './Testimonials.css';
+import { images } from '../../data';
 
-// Import LEET topper photos
-import AaditKapoorImg from '../assets/leet-toppers/Aadit Kapoor.JPG';
-import SpandanImg from '../assets/leet-toppers/Spandan.png';
-import SimranImg from '../assets/leet-toppers/SIMARAN.png';
-import KartikImg from '../assets/leet-toppers/Kartik.png';
-import ZahidImg from '../assets/leet-toppers/Zahid.jpg';
-import AkmalImg from '../assets/leet-toppers/AKMAL.png';
+const AaditKapoorImg = images.leetToppers.aaditKapoor;
+const SpandanImg = images.leetToppers.spandan;
+const SimranImg = images.leetToppers.simran;
+const KartikImg = images.leetToppers.kartik;
+const ZahidImg = images.leetToppers.zahid;
+const AkmalImg = images.leetToppers.akmal;
 
 const Testimonials = () => {
   const testimonials = [

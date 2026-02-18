@@ -2,12 +2,14 @@ import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaUserTie, FaChartLine, FaHeadset, FaBriefcase, FaHandshake, FaClipboardCheck, FaLinkedin, FaGithub } from 'react-icons/fa';
-import chairmanPhoto from '../assets/about_photo/chairman.png';
-import viceChairmanPhoto from '../assets/about_photo/vice-chairman.png';
-import ranjanSirPhoto from '../assets/about_photo/rajan-sir(director).png';
-import abhishekSirPhoto from '../assets/about_photo/abhishek-sir(director).png';
-import yashPhoto from '../assets/about_photo/YASH-PHOTO .jpg';
+import { images } from '../../data';
 import './About.css';
+
+const chairmanPhoto = images.aboutTeam.chairman;
+const viceChairmanPhoto = images.aboutTeam.viceChairman;
+const ranjanSirPhoto = images.aboutTeam.ranjanSir;
+const abhishekSirPhoto = images.aboutTeam.abhishekSir;
+const yashPhoto = images.aboutTeam.yash;
 
 const About = () => {
   const whyChooseCards = [
