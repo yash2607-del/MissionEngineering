@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
@@ -34,6 +34,14 @@ import ProtectedRoute from './auth/ProtectedRoute';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
 
+function ScrollToTop() {
+  const { pathname } = useLocation();
+  useEffect(() => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }, [pathname]);
+  return null;
+}
+
 function AppContent() {
   const location = useLocation();
 
@@ -51,6 +59,7 @@ function AppContent() {
 
   return (
     <div className="app-wrapper">
+      <ScrollToTop />
       {!hideHeader && <Header />}
 
       <main className="main-content">

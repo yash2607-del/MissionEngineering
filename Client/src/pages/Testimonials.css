@@ -58,20 +58,23 @@
 .testimonial-scroll-content {
   display: flex;
   gap: 28px;
-  animation: scroll-left 20s linear infinite;
+  animation: scroll-left 28s cubic-bezier(0.45, 0, 0.55, 1) infinite;
   width: max-content;
   align-items: center;
   justify-content: flex-start;
   padding-left: 0;
   will-change: transform;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  transform: translateZ(0);
 }
 
 @keyframes scroll-left {
   0% {
-    transform: translateX(0);
+    transform: translateX(0) translateZ(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(-50%) translateZ(0);
   }
 }
 
@@ -86,13 +89,15 @@
   border: none;
   border-radius: 18px;
   box-shadow: 0 2px 12px rgba(0, 82, 163, 0.08), 0 1.5px 6px rgba(0,0,0,0.04);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94), box-shadow 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   flex-shrink: 0;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
 }
 
 .testimonial-card:hover {
-  transform: translateY(-5px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 12px 28px rgba(0, 82, 163, 0.18), 0 4px 10px rgba(0,0,0,0.08);
 }
 
 .testimonial-card .card-body {
