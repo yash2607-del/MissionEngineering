@@ -58,28 +58,10 @@
 .testimonial-scroll-content {
   display: flex;
   gap: 28px;
-  animation: scroll-left 28s cubic-bezier(0.45, 0, 0.55, 1) infinite;
   width: max-content;
   align-items: center;
   justify-content: flex-start;
   padding-left: 0;
-  will-change: transform;
-  -webkit-backface-visibility: hidden;
-  backface-visibility: hidden;
-  transform: translateZ(0);
-}
-
-@keyframes scroll-left {
-  0% {
-    transform: translateX(0) translateZ(0);
-  }
-  100% {
-    transform: translateX(-50%) translateZ(0);
-  }
-}
-
-.testimonial-scroll-content:hover {
-  animation-play-state: paused;
 }
 
 .testimonial-card {

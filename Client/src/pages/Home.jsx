@@ -3,6 +3,7 @@ import { Container, Row, Col, Card, Carousel, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaChalkboardTeacher, FaBook, FaUsers, FaClipboardCheck } from 'react-icons/fa';
 import { images } from '../../data';
+import InfiniteScroller from '../components/InfiniteScroller';
 import './Home.css';
 
 const hero1 = images.hero.missionHero1;
@@ -427,7 +428,7 @@ const Home = () => {
           <div className="testimonial-row mb-5">
             <h3 className="testimonial-category-title">LEET EXAM</h3>
             <div className="testimonial-scroll-container">
-              <div className="testimonial-scroll-content">
+              <InfiniteScroller direction="left" speed={40}>
                 {[
                   {
                     name: 'Aadit Kapoor',
@@ -465,32 +466,7 @@ const Home = () => {
                     text: 'I, Md. Akmal, have secured AIR 1 in IPU LEET 2022 and Rank 2 in DTU LEET 2022 with the help of Mission Engineerings expert faculty and study material.',
                     photo: AkmalImg,
                   },
-                ].concat([
-                  {
-                    name: 'Aadit Kapoor',
-                    rank: 'AIR 1 - IPU LEET 2025',
-                    text: 'I, Aadit Kapoor, have secured AIR 1 in IPU LEET 2025 with the exceptional guidance and comprehensive study material provided by Mission Engineering.',
-                    photo: AaditKapoorImg,
-                  },
-                  {
-                    name: 'Spandan Choudhury',
-                    rank: 'Rank 1 - DTU LEET 2024, Rank 2 - IPU LEET 2024',
-                    text: 'I, Spandan Choudhury, have secured AIR 1 in DTU LEET 2024 and Rank 2 in IPU LEET 2024 with the dedicated support of Mission Engineering.',
-                    photo: SpandanImg,
-                  },
-                  {
-                    name: 'Simran Kumari',
-                    rank: 'Rank 1(F) - IPU LEET 2020',
-                    text: 'I, Simran Kumari, have secured AIR 1 (Female) in IPU LEET 2020. The focused guidance and regular tests at Mission Engineering helped me a lot.',
-                    photo: SimranImg,
-                  },
-                  {
-                    name: 'Kartik Dadhwal',
-                    rank: 'Rank 1 - DTU LEET 2022, Rank 9 - IPU LEET 2022',
-                    text: 'I, Kartik Dadhwal, have secured AIR 1 in DTU LEET 2022 and Rank 9 in IPU LEET 2022, thanks to the systematic coaching and test series.',
-                    photo: KartikImg,
-                  },
-                ]).map((testimonial, idx) => (
+                ].map((testimonial, idx) => (
                   <Card key={idx} className="testimonial-card">
                     <Card.Body>
                       <div className={`testimonial-avatar ${(testimonial.name === 'Spandan Choudhury' || testimonial.name === 'Md. Akmal' || testimonial.name === 'Simran Kumari' || testimonial.name === 'Kartik Dadhwal') ? 'white-bg' : ''}`}>
@@ -502,7 +478,7 @@ const Home = () => {
                     </Card.Body>
                   </Card>
                 ))}
-              </div>
+              </InfiniteScroller>
             </div>
           </div>
 
@@ -510,7 +486,7 @@ const Home = () => {
           <div className="testimonial-row mb-5">
             <h3 className="testimonial-category-title">POLYTECHNIC CAMPUS PLACEMENT</h3>
             <div className="testimonial-scroll-container">
-              <div className="testimonial-scroll-content scroll-reverse">
+              <InfiniteScroller direction="right" speed={35}>
                 {[
                   {
                     name: 'Prachi Soni',
@@ -566,32 +542,7 @@ const Home = () => {
                     text: 'I, Nitin, have got selected in a top company. The placement guidance at Mission Engineering was excellent.',
                     photo: NitinImg,
                   },
-                ].concat([
-                  {
-                    name: 'Prachi Soni',
-                    rank: 'Final Selection in Maruti Suzuki India Ltd.',
-                    text: 'I, Prachi Soni, have got selected in Maruti Suzuki India Ltd. with the excellent placement training and guidance provided by Mission Engineering.',
-                    photo: PrachiSoniImg,
-                  },
-                  {
-                    name: 'Prabhsimar Singh',
-                    rank: 'Final Selection in Maruti Suzuki India Ltd.',
-                    text: 'I, Prabhsimar Singh, have got selected in Maruti Suzuki India Ltd. The placement coaching at Mission Engineering was exceptional.',
-                    photo: PrabhsimarSinghImg,
-                  },
-                  {
-                    name: 'Pritam',
-                    rank: 'Final Selection in Samsung & S&B India',
-                    text: 'I, Pritam, have got selected in both Samsung Engineering and S&B India. Mission Engineering helped me achieve this dual placement.',
-                    photo: PritamImg,
-                  },
-                  {
-                    name: 'Raj Thakur',
-                    rank: 'Final Selection in S&B India',
-                    text: 'I, Raj Thakur, have got selected in S&B India with the excellent placement training and guidance provided by Mission Engineering.',
-                    photo: RajThakurImg,
-                  },
-                ]).map((testimonial, idx) => (
+                ].map((testimonial, idx) => (
                   <Card key={idx} className="testimonial-card">
                     <Card.Body>
                       <div className={`testimonial-avatar ${testimonial.name === 'Pritam' ? 'white-bg' : ''}`}>
@@ -603,7 +554,7 @@ const Home = () => {
                     </Card.Body>
                   </Card>
                 ))}
-              </div>
+              </InfiniteScroller>
             </div>
           </div>
         </Container>

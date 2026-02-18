@@ -3,6 +3,7 @@ import { Container, Card } from 'react-bootstrap';
 import { FaStar } from 'react-icons/fa';
 import './Testimonials.css';
 import { images } from '../../data';
+import InfiniteScroller from '../components/InfiniteScroller';
 
 const AaditKapoorImg = images.leetToppers.aaditKapoor;
 const SpandanImg = images.leetToppers.spandan;
@@ -63,9 +64,6 @@ const Testimonials = () => {
     },
   ];
 
-  // Create duplicated array for seamless infinite scroll
-  const duplicatedTestimonials = [...testimonials, ...testimonials];
-
   return (
     <div className="testimonials-page">
       <section className="page-header">
@@ -80,8 +78,8 @@ const Testimonials = () => {
           <h2 className="text-center mb-5">MISSION ENGINEERING TOPPERS</h2>
           
           <div className="testimonial-scroll-container">
-            <div className="testimonial-scroll-content">
-              {duplicatedTestimonials.map((testimonial, idx) => (
+            <InfiniteScroller direction="left" speed={35}>
+              {testimonials.map((testimonial, idx) => (
                 <Card key={idx} className="testimonial-card">
                   <Card.Body>
                     <div className={`testimonial-avatar ${(testimonial.name === 'Spandan Choudhury' || testimonial.name === 'Md. Akmal' || testimonial.name === 'Simran Kumari' || testimonial.name==='Kartik Dadhwal') ? 'white-bg' : ''}`}>
@@ -100,7 +98,7 @@ const Testimonials = () => {
                   </Card.Body>
                 </Card>
               ))}
-            </div>
+            </InfiniteScroller>
           </div>
         </Container>
       </section>
