@@ -1,52 +1,99 @@
-import React, { useEffect, useRef } from 'react';
+import React, { useEffect, useRef, useLayoutEffect, useMemo } from 'react';
 import gsap from 'gsap';
 
 const InfiniteScroller = ({ children, direction = 'left', speed = 50, className = '' }) => {
   const scrollerRef = useRef(null);
   const contentRef = useRef(null);
   const animationRef = useRef(null);
+  const isVisibleRef = useRef(false);
+  const isInitializedRef = useRef(false);
 
-  useEffect(() => {
+  // Memoize children to prevent unnecessary re-renders
+  const memoizedChildren = useMemo(() => children, [children]);
+
+  useLayoutEffect(() => {
     const scroller = scrollerRef.current;
     const content = contentRef.current;
     
-    if (!scroller || !content) return;
+    if (!scroller || !content || isInitializedRef.current) return;
 
-    // Clone content for seamless loop
-    const contentWidth = content.scrollWidth;
-    
-    // Set initial position based on direction
-    const startX = direction === 'left' ? 0 : -contentWidth / 2;
-    const endX = direction === 'left' ? -contentWidth / 2 : 0;
-    
-    // Calculate duration based on content width and speed
-    const duration = contentWidth / speed;
+    // Mark as initialized to prevent re-runs
+    isInitializedRef.current = true;
 
-    // Kill any existing animation
-    if (animationRef.current) {
-      animationRef.current.kill();
-    }
-
-    // Set initial position
-    gsap.set(content, { x: startX, force3D: true });
-
-    // Create the infinite scroll animation
-    animationRef.current = gsap.to(content, {
-      x: endX,
-      duration: duration,
-      ease: 'none',
-      repeat: -1,
-      force3D: true,
-      overwrite: true,
+    // Wait for images to load before calculating width
+    const images = content.querySelectorAll('img');
+    const imagePromises = Array.from(images).map(img => {
+      if (img.complete) return Promise.resolve();
+      return new Promise(resolve => {
+        img.onload = resolve;
+        img.onerror = resolve;
+      });
     });
 
-    // Pause on hover
+    Promise.all(imagePromises).then(() => {
+      // Get content width after images load
+      const contentWidth = content.scrollWidth / 2; // Divided by 2 since we duplicate
+      
+      // Set initial position based on direction
+      const startX = direction === 'left' ? 0 : -contentWidth;
+      const endX = direction === 'left' ? -contentWidth : 0;
+      
+      // Calculate duration based on content width and speed
+      const duration = contentWidth / speed;
+
+      // Set initial position immediately
+      gsap.set(content, { 
+        x: startX, 
+        force3D: true,
+        willChange: 'transform'
+      });
+
+      // Create the infinite scroll animation (paused initially)
+      animationRef.current = gsap.to(content, {
+        x: endX,
+        duration: duration,
+        ease: 'none',
+        repeat: -1,
+        force3D: true,
+        paused: true, // Start paused, will play when visible
+      });
+
+      // Start animation if already visible
+      if (isVisibleRef.current && animationRef.current) {
+        animationRef.current.play();
+      }
+    });
+
+    // Intersection Observer - only animate when in viewport
+    const observer = new IntersectionObserver(
+      (entries) => {
+        entries.forEach(entry => {
+          isVisibleRef.current = entry.isIntersecting;
+          if (animationRef.current) {
+            if (entry.isIntersecting) {
+              animationRef.current.play();
+            } else {
+              animationRef.current.pause();
+            }
+          }
+        });
+      },
+      { threshold: 0.1, rootMargin: '100px' }
+    );
+
+    observer.observe(scroller);
+
+    // Pause on hover with smooth transition
     const handleMouseEnter = () => {
-      gsap.to(animationRef.current, { timeScale: 0, duration: 0.5, ease: 'power2.out' });
+      if (animationRef.current) {
+        gsap.to(animationRef.current, { timeScale: 0, duration: 0.3, ease: 'power2.out' });
+      }
     };
 
     const handleMouseLeave = () => {
-      gsap.to(animationRef.current, { timeScale: 1, duration: 0.5, ease: 'power2.in' });
+      if (animationRef.current && isVisibleRef.current) {
+        gsap.to(animationRef.current, { timeScale: 1, duration: 0.3, ease: 'power2.in' });
+      }
     };
 
     scroller.addEventListener('mouseenter', handleMouseEnter);
@@ -56,10 +103,11 @@ const InfiniteScroller = ({ children, direction = 'left', speed = 50, className 
       if (animationRef.current) {
         animationRef.current.kill();
       }
+      observer.disconnect();
       scroller.removeEventListener('mouseenter', handleMouseEnter);
       scroller.removeEventListener('mouseleave', handleMouseLeave);
     };
-  }, [direction, speed, children]);
+  }, [direction, speed]);
 
   return (
     <div 
@@ -69,6 +117,7 @@ const InfiniteScroller = ({ children, direction = 'left', speed = 50, className 
         overflow: 'hidden',
         position: 'relative',
         width: '100%',
+        contain: 'layout style paint',
       }}
     >
       <div 
@@ -78,12 +127,14 @@ const InfiniteScroller = ({ children, direction = 'left', speed = 50, className 
           display: 'flex',
           gap: '28px',
           width: 'max-content',
-          willChange: 'transform',
+          backfaceVisibility: 'hidden',
+          perspective: 1000,
+          transform: 'translateZ(0)',
         }}
       >
-        {children}
-        {/* Duplicate children for seamless loop */}
-        {children}
+        {memoizedChildren}
+        {/* Duplicate for seamless loop */}
+        {memoizedChildren}
       </div>
     </div>
   );

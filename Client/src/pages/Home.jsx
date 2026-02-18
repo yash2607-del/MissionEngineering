@@ -470,7 +470,7 @@ const Home = () => {
                   <Card key={idx} className="testimonial-card">
                     <Card.Body>
                       <div className={`testimonial-avatar ${(testimonial.name === 'Spandan Choudhury' || testimonial.name === 'Md. Akmal' || testimonial.name === 'Simran Kumari' || testimonial.name === 'Kartik Dadhwal') ? 'white-bg' : ''}`}>
-                        <img src={testimonial.photo} alt={testimonial.name} />
+                        <img src={testimonial.photo} alt={testimonial.name} loading="eager" decoding="async" />
                       </div>
                       <h5 className="testimonial-name">{testimonial.name}</h5>
                       <p className="testimonial-rank">{testimonial.rank}</p>
@@ -546,7 +546,7 @@ const Home = () => {
                   <Card key={idx} className="testimonial-card">
                     <Card.Body>
                       <div className={`testimonial-avatar ${testimonial.name === 'Pritam' ? 'white-bg' : ''}`}>
-                        <img src={testimonial.photo} alt={testimonial.name} />
+                        <img src={testimonial.photo} alt={testimonial.name} loading="eager" decoding="async" />
                       </div>
                       <h5 className="testimonial-name">{testimonial.name}</h5>
                       <p className="testimonial-rank">{testimonial.rank}</p>

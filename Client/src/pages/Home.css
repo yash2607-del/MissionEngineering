@@ -472,6 +472,8 @@
   display: flex;
   align-items: center;
   justify-content: flex-start;
+  contain: layout style paint;
+  isolation: isolate;
 }
 
 .testimonial-scroll-content {
@@ -481,6 +483,7 @@
   align-items: center;
   justify-content: flex-start;
   padding-left: 0;
+  will-change: transform;
 }
 
 .testimonial-card {
@@ -494,6 +497,8 @@
   flex-shrink: 0;
   -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  transform: translateZ(0);
+  contain: content;
 }
 
 .testimonial-card:hover {
