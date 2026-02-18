@@ -11,17 +11,12 @@ createRoot(document.getElementById('root')).render(
   </StrictMode>,
 )
 
-// Register Service Worker for PWA
+// Unregister any previously installed service worker to prevent stale cache issues
 if ('serviceWorker' in navigator) {
-  window.addEventListener('load', () => {
-    navigator.serviceWorker
-      .register('/service-worker.js')
-      .then((registration) => {
-        console.log('Service Worker registered successfully:', registration.scope);
-      })
-      .catch((error) => {
-        console.log('Service Worker registration failed:', error);
-      });
+  navigator.serviceWorker.getRegistrations().then((registrations) => {
+    for (const registration of registrations) {
+      registration.unregister();
+    }
   });
 }
 
