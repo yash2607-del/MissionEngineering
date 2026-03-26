@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React, { lazy, Suspense, useEffect } from 'react';
 import {
   BrowserRouter as Router,
   Routes,
@@ -10,23 +10,23 @@ import {
 import Header from './components/Header';
 import Footer from './components/Footer';
 
-import Home from './pages/Home';
-import About from './pages/About';
-import Courses from './pages/Courses';
-import ClassroomCourse from './pages/ClassroomCourse';
-import LiveOnlineCourse from './pages/LiveOnlineCourse';
-import RecordedCourse from './pages/RecordedCourse';
-import TestSeries from './pages/TestSeries';
-import Coaching from './pages/Coaching';
-import Testimonials from './pages/Testimonials';
-import Contact from './pages/Contact';
-import LEET from './pages/LEET';
-import Placement from './pages/Placement';
-import Polytechnic from './pages/Polytechnic';
-import FeeStructure from './pages/FeeStructure';
-import SemesterCoaching from './pages/SemesterCoaching';
-import Login from './pages/Login';
-import AdminDashboard from './pages/AdminDashboard';
+const Home = lazy(() => import('./pages/Home'));
+const About = lazy(() => import('./pages/About'));
+const Courses = lazy(() => import('./pages/Courses'));
+const ClassroomCourse = lazy(() => import('./pages/ClassroomCourse'));
+const LiveOnlineCourse = lazy(() => import('./pages/LiveOnlineCourse'));
+const RecordedCourse = lazy(() => import('./pages/RecordedCourse'));
+const TestSeries = lazy(() => import('./pages/TestSeries'));
+const Coaching = lazy(() => import('./pages/Coaching'));
+const Testimonials = lazy(() => import('./pages/Testimonials'));
+const Contact = lazy(() => import('./pages/Contact'));
+const LEET = lazy(() => import('./pages/LEET'));
+const Placement = lazy(() => import('./pages/Placement'));
+const Polytechnic = lazy(() => import('./pages/Polytechnic'));
+const FeeStructure = lazy(() => import('./pages/FeeStructure'));
+const SemesterCoaching = lazy(() => import('./pages/SemesterCoaching'));
+const Login = lazy(() => import('./pages/Login'));
+const AdminDashboard = lazy(() => import('./pages/AdminDashboard'));
 
 import ProtectedRoute from './auth/ProtectedRoute';
 
@@ -58,35 +58,37 @@ function AppContent() {
       {!hideHeader && <Header />}
 
       <main className="main-content">
-        <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/about" element={<About />} />
-          <Route path="/courses" element={<Courses />} />
-          <Route path="/classroom-course" element={<ClassroomCourse />} />
-          <Route path="/live-online-course" element={<LiveOnlineCourse />} />
-          <Route path="/recorded-course" element={<RecordedCourse />} />
-          <Route path="/test-series" element={<TestSeries />} />
-          <Route path="/coaching" element={<Coaching />} />
-          <Route path="/testimonials" element={<Testimonials />} />
-          <Route path="/contact" element={<Contact />} />
-          <Route path="/leet" element={<LEET />} />
-          <Route path="/placement" element={<Placement />} />
-          <Route path="/polytechnic" element={<Polytechnic />} />
-          <Route path="/fee-structure" element={<FeeStructure />} />
-          <Route path="/semester-coaching" element={<SemesterCoaching />} />
-          <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Navigate to="/login" replace />} />
+        <Suspense fallback={<div className="text-center py-5">Loading...</div>}>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/about" element={<About />} />
+            <Route path="/courses" element={<Courses />} />
+            <Route path="/classroom-course" element={<ClassroomCourse />} />
+            <Route path="/live-online-course" element={<LiveOnlineCourse />} />
+            <Route path="/recorded-course" element={<RecordedCourse />} />
+            <Route path="/test-series" element={<TestSeries />} />
+            <Route path="/coaching" element={<Coaching />} />
+            <Route path="/testimonials" element={<Testimonials />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/leet" element={<LEET />} />
+            <Route path="/placement" element={<Placement />} />
+            <Route path="/polytechnic" element={<Polytechnic />} />
+            <Route path="/fee-structure" element={<FeeStructure />} />
+            <Route path="/semester-coaching" element={<SemesterCoaching />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Navigate to="/login" replace />} />
 
-          <Route path="/student-dashboard" element={<Navigate to="/admin-dashboard" replace />} />
-          <Route
-            path="/admin-dashboard"
-            element={
-              <ProtectedRoute allowedRoles={['admin']}>
-                <AdminDashboard />
-              </ProtectedRoute>
-            }
-          />
-        </Routes>
+            <Route path="/student-dashboard" element={<Navigate to="/admin-dashboard" replace />} />
+            <Route
+              path="/admin-dashboard"
+              element={
+                <ProtectedRoute allowedRoles={['admin']}>
+                  <AdminDashboard />
+                </ProtectedRoute>
+              }
+            />
+          </Routes>
+        </Suspense>
       </main>
 
       {!hideFooter && <Footer />}

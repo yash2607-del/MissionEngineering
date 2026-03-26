@@ -1,6 +1,6 @@
 import React, { useEffect, useMemo, useState } from 'react';
 import { Badge, Navbar, Nav, Container, Dropdown } from 'react-bootstrap';
-import { Link, useNavigate, useLocation } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import { Bell, Megaphone, InfoCircle } from 'react-bootstrap-icons';
 import './Header.css';
 import { images } from '../../data';
@@ -12,7 +12,6 @@ const missionLogo = images.hero.missionLogo;
 
 const Header = () => {
   const navigate = useNavigate();
-  const location = useLocation();
   const { isAuthenticated, user, token, logout } = useAuth();
 
   const [notifications, setNotifications] = useState([]);
@@ -71,27 +70,6 @@ const Header = () => {
   const handleLogout = () => {
     logout();
     navigate('/');
-  };
-
-  const handleTestimonialsClick = (e) => {
-    e.preventDefault();
-    
-    if (location.pathname === '/') {
-      // Already on home page, just scroll
-      const testimonialsSection = document.getElementById('testimonials');
-      if (testimonialsSection) {
-        testimonialsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }
-    } else {
-      // Navigate to home page, then scroll after navigation
-      navigate('/');
-      setTimeout(() => {
-        const testimonialsSection = document.getElementById('testimonials');
-        if (testimonialsSection) {
-          testimonialsSection.scrollIntoView({ behavior: 'smooth', block: 'start' });
-        }
-      }, 100);
-    }
   };
 
   return (

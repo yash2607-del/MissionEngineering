@@ -18,8 +18,6 @@ export default defineConfig({
           'bootstrap': ['bootstrap', 'react-bootstrap'],
         },
         assetFileNames: (assetInfo) => {
-          const info = assetInfo.name.split('.');
-          const ext = info[info.length - 1];
           if (/\.(png|jpe?g|svg|gif|tiff|bmp|ico)$/i.test(assetInfo.name)) {
             return `assets/images/[name]-[hash][extname]`;
           }
@@ -32,7 +30,7 @@ export default defineConfig({
         entryFileNames: 'assets/js/[name]-[hash].js',
       }
     },
-    cssCodeSplit: false,
+    cssCodeSplit: true,
   },
   server: {
     hmr: {

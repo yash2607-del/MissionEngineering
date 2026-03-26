@@ -1,12 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Container, Row, Col, Card, Accordion, Table } from 'react-bootstrap';
 import CourseNavigation from '../components/CourseNavigation';
 import { FaCheckCircle, FaBook, FaUserGraduate, FaChartLine, FaClock, FaQuestionCircle, FaUsers, FaHandPointRight } from 'react-icons/fa';
 import './LEET.css';
 
 const LEET = () => {
-  const [activeKey, setActiveKey] = useState(null);
-
   const tableOfContents = [
     { id: 'eligibility', title: 'LEET Eligibility Criteria' },
     { id: 'ipu-pattern', title: 'IPU LEET Exam Pattern' },

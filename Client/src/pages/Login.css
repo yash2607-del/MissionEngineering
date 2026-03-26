@@ -190,18 +190,6 @@
   margin: 0;
 }
 
-.signup-link {
-  color: #0052a3;
-  text-decoration: none;
-  font-weight: 700;
-  transition: color 0.3s ease;
-}
-
-.signup-link:hover {
-  color: #003d7a;
-  text-decoration: underline;
-}
-
 @media (max-width: 768px) {
   .auth-back-container {
     padding: 12px 0;

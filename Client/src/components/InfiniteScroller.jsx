@@ -1,4 +1,4 @@
-import React, { useEffect, useRef, useLayoutEffect, useMemo } from 'react';
+import React, { useRef, useLayoutEffect, useMemo } from 'react';
 import gsap from 'gsap';
 
 const InfiniteScroller = ({ children, direction = 'left', speed = 50, className = '' }) => {
