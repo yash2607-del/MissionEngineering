@@ -60,14 +60,14 @@ const Login = () => {
     
     setLoading(true);
     try {
-      const user = await login({ email: formData.email, password: formData.password });
+      await login({ email: formData.email, password: formData.password });
 
       if (from) {
         navigate(from, { replace: true });
         return;
       }
 
-      navigate(user.role === 'admin' ? '/admin-dashboard' : '/student-dashboard', { replace: true });
+      navigate('/admin-dashboard', { replace: true });
     } catch (err) {
       setError(err?.message || 'Login failed');
     } finally {
@@ -160,9 +160,7 @@ const Login = () => {
                   </Button>
 
                   <div className="text-center">
-                    <p className="signup-text">
-                      Don't have an account? <Link to="/signup" className="signup-link">Sign Up</Link>
-                    </p>
+                    <p className="signup-text">Admin login only</p>
                   </div>
                 </Form>
               </Card.Body>

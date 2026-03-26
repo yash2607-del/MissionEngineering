@@ -227,13 +227,12 @@ const Header = () => {
               {!isAuthenticated ? (
                 <>
                   <Nav.Link as={Link} to="/login" className="nav-item-login">LOGIN</Nav.Link>
-                  <Nav.Link as={Link} to="/signup" className="nav-item-signup">SIGN UP</Nav.Link>
                 </>
               ) : (
                 <>
                   <Nav.Link
                     as={Link}
-                    to={user?.role === 'admin' ? '/admin-dashboard' : '/student-dashboard'}
+                    to="/admin-dashboard"
                     className="nav-item"
                   >
                     Dashboard

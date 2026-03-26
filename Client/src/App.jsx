@@ -3,6 +3,7 @@ import {
   BrowserRouter as Router,
   Routes,
   Route,
+  Navigate,
   useLocation
 } from 'react-router-dom';
 
@@ -25,8 +26,6 @@ import Polytechnic from './pages/Polytechnic';
 import FeeStructure from './pages/FeeStructure';
 import SemesterCoaching from './pages/SemesterCoaching';
 import Login from './pages/Login';
-import Signup from './pages/Signup';
-import StudentDashboard from './pages/StudentDashboard';
 import AdminDashboard from './pages/AdminDashboard';
 
 import ProtectedRoute from './auth/ProtectedRoute';
@@ -47,14 +46,10 @@ function AppContent() {
 
   const hideFooter =
     location.pathname === '/login' ||
-    location.pathname === '/signup' ||
-    location.pathname === '/student-dashboard' ||
     location.pathname === '/admin-dashboard';
 
   const hideHeader = 
     location.pathname === '/login' || 
-    location.pathname === '/signup' ||
-    location.pathname === '/student-dashboard' ||
     location.pathname === '/admin-dashboard';
 
   return (
@@ -80,16 +75,9 @@ function AppContent() {
           <Route path="/fee-structure" element={<FeeStructure />} />
           <Route path="/semester-coaching" element={<SemesterCoaching />} />
           <Route path="/login" element={<Login />} />
-          <Route path="/signup" element={<Signup />} />
+          <Route path="/signup" element={<Navigate to="/login" replace />} />
 
-          <Route
-            path="/student-dashboard"
-            element={
-              <ProtectedRoute allowedRoles={['student']}>
-                <StudentDashboard />
-              </ProtectedRoute>
-            }
-          />
+          <Route path="/student-dashboard" element={<Navigate to="/admin-dashboard" replace />} />
           <Route
             path="/admin-dashboard"
             element={

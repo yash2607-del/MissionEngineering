@@ -143,12 +143,7 @@
   background: #e3f2fd;
 }
 
-.social-icon:hover {
-  color: #ffffff;
-  background: linear-gradient(135deg, #0052a3 0%, #003d7a 100%);
-  transform: translateY(-3px);
-  box-shadow: 0 4px 15px rgba(0, 82, 163, 0.3);
-}
+
 
 .member-description {
   font-size: 1rem;

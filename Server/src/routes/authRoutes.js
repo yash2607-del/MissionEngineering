@@ -19,7 +19,15 @@ function normalizeEmail(email) {
   return String(email || '').toLowerCase().trim();
 }
 
+function isAdminOnlyMode() {
+  return String(process.env.ADMIN_ONLY_MODE || 'true').toLowerCase() !== 'false';
+}
+
 router.post('/signup', async (req, res) => {
+  if (isAdminOnlyMode()) {
+    return res.status(403).json({ message: 'Student signup is currently disabled' });
+  }
+
   const { fullName, email, phone, password } = req.body || {};
 
   if (!fullName || !email || !phone || !password) {
@@ -80,6 +88,10 @@ router.post('/login', async (req, res) => {
     };
     const token = signToken({ id: 'admin', email: adminEmail, role: 'admin', fullName: adminFullName });
     return res.json({ token, user: sanitizeUser(baseAdmin, 'admin') });
+  }
+
+  if (isAdminOnlyMode()) {
+    return res.status(403).json({ message: 'Only admin login is currently enabled' });
   }
 
   try {
