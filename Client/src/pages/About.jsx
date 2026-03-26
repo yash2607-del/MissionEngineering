@@ -200,7 +200,7 @@ const About = () => {
             <Col lg={6} md={12} className="team-content-col">
               <div className="team-content">
                 <h3 className="member-name">Yash Raj</h3>
-                <h2 className="member-title">LEAD WEB DEVELOPER</h2>
+                <h2 className="member-title">FULL STACK WEB DEVELOPER</h2>
                 <div className="social-links mb-3">
                   <a href="https://www.linkedin.com/in/yashh26/" target="_blank" rel="noopener noreferrer" className="social-icon">
                     <FaLinkedin size={30} />
