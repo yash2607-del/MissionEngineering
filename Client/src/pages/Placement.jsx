@@ -3,8 +3,67 @@ import { Container, Row, Col, Card } from 'react-bootstrap';
 import CourseNavigation from '../components/CourseNavigation';
 import { FaCheckCircle, FaBriefcase, FaUserGraduate, FaHandshake, FaChartLine, FaAward, FaUsers, FaLightbulb } from 'react-icons/fa';
 import './Placement.css';
+import { images } from '../../data';
+
+const prachiSoniImg = images.placementToppers.prachiSoni;
+const prabhsimarSinghImg = images.placementToppers.prabhsimarSingh;
+const pritamImg = images.placementToppers.pritam;
+const aakashImg = images.placementToppers.aakash;
+const jatinVermaImg = images.placementToppers.jatinVerma;
+const nitinImg = images.placementToppers.nitin;
+const rajThakurImg = images.placementToppers.rajThakur;
+const sanjayImg = images.placementToppers.sanjay;
+const sureshGolaImg = images.placementToppers.sureshGola;
 
 const Placement = () => {
+  const placementToppers = [
+    {
+      name: 'Prachi Soni',
+      company: 'Maruti Suzuki',
+      image: prachiSoniImg
+    },
+    {
+      name: 'Prabhsimar Singh',
+      company: 'Maruti Suzuki',
+      image: prabhsimarSinghImg
+    },
+    {
+      name: 'Pritam',
+      company: 'Maruti Suzuki',
+      image: pritamImg
+    },
+    {
+      name: 'Aakash',
+      company: 'Top Company',
+      image: aakashImg
+    },
+    {
+      name: 'Jatin Verma',
+      company: 'Top Company',
+      image: jatinVermaImg
+    },
+    {
+      name: 'Nitin',
+      company: 'Top Company',
+      image: nitinImg
+    },
+    {
+      name: 'Raj Thakur',
+      company: 'Top Company',
+      image: rajThakurImg
+    },
+    {
+      name: 'Sanjay',
+      company: 'Top Company',
+      image: sanjayImg
+    },
+    {
+      name: 'Suresh Gola',
+      company: 'Top Company',
+      image: sureshGolaImg
+    }
+  ];
+
   const placementProcess = [
     {
       step: 1,

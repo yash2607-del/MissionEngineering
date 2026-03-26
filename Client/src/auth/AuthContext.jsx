@@ -1,7 +1,8 @@
-import React, { useCallback, useMemo, useState } from 'react';
+import React, { createContext, useCallback, useMemo, useState } from 'react';
 import { apiRequest } from '../api/http';
 import { clearAuth, getStoredAuth, storeAuth } from './authStorage';
-import { AuthContext } from './AuthContextValue';
+
+export const AuthContext = createContext(null);
 
 export function AuthProvider({ children }) {
   const initial = getStoredAuth();
@@ -22,6 +23,18 @@ export function AuthProvider({ children }) {
     return data.user;
   }, []);
 
+  const signup = useCallback(async ({ fullName, email, phone, password }) => {
+    const data = await apiRequest('/api/auth/signup', {
+      method: 'POST',
+      body: { fullName, email, phone, password }
+    });
+
+    storeAuth({ token: data.token, user: data.user });
+    setToken(data.token);
+    setUser(data.user);
+    return data.user;
+  }, []);
+
   const logout = useCallback(() => {
     clearAuth();
     setToken(null);
@@ -29,8 +42,8 @@ export function AuthProvider({ children }) {
   }, []);
 
   const value = useMemo(
-    () => ({ token, user, isAuthenticated, login, logout }),
-    [token, user, isAuthenticated, login, logout]
+    () => ({ token, user, isAuthenticated, login, signup, logout }),
+    [token, user, isAuthenticated, login, signup, logout]
   );
 
   return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>;
