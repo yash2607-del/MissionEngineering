@@ -1,6 +1,6 @@
 # Mission Engineering
 
-Mission Engineering is a specialized platform built to help students with course discovery and placement preparation. This project was developed for a mentor who is an expert in competitive programming coaching (LeetCode), diploma studies, and polytechnic placements.
+Mission Engineering is a specialized platform built to help students with course discovery and placement preparation. This project was developed for a mentor who is an expert in competitive IPU leet , polytechnic coaching, and polytechnic placements.
 
 ## Project Overview
 
@@ -26,5 +26,4 @@ The project uses a reliable and modern set of tools to ensure the website is fas
 
 - **Course Search**: A simple way for students to explore available coaching and courses.
 - **User Dashboards**: Private areas for users to manage their profiles and access specific content.
-- **Placement Support**: Specific sections dedicated to helping diploma and polytechnic students find jobs.
 - **Direct Contact**: A built-in system to allow students to communicate directly with their mentors.
