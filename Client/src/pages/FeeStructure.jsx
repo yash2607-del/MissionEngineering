@@ -67,7 +67,7 @@ const FeeStructure = () => {
               {/* Delhi LEET 2025 Fee Structure */}
               <Accordion defaultActiveKey="0">
                 <Accordion.Item eventKey="0" className="fee-accordion-item">
-                  <Accordion.Header>Delhi LEET 2025 Fee Structure</Accordion.Header>
+                  <Accordion.Header>Delhi LEET 2026 Fee Structure</Accordion.Header>
                   <Accordion.Body>
                     <div className="table-responsive">
                       <Table className="fee-table">
@@ -86,8 +86,8 @@ const FeeStructure = () => {
                             <td>1</td>
                             <td>Offline</td>
                             <td>1000</td>
-                            <td>19000</td>
-                            <td>20000</td>
+                            <td>21000</td>
+                            <td>22000</td>
                             <td>3</td>
                           </tr>
                           <tr>
@@ -138,7 +138,7 @@ const FeeStructure = () => {
 
                 {/* CUET LEET 2025 Fee Structure */}
                 <Accordion.Item eventKey="1" className="fee-accordion-item">
-                  <Accordion.Header>CUET LEET 2025 Fee Structure</Accordion.Header>
+                  <Accordion.Header>CUET LEET 2026 Fee Structure</Accordion.Header>
                   <Accordion.Body>
                     <div className="table-responsive">
                       <Table className="fee-table">
@@ -157,8 +157,8 @@ const FeeStructure = () => {
                             <td>1</td>
                             <td>Offline</td>
                             <td>1000</td>
-                            <td>19000</td>
-                            <td>20000</td>
+                            <td>21000</td>
+                            <td>22000</td>
                             <td>3</td>
                           </tr>
                           <tr>
@@ -209,7 +209,7 @@ const FeeStructure = () => {
 
                 {/* All India LEET 2025 Fee Structure */}
                 <Accordion.Item eventKey="2" className="fee-accordion-item">
-                  <Accordion.Header>All India LEET 2025 Fee Structure</Accordion.Header>
+                  <Accordion.Header>All India LEET 2026 Fee Structure</Accordion.Header>
                   <Accordion.Body>
                     <div className="table-responsive">
                       <Table className="fee-table">
@@ -270,219 +270,6 @@ const FeeStructure = () => {
                             <td>–</td>
                             <td>–</td>
                             <td>2000</td>
-                            <td>1</td>
-                          </tr>
-                        </tbody>
-                      </Table>
-                    </div>
-                  </Accordion.Body>
-                </Accordion.Item>
-
-                {/* Delhi LEET 2026 Fee Structure */}
-                <Accordion.Item eventKey="3" className="fee-accordion-item">
-                  <Accordion.Header>Delhi LEET 2026 Fee Structure</Accordion.Header>
-                  <Accordion.Body>
-                    <div className="table-responsive">
-                      <Table className="fee-table">
-                        <thead>
-                          <tr>
-                            <th>Sr. No.</th>
-                            <th>Course</th>
-                            <th>Registration Fee</th>
-                            <th>Tuition Fee</th>
-                            <th>Total Fee</th>
-                            <th>Installment</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>1</td>
-                            <td>Offline</td>
-                            <td>1000</td>
-                            <td>29000</td>
-                            <td>30000</td>
-                            <td>3</td>
-                          </tr>
-                          <tr>
-                            <td>2</td>
-                            <td>Online (Live + Recorded)</td>
-                            <td>1000</td>
-                            <td>20000</td>
-                            <td>21000</td>
-                            <td>2</td>
-                          </tr>
-                          <tr>
-                            <td>3</td>
-                            <td>Online (Recorded)</td>
-                            <td>–</td>
-                            <td>12000</td>
-                            <td>12000</td>
-                            <td>1</td>
-                          </tr>
-                          <tr>
-                            <td>4</td>
-                            <td>Study Material (Hard Copy – At Door Step)</td>
-                            <td>–</td>
-                            <td>–</td>
-                            <td>3000</td>
-                            <td>1</td>
-                          </tr>
-                          <tr>
-                            <td>5</td>
-                            <td>Study Material (Soft Copy – In the App)</td>
-                            <td>–</td>
-                            <td>–</td>
-                            <td>750</td>
-                            <td>1</td>
-                          </tr>
-                          <tr>
-                            <td>6</td>
-                            <td>Test Series</td>
-                            <td>–</td>
-                            <td>–</td>
-                            <td>1500</td>
-                            <td>1</td>
-                          </tr>
-                        </tbody>
-                      </Table>
-                    </div>
-                  </Accordion.Body>
-                </Accordion.Item>
-
-                {/* CUET LEET 2026 Fee Structure */}
-                <Accordion.Item eventKey="4" className="fee-accordion-item">
-                  <Accordion.Header>CUET LEET 2026 Fee Structure</Accordion.Header>
-                  <Accordion.Body>
-                    <div className="table-responsive">
-                      <Table className="fee-table">
-                        <thead>
-                          <tr>
-                            <th>Sr. No.</th>
-                            <th>Course</th>
-                            <th>Registration Fee</th>
-                            <th>Tuition Fee</th>
-                            <th>Total Fee</th>
-                            <th>Installment</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>1</td>
-                            <td>Offline</td>
-                            <td>1000</td>
-                            <td>29000</td>
-                            <td>30000</td>
-                            <td>3</td>
-                          </tr>
-                          <tr>
-                            <td>2</td>
-                            <td>Online (Live + Recorded)</td>
-                            <td>1000</td>
-                            <td>20000</td>
-                            <td>21000</td>
-                            <td>2</td>
-                          </tr>
-                          <tr>
-                            <td>3</td>
-                            <td>Online (Recorded)</td>
-                            <td>–</td>
-                            <td>12000</td>
-                            <td>12000</td>
-                            <td>1</td>
-                          </tr>
-                          <tr>
-                            <td>4</td>
-                            <td>Study Material (Hard Copy – At Door Step)</td>
-                            <td>–</td>
-                            <td>–</td>
-                            <td>3000</td>
-                            <td>1</td>
-                          </tr>
-                          <tr>
-                            <td>5</td>
-                            <td>Study Material (Soft Copy – In the App)</td>
-                            <td>–</td>
-                            <td>–</td>
-                            <td>750</td>
-                            <td>1</td>
-                          </tr>
-                          <tr>
-                            <td>6</td>
-                            <td>Test Series</td>
-                            <td>–</td>
-                            <td>–</td>
-                            <td>1500</td>
-                            <td>1</td>
-                          </tr>
-                        </tbody>
-                      </Table>
-                    </div>
-                  </Accordion.Body>
-                </Accordion.Item>
-
-                {/* All India LEET 2026 Fee Structure */}
-                <Accordion.Item eventKey="5" className="fee-accordion-item">
-                  <Accordion.Header>All India LEET 2026 Fee Structure</Accordion.Header>
-                  <Accordion.Body>
-                    <div className="table-responsive">
-                      <Table className="fee-table">
-                        <thead>
-                          <tr>
-                            <th>Sr. No.</th>
-                            <th>Course</th>
-                            <th>Registration Fee</th>
-                            <th>Tuition Fee</th>
-                            <th>Total Fee</th>
-                            <th>Installment</th>
-                          </tr>
-                        </thead>
-                        <tbody>
-                          <tr>
-                            <td>1</td>
-                            <td>Offline</td>
-                            <td>1000</td>
-                            <td>36500</td>
-                            <td>37500</td>
-                            <td>3</td>
-                          </tr>
-                          <tr>
-                            <td>2</td>
-                            <td>Online (Live + Recorded)</td>
-                            <td>1000</td>
-                            <td>25250</td>
-                            <td>26250</td>
-                            <td>2</td>
-                          </tr>
-                          <tr>
-                            <td>3</td>
-                            <td>Online (Recorded)</td>
-                            <td>–</td>
-                            <td>15000</td>
-                            <td>15000</td>
-                            <td>1</td>
-                          </tr>
-                          <tr>
-                            <td>4</td>
-                            <td>Study Material (Hard Copy – At Door Step)</td>
-                            <td>–</td>
-                            <td>–</td>
-                            <td>4000</td>
-                            <td>1</td>
-                          </tr>
-                          <tr>
-                            <td>5</td>
-                            <td>Study Material (Soft Copy – In the App)</td>
-                            <td>–</td>
-                            <td>–</td>
-                            <td>1500</td>
-                            <td>1</td>
-                          </tr>
-                          <tr>
-                            <td>6</td>
-                            <td>Test Series</td>
-                            <td>–</td>
-                            <td>–</td>
-                            <td>3000</td>
                             <td>1</td>
                           </tr>
                         </tbody>
