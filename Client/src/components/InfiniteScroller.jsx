@@ -6,7 +6,6 @@ const InfiniteScroller = ({ children, direction = 'left', speed = 50, className 
   const contentRef = useRef(null);
   const animationRef = useRef(null);
   const isVisibleRef = useRef(false);
-  const isInitializedRef = useRef(false);
 
   // Memoize children to prevent unnecessary re-renders
   const memoizedChildren = useMemo(() => children, [children]);
@@ -15,10 +14,7 @@ const InfiniteScroller = ({ children, direction = 'left', speed = 50, className 
     const scroller = scrollerRef.current;
     const content = contentRef.current;
     
-    if (!scroller || !content || isInitializedRef.current) return;
-
-    // Mark as initialized to prevent re-runs
-    isInitializedRef.current = true;
+    if (!scroller || !content) return;
 
     // Wait for images to load before calculating width
     const images = content.querySelectorAll('img');
@@ -102,7 +98,9 @@ const InfiniteScroller = ({ children, direction = 'left', speed = 50, className 
     return () => {
       if (animationRef.current) {
         animationRef.current.kill();
+        animationRef.current = null;
       }
+      isVisibleRef.current = false;
       observer.disconnect();
       scroller.removeEventListener('mouseenter', handleMouseEnter);
       scroller.removeEventListener('mouseleave', handleMouseLeave);

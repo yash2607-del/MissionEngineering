@@ -45,6 +45,40 @@ const Home = () => {
 
   return (
     <div className="home-page">
+      <div className="announcement-strip" role="status" aria-label="Latest announcements">
+        <div className="announcement-strip-track">
+          <div className="announcement-strip-group">
+            <span className="announcement-strip-message">13 students in Top 25 LEET 2026</span>
+            <span className="announcement-strip-divider">•</span>
+            <span className="announcement-strip-message">New Batch Starts LEET 2027</span>
+            <span className="announcement-strip-divider">•</span>
+            <span className="announcement-strip-message">Book Your Seat Now</span>
+
+          </div>
+          <div className="announcement-strip-group" aria-hidden="true">
+            <span className="announcement-strip-message">13 students in Top 25 LEET 2026</span>
+            <span className="announcement-strip-divider">•</span>
+            <span className="announcement-strip-message">New Batch Starts LEET 2027</span>
+            <span className="announcement-strip-divider">•</span>
+            <span className="announcement-strip-message">Book Your Seat Now</span>
+          </div>
+          <div className="announcement-strip-group" aria-hidden="true">
+            <span className="announcement-strip-message">13 students in Top 25 LEET 2026</span>
+            <span className="announcement-strip-divider">•</span>
+            <span className="announcement-strip-message">New Batch Starts LEET 2027</span>
+            <span className="announcement-strip-divider">•</span>
+            <span className="announcement-strip-message">Book Your Seat Now</span>
+          </div>
+          <div className="announcement-strip-group" aria-hidden="true">
+            <span className="announcement-strip-message">13 students in Top 25 LEET 2026</span>
+            <span className="announcement-strip-divider">•</span>
+            <span className="announcement-strip-message">New Batch Starts LEET 2027</span>
+            <span className="announcement-strip-divider">•</span>
+            <span className="announcement-strip-message">Book Your Seat Now</span>
+          </div>
+        </div>
+      </div>
+
       {/* Hero Section with Image Carousel */}
       <section className="hero-section">
         <Carousel activeIndex={index} onSelect={handleSelect} indicators={true} controls={true} interval={2000} fade>
