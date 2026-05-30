@@ -45,6 +45,23 @@ const Home = () => {
 
   return (
     <div className="home-page">
+      {/* Hero Section with Image Carousel */}
+      <section className="hero-section">
+        <Carousel activeIndex={index} onSelect={handleSelect} indicators={true} controls={true} interval={2000} fade>
+          {heroImages.map((image, idx) => (
+            <Carousel.Item key={idx}>
+              <div className="hero-image-wrapper">
+                <img
+                  className="d-block w-100 hero-image"
+                  src={image}
+                  alt={`Mission Engineering Hero ${idx + 1}`}
+                />
+              </div>
+            </Carousel.Item>
+          ))}
+        </Carousel>
+      </section>
+
       <div className="announcement-strip" role="status" aria-label="Latest announcements">
         <div className="announcement-strip-track">
           <div className="announcement-strip-group">
@@ -53,7 +70,6 @@ const Home = () => {
             <span className="announcement-strip-message">New Batch Starts LEET 2027</span>
             <span className="announcement-strip-divider">•</span>
             <span className="announcement-strip-message">Book Your Seat Now</span>
-
           </div>
           <div className="announcement-strip-group" aria-hidden="true">
             <span className="announcement-strip-message">13 students in Top 25 LEET 2026</span>
@@ -78,23 +94,6 @@ const Home = () => {
           </div>
         </div>
       </div>
-
-      {/* Hero Section with Image Carousel */}
-      <section className="hero-section">
-        <Carousel activeIndex={index} onSelect={handleSelect} indicators={true} controls={true} interval={2000} fade>
-          {heroImages.map((image, idx) => (
-            <Carousel.Item key={idx}>
-              <div className="hero-image-wrapper">
-                <img
-                  className="d-block w-100 hero-image"
-                  src={image}
-                  alt={`Mission Engineering Hero ${idx + 1}`}
-                />
-              </div>
-            </Carousel.Item>
-          ))}
-        </Carousel>
-      </section>
 
       {/* What We Offer Section */}
       <section className="what-we-offer-section py-5">
