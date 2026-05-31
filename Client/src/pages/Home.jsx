@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Card, Carousel, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaChalkboardTeacher, FaBook, FaUsers, FaClipboardCheck } from 'react-icons/fa';
@@ -36,15 +36,39 @@ const NitinImg = images.placementToppers.nitin;
 
 const Home = () => {
   const [index, setIndex] = useState(0);
+  const [showPopup, setShowPopup] = useState(false);
 
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
+  };
+
+  useEffect(() => {
+    const hasSeenPopup = window.localStorage.getItem('missionPopupSeen');
+    if (!hasSeenPopup) {
+      setShowPopup(true);
+    }
+  }, []);
+
+  const closePopup = () => {
+    window.localStorage.setItem('missionPopupSeen', 'true');
+    setShowPopup(false);
   };
 
   const heroImages = [hero1, hero2, hero3];
 
   return (
     <div className="home-page">
+      {showPopup && (
+        <div className="mission-popup-overlay" role="dialog" aria-modal="true" aria-label="Mission Engineering announcement">
+          <div className="mission-popup-card">
+            <button type="button" className="mission-popup-close" onClick={closePopup} aria-label="Close popup">
+              ×
+            </button>
+            <img src={images.hero.missionPopup} alt="Mission Engineering announcement" className="mission-popup-image" />
+          </div>
+        </div>
+      )}
+
       {/* Hero Section with Image Carousel */}
       <section className="hero-section">
         <Carousel activeIndex={index} onSelect={handleSelect} indicators={true} controls={true} interval={2000} fade>
