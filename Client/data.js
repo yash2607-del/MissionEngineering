@@ -4,6 +4,7 @@ export const images = {
 		missionHero2: 'https://res.cloudinary.com/dxx3suwae/image/upload/v1771403580/mission_hero_2_xsrnnk.png',
 		missionHero3: 'https://res.cloudinary.com/dxx3suwae/image/upload/v1771403580/mission_hero_3_gokds4.jpg',
 		missionLogo: 'https://res.cloudinary.com/dxx3suwae/image/upload/v1771403582/mission_logo_ittuwn.png',
+		missionPopup: 'https://res.cloudinary.com/dxx3suwae/image/upload/v1780158721/popup_bannerimage_kxrefy.jpg'
 	},
 	testSeriesLogos: {
 		dtu: 'https://res.cloudinary.com/dxx3suwae/image/upload/v1771403537/dtu_lfiz5a.png',

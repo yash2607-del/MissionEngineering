@@ -10,6 +10,7 @@ const hero1 = images.hero.missionHero1;
 const hero2 = images.hero.missionHero2;
 const hero3 = images.hero.missionHero3;
 const missionLogo = images.hero.missionLogo;
+const missionPopup= images.hero.missionPopup;
 const dtuLogo = images.testSeriesLogos.dtu;
 const ipuLogo = images.testSeriesLogos.ipu;
 const cuetLogo = images.testSeriesLogos.cuet;
