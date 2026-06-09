@@ -7,7 +7,7 @@ require('dotenv').config({ path: path.resolve(__dirname, '..', '.env') });
 const { connectDb } = require('./db/connect');
 const authRoutes = require('./routes/authRoutes');
 const notificationRoutes = require('./routes/notificationRoutes');
-const testRoutes = require('./routes/testRoutes');
+const videoRoutes = require('./routes/videoRoutes');
 
 const app = express();
 
@@ -29,7 +29,7 @@ app.get('/api/health', (req, res) => {
 
 app.use('/api/auth', authRoutes);
 app.use('/api/notifications', notificationRoutes);
-app.use('/api/tests', testRoutes);
+app.use('/api/videos', videoRoutes);
 
 app.use((req, res) => {
 	res.status(404).json({ message: 'Not found' });

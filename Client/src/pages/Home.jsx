@@ -3,6 +3,7 @@ import { Container, Row, Col, Card, Carousel, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaChalkboardTeacher, FaBook, FaUsers, FaClipboardCheck } from 'react-icons/fa';
 import { images } from '../../data';
+import { fetchVideos } from '../api/studentApi';
 import InfiniteScroller from '../components/InfiniteScroller';
 import './Home.css';
 
@@ -38,6 +39,7 @@ const NitinImg = images.placementToppers.nitin;
 const Home = () => {
   const [index, setIndex] = useState(0);
   const [showPopup, setShowPopup] = useState(false);
+  const [videos, setVideos] = useState([]);
 
   const handleSelect = (selectedIndex) => {
     setIndex(selectedIndex);
@@ -48,11 +50,23 @@ const Home = () => {
     if (!hasSeenPopup) {
       setShowPopup(true);
     }
+    
+    fetchVideos().then(res => {
+      if (res && res.videos) {
+        setVideos(res.videos);
+      }
+    }).catch(err => console.error('Failed to load videos', err));
   }, []);
 
   const closePopup = () => {
     window.localStorage.setItem('missionPopupSeen', 'true');
     setShowPopup(false);
+  };
+
+  const getEmbedUrl = (url) => {
+    if (!url) return '';
+    const match = url.match(/(?:youtu\.be\/|youtube\.com\/(?:embed\/|v\/|watch\?v=|watch\?.+&v=))([^&?]+)/);
+    return match && match[1] ? `https://www.youtube.com/embed/${match[1]}` : url;
   };
 
   const heroImages = [hero1, hero2, hero3];
@@ -119,6 +133,39 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      {/* Our YouTube Videos Section */}
+      {videos && videos.length > 0 && (
+        <section className="youtube-videos-section py-5 bg-light">
+          <Container>
+            <h2 className="text-center mb-5">OUR YOUTUBE VIDEOS</h2>
+            <Row className="g-4">
+              {videos.map((video) => {
+                if (!video.youtubeUrl) return null;
+                return (
+                  <Col lg={6} md={6} key={video.id || video._id}>
+                    <Card className="h-100 video-card border-0 shadow-sm">
+                      <Card.Body className="p-3">
+                        <div className="ratio ratio-16x9 mb-3">
+                          <iframe 
+                            src={getEmbedUrl(video.youtubeUrl)} 
+                            title={video.title || 'YouTube Video'} 
+                            allowFullScreen 
+                            style={{ borderRadius: '8px' }}
+                          ></iframe>
+                        </div>
+                        {video.title && (
+                          <h5 className="text-center mb-0 mt-2">{video.title}</h5>
+                        )}
+                      </Card.Body>
+                    </Card>
+                  </Col>
+                );
+              })}
+            </Row>
+          </Container>
+        </section>
+      )}
 
       {/* What We Offer Section */}
       <section className="what-we-offer-section py-5">

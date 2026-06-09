@@ -127,10 +127,27 @@
   justify-content: center;
 }
 
+/* Glow for the bell */
+.bell-glow {
+  color: #ffd700 !important;
+  filter: drop-shadow(0 0 4px rgba(255, 215, 0, 0.8)) drop-shadow(0 0 10px rgba(255, 215, 0, 0.8));
+  animation: pulse-glow 1.5s infinite alternate;
+}
+
+@keyframes pulse-glow {
+  from {
+    filter: drop-shadow(0 0 2px rgba(255, 215, 0, 0.5)) drop-shadow(0 0 5px rgba(255, 215, 0, 0.5));
+  }
+  to {
+    filter: drop-shadow(0 0 8px rgba(255, 215, 0, 1)) drop-shadow(0 0 15px rgba(255, 215, 0, 1));
+  }
+}
+
 /* Notification Dropdown Menu */
 .nav-notification-menu {
-  min-width: 380px;
-  max-width: 380px;
+  width: 240px !important;
+  min-width: 240px !important;
+  max-width: 95vw !important;
   border-radius: 12px;
   box-shadow: 0 4px 20px rgba(0, 0, 0, 0.12);
   border: 1px solid #e5e7eb;
@@ -150,7 +167,7 @@
 }
 
 .notification-list {
-  max-height: 420px;
+  max-height: 520px;
   overflow-y: auto;
   background: #ffffff;
 }

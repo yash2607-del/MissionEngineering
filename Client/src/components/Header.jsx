@@ -108,7 +108,7 @@ const Header = () => {
           <div className="mobile-notification-wrapper d-lg-none">
             <Dropdown align="end" onToggle={(isOpen) => isOpen && handleOpenNotifications()}>
               <Dropdown.Toggle variant="link" className="nav-notification-btn mobile-notification-btn">
-                <Bell size={20} />
+                <Bell size={20} className={unreadCount > 0 ? "bell-glow" : ""} />
                 {unreadCount > 0 ? (
                   <Badge bg="danger" pill className="nav-notification-badge">
                     {unreadCount}
@@ -174,7 +174,7 @@ const Header = () => {
               {/* Desktop Notification Icon - Inside Nav */}
               <Dropdown align="end" onToggle={(isOpen) => isOpen && handleOpenNotifications()} className="d-none d-lg-block">
                 <Dropdown.Toggle variant="link" className="nav-notification-btn">
-                  <Bell size={20} />
+                  <Bell size={20} className={unreadCount > 0 ? "bell-glow" : ""} />
                   {unreadCount > 0 ? (
                     <Badge bg="danger" pill className="nav-notification-badge">
                       {unreadCount}

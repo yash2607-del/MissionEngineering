@@ -20,20 +20,18 @@ export function adminDeleteNotification(token, id) {
 }
 
 export function adminFetchTests(token) {
+  // kept just in case, but unused
   return apiRequest('/api/tests', { token });
 }
 
-export function adminCreateTest(token, { title, subject, date, link, details, duration, questions }) {
-  return apiRequest('/api/tests', {
-    method: 'POST',
-    token,
-    body: { title, subject, date, link, details, duration, questions }
-  });
+export function adminFetchVideos() {
+  return apiRequest('/api/videos', {});
 }
 
-export function adminDeleteTest(token, id) {
-  return apiRequest(`/api/tests/${id}`, {
-    method: 'DELETE',
-    token
+export function adminUpdateVideo(token, id, { title, youtubeUrl }) {
+  return apiRequest(`/api/videos/${id}`, {
+    method: 'PUT',
+    token,
+    body: { title, youtubeUrl }
   });
 }

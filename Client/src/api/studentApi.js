@@ -8,3 +8,7 @@ export function fetchNotifications(token) {
 export function fetchTests(token) {
   return apiRequest('/api/tests', { token });
 }
+
+export function fetchVideos() {
+  return apiRequest('/api/videos', {});
+}
