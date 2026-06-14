@@ -11,7 +11,6 @@
 .hero-section .carousel-inner,
 .hero-section .carousel-item {
   width: 100%;
-  min-height: 360px;
 }
 
 .hero-section .carousel-item {
@@ -22,11 +21,11 @@
 
 .hero-image-wrapper {
   width: 100%;
-  min-height: 360px;
+  aspect-ratio: 16 / 9;
   overflow: hidden;
   background: linear-gradient(135deg, #0052a3 0%, #0b67d0 100%);
   margin: 0;
-  padding: 18px 20px;
+  padding: 0;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -36,14 +35,11 @@
 
 .hero-image {
   width: 100%;
-  max-width: 100%;
-  max-height: 100%;
-  height: auto;
+  height: 100%;
   display: block;
   margin: 0 auto;
   padding: 0;
-  object-fit: contain;
-  min-height: auto;
+  object-fit: cover;
 }
 
 .mission-popup-overlay {
@@ -162,45 +158,10 @@
   }
 }
 
-@media (max-width: 992px) {
-  .hero-section .carousel,
-  .hero-section .carousel-inner,
-  .hero-section .carousel-item,
-  .hero-image-wrapper {
-    min-height: 300px;
-  }
-
-  .hero-image-wrapper {
-    padding: 0 15px;
-  }
-  
-  .hero-image {
-    width: 100%;
-    max-width: 100%;
-    object-fit: contain;
-    min-height: auto;
-    max-height: none;
-  }
-}
 
 @media (max-width: 768px) {
-  .hero-section .carousel,
-  .hero-section .carousel-inner,
-  .hero-section .carousel-item,
   .hero-image-wrapper {
-    min-height: 260px;
-  }
-
-  .hero-image-wrapper {
-    padding: 0 10px;
-  }
-
-  .hero-image {
-    width: 100%;
-    max-width: 100%;
-    object-fit: contain;
-    min-height: auto;
-    max-height: none;
+    aspect-ratio: 1 / 1;
   }
 }
 
@@ -235,44 +196,6 @@
 
   .hero-section {
     padding: 5px 0;
-  }
-
-  .hero-section .carousel,
-  .hero-section .carousel-inner,
-  .hero-section .carousel-item,
-  .hero-image-wrapper {
-    min-height: 220px;
-  }
-
-  .hero-image-wrapper {
-    padding: 0 5px;
-  }
-
-  .hero-image {
-    width: 100%;
-    max-width: 100%;
-    object-fit: contain;
-    min-height: auto;
-    max-height: none;
-  }
-}
-
-@media (min-width: 1200px) {
-  .hero-section .carousel,
-  .hero-section .carousel-inner,
-  .hero-section .carousel-item,
-  .hero-image-wrapper {
-    min-height: 420px;
-  }
-
-  .hero-image-wrapper {
-    padding: 20px 24px;
-  }
-
-  .hero-image {
-    width: 100%;
-    max-width: 100%;
-    min-height: auto;
   }
 }
 

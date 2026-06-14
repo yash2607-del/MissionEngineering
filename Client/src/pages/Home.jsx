@@ -3,11 +3,13 @@ import { Container, Row, Col, Card, Carousel, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaChalkboardTeacher, FaBook, FaUsers, FaClipboardCheck } from 'react-icons/fa';
 import { images } from '../../data';
+import HeroImage from '../../public/mission-hero1.png';
 import { fetchVideos } from '../api/studentApi';
 import InfiniteScroller from '../components/InfiniteScroller';
 import './Home.css';
 
-const hero1 = images.hero.missionHero1;
+const hero1Desktop = images.hero.missionHero1;
+const hero1Mobile = HeroImage;
 const hero2 = images.hero.missionHero2;
 const hero3 = images.hero.missionHero3;
 const missionLogo = images.hero.missionLogo;
@@ -69,7 +71,11 @@ const Home = () => {
     return match && match[1] ? `https://www.youtube.com/embed/${match[1]}` : url;
   };
 
-  const heroImages = [hero1, hero2, hero3];
+  const heroImages = [
+    { desktop: hero1Desktop, mobile: hero1Mobile },
+    { desktop: hero2, mobile: hero2 },
+    { desktop: hero3, mobile: hero3 },
+  ];
 
   return (
     <div className="home-page">
@@ -87,14 +93,17 @@ const Home = () => {
       {/* Hero Section with Image Carousel */}
       <section className="hero-section">
         <Carousel activeIndex={index} onSelect={handleSelect} indicators={true} controls={true} interval={2000} fade>
-          {heroImages.map((image, idx) => (
+          {heroImages.map((img, idx) => (
             <Carousel.Item key={idx}>
               <div className="hero-image-wrapper">
-                <img
-                  className="d-block w-100 hero-image"
-                  src={image}
-                  alt={`Mission Engineering Hero ${idx + 1}`}
-                />
+                <picture>
+                  <source media="(max-width: 768px)" srcSet={img.mobile} />
+                  <img
+                    className="d-block w-100 hero-image"
+                    src={img.desktop}
+                    alt={`Mission Engineering Hero ${idx + 1}`}
+                  />
+                </picture>
               </div>
             </Carousel.Item>
           ))}
