@@ -3,13 +3,12 @@ import { Container, Row, Col, Card, Carousel, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaChalkboardTeacher, FaBook, FaUsers, FaClipboardCheck } from 'react-icons/fa';
 import { images } from '../../data';
-import HeroImage from '../../public/mission-hero1.png';
 import { fetchVideos } from '../api/studentApi';
 import InfiniteScroller from '../components/InfiniteScroller';
 import './Home.css';
 
 const hero1Desktop = images.hero.missionHero1;
-const hero1Mobile = HeroImage;
+const hero1Mobile = '/mission-hero1.png';
 const hero2 = images.hero.missionHero2;
 const hero3 = images.hero.missionHero3;
 const missionLogo = images.hero.missionLogo;
@@ -99,7 +98,7 @@ const Home = () => {
                 <picture>
                   <source media="(max-width: 768px)" srcSet={img.mobile} />
                   <img
-                    className="d-block w-100 hero-image"
+                    className={`d-block w-100 hero-image ${idx === 0 ? 'hero-image-cover' : 'hero-image-fill'}`}
                     src={img.desktop}
                     alt={`Mission Engineering Hero ${idx + 1}`}
                   />
