@@ -248,7 +248,7 @@ const LEET = () => {
               </div>
               
               <div className="table-responsive mt-4">
-                <Table striped bordered hover className="exam-table">
+                <Table responsive striped bordered hover className="exam-table">
                   <thead>
                     <tr>
                       <th>Sr. No.</th>
@@ -286,7 +286,7 @@ const LEET = () => {
           <Card className="content-card">
             <Card.Body>
               <div className="table-responsive">
-                <Table striped bordered hover className="exam-table">
+                <Table responsive striped bordered hover className="exam-table">
                   <thead>
                     <tr>
                       <th>Sr. No.</th>
@@ -358,7 +358,7 @@ const LEET = () => {
               </div>
               
               <div className="table-responsive mt-4">
-                <Table striped bordered hover className="exam-table">
+                <Table responsive striped bordered hover className="exam-table">
                   <thead>
                     <tr>
                       <th>Sr. No.</th>
@@ -396,7 +396,7 @@ const LEET = () => {
           <Card className="content-card">
             <Card.Body>
               <div className="table-responsive">
-                <Table striped bordered hover className="exam-table">
+                <Table responsive striped bordered hover className="exam-table">
                   <thead>
                     <tr>
                       <th>Sr. No.</th>
@@ -439,7 +439,7 @@ const LEET = () => {
           </p>
 
           <Row className="g-4">
-            <Col md={6} lg={4}>
+            <Col md={6} lg={4} xs={6}>
               <Card className="step-card h-100">
                 <Card.Body>
                   <div className="step-number">1</div>
@@ -449,7 +449,7 @@ const LEET = () => {
               </Card>
             </Col>
 
-            <Col md={6} lg={4}>
+            <Col md={6} lg={4} xs={6}>
               <Card className="step-card h-100">
                 <Card.Body>
                   <div className="step-number">2</div>
@@ -459,7 +459,7 @@ const LEET = () => {
               </Card>
             </Col>
 
-            <Col md={6} lg={4}>
+            <Col md={6} lg={4} xs={6}>
               <Card className="step-card h-100">
                 <Card.Body>
                   <div className="step-number">3</div>
@@ -469,7 +469,7 @@ const LEET = () => {
               </Card>
             </Col>
 
-            <Col md={6} lg={4}>
+            <Col md={6} lg={4} xs={6}>
               <Card className="step-card h-100">
                 <Card.Body>
                   <div className="step-number">4</div>
@@ -479,7 +479,7 @@ const LEET = () => {
               </Card>
             </Col>
 
-            <Col md={6} lg={4}>
+            <Col md={6} lg={4} xs={6}>
               <Card className="step-card h-100">
                 <Card.Body>
                   <div className="step-number">5</div>
@@ -489,7 +489,7 @@ const LEET = () => {
               </Card>
             </Col>
 
-            <Col md={6} lg={4}>
+            <Col md={6} lg={4} xs={6}>
               <Card className="step-card h-100">
                 <Card.Body>
                   <div className="step-number">6</div>
@@ -499,7 +499,7 @@ const LEET = () => {
               </Card>
             </Col>
 
-            <Col md={6} lg={4}>
+            <Col md={6} lg={4} xs={6}>
               <Card className="step-card h-100">
                 <Card.Body>
                   <div className="step-number">7</div>
@@ -509,7 +509,7 @@ const LEET = () => {
               </Card>
             </Col>
 
-            <Col md={6} lg={4}>
+            <Col md={6} lg={4} xs={6}>
               <Card className="step-card h-100">
                 <Card.Body>
                   <div className="step-number">8</div>
@@ -543,21 +543,21 @@ const LEET = () => {
 
               <h5 className="mt-4">Understanding the LEET cut off is crucial for several reasons:</h5>
               <Row className="mt-3">
-                <Col md={4}>
+                <Col md={4} xs={6}>
                   <div className="cutoff-reason">
                     <FaChartLine className="reason-icon" />
                     <h6>Admission Planning</h6>
                     <p>Knowing the expected cut off helps candidates set realistic goals for their preparation and choose the right institutions.</p>
                   </div>
                 </Col>
-                <Col md={4}>
+                <Col md={4} xs={6}>
                   <div className="cutoff-reason">
                     <FaUserGraduate className="reason-icon" />
                     <h6>Competitive Edge</h6>
                     <p>Familiarity with cut off trends allows candidates to understand the competition and tailor their strategies accordingly.</p>
                   </div>
                 </Col>
-                <Col md={4}>
+                <Col md={4} xs={6}>
                   <div className="cutoff-reason">
                     <FaBook className="reason-icon" />
                     <h6>Guiding Study Focus</h6>
@@ -581,7 +581,7 @@ const LEET = () => {
               </p>
 
               <Row className="mt-4">
-                <Col md={4}>
+                <Col md={4} xs={6}>
                   <Card className="year-card">
                     <Card.Body>
                       <h4 className="year-title">2024 Cut Off</h4>
@@ -597,7 +597,7 @@ const LEET = () => {
                   </Card>
                 </Col>
 
-                <Col md={4}>
+                <Col md={4} xs={6}>
                   <Card className="year-card">
                     <Card.Body>
                       <h4 className="year-title">2023 Cut Off</h4>
@@ -613,7 +613,7 @@ const LEET = () => {
                   </Card>
                 </Col>
 
-                <Col md={4}>
+                <Col md={4} xs={6}>
                   <Card className="year-card">
                     <Card.Body>
                       <h4 className="year-title">2022 Cut Off</h4>
@@ -651,7 +651,7 @@ const LEET = () => {
           </p>
 
           <Row className="g-4">
-            <Col md={6}>
+            <Col md={6} xs={6}>
               <Card className="prep-card h-100">
                 <Card.Body>
                   <div className="prep-icon">
@@ -663,7 +663,7 @@ const LEET = () => {
               </Card>
             </Col>
 
-            <Col md={6}>
+            <Col md={6} xs={6}>
               <Card className="prep-card h-100">
                 <Card.Body>
                   <div className="prep-icon">
@@ -675,7 +675,7 @@ const LEET = () => {
               </Card>
             </Col>
 
-            <Col md={6}>
+            <Col md={6} xs={6}>
               <Card className="prep-card h-100">
                 <Card.Body>
                   <div className="prep-icon">
@@ -687,7 +687,7 @@ const LEET = () => {
               </Card>
             </Col>
 
-            <Col md={6}>
+            <Col md={6} xs={6}>
               <Card className="prep-card h-100">
                 <Card.Body>
                   <div className="prep-icon">
@@ -699,7 +699,7 @@ const LEET = () => {
               </Card>
             </Col>
 
-            <Col md={6}>
+            <Col md={6} xs={6}>
               <Card className="prep-card h-100">
                 <Card.Body>
                   <div className="prep-icon">
@@ -711,7 +711,7 @@ const LEET = () => {
               </Card>
             </Col>
 
-            <Col md={6}>
+            <Col md={6} xs={6}>
               <Card className="prep-card h-100">
                 <Card.Body>
                   <div className="prep-icon">
@@ -723,7 +723,7 @@ const LEET = () => {
               </Card>
             </Col>
 
-            <Col md={6}>
+            <Col md={6} xs={6}>
               <Card className="prep-card h-100">
                 <Card.Body>
                   <div className="prep-icon">
@@ -735,7 +735,7 @@ const LEET = () => {
               </Card>
             </Col>
 
-            <Col md={6}>
+            <Col md={6} xs={6}>
               <Card className="prep-card h-100">
                 <Card.Body>
                   <div className="prep-icon">
@@ -762,7 +762,7 @@ const LEET = () => {
 
               <h5 className="mt-4">Purpose of LEET Exam</h5>
               <Row className="mt-3">
-                <Col md={6}>
+                <Col md={6} xs={6}>
                   <div className="purpose-item">
                     <FaCheckCircle className="purpose-icon" />
                     <div>
@@ -771,7 +771,7 @@ const LEET = () => {
                     </div>
                   </div>
                 </Col>
-                <Col md={6}>
+                <Col md={6} xs={6}>
                   <div className="purpose-item">
                     <FaCheckCircle className="purpose-icon" />
                     <div>
@@ -780,7 +780,7 @@ const LEET = () => {
                     </div>
                   </div>
                 </Col>
-                <Col md={6}>
+                <Col md={6} xs={6}>
                   <div className="purpose-item">
                     <FaCheckCircle className="purpose-icon" />
                     <div>
@@ -789,7 +789,7 @@ const LEET = () => {
                     </div>
                   </div>
                 </Col>
-                <Col md={6}>
+                <Col md={6} xs={6}>
                   <div className="purpose-item">
                     <FaCheckCircle className="purpose-icon" />
                     <div>
@@ -834,8 +834,8 @@ const LEET = () => {
           <h3 className="text-center mb-4">Top 5 LEET Coaching Centers in Delhi</h3>
           <Row className="g-4">
             {coachingCenters.map((center, index) => (
-              <Col key={index} lg={12}>
-                <Card className="coaching-card">
+              <Col key={index} lg={index === 0 ? 12 : 6} xs={index === 0 ? 12 : 6}>
+                <Card className={`coaching-card ${index === 0 ? 'featured-coaching-card' : ''}`}>
                   <Card.Body>
                     <div className="coaching-number">{index + 1}</div>
                     <h5>{center.name}</h5>

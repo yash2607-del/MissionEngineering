@@ -271,7 +271,7 @@ const Placement = () => {
           
           <Row className="g-4">
             {placementProcess.map((item, index) => (
-              <Col key={index} md={6} lg={4}>
+              <Col key={index} md={6} lg={4} xs={6}>
                 <Card className="process-card h-100">
                   <Card.Body>
                     <div className="process-number">{item.step}</div>
@@ -294,7 +294,7 @@ const Placement = () => {
             <h4 className="subsection-title">For Students:</h4>
             <Row className="g-4 mt-3">
               {studentBenefits.map((benefit, index) => (
-                <Col key={index} md={4}>
+                <Col key={index} md={4} xs={6}>
                   <Card className="benefit-card h-100">
                     <Card.Body>
                       <div className="benefit-icon">{benefit.icon}</div>
@@ -311,7 +311,7 @@ const Placement = () => {
             <h4 className="subsection-title">For Employers:</h4>
             <Row className="g-4 mt-3">
               {employerBenefits.map((benefit, index) => (
-                <Col key={index} md={4}>
+                <Col key={index} md={4} xs={6}>
                   <Card className="benefit-card h-100">
                     <Card.Body>
                       <div className="benefit-icon">{benefit.icon}</div>
@@ -370,7 +370,7 @@ const Placement = () => {
           
           <Row className="g-4">
             {missionOffers.map((offer, index) => (
-              <Col key={index} md={6}>
+              <Col key={index} md={6} xs={6}>
                 <Card className="offer-card h-100">
                   <Card.Body>
                     <h5 className="offer-title">
@@ -426,7 +426,7 @@ const Placement = () => {
           
           <Row className="g-4">
             {topRecruiters.map((recruiter, index) => (
-              <Col key={index} lg={6}>
+              <Col key={index} lg={6} xs={6}>
                 <Card className="recruiter-card h-100">
                   <Card.Body>
                     <div className="recruiter-number">{index + 1}</div>

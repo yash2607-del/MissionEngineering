@@ -171,7 +171,7 @@
 
 .exam-header {
   background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
-  color: white;
+  color: white !important;
   font-weight: 600;
   font-size: 1.1rem;
   padding: 15px;

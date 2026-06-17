@@ -340,9 +340,10 @@
   }
 
   .circular-frame {
-    width: 300px;
-    height: 300px;
-    border-width: 6px;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 1 / 1;
+    border-width: 4px;
   }
 
   .about-mission-title,

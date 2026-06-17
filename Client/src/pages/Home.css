@@ -57,7 +57,7 @@
 
 @media (max-width: 768px) {
   .hero-image-wrapper {
-    aspect-ratio: 1 / 1; /* Force 1080x1080 square aspect ratio on mobile */
+    aspect-ratio: auto;
   }
 }
 

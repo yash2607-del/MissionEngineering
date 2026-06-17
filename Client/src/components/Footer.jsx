@@ -24,8 +24,8 @@ const Footer = () => {
         </button>
       </div>
       <Container>
-        <Row className="py-5">
-          <Col lg={4} md={6} className="mb-4">
+        <Row className="py-lg-5 py-3">
+          <Col lg={4} md={6} xs={6} className="mb-4">
             <h5 className="footer-heading">QUICK LINKS</h5>
             <div className="footer-divider"></div>
             <ul className="footer-links">
@@ -35,7 +35,7 @@ const Footer = () => {
               <li><a href="/contact">Contact Us</a></li>
             </ul>
           </Col>
-          <Col lg={4} md={6} className="mb-4">
+          <Col lg={4} md={6} xs={6} className="mb-4">
             <h5 className="footer-heading">COACHING PROGRAMS</h5>
             <div className="footer-divider"></div>
             <ul className="footer-links">
@@ -68,7 +68,7 @@ const Footer = () => {
             </div>
           </Col>
         </Row>
-        <Row className="footer-contact-section pt-4 mt-3">
+        <Row className="footer-contact-section py-lg-4 py-3 mt-3">
           <Col lg={12} className="mb-3">
             <h5 className="footer-heading text-center">GET IN TOUCH</h5>
             <div className="footer-divider mx-auto"></div>

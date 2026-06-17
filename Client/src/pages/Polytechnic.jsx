@@ -127,7 +127,7 @@ const Polytechnic = () => {
           <h2 className="section-title">Popular Polytechnic Entrance Exams in India</h2>
           <Row className="g-4">
             {polytechnicExams.map((exam, index) => (
-              <Col key={index} md={6} lg={3}>
+              <Col key={index} md={6} lg={3} xs={6}>
                 <Card className="exam-card h-100">
                   <Card.Header className="exam-header">{exam.title}</Card.Header>
                   <Card.Body>

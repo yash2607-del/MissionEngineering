@@ -70,7 +70,7 @@ const FeeStructure = () => {
                   <Accordion.Header>Delhi LEET 2026 Fee Structure</Accordion.Header>
                   <Accordion.Body>
                     <div className="table-responsive">
-                      <Table className="fee-table">
+                      <Table responsive className="fee-table">
                         <thead>
                           <tr>
                             <th>Sr. No.</th>
@@ -141,7 +141,7 @@ const FeeStructure = () => {
                   <Accordion.Header>CUET LEET 2026 Fee Structure</Accordion.Header>
                   <Accordion.Body>
                     <div className="table-responsive">
-                      <Table className="fee-table">
+                      <Table responsive className="fee-table">
                         <thead>
                           <tr>
                             <th>Sr. No.</th>
@@ -212,7 +212,7 @@ const FeeStructure = () => {
                   <Accordion.Header>All India LEET 2026 Fee Structure</Accordion.Header>
                   <Accordion.Body>
                     <div className="table-responsive">
-                      <Table className="fee-table">
+                      <Table responsive className="fee-table">
                         <thead>
                           <tr>
                             <th>Sr. No.</th>
@@ -290,7 +290,7 @@ const FeeStructure = () => {
                   <Accordion.Header>Delhi Polytechnic DSEU</Accordion.Header>
                   <Accordion.Body>
                     <div className="table-responsive">
-                      <Table className="fee-table">
+                      <Table responsive className="fee-table">
                         <thead>
                           <tr>
                             <th>Sr. No.</th>
@@ -368,7 +368,7 @@ const FeeStructure = () => {
                   <Accordion.Header>Polytechnic Placement Coaching</Accordion.Header>
                   <Accordion.Body>
                     <div className="table-responsive">
-                      <Table className="fee-table">
+                      <Table responsive className="fee-table">
                         <thead>
                           <tr>
                             <th>Sr. No.</th>
@@ -432,7 +432,7 @@ const FeeStructure = () => {
                   <Accordion.Body>
                     <h5 className="semester-title">Semester 1</h5>
                     <div className="table-responsive">
-                      <Table className="fee-table">
+                      <Table responsive className="fee-table">
                         <thead>
                           <tr>
                             <th>Sr. No.</th>
@@ -482,7 +482,7 @@ const FeeStructure = () => {
 
                     <h5 className="semester-title">Semester 2</h5>
                     <div className="table-responsive">
-                      <Table className="fee-table">
+                      <Table responsive className="fee-table">
                         <thead>
                           <tr>
                             <th>Sr. No.</th>
@@ -532,7 +532,7 @@ const FeeStructure = () => {
 
                     <h5 className="semester-title">Semester 3</h5>
                     <div className="table-responsive">
-                      <Table className="fee-table">
+                      <Table responsive className="fee-table">
                         <thead>
                           <tr>
                             <th>Sr. No.</th>
@@ -566,7 +566,7 @@ const FeeStructure = () => {
 
                     <h5 className="semester-title">Semester 4</h5>
                     <div className="table-responsive">
-                      <Table className="fee-table">
+                      <Table responsive className="fee-table">
                         <thead>
                           <tr>
                             <th>Sr. No.</th>
@@ -608,7 +608,7 @@ const FeeStructure = () => {
 
                     <h5 className="semester-title">Semester 5</h5>
                     <div className="table-responsive">
-                      <Table className="fee-table">
+                      <Table responsive className="fee-table">
                         <thead>
                           <tr>
                             <th>Sr. No.</th>
@@ -642,7 +642,7 @@ const FeeStructure = () => {
 
                     <h5 className="semester-title">Semester 6</h5>
                     <div className="table-responsive">
-                      <Table className="fee-table">
+                      <Table responsive className="fee-table">
                         <thead>
                           <tr>
                             <th>Sr. No.</th>
@@ -689,7 +689,7 @@ const FeeStructure = () => {
                   <Accordion.Header>Computer Science</Accordion.Header>
                   <Accordion.Body>
                     <div className="table-responsive">
-                      <Table className="fee-table">
+                      <Table responsive className="fee-table">
                         <thead>
                           <tr>
                             <th>Sr. No.</th>
@@ -760,7 +760,7 @@ const FeeStructure = () => {
                   <Accordion.Header>Electronics Engineering</Accordion.Header>
                   <Accordion.Body>
                     <div className="table-responsive">
-                      <Table className="fee-table">
+                      <Table responsive className="fee-table">
                         <thead>
                           <tr>
                             <th>Sr. No.</th>

@@ -541,6 +541,34 @@
   margin-bottom: 0;
 }
 
+/* Featured Coaching Card (Rank 1) */
+.featured-coaching-card {
+  border: 3px solid #ffd700;
+  box-shadow: 0 10px 30px rgba(255, 215, 0, 0.2);
+  background: linear-gradient(135deg, #ffffff 0%, #fffdf0 100%);
+}
+
+.featured-coaching-card:hover {
+  box-shadow: 0 12px 35px rgba(255, 215, 0, 0.35);
+  border-top: 3px solid #ffd700;
+}
+
+.featured-coaching-card .coaching-number {
+  background: linear-gradient(135deg, #ffd700 0%, #ff8c00 100%);
+  color: #1e3c72;
+  font-size: 2.2rem;
+}
+
+.featured-coaching-card h5 {
+  color: #b8860b;
+  font-size: 1.3rem;
+}
+
+.featured-coaching-card p {
+  font-size: 1.05rem;
+  font-weight: 500;
+}
+
 /* FAQ Cards */
 .faq-accordion-item {
   border: none;

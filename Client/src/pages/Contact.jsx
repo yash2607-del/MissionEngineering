@@ -52,7 +52,7 @@ const Contact = () => {
           <Row className="g-4">
 
             {/* LEFT SIDE */}
-            <Col lg={6}>
+            <Col lg={6} xs={12}>
               <div className="contact-info-card">
 
                 <h2>Get In Touch</h2>
@@ -85,7 +85,7 @@ const Contact = () => {
             </Col>
 
             {/* RIGHT SIDE FORM */}
-            <Col lg={6}>
+            <Col lg={6} xs={12}>
 
               <div className="contact-form">
 

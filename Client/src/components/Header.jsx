@@ -17,6 +17,7 @@ const Header = () => {
 
   const [notifications, setNotifications] = useState([]);
   const [notifError, setNotifError] = useState('');
+  const [expanded, setExpanded] = useState(false);
 
   const lastSeenKey = useMemo(
     () => (user?.email ? `lastSeenNotifications:${user.email}` : null),
@@ -97,7 +98,7 @@ const Header = () => {
   return (
     <>
       
-      <Navbar expand="lg" className="custom-navbar">
+      <Navbar expanded={expanded} onToggle={(val) => setExpanded(val)} expand="lg" className="custom-navbar">
         <Container fluid>
           <Navbar.Brand as={Link} to="/" className="brand-name">
             <span className="d-none d-lg-inline">Mission Engineering</span>
@@ -162,14 +163,14 @@ const Header = () => {
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="ms-auto">
-              <Nav.Link as={Link} to="/" className="nav-item">Home </Nav.Link>
-              <Nav.Link as={Link} to="/about" className="nav-item">About Us </Nav.Link>
-              <Nav.Link as={Link} to="/leet" className="nav-item">LEET</Nav.Link>
-              <Nav.Link as={Link} to="/polytechnic" className="nav-item">POLYTECHNIC</Nav.Link>
-              <Nav.Link as={Link} to="/placement" className="nav-item">PLACEMENT</Nav.Link>
-              <Nav.Link as={Link} to="/semester-coaching" className="nav-item">SEMESTER COACHING</Nav.Link>
-              <Nav.Link as={Link} to="/fee-structure" className="nav-item">FEE STRUCTURE</Nav.Link>
-              <Nav.Link as={Link} to="/contact" className="nav-item">CONTACT US</Nav.Link>
+              <Nav.Link as={Link} to="/" className="nav-item" onClick={() => setExpanded(false)}>Home </Nav.Link>
+              <Nav.Link as={Link} to="/about" className="nav-item" onClick={() => setExpanded(false)}>About Us </Nav.Link>
+              <Nav.Link as={Link} to="/leet" className="nav-item" onClick={() => setExpanded(false)}>LEET</Nav.Link>
+              <Nav.Link as={Link} to="/polytechnic" className="nav-item" onClick={() => setExpanded(false)}>POLYTECHNIC</Nav.Link>
+              <Nav.Link as={Link} to="/placement" className="nav-item" onClick={() => setExpanded(false)}>PLACEMENT</Nav.Link>
+              <Nav.Link as={Link} to="/semester-coaching" className="nav-item" onClick={() => setExpanded(false)}>SEMESTER COACHING</Nav.Link>
+              <Nav.Link as={Link} to="/fee-structure" className="nav-item" onClick={() => setExpanded(false)}>FEE STRUCTURE</Nav.Link>
+              <Nav.Link as={Link} to="/contact" className="nav-item" onClick={() => setExpanded(false)}>CONTACT US</Nav.Link>
 
               {/* Desktop Notification Icon - Inside Nav */}
               <Dropdown align="end" onToggle={(isOpen) => isOpen && handleOpenNotifications()} className="d-none d-lg-block">
@@ -226,7 +227,7 @@ const Header = () => {
 
               {!isAuthenticated ? (
                 <>
-                  <Nav.Link as={Link} to="/login" className="nav-item-login">LOGIN</Nav.Link>
+                  <Nav.Link as={Link} to="/login" className="nav-item-login" onClick={() => setExpanded(false)}>LOGIN</Nav.Link>
                 </>
               ) : (
                 <>
@@ -234,11 +235,12 @@ const Header = () => {
                     as={Link}
                     to="/admin-dashboard"
                     className="nav-item"
+                    onClick={() => setExpanded(false)}
                   >
                     Dashboard
                   </Nav.Link>
 
-                  <Nav.Link as="button" onClick={handleLogout} className="nav-item nav-logout-btn">
+                  <Nav.Link as="button" onClick={() => { setExpanded(false); handleLogout(); }} className="nav-item nav-logout-btn">
                     Logout
                   </Nav.Link>
                 </>

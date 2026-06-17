@@ -7,10 +7,7 @@ import { fetchVideos } from '../api/studentApi';
 import InfiniteScroller from '../components/InfiniteScroller';
 import './Home.css';
 
-const hero1Desktop = images.hero.missionHero1;
-const hero1Mobile = '/mission-hero1.png';
-const hero2 = images.hero.missionHero2;
-const hero3 = images.hero.missionHero3;
+
 const missionLogo = images.hero.missionLogo;
 const missionPopup= images.hero.missionPopup;
 const dtuLogo = images.testSeriesLogos.dtu;
@@ -71,9 +68,10 @@ const Home = () => {
   };
 
   const heroImages = [
-    { desktop: hero1Desktop, mobile: hero1Mobile },
-    { desktop: hero2, mobile: hero2 },
-    { desktop: hero3, mobile: hero3 },
+    { desktop: '/1.jpeg', mobile: '/1.jpeg' },
+    { desktop: '/2.jpeg', mobile: '/2.jpeg' },
+    { desktop: '/3.jpeg', mobile: '/3.jpeg' },
+    { desktop: '/4.jpeg', mobile: '/4.jpeg' },
   ];
 
   return (
@@ -446,7 +444,7 @@ const Home = () => {
             </Col>
 
             {/* IPU LEET */}
-            <Col lg={3} md={4} sm={6}>
+            <Col lg={3} md={4} sm={6} xs={6}>
               <Card className="test-card h-100">
                 <Card.Body className="text-center">
                   <div className="test-logo-wrapper">
@@ -458,7 +456,7 @@ const Home = () => {
             </Col>
 
             {/* CUET LEET */}
-            <Col lg={3} md={4} sm={6}>
+            <Col lg={3} md={4} sm={6} xs={6}>
               <Card className="test-card h-100">
                 <Card.Body className="text-center">
                   <div className="test-logo-wrapper">
@@ -470,7 +468,7 @@ const Home = () => {
             </Col>
 
             {/* ALL INDIA LEET */}
-            <Col lg={3} md={4} sm={6}>
+            <Col lg={3} md={4} sm={6} xs={6}>
               <Card className="test-card h-100">
                 <Card.Body className="text-center">
                   <div className="test-logo-wrapper">
@@ -482,7 +480,7 @@ const Home = () => {
             </Col>
 
             {/* DELHI POLYTECHNIC */}
-            <Col lg={3} md={4} sm={6}>
+            <Col lg={3} md={4} sm={6} xs={6}>
               <Card className="test-card h-100">
                 <Card.Body className="text-center">
                   <div className="test-logo-wrapper">
@@ -494,7 +492,7 @@ const Home = () => {
             </Col>
 
             {/* UP POLYTECHNIC */}
-            <Col lg={3} md={4} sm={6}>
+            <Col lg={3} md={4} sm={6} xs={6}>
               <Card className="test-card h-100">
                 <Card.Body className="text-center">
                   <div className="test-logo-wrapper">
@@ -506,7 +504,7 @@ const Home = () => {
             </Col>
 
             {/* BIHAR POLYTECHNIC */}
-            <Col lg={3} md={4} sm={6}>
+            <Col lg={3} md={4} sm={6} xs={6}>
               <Card className="test-card h-100">
                 <Card.Body className="text-center">
                   <div className="test-logo-wrapper">
@@ -518,7 +516,7 @@ const Home = () => {
             </Col>
 
             {/* JHARKHAND POLYTECHNIC */}
-            <Col lg={3} md={4} sm={6}>
+            <Col lg={3} md={4} sm={6} xs={6}>
               <Card className="test-card h-100">
                 <Card.Body className="text-center">
                   <div className="test-logo-wrapper">

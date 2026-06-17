@@ -281,7 +281,7 @@ const SemesterCoaching = () => {
             </p>
             <Row className="benefits-row">
               {benefits.map((benefit, index) => (
-                <Col lg={3} md={6} key={index} className="mb-4">
+                <Col lg={3} md={6} xs={6} key={index} className="mb-4">
                   <Card className="benefit-card h-100">
                     <Card.Body>
                       <div className="benefit-icon">
@@ -305,7 +305,7 @@ const SemesterCoaching = () => {
             <h3 className="subsection-heading">Our Key Strengths</h3>
             <Row className="strengths-row">
               {keyStrengths.map((strength, index) => (
-                <Col lg={4} md={6} key={index} className="mb-4">
+                <Col lg={4} md={6} xs={6} key={index} className="mb-4">
                   <Card className="strength-card h-100">
                     <Card.Body>
                       <div className="strength-icon">
@@ -328,7 +328,7 @@ const SemesterCoaching = () => {
             </p>
             <Row>
               {engineeringBranches.map((branch, index) => (
-                <Col lg={4} md={6} key={index} className="mb-4">
+                <Col lg={4} md={6} xs={6} key={index} className="mb-4">
                   <Card className="branch-card h-100">
                     <Card.Body className="d-flex flex-column">
                       <div className="branch-header">
