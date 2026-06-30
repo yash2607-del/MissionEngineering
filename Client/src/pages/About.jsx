@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { FaUserTie, FaChartLine, FaHeadset, FaBriefcase, FaHandshake, FaClipboardCheck, FaLinkedin, FaGithub } from 'react-icons/fa';
+import { FaUserTie, FaChartLine, FaHeadset, FaBriefcase, FaHandshake, FaClipboardCheck, FaLinkedin, FaGithub, FaTrophy, FaUsers, FaStar, FaCheckCircle, FaGraduationCap, FaBullseye } from 'react-icons/fa';
 import { images } from '../../data';
 import './About.css';
 
@@ -84,12 +84,8 @@ const About = () => {
             </Col>
             <Col lg={6} md={12} xs={12} className="team-photo-col">
               <div className="team-photo-wrapper">
-                <div className="circular-frame">
+              <div class="portrait-frame">
                   <img src={chairmanPhoto} alt="Chairman" className="team-photo" />
-                  <div className="frame-decoration top-left"></div>
-                  <div className="frame-decoration top-right"></div>
-                  <div className="frame-decoration bottom-left"></div>
-                  <div className="frame-decoration bottom-right"></div>
                 </div>
               </div>
             </Col>
@@ -103,12 +99,8 @@ const About = () => {
           <Row className="align-items-center">
             <Col lg={6} md={12} xs={12} className="team-photo-col order-lg-1 order-2">
               <div className="team-photo-wrapper">
-                <div className="circular-frame">
+                <div className="portrait-frame">
                   <img src={viceChairmanPhoto} alt="Vice Chairman" className="team-photo" />
-                  <div className="frame-decoration top-left"></div>
-                  <div className="frame-decoration top-right"></div>
-                  <div className="frame-decoration bottom-left"></div>
-                  <div className="frame-decoration bottom-right"></div>
                 </div>
               </div>
             </Col>
@@ -149,12 +141,8 @@ const About = () => {
             </Col>
             <Col lg={6} md={12} xs={12} className="team-photo-col">
               <div className="team-photo-wrapper">
-                <div className="circular-frame">
+                <div className="portrait-frame portrait-frame--contain">
                   <img src={ranjanSirPhoto} alt="Ranjan Shrivastav - Director" className="team-photo" />
-                  <div className="frame-decoration top-left"></div>
-                  <div className="frame-decoration top-right"></div>
-                  <div className="frame-decoration bottom-left"></div>
-                  <div className="frame-decoration bottom-right"></div>
                 </div>
               </div>
             </Col>
@@ -168,12 +156,8 @@ const About = () => {
           <Row className="align-items-center">
             <Col lg={6} md={12} xs={12} className="team-photo-col order-lg-1 order-2">
               <div className="team-photo-wrapper">
-                <div className="circular-frame">
+                <div className="portrait-frame portrait-frame--contain">
                   <img src={abhishekSirPhoto} alt="Abhishek Shrivastav - Director" className="team-photo" />
-                  <div className="frame-decoration top-left"></div>
-                  <div className="frame-decoration top-right"></div>
-                  <div className="frame-decoration bottom-left"></div>
-                  <div className="frame-decoration bottom-right"></div>
                 </div>
               </div>
             </Col>
@@ -219,12 +203,8 @@ const About = () => {
             </Col>
             <Col lg={6} md={12} xs={12} className="team-photo-col">
               <div className="team-photo-wrapper">
-                <div className="circular-frame">
+                <div className="portrait-frame portrait-frame--cropped">
                   <img src={yashPhoto} alt="Yash Raj - Lead Web Developer" className="team-photo" />
-                  <div className="frame-decoration top-left"></div>
-                  <div className="frame-decoration top-right"></div>
-                  <div className="frame-decoration bottom-left"></div>
-                  <div className="frame-decoration bottom-right"></div>
                 </div>
               </div>
             </Col>
@@ -232,17 +212,62 @@ const About = () => {
         </Container>
       </section>
 
-      {/* About Mission Engineering Section */}
+      {/* About Mission Engineering Section - Redesigned */}
       <section className="about-mission-section">
-        <Container>
-          <h2 className="about-mission-title">About Mission Engineering</h2>
-          <p className="about-mission-text">
-            Welcome to Mission Engineering, where we offer top-notch coaching to students who want to pursue careers in government service, polytechnic education, and B.tech. Our main objective is to give pupils the knowledge and abilities needed to perform well on entrance tests. At our institute, we have a team of highly experienced and qualified faculty who are dedicated to providing the best possible coaching to our students. Our instructors use their extensive knowledge of the exam formats and subject matter of various entrance exams to help students achieve their full potential.
-          </p>
-          <p className="about-mission-text">
-            We believe that every student is unique, and therefore, we provide personalized attention to each and every student in our classes. Our coaching methodology is based on a combination of traditional and modern teaching techniques, which makes learning fun and interactive. We make use of the latest technologies and tools to ensure that our students get the best possible learning experience.
-          </p>
-        </Container>
+        <div className="about-mission-bg">
+          <Container>
+            <Row className="align-items-center g-5">
+
+              {/* Left: Stats Panel */}
+              <Col lg={5} md={12}>
+                <div className="about-stats-panel">
+                  <div className="about-stats-label">MISSION ENGINEERING</div>
+                  <h2 className="about-stats-heading">
+                    Shaping <span className="about-stats-accent">Future</span> Engineers
+                  </h2>
+                  <p className="about-stats-sub">
+                    India's most trusted coaching destination for Polytechnic Coaching, Leet Coaching and Campus Placements.
+                  </p>
+                  <div className="about-stats-grid">
+                    <div className="about-stat-card">
+                      <FaTrophy className="about-stat-icon" />
+                      <div className="about-stat-number">12+</div>
+                      <div className="about-stat-text">Years of Excellence</div>
+                    </div>
+                    <div className="about-stat-card">
+                      <FaUsers className="about-stat-icon" />
+                      <div className="about-stat-number">30000+</div>
+                      <div className="about-stat-text">Students Enrolled</div>
+                    </div>
+                    <div className="about-stat-card">
+                      <FaStar className="about-stat-icon" />
+                      <div className="about-stat-number">98%</div>
+                      <div className="about-stat-text">Success Rate</div>
+                    </div>
+                    <div className="about-stat-card">
+                      <FaGraduationCap className="about-stat-icon" />
+                      <div className="about-stat-number">200+</div>
+                      <div className="about-stat-text">IPU Selections</div>
+                    </div>
+                  </div>
+                </div>
+              </Col>
+
+              {/* Right: Text + Highlights */}
+              <Col lg={7} md={12}>
+                <div className="about-content-panel">
+                  <p className="about-mission-text">
+                    Welcome to <strong>Mission Engineering</strong> — where we offer top-notch coaching to students who want to pursue careers in government service, polytechnic education and Leet Coaching. Our main objective is to give pupils the knowledge and abilities needed to perform well on entrance tests.
+                  </p>
+                  <p className="about-mission-text">
+                    We believe that every student is unique, and therefore, we provide personalized attention to each and every student. Our coaching methodology combines traditional and modern teaching techniques, making learning fun and interactive.
+                  </p>
+                </div>
+              </Col>
+
+            </Row>
+          </Container>
+        </div>
       </section>
 
       {/* Why Choose Us Section */}

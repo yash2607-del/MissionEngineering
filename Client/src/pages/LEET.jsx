@@ -239,7 +239,7 @@ const LEET = () => {
                 </div>
                 <div className="key-point">
                   <FaCheckCircle className="point-icon" />
-                  <span>Age Limit - The maximum age limit for the entering is 21 years for general category candidates as on 01.08.2025. For SC/ST/OBC candidates, a relaxation of 5 years shall be granted on the maximum age limit specified.</span>
+                  <span>Age Limit - The maximum age limit for the entering is 21 years for general category candidates as on 01.08.2027. For SC/ST/OBC candidates, a relaxation of 5 years shall be granted on the maximum age limit specified.</span>
                 </div>
                 <div className="key-point">
                   <FaCheckCircle className="point-icon" />
@@ -282,7 +282,7 @@ const LEET = () => {
       {/* IPU LEET Syllabus */}
       <section id="ipu-syllabus" className="leet-section">
         <Container>
-          <h2 className="section-title">Syllabus for IPU LEET 2025 (Delhi)</h2>
+          <h2 className="section-title">Syllabus for IPU LEET 2027 (Delhi)</h2>
           <Card className="content-card">
             <Card.Body>
               <div className="table-responsive">
@@ -325,7 +325,7 @@ const LEET = () => {
           <h2 className="section-title">DTU LEET Exam Pattern</h2>
           <Card className="content-card">
             <Card.Body>
-              <h5 className="mb-3">Essential Guidelines for DTU LEET 2025 (Delhi)</h5>
+              <h5 className="mb-3">Essential Guidelines for DTU LEET 2027 (Delhi)</h5>
               <div className="key-points">
                 <div className="key-point">
                   <FaCheckCircle className="point-icon" />
@@ -392,7 +392,7 @@ const LEET = () => {
       {/* DTU LEET Syllabus */}
       <section id="dtu-syllabus" className="leet-section">
         <Container>
-          <h2 className="section-title">Syllabus Of DTU LEET 2025 (Delhi)</h2>
+          <h2 className="section-title">Syllabus Of DTU LEET 2027 (Delhi)</h2>
           <Card className="content-card">
             <Card.Body>
               <div className="table-responsive">

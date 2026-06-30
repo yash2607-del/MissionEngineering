@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Card, Carousel, Button } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { FaChalkboardTeacher, FaBook, FaUsers, FaClipboardCheck } from 'react-icons/fa';
+import { FaUserTie, FaLayerGroup, FaGraduationCap, FaMedal } from 'react-icons/fa';
 import { images } from '../../data';
 import { fetchVideos } from '../api/studentApi';
 import InfiniteScroller from '../components/InfiniteScroller';
@@ -144,7 +144,7 @@ const Home = () => {
       {videos && videos.length > 0 && (
         <section className="youtube-videos-section py-5 bg-light">
           <Container>
-            <h2 className="text-center mb-5">OUR YOUTUBE VIDEOS</h2>
+            <h2 className="text-center mb-5 youtube-section-title">OUR YOUTUBE VIDEOS</h2>
             <Row className="g-4">
               {videos.map((video) => {
                 if (!video.youtubeUrl) return null;
@@ -674,22 +674,24 @@ const Home = () => {
       {/* Success Keys Section */}
       <section className="success-keys-section py-5">
         <Container>
-          <h2 className="text-center mb-5">4 SUCCESS KEYS OF MISSION ENGINEERING</h2>
+          <h1 className="text-center mb-4 success-keys-title fs-1">Our  Pillars of Excellence</h1>
           <Row className="g-4">
             {/* Key 1 */}
             <Col lg={3} md={6}>
               <Card className="success-card h-100 text-center">
                 <Card.Body>
                   <div className="icon-wrapper mb-3">
-                    <FaChalkboardTeacher size={50} className="success-icon icon-blue" />
+                    <div className="icon-circle">
+                      <FaUserTie size={28} className="success-icon icon-blue" />
+                    </div>
                   </div>
-                  <Card.Title>Renowned & Experienced Faculties</Card.Title>
+                  <Card.Title>Expert &amp; Dedicated Faculty</Card.Title>
                   <ul className="text-start mt-3">
-                    <li>Quality Teaching</li>
-                    <li>Outstanding Education Delivery</li>
-                    <li>Concept Building</li>
-                    <li>Individualised Support</li>
-                    <li>Dynamic Educational Technique</li>
+                    <li>Industry-Proven Teaching Methods</li>
+                    <li>Strong Foundation &amp; Concept Clarity</li>
+                    <li>Personalized Attention to Every Student</li>
+                    <li>Regular Doubt-Clearing Sessions</li>
+                    <li>Motivational &amp; Result-Driven Approach</li>
                   </ul>
                 </Card.Body>
               </Card>
@@ -700,12 +702,17 @@ const Home = () => {
               <Card className="success-card h-100 text-center">
                 <Card.Body>
                   <div className="icon-wrapper mb-3">
-                    <FaBook size={50} className="success-icon icon-purple" />
+                    <div className="icon-circle">
+                      <FaLayerGroup size={28} className="success-icon icon-purple" />
+                    </div>
                   </div>
-                  <Card.Title>Enriched Content & Performance Assessment</Card.Title>
+                  <Card.Title>Premium Study Material &amp; Assessments</Card.Title>
                   <ul className="text-start mt-3">
-                    <li>Well Researched & Refined Study Material</li>
-                    <li>Aligned with Current Exam Trends</li>
+                    <li>Thoroughly Researched &amp; Updated Content</li>
+                    <li>Topic-wise Practice Question Banks</li>
+                    <li>Previous Year Papers with Solutions</li>
+                    <li>Regular Performance-Based Tests</li>
+                    <li>Aligned with Latest Exam Patterns</li>
                   </ul>
                 </Card.Body>
               </Card>
@@ -716,14 +723,17 @@ const Home = () => {
               <Card className="success-card h-100 text-center">
                 <Card.Body>
                   <div className="icon-wrapper mb-3">
-                    <FaUsers size={50} className="success-icon icon-teal" />
+                    <div className="icon-circle">
+                      <FaGraduationCap size={28} className="success-icon icon-teal" />
+                    </div>
                   </div>
-                  <Card.Title>Student Centric Approach</Card.Title>
+                  <Card.Title>Student-First Learning Environment</Card.Title>
                   <ul className="text-start mt-3">
-                    <li>Back-Up for Missed Classes</li>
-                    <li>Robust Infrastructure</li>
-                    <li>Exam-Oriented Ecosystem</li>
-                    <li>Updates by Career Support Team</li>
+                    <li>Recorded Backup for Missed Classes</li>
+                    <li>State-of-the-Art Infrastructure</li>
+                    <li>Exam-Focused Daily Schedule</li>
+                    <li>Dedicated Career Guidance Team</li>
+                    <li>Live Progress Tracking &amp; Reports</li>
                   </ul>
                 </Card.Body>
               </Card>
@@ -734,15 +744,17 @@ const Home = () => {
               <Card className="success-card h-100 text-center">
                 <Card.Body>
                   <div className="icon-wrapper mb-3">
-                    <FaClipboardCheck size={50} className="success-icon icon-orange" />
+                    <div className="icon-circle">
+                      <FaMedal size={28} className="success-icon icon-orange" />
+                    </div>
                   </div>
-                  <Card.Title>Written & Personality Test</Card.Title>
+                  <Card.Title>Placement &amp; Personality Training</Card.Title>
                   <ul className="text-start mt-3">
-                    <li>Meticulously Crafted Curriculum</li>
-                    <li>Result Oriented Approach</li>
-                    <li>Interview Guidance by Renowned Experts</li>
-                    <li>GD & Mock Interviews</li>
-                    <li>Personality Development by Seasoned Trainers</li>
+                    <li>Structured Written Test Preparation</li>
+                    <li>GD &amp; Group Activity Practice</li>
+                    <li>Mock Interviews with Industry Experts</li>
+                    <li>Personality &amp; Communication Development</li>
+                    <li>Campus Placement Drive Support</li>
                   </ul>
                 </Card.Body>
               </Card>

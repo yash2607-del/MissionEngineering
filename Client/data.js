@@ -38,8 +38,8 @@ export const images = {
 	aboutTeam: {
 		chairman: 'https://res.cloudinary.com/dxx3suwae/image/upload/v1771403599/chairman_rgzmo8.png',
 		viceChairman: 'https://res.cloudinary.com/dxx3suwae/image/upload/v1771403602/vice-chairman_qbdghi.png',
-		ranjanSir: 'https://res.cloudinary.com/dxx3suwae/image/upload/v1771403600/rajan-sir_director_pp70w1.png',
-		abhishekSir: 'https://res.cloudinary.com/dxx3suwae/image/upload/v1771403599/abhishek-sir_director_iaroys.png',
+		ranjanSir: '/rajan-sir-image.jpeg',
+		abhishekSir: '/abhishek-sir-img.jpeg',
 		yash: 'https://res.cloudinary.com/dxx3suwae/image/upload/v1771403603/YASH-PHOTO_vgegtf.jpg',
 	},
 	testSeriesPhone: {

@@ -1,3 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap');
+
+/* ── YouTube Section Heading ── */
+.youtube-section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.4rem;
+  font-weight: 900;
+  letter-spacing: 3px;
+  text-transform: uppercase;
+  background: linear-gradient(135deg, #0052a3 0%, #003d7a 50%, #ffd700 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  position: relative;
+  display: inline-block;
+  width: 100%;
+  text-align: center;
+}
+
+.youtube-section-title::after {
+  content: '';
+  display: block;
+  margin: 10px auto 0;
+  width: 80px;
+  height: 4px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, #0052a3, #ffd700);
+}
+
 .hero-section {
   padding: 0 !important;
   position: relative;
@@ -46,10 +75,6 @@
   object-fit: contain;
 }
 
-.hero-image-cover,
-.hero-image-fill {
-  /* Removed to stop cropping/stretching */
-}
 
 .mission-popup-overlay {
   position: fixed;
@@ -703,9 +728,26 @@
 }
 
 .success-keys-section h2 {
-  font-size: 2.5rem;
-  font-weight: bold;
-  color: #333;
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  letter-spacing: -0.3px;
+}
+
+.success-keys-title {
+  font-size: 2.2rem;
+  font-weight: 800;
+  color: #1a1a2e;
+  letter-spacing: -0.3px;
+}
+
+.success-keys-subtitle {
+  font-size: 1rem;
+  color: #6b7280;
+  font-weight: 400;
+  max-width: 520px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .success-card {
@@ -723,6 +765,23 @@
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.icon-circle {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #e8f1fb 0%, #d0e4f7 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 14px rgba(0, 82, 163, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.success-card:hover .icon-circle {
+  transform: scale(1.1);
+  box-shadow: 0 6px 20px rgba(0, 82, 163, 0.25);
 }
 
 .success-icon {

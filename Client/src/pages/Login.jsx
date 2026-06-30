@@ -109,7 +109,7 @@ const Login = () => {
                     <Form.Label className="form-label">Email Address</Form.Label>
                     <Form.Control
                       type="email"
-                      placeholder="Enter your email (e.g., user@gmail.com)"
+                      placeholder="Enter your Email"
                       name="email"
                       value={formData.email}
                       onChange={handleChange}
@@ -146,21 +146,14 @@ const Login = () => {
                     </div>
                   </Form.Group>
 
-                  <div className="d-flex justify-content-between align-items-center mb-4">
-                    <Form.Check 
-                      type="checkbox" 
-                      label="Remember me" 
-                      className="remember-check"
-                    />
-                    <Link to="#" className="forgot-link">Forgot Password?</Link>
-                  </div>
+                
 
                   <Button type="submit" className="login-btn w-100 mb-3" disabled={loading}>
                     {loading ? 'Logging in…' : 'Login'}
                   </Button>
 
                   <div className="text-center">
-                    <p className="signup-text">Admin login only</p>
+                    <h3 className="signup-text">Admin login only</h3>
                   </div>
                 </Form>
               </Card.Body>
