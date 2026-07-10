@@ -47,44 +47,44 @@ const ClassroomCourse = () => {
     {
       title: 'Lateral Entry Coaching 2026-27 - IPU | DTU | NSUT LEET',
       targetStudents: 'For Final Year/Dropped Students',
-      nextBatch: '05-06-2026',
-      classTimings: 'Mon-Sun | 7AM & 6 Sun',
+      nextBatch: '18-07-2026',
+      classTimings: 'Mon-Sun | 9AM - 1PM ',
       validity: 'Group Validity till Jun 2027'
     },
     {
       title: 'Lateral Entry Coaching 2026-27 - CUET LEET',
       targetStudents: 'For Final Year/Dropped Students',
-      nextBatch: '05-06-2027',
-      classTimings: 'Mon-Sun | 7AM & 6 Sun',
-      validity: 'Group Validity till Jun 2028'
+      nextBatch: '18-07-2026',
+      classTimings: 'Mon-Sun | 9AM - 1PM',
+      validity: 'Group Validity till Jun 2027'
     },
     {
       title: 'Lateral Entry Coaching 2026-27 - All India LEET',
       targetStudents: 'For Final Year/Dropped Students',
-      nextBatch: '05-06-2026',
+      nextBatch: '18-07-2026',
       classTimings: 'Mon-Sun | 9AM - 1 PM',
       validity: 'Group Validity till Jun 2027'
     },
     {
-      title: 'Lateral Entry Coaching 2024-25 - IPU | DTU | NSUT LEET',
+      title: 'Lateral Entry Coaching 2026-28 - IPU | DTU | NSUT LEET',
       targetStudents: 'For Second Year Students',
-      nextBatch: '05-06-2026',
+      nextBatch: '18-07-2026',
       classTimings: 'Mon-Sun | 9AM - 1PM',
-      validity: 'Group Validity till Jun 2027'
+      validity: 'Group Validity till Jun 2028'
     },
     {
-      title: 'Lateral Entry Coaching 2026-27 - CUET LEET',
+      title: 'Lateral Entry Coaching 2026-28 - CUET LEET',
       targetStudents: 'For Second Year Students',
-      nextBatch: '05-06-2026',
+      nextBatch: '18-07-2026',
       classTimings: 'Mon-Sun | 9AM - 1PM',
-      validity: 'Group Validity till Jun 2027'
+      validity: 'Group Validity till Jun 2028'
     },
     {
-      title: 'Lateral Entry Coaching 2026-27 - All India LEET',
+      title: 'Lateral Entry Coaching 2026-28 - All India LEET',
       targetStudents: 'For Second Year Students',
-      nextBatch: '05-06-2026',
+      nextBatch: '18-07-2026',
       classTimings: 'Mon-Sun | 9AM - 1PM',
-      validity: 'Group Validity till Jun 2027'
+      validity: 'Group Validity till Jun 2028'
     }
   ];
 
