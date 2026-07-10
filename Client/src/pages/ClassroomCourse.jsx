@@ -48,42 +48,42 @@ const ClassroomCourse = () => {
       title: 'Lateral Entry Coaching 2026-27 - IPU | DTU | NSUT LEET',
       targetStudents: 'For Final Year/Dropped Students',
       nextBatch: '18-07-2026',
-      classTimings: 'Mon-Sun | 9AM - 1PM ',
+      classTimings: 'Sat-Sun | 9AM - 1PM ',
       validity: 'Group Validity till Jun 2027'
     },
     {
       title: 'Lateral Entry Coaching 2026-27 - CUET LEET',
       targetStudents: 'For Final Year/Dropped Students',
       nextBatch: '18-07-2026',
-      classTimings: 'Mon-Sun | 9AM - 1PM',
+      classTimings: 'Sat-Sun | 9AM - 1PM',
       validity: 'Group Validity till Jun 2027'
     },
     {
       title: 'Lateral Entry Coaching 2026-27 - All India LEET',
       targetStudents: 'For Final Year/Dropped Students',
       nextBatch: '18-07-2026',
-      classTimings: 'Mon-Sun | 9AM - 1 PM',
+      classTimings: 'Sat-Sun | 9AM - 1 PM',
       validity: 'Group Validity till Jun 2027'
     },
     {
       title: 'Lateral Entry Coaching 2026-28 - IPU | DTU | NSUT LEET',
       targetStudents: 'For Second Year Students',
       nextBatch: '18-07-2026',
-      classTimings: 'Mon-Sun | 9AM - 1PM',
+      classTimings: 'Sat-Sun | 9AM - 1PM',
       validity: 'Group Validity till Jun 2028'
     },
     {
       title: 'Lateral Entry Coaching 2026-28 - CUET LEET',
       targetStudents: 'For Second Year Students',
       nextBatch: '18-07-2026',
-      classTimings: 'Mon-Sun | 9AM - 1PM',
+      classTimings: 'Sat-Sun | 9AM - 1PM',
       validity: 'Group Validity till Jun 2028'
     },
     {
       title: 'Lateral Entry Coaching 2026-28 - All India LEET',
       targetStudents: 'For Second Year Students',
       nextBatch: '18-07-2026',
-      classTimings: 'Mon-Sun | 9AM - 1PM',
+      classTimings: 'Sat-Sun | 9AM - 1PM',
       validity: 'Group Validity till Jun 2028'
     }
   ];
