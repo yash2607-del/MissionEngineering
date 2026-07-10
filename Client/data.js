@@ -38,8 +38,8 @@ export const images = {
 	aboutTeam: {
 		chairman: 'https://res.cloudinary.com/dxx3suwae/image/upload/v1771403599/chairman_rgzmo8.png',
 		viceChairman: 'https://res.cloudinary.com/dxx3suwae/image/upload/v1771403602/vice-chairman_qbdghi.png',
-		ranjanSir: '/rajan-sir-image.jpeg',
-		abhishekSir: '/abhishek-sir-img.jpeg',
+		ranjanSir: '../public/rajan-sir-image.jpeg',
+		abhishekSir: '../public/abhishek-sir-image-1.jpeg',
 		yash: 'https://res.cloudinary.com/dxx3suwae/image/upload/v1771403603/YASH-PHOTO_vgegtf.jpg',
 	},
 	testSeriesPhone: {
@@ -50,4 +50,8 @@ export const images = {
 		phone5: 'https://res.cloudinary.com/dxx3suwae/image/upload/v1771403555/me-phone-5_lixsrh.jpg',
 		phone6: 'https://res.cloudinary.com/dxx3suwae/image/upload/v1771403556/me-phone-6_uctiei.jpg',
 	},
+
+	brochure:{
+		leet: 'https://res.cloudinary.com/dxx3suwae/image/upload/v1783710692/ME_LEET_2026_BROCHURE_apleju.pdf'
+	}
 };

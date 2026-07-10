@@ -1,89 +1,91 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import CourseNavigation from '../components/CourseNavigation';
 import './RecordedCourse.css';
 
 const RecordedCourse = () => {
+  const navigate = useNavigate();
   const recordedCourses = [
     {
-      title: 'Lateral Entry Coaching 2024-25 : IPU | DTU | NSUT LEET',
+      title: 'Lateral Entry Coaching 2026-27 : IPU | DTU | NSUT LEET',
       targetStudents: 'For Final Year/Dropout Students',
-      validity: '25 July 2025'
+      validity: '25 July 2027'
     },
     {
-      title: 'Lateral Entry Coaching 2024-25 : IPU LEET',
+      title: 'Lateral Entry Coaching 2026-27 : IPU LEET',
       targetStudents: 'For Final Year/Dropout Students',
-      validity: '25 July 2025'
+      validity: '25 July 2027'
     },
     {
-      title: 'Lateral Entry Coaching 2024-25 : DTU / NSUT LEET',
+      title: 'Lateral Entry Coaching 2026-27 : DTU / NSUT LEET',
       targetStudents: 'For Final Year/Dropout Students',
-      validity: '25 July 2025'
+      validity: '25 July 2027'
     },
     {
-      title: 'Lateral Entry Coaching 2024-25 : CUET LEET',
+      title: 'Lateral Entry Coaching 2026-27 : CUET LEET',
       targetStudents: 'For Final Year/Dropout Students',
-      validity: '25 July 2025'
+      validity: '25 July 2027'
     },
     {
-      title: 'Lateral Entry Coaching 2024-25 : Bihar LEET (BCECE)',
+      title: 'Lateral Entry Coaching 2026-27 : Bihar LEET (BCECE)',
       targetStudents: 'For Final Year/Dropout Students',
-      validity: '25 July 2025'
+      validity: '25 July 2027'
     },
     {
-      title: 'Lateral Entry Coaching 2024-25 : Jharkhand LEET (JCECEB)',
+      title: 'Lateral Entry Coaching 2026-27 : Jharkhand LEET (JCECEB)',
       targetStudents: 'For Final Year/Dropout Students',
-      validity: '25 July 2025'
+      validity: '25 July 2027'
     },
     {
-      title: 'Lateral Entry Coaching 2024-25 : West Bengal (JELET)',
+      title: 'Lateral Entry Coaching 2026-27 : West Bengal (JELET)',
       targetStudents: 'For Final Year/Dropout Students',
-      validity: '25 July 2025'
+      validity: '25 July 2027'
     },
     {
-      title: 'Lateral Entry Coaching 2024-25 : Gujarat LEET (D to D)',
+      title: 'Lateral Entry Coaching 2026-27 : Gujarat LEET (D to D)',
       targetStudents: 'For Final Year/Dropout Students',
-      validity: '25 July 2025'
+      validity: '25 July 2027'
     },
     {
-      title: 'Lateral Entry Coaching 2024-25 : Punjab LEET (PUEEET)',
+      title: 'Lateral Entry Coaching 2026-27 : Punjab LEET (PUEEET)',
       targetStudents: 'For Final Year/Dropout Students',
-      validity: '25 July 2025'
+      validity: '25 July 2027'
     },
     {
-      title: 'Lateral Entry Coaching 2024-25 : SLIET LEET',
+      title: 'Lateral Entry Coaching 2026-27 : SLIET LEET',
       targetStudents: 'For Final Year/Dropout Students',
-      validity: '25 July 2025'
+      validity: '25 July 2027'
     },
     {
-      title: 'Lateral Entry Coaching 2024-25 : Kerala LEET (CUSAT)',
+      title: 'Lateral Entry Coaching 2026-27 : Kerala LEET (CUSAT)',
       targetStudents: 'For Final Year/Dropout Students',
-      validity: '25 July 2025'
+      validity: '25 July 2027'
     },
     {
-      title: 'Lateral Entry Coaching 2024-23 : Uttarakhand LEET (UKSEE)',
+      title: 'Lateral Entry Coaching 2026-27 : Uttarakhand LEET (UKSEE)',
       targetStudents: 'For Final Year/Dropout Students',
-      validity: '25 July 2025'
+      validity: '25 July 2027'
     },
     {
-      title: 'Lateral Entry Coaching 2024-25 : Himachal Pradesh LEET (HP LEET)',
+      title: 'Lateral Entry Coaching 2026-27 : Himachal Pradesh LEET (HP LEET)',
       targetStudents: 'For Final Year/Dropout Students',
-      validity: '25 July 2025'
+      validity: '25 July 2027'
     },
     {
-      title: 'Lateral Entry Coaching 2024-25 : Maharashtra LEET',
+      title: 'Lateral Entry Coaching 2026-27 : Maharashtra LEET',
       targetStudents: 'For Final Year/Dropout Students',
-      validity: '25 July 2025'
+      validity: '25 July 2027'
     },
     {
-      title: 'Lateral Entry Coaching 2024-25 : All India LEET',
+      title: 'Lateral Entry Coaching 2026-27 : All India LEET',
       targetStudents: 'For Final Year/Dropout Students',
-      validity: '25 July 2025'
+      validity: '25 July 2028'
     },
     {
-      title: 'Lateral Entry Coaching 2024-26 : IPU | DTU | NSUT LEET',
+      title: 'Lateral Entry Coaching 2026-28 : IPU | DTU | NSUT LEET',
       targetStudents: 'For Second Year Students',
-      validity: '25 July 2026'
+      validity: '25 July 2028'
     }
   ];
 
@@ -122,9 +124,9 @@ const RecordedCourse = () => {
                     </div>
 
                     <div className="course-actions mt-3">
-                      <Button variant="primary" className="action-btn">FEE STRUCTURE</Button>
-                      <Button variant="outline-primary" className="action-btn">COURSE FEATURE</Button>
-                      <Button variant="outline-primary" className="action-btn">MEET OUR TOPPERS</Button>
+                      <Button variant="primary" className="action-btn" onClick={() => navigate('/fee-structure')}>FEE STRUCTURE</Button>
+                      <Button variant="outline-primary" className="action-btn" onClick={() => navigate('/leet')}>COURSE FEATURE</Button>
+                      <Button variant="outline-primary" className="action-btn" onClick={() => window.open('https://youtu.be/LMxKZMROreg?si=6XLbdZo--t7h45-U', '_blank', 'noopener,noreferrer')}>MEET OUR TOPPERS</Button>
                     </div>
 
                     <div className="book-seats mt-3">

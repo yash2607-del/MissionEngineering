@@ -1,9 +1,12 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import CourseNavigation from '../components/CourseNavigation';
 import './ClassroomCourse.css';
+import { images } from '../../data';
 
 const ClassroomCourse = () => {
+  const navigate = useNavigate();
   const courseFeatures = [
     {
       title: 'Renowned & Experienced Faculties',
@@ -154,9 +157,9 @@ const ClassroomCourse = () => {
                     </Row>
 
                     <div className="course-actions mt-3">
-                      <Button variant="primary" className="action-btn">SEE BROCHURE</Button>
-                      <Button variant="outline-primary" className="action-btn">COURSE EXPLORE</Button>
-                      <Button variant="outline-primary" className="action-btn">MEET OUR TOPPERS</Button>
+                      <Button variant="primary" className="action-btn" onClick={() => window.open(images.brochure.leet, '_blank', 'noopener,noreferrer')}>SEE BROCHURE</Button>
+                      <Button variant="outline-primary" className="action-btn" onClick={() => navigate('/leet')}>COURSE EXPLORE</Button>
+                      <Button variant="outline-primary" className="action-btn" onClick={() => window.open('https://youtu.be/LMxKZMROreg?si=6XLbdZo--t7h45-U', '_blank', 'noopener,noreferrer')}>MEET OUR TOPPERS</Button>
                     </div>
 
                     <div className="book-seats mt-3">

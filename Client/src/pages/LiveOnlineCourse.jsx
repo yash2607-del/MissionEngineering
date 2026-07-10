@@ -1,9 +1,12 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
+import { useNavigate } from 'react-router-dom';
 import CourseNavigation from '../components/CourseNavigation';
 import './LiveOnlineCourse.css';
+import { images } from '../../data';
 
 const LiveOnlineCourse = () => {
+  const navigate = useNavigate();
   const courseFeatures = [
     {
       title: 'Renowned & Experienced Faculties',
@@ -45,46 +48,46 @@ const LiveOnlineCourse = () => {
 
   const liveOnlineCourses = [
     {
-      title: 'Lateral Entry Coaching 2024-25 - IPU | DTU | NSUT LEET',
+      title: 'Lateral Entry Coaching 2026-27 - IPU | DTU | NSUT LEET',
       targetStudents: 'For Final Year/Dropped Students',
-      nextBatch: '05-06-2025',
-      classTimings: 'Mon-Sun | 7AM & 6 Sun',
-      validity: 'Group Validity till Jun 2025'
+      nextBatch: '18-07-2026',
+      classTimings: 'Sat-Sun | 9 AM - 1 PM',
+      validity: 'Group Validity till Jun 2027'
     },
     {
-      title: 'Lateral Entry Coaching 2024-25 - CUET LEET',
+      title: 'Lateral Entry Coaching 2026-27 - CUET LEET',
       targetStudents: 'For Final Year/Dropped Students',
-      nextBatch: '05-06-2025',
-      classTimings: 'Mon-Sun | 7AM & 6 Sun',
-      validity: 'Group Validity till Jun 2025'
+      nextBatch: '18-07-2026',
+      classTimings: 'Sat-Sun | 9 AM - 1 PM',
+      validity: 'Group Validity till Jun 2027'
     },
     {
-      title: 'Lateral Entry Coaching 2024-25 - All India LEET',
+      title: 'Lateral Entry Coaching 2026-27 - All India LEET',
       targetStudents: 'For Final Year/Dropped Students',
-      nextBatch: '05-06-2025',
-      classTimings: 'Mon-Sun | 7AM & 6 Sun',
-      validity: 'Group Validity till Jun 2025'
+      nextBatch: '18-07-2026',
+      classTimings: 'Sat-Sun | 9 AM - 1 PM',
+      validity: 'Group Validity till Jun 2027'
     },
     {
-      title: 'Lateral Entry Coaching 2024-25 - IPU | DTU | NSUT LEET',
+      title: 'Lateral Entry Coaching 2026-28 - IPU | DTU | NSUT LEET',
       targetStudents: 'For Second Year Students',
-      nextBatch: '05-06-2025',
-      classTimings: 'Mon-Sun | 7AM & 6 Sun',
-      validity: 'Group Validity till Jun 2025'
+      nextBatch: '18-07-2026',
+      classTimings: 'Sat-Sun | 9AM - 1PM',
+      validity: 'Group Validity till Jun 2028'
     },
     {
-      title: 'Lateral Entry Coaching 2024-25 - CUET LEET',
+      title: 'Lateral Entry Coaching 2026-28 - CUET LEET',
       targetStudents: 'For Second Year Students',
-      nextBatch: '05-06-2025',
-      classTimings: 'Mon-Sun | 7AM & 6 Sun',
-      validity: 'Group Validity till Jun 2025'
+      nextBatch: '18-07-2026',
+      classTimings: 'Sat-Sun | 9AM - 1PM',
+      validity: 'Group Validity till Jun 2028'
     },
     {
-      title: 'Lateral Entry Coaching 2024-25 - All India LEET',
+      title: 'Lateral Entry Coaching 2026-28 - All India LEET',
       targetStudents: 'For Second Year Students',
-      nextBatch: '05-06-2025',
-      classTimings: 'Mon-Sun | 7AM & 6 Sun',
-      validity: 'Group Validity till Jun 2025'
+      nextBatch: '18-07-2026',
+      classTimings: 'Sat-Sun | 9AM - 1PM',
+      validity: 'Group Validity till Jun 2028'
     }
   ];
 
@@ -154,9 +157,9 @@ const LiveOnlineCourse = () => {
                     </Row>
 
                     <div className="course-actions mt-3">
-                      <Button variant="primary" className="action-btn">SEE BROCHURE</Button>
-                      <Button variant="outline-primary" className="action-btn">COURSE EXPLORE</Button>
-                      <Button variant="outline-primary" className="action-btn">MEET OUR TOPPERS</Button>
+                      <Button variant="primary" className="action-btn" onClick={() => window.open(images.brochure.leet, '_blank', 'noopener,noreferrer')}>SEE BROCHURE</Button>
+                      <Button variant="outline-primary" className="action-btn" onClick={() => navigate('/leet')}>COURSE EXPLORE</Button>
+                      <Button variant="outline-primary" className="action-btn" onClick={() => window.open('https://youtu.be/LMxKZMROreg?si=6XLbdZo--t7h45-U', '_blank', 'noopener,noreferrer')}>MEET OUR TOPPERS</Button>
                     </div>
 
                     <div className="book-seats mt-3">
