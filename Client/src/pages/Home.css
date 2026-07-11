@@ -77,7 +77,7 @@
 
 @media (min-width: 992px) {
   .hero-image-wrapper {
-    height: 75vh;
+    height: 80vh;
   }
   .hero-image-wrapper picture {
     height: 100%;

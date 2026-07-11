@@ -25,6 +25,15 @@ body {
   overflow-x: hidden;
 }
 
+/* Force navbar to scroll with page — not sticky */
+nav.navbar,
+.custom-navbar,
+.sticky-top {
+  position: relative !important;
+  top: unset !important;
+}
+
+
 .main-content {
   flex: 1;
   padding-top: 0;

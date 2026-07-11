@@ -18,6 +18,8 @@ const Header = () => {
   const [notifications, setNotifications] = useState([]);
   const [notifError, setNotifError] = useState('');
   const [expanded, setExpanded] = useState(false);
+  const [leetDropdownOpen, setLeetDropdownOpen] = useState(false);
+  const leetDropdownTimer = React.useRef(null);
 
   const lastSeenKey = useMemo(
     () => (user?.email ? `lastSeenNotifications:${user.email}` : null),
@@ -98,7 +100,7 @@ const Header = () => {
   return (
     <>
       
-      <Navbar expanded={expanded} onToggle={(val) => setExpanded(val)} expand="lg" className="custom-navbar">
+      <Navbar expanded={expanded} onToggle={(val) => setExpanded(val)} expand="lg" className="custom-navbar" style={{ position: 'relative', top: 'unset' }}>
         <Container fluid>
           <Navbar.Brand as={Link} to="/" className="brand-name">
             <span className="d-none d-lg-inline">Mission Engineering</span>
@@ -165,7 +167,25 @@ const Header = () => {
             <Nav className="ms-auto">
               <Nav.Link as={Link} to="/" className="nav-item" onClick={() => setExpanded(false)}>Home </Nav.Link>
               <Nav.Link as={Link} to="/about" className="nav-item" onClick={() => setExpanded(false)}>About Us </Nav.Link>
-              <Nav.Link as={Link} to="/leet" className="nav-item" onClick={() => setExpanded(false)}>LEET</Nav.Link>
+              <div
+                className="leet-nav-dropdown-wrapper"
+                onMouseEnter={() => { clearTimeout(leetDropdownTimer.current); setLeetDropdownOpen(true); }}
+                onMouseLeave={() => { leetDropdownTimer.current = setTimeout(() => setLeetDropdownOpen(false), 150); }}
+              >
+                <Nav.Link as={Link} to="/leet" className="nav-item" onClick={() => setExpanded(false)}>
+                  LEET <span className="leet-dropdown-caret">▾</span>
+                </Nav.Link>
+                {leetDropdownOpen && (
+                  <div className="leet-nav-dropdown-menu">
+                    <Link to="/leet/ipu-leet" className="leet-dropdown-item" onClick={() => { setExpanded(false); setLeetDropdownOpen(false); }}>
+                      IPU LEET
+                    </Link>
+                    <Link to="/leet/dtu-leet" className="leet-dropdown-item" onClick={() => { setExpanded(false); setLeetDropdownOpen(false); }}>
+                      DTU LEET
+                    </Link>
+                  </div>
+                )}
+              </div>
               <Nav.Link as={Link} to="/polytechnic" className="nav-item" onClick={() => setExpanded(false)}>POLYTECHNIC</Nav.Link>
               <Nav.Link as={Link} to="/placement" className="nav-item" onClick={() => setExpanded(false)}>PLACEMENT</Nav.Link>
               <Nav.Link as={Link} to="/semester-coaching" className="nav-item" onClick={() => setExpanded(false)}>SEMESTER COACHING</Nav.Link>

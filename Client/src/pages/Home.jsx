@@ -115,6 +115,7 @@ const Home = () => {
             <span className="announcement-strip-message">New Batch Starts LEET 2027</span>
             <span className="announcement-strip-divider">•</span>
             <span className="announcement-strip-message">Book Your Seat Now</span>
+            <span className="announcement-strip-divider">•</span>
           </div>
           <div className="announcement-strip-group" aria-hidden="true">
             <span className="announcement-strip-message">13 students in Top 25 LEET 2026</span>
@@ -122,6 +123,8 @@ const Home = () => {
             <span className="announcement-strip-message">New Batch Starts LEET 2027</span>
             <span className="announcement-strip-divider">•</span>
             <span className="announcement-strip-message">Book Your Seat Now</span>
+            <span className="announcement-strip-divider">•</span>
+
           </div>
           <div className="announcement-strip-group" aria-hidden="true">
             <span className="announcement-strip-message">13 students in Top 25 LEET 2026</span>
@@ -129,6 +132,8 @@ const Home = () => {
             <span className="announcement-strip-message">New Batch Starts LEET 2027</span>
             <span className="announcement-strip-divider">•</span>
             <span className="announcement-strip-message">Book Your Seat Now</span>
+            <span className="announcement-strip-divider">•</span>
+
           </div>
           <div className="announcement-strip-group" aria-hidden="true">
             <span className="announcement-strip-message">13 students in Top 25 LEET 2026</span>
@@ -136,6 +141,8 @@ const Home = () => {
             <span className="announcement-strip-message">New Batch Starts LEET 2027</span>
             <span className="announcement-strip-divider">•</span>
             <span className="announcement-strip-message">Book Your Seat Now</span>
+            <span className="announcement-strip-divider">•</span>
+
           </div>
         </div>
       </div>
@@ -189,13 +196,13 @@ const Home = () => {
                       <Button variant="outline-primary" className="offer-btn w-100">DELHI</Button>
                     </Col>
                     <Col xs={6}>
+                      <Button variant="outline-primary" className="offer-btn w-100">HARYANA</Button>
+                    </Col>
+                    <Col xs={6}>
                       <Button variant="outline-primary" className="offer-btn w-100">BIHAR</Button>
                     </Col>
                     <Col xs={6}>
-                      <Button variant="outline-primary" className="offer-btn w-100">JHARKHAND</Button>
-                    </Col>
-                    <Col xs={6}>
-                      <Button variant="outline-primary" className="offer-btn w-100">UTTARAKHAND</Button>
+                      <Button variant="outline-primary" className="offer-btn w-100">PUNJAB</Button>
                     </Col>
                     <Col xs={6}>
                       <Button variant="outline-primary" className="offer-btn w-100">UTTAR PRADESH</Button>
@@ -216,24 +223,37 @@ const Home = () => {
                   <h3 className="offer-title">LATERAL ENTRY (LEET)</h3>
                   <Row className="g-3 mt-3">
                     <Col xs={6}>
-                      <Button variant="outline-primary" className="offer-btn w-100">IPU</Button>
+                      <Link to="/leet/ipu-leet" style={{ textDecoration: 'none' }}>
+                        <Button variant="outline-primary" className="offer-btn w-100">IPU</Button>
+                      </Link>
                     </Col>
                     <Col xs={6}>
-                      <Button variant="outline-primary" className="offer-btn w-100">DTU</Button>
+                      <Link to="/leet/dtu-leet" style={{ textDecoration: 'none' }}>
+                        <Button variant="outline-primary" className="offer-btn w-100">DTU/NSUT</Button>
+                      </Link>
                     </Col>
                     <Col xs={6}>
-                      <Button variant="outline-primary" className="offer-btn w-100">CUET</Button>
+                      <Link to="/leet" style={{ textDecoration: 'none' }}>
+                        <Button variant="outline-primary" className="offer-btn w-100">CUET</Button>
+                      </Link>
                     </Col>
                     <Col xs={6}>
-                      <Button variant="outline-primary" className="offer-btn w-100">WBJELET</Button>
+                      <Link to="/leet" style={{ textDecoration: 'none' }}>
+                        <Button variant="outline-primary" className="offer-btn w-100">IGDTUW LEET</Button>
+                      </Link>
                     </Col>
                     <Col xs={6}>
-                      <Button variant="outline-primary" className="offer-btn w-100">BCECE</Button>
+                      <Link to="/leet" style={{ textDecoration: 'none' }}>
+                        <Button variant="outline-primary" className="offer-btn w-100">BCECE</Button>
+                      </Link>
                     </Col>
                     <Col xs={6}>
-                      <Button variant="outline-primary" className="offer-btn w-100">ALL INDIA LEET</Button>
+                      <Link to="/leet" style={{ textDecoration: 'none' }}>
+                        <Button variant="outline-primary" className="offer-btn w-100">ALL INDIA LEET</Button>
+                      </Link>
                     </Col>
                   </Row>
+
                 </Card.Body>
               </Card>
             </Col>
@@ -380,7 +400,7 @@ const Home = () => {
                 <Button variant="outline-primary" className="course-btn w-100">IPU LEET</Button>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">DTU LEET</Button>
+                <Button variant="outline-primary" className="course-btn w-100">DTU/NSUT LEET</Button>
               </Col>
               <Col lg={4} md={4} sm={6}>
                 <Button variant="outline-primary" className="course-btn w-100">CUET LEET</Button>
@@ -438,7 +458,7 @@ const Home = () => {
                   <div className="test-logo-wrapper">
                     <img src={dtuLogo} alt="DTU LEET TEST SERIES" className="test-logo" />
                   </div>
-                  <Button as={Link} to="/courses#test-series" variant="primary" className="test-btn">View Details</Button>
+                  <Button as={Link} to="/test-series" variant="primary" className="test-btn">View Details</Button>
                 </Card.Body>
               </Card>
             </Col>
@@ -450,7 +470,7 @@ const Home = () => {
                   <div className="test-logo-wrapper">
                     <img src={ipuLogo} alt="IPU LEET TEST SERIES" className="test-logo" />
                   </div>
-                  <Button as={Link} to="/courses#test-series" variant="primary" className="test-btn">View Details</Button>
+                  <Button as={Link} to="/test-series" variant="primary" className="test-btn">View Details</Button>
                 </Card.Body>
               </Card>
             </Col>
@@ -462,7 +482,7 @@ const Home = () => {
                   <div className="test-logo-wrapper">
                     <img src={cuetLogo} alt="CUET LEET TEST SERIES" className="test-logo" />
                   </div>
-                  <Button as={Link} to="/courses#test-series" variant="primary" className="test-btn">View Details</Button>
+                  <Button as={Link} to="/test-series" variant="primary" className="test-btn">View Details</Button>
                 </Card.Body>
               </Card>
             </Col>
@@ -474,7 +494,7 @@ const Home = () => {
                   <div className="test-logo-wrapper">
                     <img src={allIndiaLogo} alt="ALL INDIA LEET TEST SERIES" className="test-logo" />
                   </div>
-                  <Button as={Link} to="/courses#test-series" variant="primary" className="test-btn">View Details</Button>
+                  <Button as={Link} to="/test-series" variant="primary" className="test-btn">View Details</Button>
                 </Card.Body>
               </Card>
             </Col>
@@ -486,7 +506,7 @@ const Home = () => {
                   <div className="test-logo-wrapper">
                     <img src={delhiPolyLogo} alt="DELHI POLYTECHNIC TEST SERIES" className="test-logo" />
                   </div>
-                  <Button as={Link} to="/courses#test-series" variant="primary" className="test-btn">View Details</Button>
+                  <Button as={Link} to="/test-series" variant="primary" className="test-btn">View Details</Button>
                 </Card.Body>
               </Card>
             </Col>
@@ -498,7 +518,7 @@ const Home = () => {
                   <div className="test-logo-wrapper">
                     <img src={upPolyLogo} alt="UP POLYTECHNIC TEST SERIES" className="test-logo" />
                   </div>
-                  <Button as={Link} to="/courses#test-series" variant="primary" className="test-btn">View Details</Button>
+                  <Button as={Link} to="/test-series" variant="primary" className="test-btn">View Details</Button>
                 </Card.Body>
               </Card>
             </Col>
@@ -510,7 +530,7 @@ const Home = () => {
                   <div className="test-logo-wrapper">
                     <img src={biharPolyLogo} alt="BIHAR POLYTECHNIC TEST SERIES" className="test-logo" />
                   </div>
-                  <Button as={Link} to="/courses#test-series" variant="primary" className="test-btn">View Details</Button>
+                  <Button as={Link} to="/test-series" variant="primary" className="test-btn">View Details</Button>
                 </Card.Body>
               </Card>
             </Col>
@@ -522,7 +542,7 @@ const Home = () => {
                   <div className="test-logo-wrapper">
                     <img src={jharkhandPolyLogo} alt="JHARKHAND POLYTECHNIC TEST SERIES" className="test-logo" />
                   </div>
-                  <Button as={Link} to="/courses#test-series" variant="primary" className="test-btn">View Details</Button>
+                  <Button as={Link} to="/test-series" variant="primary" className="test-btn">View Details</Button>
                 </Card.Body>
               </Card>
             </Col>

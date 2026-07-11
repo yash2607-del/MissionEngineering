@@ -21,6 +21,8 @@ import Coaching from './pages/Coaching';
 import Testimonials from './pages/Testimonials';
 import Contact from './pages/Contact';
 import LEET from './pages/LEET';
+import IPULEET from './pages/IPULEET';
+import DTULEET from './pages/DTULEET';
 import Placement from './pages/Placement';
 import Polytechnic from './pages/Polytechnic';
 import FeeStructure from './pages/FeeStructure';
@@ -70,6 +72,8 @@ function AppContent() {
           <Route path="/testimonials" element={<Testimonials />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/leet" element={<LEET />} />
+          <Route path="/leet/ipu-leet" element={<IPULEET />} />
+          <Route path="/leet/dtu-leet" element={<DTULEET />} />
           <Route path="/placement" element={<Placement />} />
           <Route path="/polytechnic" element={<Polytechnic />} />
           <Route path="/fee-structure" element={<FeeStructure />} />

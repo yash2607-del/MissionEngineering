@@ -3,10 +3,62 @@
 .custom-navbar {
   background-color: #0052a3;
   padding: 10px 0;
-  position: sticky;
-  top: 0;
+  position: relative !important;
+  top: unset !important;
   z-index: 1030;
 }
+
+/* LEET Hover Dropdown */
+.leet-nav-dropdown-wrapper {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+}
+
+.leet-dropdown-caret {
+  font-size: 0.75rem;
+  margin-left: 3px;
+  vertical-align: middle;
+}
+
+.leet-nav-dropdown-menu {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.18);
+  min-width: 160px;
+  z-index: 2000;
+  overflow: hidden;
+  border-top: 3px solid #ffd700;
+  animation: dropdownFadeIn 0.18s ease;
+}
+
+@keyframes dropdownFadeIn {
+  from { opacity: 0; transform: translateY(-6px); }
+  to   { opacity: 1; transform: translateY(0); }
+}
+
+.leet-dropdown-item {
+  display: block;
+  padding: 12px 18px;
+  color: #0052a3;
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  text-decoration: none;
+  transition: background 0.2s ease, color 0.2s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.leet-dropdown-item:hover {
+  background: #0052a3;
+  color: #ffd700;
+}
+
+
 
 .brand-name {
   color: white !important;
