@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row, Col, Card, Carousel, Button } from 'react-bootstrap';
+import { Container, Row, Col, Card, Carousel, Button, Accordion } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
 import { FaUserTie, FaLayerGroup, FaGraduationCap, FaMedal } from 'react-icons/fa';
 import { images } from '../../data';
@@ -755,6 +755,222 @@ const Home = () => {
               </InfiniteScroller>
             </div>
           </div>
+        </Container>
+      </section>
+
+      {/* FAQ Section */}
+      <section className="faq-section py-5">
+        <Container>
+          <h2 className="text-center mb-5 home-section-heading">FREQUENTLY ASKED QUESTIONS</h2>
+          <Accordion>
+            <Accordion.Item eventKey="0">
+              <Accordion.Header>1. When was Mission Engineering established?</Accordion.Header>
+              <Accordion.Body>
+                Mission Engineering was established on 26 March 2014. Since then, we have been helping thousands of students achieve success in LEET (B.Tech Lateral Entry), Polytechnic Entrance, Polytechnic Semester Exams, and Campus Placement preparation through quality education and expert guidance.
+              </Accordion.Body>
+            </Accordion.Item>
+            
+            <Accordion.Item eventKey="1">
+              <Accordion.Header>2. Where is Mission Engineering located?</Accordion.Header>
+              <Accordion.Body>
+                Mission Engineering is conveniently located in front of Metro Gate No. 2, Uttam Nagar East Metro Station, New Delhi, just a 2-minute walk from Uttam Nagar Bus Terminal. Our prime location makes us easily accessible for students from Delhi, Noida, Gurugram, Ghaziabad, Faridabad, and nearby areas.
+              </Accordion.Body>
+            </Accordion.Item>
+            
+            <Accordion.Item eventKey="2">
+              <Accordion.Header>3. Which courses are offered at Mission Engineering?</Accordion.Header>
+              <Accordion.Body>
+                <p>Mission Engineering offers comprehensive coaching for:</p>
+                <ul>
+                  <li>LEET (B.Tech Lateral Entry Entrance Exam)</li>
+                  <li>Polytechnic Entrance Examination</li>
+                  <li>Polytechnic Semester Subjects</li>
+                  <li>Polytechnic Campus Placement Preparation</li>
+                  <li>Live, Recorded &amp; Test Series Programs</li>
+                </ul>
+                <p>Our courses are designed to help students secure admission into top engineering colleges like DTU, NSUT, IGDTUW, DSEU, GGSIPU, and other reputed institutions.</p>
+              </Accordion.Body>
+            </Accordion.Item>
+            
+            <Accordion.Item eventKey="3">
+              <Accordion.Header>4. How can I contact Mission Engineering?</Accordion.Header>
+              <Accordion.Body>
+                <p>You can visit our institute directly or contact our admission team through phone or WhatsApp.</p>
+                <p>Admission Helpline:</p>
+                <ul>
+                  <li>011 41 083 083</li>
+                  <li>+91 96 439 439 14</li>
+                  <li>+91 95 822 026 51</li>
+                </ul>
+                <p>Our team is always available to assist you with admissions, counselling, batch details, and course information.</p>
+              </Accordion.Body>
+            </Accordion.Item>
+            
+            <Accordion.Item eventKey="4">
+              <Accordion.Header>5. Is a demo class available before admission?</Accordion.Header>
+              <Accordion.Body>
+                Yes. We provide 2 FREE Demo Classes so students can experience our teaching methodology, faculty, classroom environment, and learning approach before taking admission.
+              </Accordion.Body>
+            </Accordion.Item>
+            
+            <Accordion.Item eventKey="5">
+              <Accordion.Header>6. How can I take admission at Mission Engineering?</Accordion.Header>
+              <Accordion.Body>
+                <p>Admission is simple and hassle-free.</p>
+                <p>You can:</p>
+                <ul>
+                  <li>Visit the institute for Offline Classroom Admission, or</li>
+                  <li>Download the Mission Engineering App for Live Classes, Recorded Courses, Test Series, and Online Learning.</li>
+                </ul>
+                <p>For admission assistance, simply call or WhatsApp our admission team.</p>
+              </Accordion.Body>
+            </Accordion.Item>
+            
+            <Accordion.Item eventKey="6">
+              <Accordion.Header>7. Is online coaching available?</Accordion.Header>
+              <Accordion.Body>
+                <p>Yes. Mission Engineering provides Online LEET Coaching through the Mission Engineering App.</p>
+                <p>Students can access:</p>
+                <ul>
+                  <li>Live Interactive Classes</li>
+                  <li>Recorded Video Lectures</li>
+                  <li>Online Test Series</li>
+                  <li>Study Material</li>
+                  <li>Doubt Support</li>
+                </ul>
+                <p>This allows students from anywhere in India to prepare effectively.</p>
+              </Accordion.Body>
+            </Accordion.Item>
+            
+            <Accordion.Item eventKey="7">
+              <Accordion.Header>8. Do you provide study material?</Accordion.Header>
+              <Accordion.Body>
+                <p>Yes. Every enrolled student receives comprehensive study resources, including:</p>
+                <ul>
+                  <li>Printed &amp; Digital Study Material</li>
+                  <li>Practice Sheets</li>
+                  <li>Assignments</li>
+                  <li>Previous Year Questions (PYQs)</li>
+                  <li>Mock Tests</li>
+                  <li>Topic-wise Notes</li>
+                </ul>
+                <p>Our study material is regularly updated according to the latest exam pattern.</p>
+              </Accordion.Body>
+            </Accordion.Item>
+            
+            <Accordion.Item eventKey="8">
+              <Accordion.Header>9. Why is Mission Engineering considered one of the best LEET coaching institutes in Delhi?</Accordion.Header>
+              <Accordion.Body>
+                <p>Mission Engineering has earned the trust of thousands of students because of its result-oriented approach and experienced faculty.</p>
+                <p>Our key strengths include:</p>
+                <ul>
+                  <li>Result-Oriented Teaching Methodology</li>
+                  <li>Individual Attention to Every Student</li>
+                  <li>Strong Concept Building</li>
+                  <li>Regular Doubt-Solving Sessions</li>
+                  <li>Performance Analysis &amp; Test Series</li>
+                  <li>Motivational Guidance</li>
+                  <li>Excellent Success Record in LEET &amp; Polytechnic Exams</li>
+                </ul>
+                <p>Our focus is not just on completing the syllabus but on helping every student achieve their dream engineering college.</p>
+              </Accordion.Body>
+            </Accordion.Item>
+            
+            <Accordion.Item eventKey="9">
+              <Accordion.Header>10. Are Previous Year Question Papers (PYQs) discussed in class?</Accordion.Header>
+              <Accordion.Body>
+                <p>Yes. We thoroughly solve and explain Previous Year Question Papers (PYQs) during classroom sessions.</p>
+                <p>Students learn:</p>
+                <ul>
+                  <li>Latest Exam Pattern</li>
+                  <li>Frequently Asked Questions</li>
+                  <li>Important Topics</li>
+                  <li>Time Management Techniques</li>
+                  <li>Smart Problem-Solving Methods</li>
+                </ul>
+                <p>Practicing PYQs significantly improves exam confidence and accuracy.</p>
+              </Accordion.Body>
+            </Accordion.Item>
+            
+            <Accordion.Item eventKey="10">
+              <Accordion.Header>11. How is student performance monitored?</Accordion.Header>
+              <Accordion.Body>
+                <p>Mission Engineering continuously tracks each student's progress through:</p>
+                <ul>
+                  <li>Regular Class Tests</li>
+                  <li>Weekly &amp; Monthly Assessments</li>
+                  <li>Assignments</li>
+                  <li>Attendance Monitoring</li>
+                  <li>One-to-One Feedback Sessions</li>
+                  <li>Personalized Improvement Plans</li>
+                </ul>
+                <p>Parents can also receive updates regarding their child's academic progress whenever required.</p>
+              </Accordion.Body>
+            </Accordion.Item>
+            
+            <Accordion.Item eventKey="11">
+              <Accordion.Header>12. Does Mission Engineering provide counselling and admission guidance after the results?</Accordion.Header>
+              <Accordion.Body>
+                <p>Yes.</p>
+                <p>Our expert team provides complete post-result support, including:</p>
+                <ul>
+                  <li>Counselling Guidance</li>
+                  <li>College Choice Filling</li>
+                  <li>Document Verification</li>
+                  <li>Seat Allotment Assistance</li>
+                  <li>Admission Process Support</li>
+                </ul>
+                <p>We help students make informed decisions and secure admission into the best engineering colleges.</p>
+              </Accordion.Body>
+            </Accordion.Item>
+            
+            <Accordion.Item eventKey="12">
+              <Accordion.Header>13. Can parents meet the faculty to discuss their child's progress?</Accordion.Header>
+              <Accordion.Body>
+                <p>Absolutely.</p>
+                <p>Parents are always welcome to meet our faculty members or counselling team to discuss:</p>
+                <ul>
+                  <li>Academic Performance</li>
+                  <li>Test Results</li>
+                  <li>Attendance</li>
+                  <li>Improvement Areas</li>
+                  <li>Career Guidance</li>
+                </ul>
+                <p>We believe that parent involvement plays an important role in student success.</p>
+              </Accordion.Body>
+            </Accordion.Item>
+            
+            <Accordion.Item eventKey="13">
+              <Accordion.Header>14. How can I stay updated about admissions, new batches, and important announcements?</Accordion.Header>
+              <Accordion.Body>
+                <p>To receive the latest updates regarding admissions, batch schedules, counselling, exam notifications, and results:</p>
+                <ul>
+                  <li>Subscribe to the Mission Engineering YouTube Channel</li>
+                  <li>Join the Mission Engineering WhatsApp Channel</li>
+                </ul>
+                <p>You will receive timely updates, preparation tips, and important announcements.</p>
+              </Accordion.Body>
+            </Accordion.Item>
+            
+            <Accordion.Item eventKey="14">
+              <Accordion.Header>15. Why should I join coaching instead of preparing through self-study?</Accordion.Header>
+              <Accordion.Body>
+                <p>While self-study is important, expert coaching provides the right direction, structured learning, and continuous guidance.</p>
+                <p>At Mission Engineering, students benefit from:</p>
+                <ul>
+                  <li>Expert Faculty</li>
+                  <li>Structured Learning Plan</li>
+                  <li>Regular Mock Tests</li>
+                  <li>Daily Doubt Solving</li>
+                  <li>Previous Year Question Practice</li>
+                  <li>Time Management Strategies</li>
+                  <li>Performance Analysis</li>
+                  <li>Motivation &amp; Career Guidance</li>
+                </ul>
+                <p>This systematic approach helps students prepare more efficiently and improves their chances of securing top ranks in LEET and Polytechnic entrance examinations.</p>
+              </Accordion.Body>
+            </Accordion.Item>
+          </Accordion>
         </Container>
       </section>
 
