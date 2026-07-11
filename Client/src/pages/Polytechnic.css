@@ -162,6 +162,9 @@
   border-radius: 10px;
   box-shadow: 0 3px 15px rgba(0, 0, 0, 0.1);
   transition: all 0.3s ease;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .exam-card:hover {
@@ -211,6 +214,7 @@
   font-weight: 600;
   transition: all 0.3s ease;
   width: 100%;
+  margin-top: auto;
 }
 
 .explore-btn:hover {
@@ -343,6 +347,7 @@
   }
 }
 
+/* Equal-height card grid on mobile */
 @media (max-width: 576px) {
   .polytechnic-hero {
     padding: 40px 15px;
@@ -362,6 +367,37 @@
 
   .section-title {
     font-size: 1.75rem;
+  }
+
+  /* Force 2-column cards to match each other's height */
+  .exams-section .row {
+    align-items: stretch;
+  }
+
+  .exams-section [class*='col-'] {
+    display: flex;
+    flex-direction: column;
+  }
+
+  .exam-card .card-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  .exam-header {
+    font-size: 0.95rem;
+    padding: 10px;
+  }
+
+  .exam-points li {
+    font-size: 0.85rem;
+    line-height: 1.5;
+  }
+
+  .explore-btn {
+    font-size: 0.85rem;
+    padding: 6px 15px;
   }
 }
 

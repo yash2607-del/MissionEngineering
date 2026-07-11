@@ -125,23 +125,24 @@ const Polytechnic = () => {
       <section id="popular-exams" className="poly-section exams-section">
         <Container>
           <h2 className="section-title">Popular Polytechnic Entrance Exams in India</h2>
-          <Row className="g-4">
+          <Row className="g-4 align-items-stretch">
             {polytechnicExams.map((exam, index) => (
-              <Col key={index} md={6} lg={3} xs={6}>
-                <Card className="exam-card h-100">
+              <Col key={index} md={6} lg={3} xs={6} className="d-flex">
+                <Card className="exam-card h-100 w-100">
                   <Card.Header className="exam-header">{exam.title}</Card.Header>
-                  <Card.Body>
-                    <ul className="exam-points">
+                  <Card.Body className="d-flex flex-column">
+                    <ul className="exam-points flex-grow-1">
                       {exam.points.map((point, idx) => (
                         <li key={idx}>{point}</li>
                       ))}
                     </ul>
-                    <Button className="explore-btn">Explore Now</Button>
+                    <Button className="explore-btn mt-auto">Explore Now</Button>
                   </Card.Body>
                 </Card>
               </Col>
             ))}
           </Row>
+
         </Container>
       </section>
 

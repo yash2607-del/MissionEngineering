@@ -183,7 +183,7 @@ const Home = () => {
       {/* What We Offer Section */}
       <section className="what-we-offer-section py-5">
         <Container>
-          <h2 className="text-center mb-5">WHAT WE OFFER</h2>
+          <h2 className="text-center mb-5 home-section-heading">WHAT WE OFFER</h2>
           <Row className="g-4">
             {/* Polytechnic Entrance */}
             <Col lg={6} md={6}>
@@ -329,22 +329,34 @@ const Home = () => {
             <h2 className="course-heading text-center mb-4">OFFLINE COURSES</h2>
             <Row className="g-3 justify-content-center">
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">DELHI LEET</Button>
+                <Link to="/leet" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">DELHI LEET</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">CUET LEET</Button>
+                <Link to="/leet" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">CUET LEET</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">ALL INDIA LEET</Button>
+                <Link to="/leet" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">ALL INDIA LEET</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">POLYTECHNIC ENTRANCE</Button>
+                <Link to="/polytechnic" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">POLYTECHNIC ENTRANCE</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">POLYTECHNIC PLACEMENT</Button>
+                <Link to="/placement" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">POLYTECHNIC PLACEMENT</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">SEMESTER COACHING</Button>
+                <Link to="/semester-coaching" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">SEMESTER COACHING</Button>
+                </Link>
               </Col>
             </Row>
           </div>
@@ -354,40 +366,64 @@ const Home = () => {
             <h2 className="course-heading text-center mb-4">LIVE-ONLINE COURSES</h2>
             <Row className="g-3 justify-content-center">
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">DELHI LEET</Button>
+                <Link to="/leet" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">DELHI LEET</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">CUET LEET</Button>
+                <Link to="/leet" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">CUET LEET</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">ALL INDIA LEET</Button>
+                <Link to="/leet" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">ALL INDIA LEET</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">DELHI POLYTECHNIC</Button>
+                <Link to="/polytechnic" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">DELHI POLYTECHNIC</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">UP POLYTECHNIC</Button>
+                <Link to="/polytechnic" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">UP POLYTECHNIC</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">JHARKHAND POLYTECHNIC</Button>
+                <Link to="/polytechnic" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">JHARKHAND POLYTECHNIC</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">BIHAR POLYTECHNIC</Button>
+                <Link to="/polytechnic" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">BIHAR POLYTECHNIC</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">MP POLYTECHNIC</Button>
+                <Link to="/polytechnic" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">MP POLYTECHNIC</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">UTTARAKHAND POLYTECHNIC</Button>
+                <Link to="/polytechnic" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">UTTARAKHAND POLYTECHNIC</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">HIMACHAL POLYTECHNIC</Button>
+                <Link to="/polytechnic" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">HIMACHAL POLYTECHNIC</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">POLYTECHNIC PLACEMENT</Button>
+                <Link to="/placement" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">POLYTECHNIC PLACEMENT</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">SEMESTER COACHING</Button>
+                <Link to="/semester-coaching" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">SEMESTER COACHING</Button>
+                </Link>
               </Col>
             </Row>
           </div>
@@ -397,59 +433,90 @@ const Home = () => {
             <h2 className="course-heading text-center mb-4">RECORDED COURSES</h2>
             <Row className="g-3 justify-content-center">
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">IPU LEET</Button>
+                <Link to="/leet/ipu-leet" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">IPU LEET</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">DTU/NSUT LEET</Button>
+                <Link to="/leet/dtu-leet" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">DTU/NSUT LEET</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">CUET LEET</Button>
+                <Link to="/leet" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">CUET LEET</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">BIHAR LEET (BCECE)</Button>
+                <Link to="/leet" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">BIHAR LEET (BCECE)</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">JHARKHAND LEET (JCECEB)</Button>
+                <Link to="/leet" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">JHARKHAND LEET (JCECEB)</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">WEST BENGAL (JELET)</Button>
+                <Link to="/leet" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">WEST BENGAL (JELET)</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">GUJRAT LEET (D TO D)</Button>
+                <Link to="/leet" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">GUJRAT LEET (D TO D)</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">PUNJAB LEET (PULEET)</Button>
+                <Link to="/leet" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">PUNJAB LEET (PULEET)</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">SLIET LEET</Button>
+                <Link to="/leet" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">SLIET LEET</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">KERALA LEET (CUSAT)</Button>
+                <Link to="/leet" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">KERALA LEET (CUSAT)</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">UTTARAKHAND LEET (UKSEE)</Button>
+                <Link to="/leet" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">UTTARAKHAND LEET (UKSEE)</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">HP LEET</Button>
+                <Link to="/leet" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">HP LEET</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">MAHARASHTRA LEET</Button>
+                <Link to="/leet" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">MAHARASHTRA LEET</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">ALL INDIA LEET EXAMS</Button>
+                <Link to="/leet" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">ALL INDIA LEET EXAMS</Button>
+                </Link>
               </Col>
               <Col lg={4} md={4} sm={6}>
-                <Button variant="outline-primary" className="course-btn w-100">SEMESTER COACHING</Button>
+                <Link to="/semester-coaching" style={{ textDecoration: 'none' }}>
+                  <Button variant="outline-primary" className="course-btn w-100">SEMESTER COACHING</Button>
+                </Link>
               </Col>
             </Row>
           </div>
         </Container>
       </section>
 
+
       {/* Test Series Section */}
       <section className="test-series-section py-5">
         <Container>
-          <h2 className="text-center mb-5">TEST SERIES</h2>
+          <h2 className="text-center mb-5 home-section-heading">TEST SERIES</h2>
           <Row className="g-4">
             {/* DTU LEET */}
             <Col lg={3} md={4} sm={6}>
@@ -553,7 +620,7 @@ const Home = () => {
       {/* Testimonials Section */}
       <section id="testimonials" className="testimonials-home-section py-5">
         <Container fluid>
-          <h2 className="text-center mb-5">TESTIMONIALS</h2>
+          <h2 className="text-center mb-5 home-section-heading">TESTIMONIALS</h2>
           
           {/* LEET Exam Row */}
           <div className="testimonial-row mb-5">

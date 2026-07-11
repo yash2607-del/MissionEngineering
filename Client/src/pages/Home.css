@@ -1,21 +1,30 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@700;900&display=swap');
 
-/* ── YouTube Section Heading ── */
-.youtube-section-title {
-  font-family: 'Montserrat', sans-serif;
-  font-size: 2.4rem;
-  font-weight: 900;
-  letter-spacing: 3px;
+/* ── Unified Home Page Headings ── */
+.youtube-section-title,
+.course-heading,
+.home-section-heading,
+.courses-section h2,
+.test-series-section h2,
+.testimonials-home-section h2,
+.what-we-offer-section h2 {
+  font-family: 'Montserrat', sans-serif !important;
+  font-size: 38px !important;
+  font-weight: 900 !important;
+  letter-spacing: 2px;
   text-transform: uppercase;
-  background: linear-gradient(135deg, #0052a3 0%, #003d7a 50%, #ffd700 100%);
-  -webkit-background-clip: text;
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
+  color: #000000 !important;
+  -webkit-text-fill-color: #000000 !important;
+  background: none !important;
+  -webkit-background-clip: unset !important;
+  background-clip: unset !important;
   position: relative;
   display: inline-block;
   width: 100%;
   text-align: center;
 }
+
+
 
 .youtube-section-title::after {
   content: '';
@@ -26,6 +35,12 @@
   border-radius: 2px;
   background: linear-gradient(90deg, #0052a3, #ffd700);
 }
+
+.youtube-videos-section {
+  padding-top: 1.5rem !important;
+}
+
+
 
 .hero-section {
   padding: 0 !important;
