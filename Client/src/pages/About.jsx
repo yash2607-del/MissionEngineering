@@ -53,7 +53,7 @@ const About = () => {
           <div className="section-badge">OUR TEAM</div>
           <h1 className="team-main-title">Meet Our Leadership</h1>
           <p className="team-subtitle">
-            Unlock success with Mission Engineering! Elevate your academic journey with expert coaching in Polytechnic, B.Tech, Gov. Job, and Campus Placements. Meet our leadership for personalized guidance today.
+            Unlock success with Mission Engineering! Elevate your academic journey with expert coaching in Leet, Polytechnic, Semester Coaching and Campus Placements. Meet our leadership for personalized guidance today.
           </p>
           <div className="team-buttons">
             <Button as={Link} to="/contact" className="btn-contact">
