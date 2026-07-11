@@ -47,8 +47,9 @@
 }
 
 .btn-contact {
-  background: linear-gradient(135deg, #0052a3 0%, #003d7a 100%);
-  border: none;
+  background: linear-gradient(135deg, #0052a3 0%, #003d7a 100%) !important;
+  border: none !important;
+  color: white !important;
   padding: 12px 32px;
   font-weight: 600;
   border-radius: 8px;
@@ -59,27 +60,32 @@
 }
 
 .btn-contact:hover {
-  background: linear-gradient(135deg, #003d7a 0%, #002855 100%);
+  background: linear-gradient(135deg, #003d7a 0%, #002855 100%) !important;
+  border: none !important;
+  color: white !important;
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(0, 82, 163, 0.4);
 }
 
 .btn-explore {
-  background: linear-gradient(135deg, #1a202c 0%, #000000 100%);
-  border: none;
+  background: linear-gradient(135deg, #0052a3 0%, #1e7ac9 100%) !important;
+  border: none !important;
+  color: white !important;
   padding: 12px 32px;
   font-weight: 600;
   border-radius: 8px;
   transition: all 0.3s ease;
   text-transform: uppercase;
   font-size: 0.9rem;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 15px rgba(0, 82, 163, 0.3);
 }
 
 .btn-explore:hover {
-  background: linear-gradient(135deg, #000000 0%, #1a202c 100%);
+  background: linear-gradient(135deg, #1e7ac9 0%, #0052a3 100%) !important;
+  border: none !important;
+  color: white !important;
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+  box-shadow: 0 6px 20px rgba(0, 82, 163, 0.4);
 }
 
 /* Team Member Section */

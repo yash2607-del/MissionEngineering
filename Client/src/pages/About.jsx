@@ -56,10 +56,10 @@ const About = () => {
             Unlock success with Mission Engineering! Elevate your academic journey with expert coaching in Polytechnic, B.Tech, Gov. Job, and Campus Placements. Meet our leadership for personalized guidance today.
           </p>
           <div className="team-buttons">
-            <Button as={Link} to="/contact" variant="danger" className="btn-contact">
+            <Button as={Link} to="/contact" className="btn-contact">
               Contact Us →
             </Button>
-            <Button as={Link} to="/classroom-course" variant="dark" className="btn-explore">
+            <Button as={Link} to="/classroom-course" className="btn-explore">
               Explore Courses →
             </Button>
           </div>
