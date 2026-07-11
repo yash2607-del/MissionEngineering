@@ -100,7 +100,7 @@ const Header = () => {
   return (
     <>
       
-      <Navbar expanded={expanded} onToggle={(val) => setExpanded(val)} expand="lg" className="custom-navbar" style={{ position: 'relative', top: 'unset' }}>
+      <Navbar expanded={expanded} onToggle={(val) => setExpanded(val)} expand="lg" className="custom-navbar sticky-top">
         <Container fluid>
           <Navbar.Brand as={Link} to="/" className="brand-name">
             <span className="d-none d-lg-inline">Mission Engineering</span>
