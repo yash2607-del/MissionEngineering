@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import CourseNavigation from '../components/CourseNavigation';
-import { FaHandPointRight, FaCheckCircle } from 'react-icons/fa';
+import { FaHandPointRight, FaCheckCircle, FaCircle } from 'react-icons/fa';
 import './Polytechnic.css';
 
 const Polytechnic = () => {
@@ -240,22 +240,22 @@ const Polytechnic = () => {
               <h2 className="section-title">FAQs About Polytechnic</h2>
               
               <div className="faq-item">
-                <h5><FaCheckCircle className="faq-icon" /> What is a Polytechnic course?</h5>
+                <h5><FaCircle className="faq-icon" /> What is a Polytechnic course?</h5>
                 <p>Polytechnic courses are diploma programs that focus on technical and practical education in various engineering fields.</p>
               </div>
 
               <div className="faq-item">
-                <h5><FaCheckCircle className="faq-icon" /> Can I pursue Polytechnic after 10th?</h5>
+                <h5><FaCircle className="faq-icon" /> Can I pursue Polytechnic after 10th?</h5>
                 <p>Yes, Polytechnic courses are available for students after completing their 10th standard.</p>
               </div>
 
               <div className="faq-item">
-                <h5><FaCheckCircle className="faq-icon" /> How long is a Polytechnic course?</h5>
+                <h5><FaCircle className="faq-icon" /> How long is a Polytechnic course?</h5>
                 <p>Polytechnic diploma courses typically last three to four years, depending on the program.</p>
               </div>
 
               <div className="faq-item">
-                <h5><FaCheckCircle className="faq-icon" /> What are the benefits of joining Mission Engineering for Polytechnic coaching?</h5>
+                <h5><FaCircle className="faq-icon" /> What are the benefits of joining Mission Engineering for Polytechnic coaching?</h5>
                 <p>Mission Engineering offers expert faculty, comprehensive study materials, mock tests, and both online and offline classes to ensure your success in Polytechnic entrance exams.</p>
               </div>
 

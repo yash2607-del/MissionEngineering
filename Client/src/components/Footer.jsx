@@ -27,7 +27,7 @@ const Footer = () => {
         <Container>
           <Row className="g-3">
             {/* Quick Links */}
-            <Col lg={4} md={4} xs={6}>
+            <Col lg={3} md={6} xs={6}>
               <h5 className="footer-heading">Quick Links</h5>
               <div className="footer-divider"></div>
               <ul className="footer-links">
@@ -39,7 +39,7 @@ const Footer = () => {
             </Col>
 
             {/* Coaching Programs */}
-            <Col lg={4} md={4} xs={6}>
+            <Col lg={3} md={6} xs={6}>
               <h5 className="footer-heading">Coaching Programs</h5>
               <div className="footer-divider"></div>
               <ul className="footer-links">
@@ -50,8 +50,28 @@ const Footer = () => {
               </ul>
             </Col>
 
+            {/* Get In Touch */}
+            <Col lg={3} md={6} xs={12}>
+              <h5 className="footer-heading">Get in Touch</h5>
+              <div className="footer-divider"></div>
+              <div className="footer-contact-vertical">
+                <div className="contact-item-vertical">
+                  <FaMapMarkerAlt className="contact-icon" />
+                  <span>In Front Of Metro Gate No.2, Uttam Nagar East, New Delhi - 110059</span>
+                </div>
+                <div className="contact-item-vertical">
+                  <FaPhone className="contact-icon" />
+                  <span>+91 96 439 439 14</span>
+                </div>
+                <div className="contact-item-vertical">
+                  <FaEnvelope className="contact-icon" />
+                  <span>missionengineering2014@gmail.com</span>
+                </div>
+              </div>
+            </Col>
+
             {/* Connect with us */}
-            <Col lg={4} md={4} xs={12}>
+            <Col lg={3} md={6} xs={12}>
               <h5 className="footer-heading">Connect With Us</h5>
               <div className="footer-divider"></div>
               <p className="social-text">Follow us for updates and success stories.</p>
@@ -77,33 +97,11 @@ const Footer = () => {
         </Container>
       </div>
 
-      {/* Contact strip */}
-      <div className="footer-contact-section">
-        <Container>
-          <h5 className="footer-heading text-center">Get in Touch</h5>
-          <div className="footer-divider mx-auto"></div>
-          <div className="contact-info-row">
-            <div className="contact-item">
-              <FaMapMarkerAlt className="contact-icon" />
-              <span>In Front Of Metro Gate No.2, Uttam Nagar East, New Delhi - 110059</span>
-            </div>
-            <div className="contact-item">
-              <FaPhone className="contact-icon" />
-              <span>+91 96 439 439 14</span>
-            </div>
-            <div className="contact-item">
-              <FaEnvelope className="contact-icon" />
-              <span>missionengineering2014@gmail.com</span>
-            </div>
-          </div>
-        </Container>
-      </div>
-
       {/* Bottom bar */}
       <div className="footer-bottom">
         <Container>
           <p className="copyright text-center">
-            © 2026 Mission Engineering. All Rights Reserved. | Designed &amp; Developed by Yash Raj
+            © 2026 Mission Engineering. All Rights Reserved. <span className="d-none d-md-inline">|</span><br className="d-md-none" /> Designed &amp; Developed by <a href="https://www.linkedin.com/in/yashh26/ " className="text-white text-decoration-none fw-bold"> Yash Raj</a>
           </p>
         </Container>
       </div>

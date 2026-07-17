@@ -186,11 +186,11 @@ const About = () => {
                 <h3 className="member-name">Yash Raj</h3>
                 <h2 className="member-title">FULL STACK WEB DEVELOPER</h2>
                 <div className="social-links mb-3">
-                  <a href="https://www.linkedin.com/in/yashh26/" target="_blank" rel="noopener noreferrer" className="social-icon">
-                    <FaLinkedin size={30} />
+                  <a href="https://www.linkedin.com/in/yashh26/" target="_blank" rel="noopener noreferrer" className="social-icon linkedin-icon">
+                    <FaLinkedin size={24} />
                   </a>
-                  <a href="https://github.com/yash2607-del" target="_blank" rel="noopener noreferrer" className="social-icon">
-                    <FaGithub size={30} />
+                  <a href="https://github.com/yash2607-del" target="_blank" rel="noopener noreferrer" className="social-icon github-icon">
+                    <FaGithub size={24} />
                   </a>
                 </div>
                 <p className="member-description">

@@ -49,17 +49,7 @@
   padding-bottom: 15px;
 }
 
-.section-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 80px;
-  height: 4px;
-  background: linear-gradient(to right, #1e3c72, #2a5298);
-  border-radius: 2px;
-}
+
 
 /* Card Styles */
 .intro-card,
@@ -117,17 +107,7 @@
   padding-bottom: 15px;
 }
 
-.toc-title::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 3px;
-  background: linear-gradient(to right, #1e3c72, #2a5298);
-  border-radius: 2px;
-}
+
 
 .toc-list {
   display: flex;

@@ -31,7 +31,6 @@
   min-width: 160px;
   z-index: 2000;
   overflow: hidden;
-  border-top: 3px solid #ffd700;
   animation: dropdownFadeIn 0.18s ease;
 }
 

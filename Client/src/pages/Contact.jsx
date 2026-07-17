@@ -43,7 +43,7 @@ const Contact = () => {
       <section className="page-header">
         <Container>
           <h1>Contact Us</h1>
-          <p className="lead">We'd love to hear from you. Get in touch with us today!</p>
+          <p className="lead">We'd love to hear queries from you. Get in touch with us today and we'll help you to land in your dream ipu and dtu college!</p>
         </Container>
       </section>
 
@@ -52,7 +52,7 @@ const Contact = () => {
           <Row className="g-4">
 
             {/* LEFT SIDE */}
-            <Col lg={6} xs={12}>
+            <Col lg={5} md={5} xs={12}>
               <div className="contact-info-card">
 
                 <h2>Get In Touch</h2>
@@ -61,7 +61,7 @@ const Contact = () => {
                   <FaMapMarkerAlt size={30} className="contact-icon me-3" />
                   <div>
                     <h5>Address</h5>
-                    <p>Uttam Nagar East, New Delhi - 110059</p>
+                    <p>In Front Of Metro Gate No.2, Uttam Nagar East, New Delhi - 110059</p>
                   </div>
                 </div>
 
@@ -85,7 +85,7 @@ const Contact = () => {
             </Col>
 
             {/* RIGHT SIDE FORM */}
-            <Col lg={6} xs={12}>
+            <Col lg={7} md={7} xs={12}>
 
               <div className="contact-form">
 
@@ -94,7 +94,7 @@ const Contact = () => {
                 <Form ref={formRef} onSubmit={handleFormSubmit}>
 
                   <Form.Group className="mb-3">
-                    <Form.Label>Name</Form.Label>
+                    <Form.Label>Name <span className="text-danger">*</span></Form.Label>
                     <Form.Control
                       type="text"
                       name="name"
@@ -104,7 +104,7 @@ const Contact = () => {
                   </Form.Group>
 
                   <Form.Group className="mb-3">
-                    <Form.Label>Email</Form.Label>
+                    <Form.Label>Email <span className="text-danger">*</span></Form.Label>
                     <Form.Control
                       type="email"
                       name="email"
@@ -122,11 +122,11 @@ const Contact = () => {
                     />
                   </Form.Group>
 
-                  <Form.Group className="mb-3">
-                    <Form.Label>Message</Form.Label>
+                  <Form.Group className="mb-4">
+                    <Form.Label>Message <span className="text-danger">*</span></Form.Label>
                     <Form.Control
                       as="textarea"
-                      rows={4}
+                      rows={3}
                       name="message"
                       placeholder="Enter your message"
                       required

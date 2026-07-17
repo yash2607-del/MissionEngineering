@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Card, Carousel, Button, Accordion } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import { FaUserTie, FaLayerGroup, FaGraduationCap, FaMedal } from 'react-icons/fa';
+import { FaUserTie, FaLayerGroup, FaGraduationCap, FaMedal, FaWhatsapp } from 'react-icons/fa';
 import { images } from '../../data';
 import { fetchVideos } from '../api/studentApi';
 import InfiniteScroller from '../components/InfiniteScroller';
@@ -35,29 +35,20 @@ const AakashImg = images.placementToppers.aakash;
 const NitinImg = images.placementToppers.nitin;
 
 const Home = () => {
-  const [index, setIndex] = useState(0);
   const [showPopup, setShowPopup] = useState(false);
   const [videos, setVideos] = useState([]);
 
-  const handleSelect = (selectedIndex) => {
-    setIndex(selectedIndex);
-  };
-
   useEffect(() => {
-    const hasSeenPopup = window.localStorage.getItem('missionPopupSeen');
-    if (!hasSeenPopup) {
-      setShowPopup(true);
-    }
+    setShowPopup(true);
     
     fetchVideos().then(res => {
       if (res && res.videos) {
         setVideos(res.videos);
       }
-    }).catch(err => console.error('Failed to load videos', err));
+    }).catch(err => console.error(' No Youtube Videos', err));
   }, []);
 
   const closePopup = () => {
-    window.localStorage.setItem('missionPopupSeen', 'true');
     setShowPopup(false);
   };
 
@@ -69,9 +60,9 @@ const Home = () => {
 
   const heroImages = [
     { desktop: '/5.png', mobile: '/5.png' },
-    { desktop: '/2.jpeg', mobile: '/2.jpeg' },
-    { desktop: '/3.jpeg', mobile: '/3.jpeg' },
     { desktop: '/4.jpeg', mobile: '/4.jpeg' },
+    { desktop: '/3.jpeg', mobile: '/3.jpeg' },
+    { desktop: '/2.jpeg', mobile: '/2.jpeg' },
   ];
 
   return (
@@ -89,7 +80,7 @@ const Home = () => {
 
       {/* Hero Section with Image Carousel */}
       <section className="hero-section">
-        <Carousel activeIndex={index} onSelect={handleSelect} indicators={true} controls={true} interval={2000} fade>
+        <Carousel indicators={true} controls={true} interval={4000} pause={false} fade>
           {heroImages.map((img, idx) => (
             <Carousel.Item key={idx}>
               <div className="hero-image-wrapper">
@@ -106,6 +97,17 @@ const Home = () => {
           ))}
         </Carousel>
       </section>
+
+      {/* Sticky WhatsApp Button */}
+      <a 
+        href="https://wa.me/919643943914" 
+        target="_blank" 
+        rel="noopener noreferrer" 
+        className="whatsapp-sticky"
+        aria-label="Chat with us on WhatsApp"
+      >
+        <FaWhatsapp size={35} />
+      </a>
 
       <div className="announcement-strip" role="status" aria-label="Latest announcements">
         <div className="announcement-strip-track">
@@ -198,22 +200,34 @@ const Home = () => {
                   <h3 className="offer-title">POLYTECHNIC ENTRANCE</h3>
                   <Row className="g-3 mt-3">
                     <Col xs={6}>
-                      <Button variant="outline-primary" className="offer-btn w-100">DELHI</Button>
+                      <Link to="/polytechnic" style={{ textDecoration: 'none' }}>
+                        <Button variant="outline-primary" className="offer-btn w-100">DELHI</Button>
+                      </Link>
                     </Col>
                     <Col xs={6}>
-                      <Button variant="outline-primary" className="offer-btn w-100">HARYANA</Button>
+                      <Link to="/polytechnic" style={{ textDecoration: 'none' }}>
+                        <Button variant="outline-primary" className="offer-btn w-100">HARYANA</Button>
+                      </Link>
                     </Col>
                     <Col xs={6}>
-                      <Button variant="outline-primary" className="offer-btn w-100">BIHAR</Button>
+                      <Link to="/polytechnic" style={{ textDecoration: 'none' }}>
+                        <Button variant="outline-primary" className="offer-btn w-100">BIHAR</Button>
+                      </Link>
                     </Col>
                     <Col xs={6}>
-                      <Button variant="outline-primary" className="offer-btn w-100">PUNJAB</Button>
+                      <Link to="/polytechnic" style={{ textDecoration: 'none' }}>
+                        <Button variant="outline-primary" className="offer-btn w-100">PUNJAB</Button>
+                      </Link>
                     </Col>
                     <Col xs={6}>
-                      <Button variant="outline-primary" className="offer-btn w-100">UTTAR PRADESH</Button>
+                      <Link to="/polytechnic" style={{ textDecoration: 'none' }}>
+                        <Button variant="outline-primary" className="offer-btn w-100">UTTAR PRADESH</Button>
+                      </Link>
                     </Col>
                     <Col xs={6}>
-                      <Button variant="outline-primary" className="offer-btn w-100">MADHYA PRADESH</Button>
+                      <Link to="/polytechnic" style={{ textDecoration: 'none' }}>
+                        <Button variant="outline-primary" className="offer-btn w-100">MADHYA PRADESH</Button>
+                      </Link>
                     </Col>
                   </Row>
                 </Card.Body>
@@ -271,22 +285,34 @@ const Home = () => {
                   <h3 className="offer-title">PLACEMENT COACHING</h3>
                   <Row className="g-3 mt-3">
                     <Col xs={6}>
-                      <Button variant="outline-primary" className="offer-btn w-100">MARUTI SUZUKI</Button>
+                      <Link to="/placement" style={{ textDecoration: 'none' }}>
+                        <Button variant="outline-primary" className="offer-btn w-100">MARUTI SUZUKI</Button>
+                      </Link>
                     </Col>
                     <Col xs={6}>
-                      <Button variant="outline-primary" className="offer-btn w-100">SAMSUNG ENGG.</Button>
+                      <Link to="/placement" style={{ textDecoration: 'none' }}>
+                        <Button variant="outline-primary" className="offer-btn w-100">SAMSUNG ENGG.</Button>
+                      </Link>
                     </Col>
                     <Col xs={6}>
-                      <Button variant="outline-primary" className="offer-btn w-100">HONDA CARS</Button>
+                      <Link to="/placement" style={{ textDecoration: 'none' }}>
+                        <Button variant="outline-primary" className="offer-btn w-100">HONDA CARS</Button>
+                      </Link>
                     </Col>
                     <Col xs={6}>
-                      <Button variant="outline-primary" className="offer-btn w-100">TECHNIP ENERGIES</Button>
+                      <Link to="/placement" style={{ textDecoration: 'none' }}>
+                        <Button variant="outline-primary" className="offer-btn w-100">TECHNIP ENERGIES</Button>
+                      </Link>
                     </Col>
                     <Col xs={6}>
-                      <Button variant="outline-primary" className="offer-btn w-100">INDRAPRASTHA GAS LTD</Button>
+                      <Link to="/placement" style={{ textDecoration: 'none' }}>
+                        <Button variant="outline-primary" className="offer-btn w-100">INDRAPRASTHA GAS LTD</Button>
+                      </Link>
                     </Col>
                     <Col xs={6}>
-                      <Button variant="outline-primary" className="offer-btn w-100">HERO MOTOCORP LTD</Button>
+                      <Link to="/placement" style={{ textDecoration: 'none' }}>
+                        <Button variant="outline-primary" className="offer-btn w-100">HERO MOTOCORP LTD</Button>
+                      </Link>
                     </Col>
                   </Row>
                 </Card.Body>
@@ -301,22 +327,34 @@ const Home = () => {
                   <h3 className="offer-title">SEMESTER COACHING</h3>
                   <Row className="g-3 mt-3">
                     <Col xs={6}>
-                      <Button variant="outline-primary" className="offer-btn w-100">MECHANICAL</Button>
+                      <Link to="/semester-coaching" style={{ textDecoration: 'none' }}>
+                        <Button variant="outline-primary" className="offer-btn w-100">MECHANICAL</Button>
+                      </Link>
                     </Col>
                     <Col xs={6}>
-                      <Button variant="outline-primary" className="offer-btn w-100">COMPUTER</Button>
+                      <Link to="/semester-coaching" style={{ textDecoration: 'none' }}>
+                        <Button variant="outline-primary" className="offer-btn w-100">COMPUTER</Button>
+                      </Link>
                     </Col>
                     <Col xs={6}>
-                      <Button variant="outline-primary" className="offer-btn w-100">CIVIL</Button>
+                      <Link to="/semester-coaching" style={{ textDecoration: 'none' }}>
+                        <Button variant="outline-primary" className="offer-btn w-100">CIVIL</Button>
+                      </Link>
                     </Col>
                     <Col xs={6}>
-                      <Button variant="outline-primary" className="offer-btn w-100">ELECTRONICS</Button>
+                      <Link to="/semester-coaching" style={{ textDecoration: 'none' }}>
+                        <Button variant="outline-primary" className="offer-btn w-100">ELECTRONICS</Button>
+                      </Link>
                     </Col>
                     <Col xs={6}>
-                      <Button variant="outline-primary" className="offer-btn w-100">ELECTRICAL</Button>
+                      <Link to="/semester-coaching" style={{ textDecoration: 'none' }}>
+                        <Button variant="outline-primary" className="offer-btn w-100">ELECTRICAL</Button>
+                      </Link>
                     </Col>
                     <Col xs={6}>
-                      <Button variant="outline-primary" className="offer-btn w-100">OTHER TRADES</Button>
+                      <Link to="/semester-coaching" style={{ textDecoration: 'none' }}>
+                        <Button variant="outline-primary" className="offer-btn w-100">OTHER TRADES</Button>
+                      </Link>
                     </Col>
                   </Row>
                 </Card.Body>

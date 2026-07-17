@@ -7,7 +7,13 @@
 .courses-section h2,
 .test-series-section h2,
 .testimonials-home-section h2,
-.what-we-offer-section h2 {
+.what-we-offer-section h2,
+.section-title,
+.fee-main-title,
+.fee-section-title,
+.main-section-heading,
+.subsection-heading,
+.toc-title {
   font-family: 'Montserrat', sans-serif !important;
   font-size: 38px !important;
   font-weight: 900 !important;
@@ -419,16 +425,7 @@
   padding-bottom: 15px;
 }
 
-.course-heading::after {
-  content: '';
-  position: absolute;
-  bottom: 0;
-  left: 50%;
-  transform: translateX(-50%);
-  width: 100px;
-  height: 3px;
-  background-color: #0052a3;
-}
+
 
 .course-btn {
   border: 2px solid #0052a3 !important;
@@ -843,4 +840,41 @@
   left: 0;
   color: #0052a3;
   font-weight: bold;
+}
+
+/* Sticky WhatsApp Button */
+.whatsapp-sticky {
+  position: fixed;
+  bottom: 30px;
+  right: 30px;
+  background-color: #25D366;
+  color: white;
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+  z-index: 9999;
+  text-decoration: none;
+  animation: pulse-whatsapp 2s infinite;
+  transition: transform 0.3s ease;
+}
+
+.whatsapp-sticky:hover {
+  transform: scale(1.1);
+  color: white;
+}
+
+@keyframes pulse-whatsapp {
+  0% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0.7);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(37, 211, 102, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(37, 211, 102, 0);
+  }
 }

@@ -149,6 +149,26 @@
   background: #e3f2fd;
 }
 
+.social-icon.linkedin-icon {
+  background: #0077b5;
+  color: white;
+}
+.social-icon.linkedin-icon:hover {
+  background: #005885;
+  color: white;
+  transform: translateY(-3px);
+}
+
+.social-icon.github-icon {
+  background: #24292e;
+  color: white;
+}
+.social-icon.github-icon:hover {
+  background: #000000;
+  color: white;
+  transform: translateY(-3px);
+}
+
 
 
 .member-description {

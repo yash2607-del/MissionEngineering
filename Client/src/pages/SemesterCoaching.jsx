@@ -1,10 +1,15 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
-import CourseNavigation from '../components/CourseNavigation';
 import { FaBook, FaGraduationCap, FaChalkboardTeacher, FaLaptop, FaCog, FaBolt, FaDesktop, FaFlask, FaCar, FaPrint, FaNetworkWired, FaUserTie, FaBookOpen, FaBullseye, FaTrophy, FaUsers, FaClipboardCheck, FaChartLine, FaClock, FaLaptopCode, FaMicrochip, FaBuilding, FaPlug, FaWrench, FaVial, FaServer } from 'react-icons/fa';
 import './SemesterCoaching.css';
 
 const SemesterCoaching = () => {
+  const [expandedCards, setExpandedCards] = useState({});
+
+  const toggleCard = (index) => {
+    setExpandedCards(prev => ({ ...prev, [index]: !prev[index] }));
+  };
+
   const engineeringBranches = [
     {
       icon: <FaCog />,
@@ -248,7 +253,7 @@ const SemesterCoaching = () => {
       {/* Header Section */}
       <div className="semester-header">
         <Container>
-          <h1 className="semester-main-title">Polytechnic Semester Coaching: Expert Guidance for Success</h1>
+          <h1 className="semester-main-title">Polytechnic Semester Coaching</h1>
         </Container>
       </div>
 
@@ -266,10 +271,7 @@ const SemesterCoaching = () => {
         </Container>
       </div>
 
-      <div className="courses-heading-container">
-        <h2 className="courses-heading">Courses We Offer</h2>
-      </div>
-      <CourseNavigation />
+
 
       {/* Content Container */}
       <Container>
@@ -296,36 +298,10 @@ const SemesterCoaching = () => {
             </Row>
           </div>
 
-          {/* Why Mission Engineering */}
-          <div className="mission-section">
-            <h2 className="main-section-heading">Why Mission Engineering is Best For Polytechnic Semester Coaching?</h2>
-            <p className="intro-text">
-              At Mission Engineering, we understand the unique challenges that Polytechnic students face when preparing for their semester exams. With a commitment to academic excellence and personalized support, we have emerged as the go-to coaching institute for Polytechnic semester preparation.
-            </p>
-            <h3 className="subsection-heading">Our Key Strengths</h3>
-            <Row className="strengths-row">
-              {keyStrengths.map((strength, index) => (
-                <Col lg={4} md={6} xs={6} key={index} className="mb-4">
-                  <Card className="strength-card h-100">
-                    <Card.Body>
-                      <div className="strength-icon">
-                        {strength.icon}
-                      </div>
-                      <h5 className="strength-title">{strength.title}</h5>
-                      <p className="strength-description">{strength.description}</p>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              ))}
-            </Row>
-          </div>
-
           {/* Engineering Branches */}
           <div className="branches-section">
             <h2 className="main-section-heading">Polytechnic Engineering Branches We Offer</h2>
-            <p className="intro-text">
-              Mission Engineering provides comprehensive coaching for all streams of polytechnic. We offer both offline and online semester coaching to ensure every student has access to high-quality education.
-            </p>
+            
             <Row>
               {engineeringBranches.map((branch, index) => (
                 <Col lg={4} md={6} xs={6} key={index} className="mb-4">
@@ -341,25 +317,56 @@ const SemesterCoaching = () => {
                       <div className="branch-content">
                         {branch.semesters ? (
                           // For Mechanical Engineering with semester breakdown
-                          branch.semesters.map((semester, semIdx) => (
-                            <div key={semIdx} className="semester-group">
-                              <h5 className="semester-heading">{semester.title}</h5>
-                              <ul className="subjects-list">
-                                {semester.subjects.map((subject, subIdx) => (
-                                  <li key={subIdx}>{subject}</li>
-                                ))}
-                              </ul>
-                            </div>
-                          ))
+                          <>
+                            {branch.semesters.slice(0, expandedCards[index] ? branch.semesters.length : 1).map((semester, semIdx) => (
+                              <div key={semIdx} className="semester-group">
+                                <h5 className="semester-heading">{semester.title}</h5>
+                                <ul className="subjects-list">
+                                  {semester.subjects.slice(0, expandedCards[index] ? semester.subjects.length : 4).map((subject, subIdx) => (
+                                    <li key={subIdx}>{subject}</li>
+                                  ))}
+                                </ul>
+                              </div>
+                            ))}
+                          </>
                         ) : (
                           // For other branches with direct subjects list
                           <ul className="subjects-list">
-                            {branch.subjects.map((subject, subIdx) => (
+                            {branch.subjects.slice(0, expandedCards[index] ? branch.subjects.length : 5).map((subject, subIdx) => (
                               <li key={subIdx}>{subject}</li>
                             ))}
                           </ul>
                         )}
+                        {(branch.semesters ? branch.semesters.length > 1 : branch.subjects.length > 5) && (
+                          <button 
+                            className="read-more-btn"
+                            onClick={() => toggleCard(index)}
+                          >
+                            {expandedCards[index] ? 'Show Less' : 'Read More...'}
+                          </button>
+                        )}
                       </div>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              ))}
+            </Row>
+          </div>
+
+          {/* Why Mission Engineering */}
+          <div className="mission-section">
+
+            <h3 className="subsection-heading">Our Key Strengths</h3>
+            <Row className="strengths-row">
+              {keyStrengths.map((strength, index) => (
+                <Col lg={4} md={6} xs={6} key={index} className="mb-4">
+                  <Card className="strength-card h-100">
+                    <Card.Body>
+                      <div className="strength-icon">
+                        {strength.icon}
+                      </div>
+                      <h5 className="strength-title">{strength.title}</h5>
+                      <p className="strength-description">{strength.description}</p>
                     </Card.Body>
                   </Card>
                 </Col>
