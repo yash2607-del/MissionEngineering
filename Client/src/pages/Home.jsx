@@ -68,7 +68,7 @@ const Home = () => {
   };
 
   const heroImages = [
-    { desktop: '/1.jpeg', mobile: '/1.jpeg' },
+    { desktop: '/5.png', mobile: '/5.png' },
     { desktop: '/2.jpeg', mobile: '/2.jpeg' },
     { desktop: '/3.jpeg', mobile: '/3.jpeg' },
     { desktop: '/4.jpeg', mobile: '/4.jpeg' },
