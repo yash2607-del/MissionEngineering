@@ -584,14 +584,14 @@ const LEET = () => {
                 <Col md={4} xs={6}>
                   <Card className="year-card">
                     <Card.Body>
-                      <h4 className="year-title">2024 Cut Off</h4>
+                      <h4 className="year-title">2026 Cut Off</h4>
                       <div className="university-cutoff">
                         <h6>IPU:</h6>
                         <p>Students who scored 290 out of 400 ranked in the top 10.</p>
                       </div>
                       <div className="university-cutoff">
                         <h6>DTU:</h6>
-                        <p>Rank 1: Spandan Choudhury scored 292 out of 360. Spandan was a student of Mission Engineering offline batch LEET 2024.</p>
+                        <p>Rank 1: Spandan Choudhury scored 292 out of 360. Spandan was a student of Mission Engineering offline batch LEET 2026.</p>
                       </div>
                     </Card.Body>
                   </Card>
@@ -600,7 +600,7 @@ const LEET = () => {
                 <Col md={4} xs={6}>
                   <Card className="year-card">
                     <Card.Body>
-                      <h4 className="year-title">2023 Cut Off</h4>
+                      <h4 className="year-title">2025 Cut Off</h4>
                       <div className="university-cutoff">
                         <h6>IPU:</h6>
                         <p>Students who scored 230 out of 400 ranked in the top 10.</p>
@@ -616,7 +616,7 @@ const LEET = () => {
                 <Col md={4} xs={6}>
                   <Card className="year-card">
                     <Card.Body>
-                      <h4 className="year-title">2022 Cut Off</h4>
+                      <h4 className="year-title">2024 Cut Off</h4>
                       <div className="university-cutoff">
                         <h6>IPU:</h6>
                         <p>Rank 1: Md Akmal scored 267 out of 400 (Mission Engineering student). Top 10: 235+ out of 400.</p>

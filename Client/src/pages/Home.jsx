@@ -39,7 +39,10 @@ const Home = () => {
   const [videos, setVideos] = useState([]);
 
   useEffect(() => {
-    setShowPopup(true);
+    const hasSeenPopup = window.sessionStorage.getItem('missionPopupSeenSession');
+    if (!hasSeenPopup) {
+      setShowPopup(true);
+    }
     
     fetchVideos().then(res => {
       if (res && res.videos) {
@@ -49,6 +52,7 @@ const Home = () => {
   }, []);
 
   const closePopup = () => {
+    window.sessionStorage.setItem('missionPopupSeenSession', 'true');
     setShowPopup(false);
   };
 
@@ -562,7 +566,7 @@ const Home = () => {
           <h2 className="text-center mb-5 home-section-heading">TEST SERIES</h2>
           <Row className="g-4">
             {/* DTU LEET */}
-            <Col lg={3} md={4} sm={6}>
+            <Col lg={3} md={4} sm={6} xs={6}>
               <Card className="test-card h-100">
                 <Card.Body className="text-center">
                   <div className="test-logo-wrapper">
@@ -805,7 +809,7 @@ const Home = () => {
       <section className="faq-section py-5">
         <Container>
           <h2 className="text-center mb-5 home-section-heading">FREQUENTLY ASKED QUESTIONS</h2>
-          <Accordion>
+          <Accordion className="custom-accordion">
             <Accordion.Item eventKey="0">
               <Accordion.Header>1. When was Mission Engineering established?</Accordion.Header>
               <Accordion.Body>

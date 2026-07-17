@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card, Button } from 'react-bootstrap';
 import { useNavigate } from 'react-router-dom';
+import { FaChalkboardTeacher, FaBookOpen, FaUserGraduate, FaFileSignature } from 'react-icons/fa';
 import CourseNavigation from '../components/CourseNavigation';
 import './ClassroomCourse.css';
 import { images } from '../../data';
@@ -10,6 +11,7 @@ const ClassroomCourse = () => {
   const courseFeatures = [
     {
       title: 'Renowned & Experienced Faculties',
+      icon: <FaChalkboardTeacher size={30} />,
       items: [
         'Quality Teaching',
         'Outstanding Education Delivery',
@@ -20,6 +22,7 @@ const ClassroomCourse = () => {
     },
     {
       title: 'Enriched Content & Performance Assessment',
+      icon: <FaBookOpen size={30} />,
       items: [
         'Well Researched & Refined Study Material',
         'Aligned with Current Exam Trends'
@@ -27,6 +30,7 @@ const ClassroomCourse = () => {
     },
     {
       title: 'Student Centric Approach',
+      icon: <FaUserGraduate size={30} />,
       items: [
         'Back-Up for Missed Classes/Robust Infrastructure',
         'Dynamic Infrastructure',
@@ -36,6 +40,7 @@ const ClassroomCourse = () => {
     },
     {
       title: 'Written & Personality Test',
+      icon: <FaFileSignature size={30} />,
       items: [
         'Meticulously Crafted Curriculum',
         'Result Oriented Approach',
@@ -103,9 +108,12 @@ const ClassroomCourse = () => {
           <h2 className="features-title">COURSE FEATURES</h2>
           <Row>
             {courseFeatures.map((feature, index) => (
-              <Col md={6} lg={3} key={index} className="mb-4">
+              <Col lg={3} md={6} key={index} className="mb-4">
                 <Card className="feature-card h-100">
                   <Card.Body>
+                    <div className="feature-icon-wrapper">
+                      {feature.icon}
+                    </div>
                     <h5 className="feature-title">{feature.title}</h5>
                     <ul className="feature-list">
                       {feature.items.map((item, idx) => (
