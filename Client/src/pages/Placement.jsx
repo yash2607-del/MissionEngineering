@@ -68,27 +68,27 @@ const Placement = () => {
     {
       step: 1,
       title: 'Company Visits & Presentations',
-      description: 'Companies interested in hiring polytechnic students schedule campus visits where they present their organization, its values, and the job roles available. This gives students a chance to learn about potential employers and the expectations of the roles they are applying for.'
+      description: 'Companies present their organization, values, and available job roles to interested students.'
     },
     {
       step: 2,
       title: 'Written Tests',
-      description: 'Many companies conduct written tests to assess the technical knowledge and problem-solving skills of students. These tests typically cover subjects relevant to the student\'s field of study, such as engineering principles, logical reasoning, and mathematics.'
+      description: 'Assessments to evaluate technical knowledge, logical reasoning, and problem-solving skills.'
     },
     {
       step: 3,
       title: 'Group Discussions',
-      description: 'Some companies also include group discussions (GD) as part of the selection process. This helps employers assess the candidates\' communication, leadership, and teamwork abilities.'
+      description: 'Interactive discussions to assess communication, leadership, and teamwork abilities.'
     },
     {
       step: 4,
       title: 'Interviews',
-      description: 'After successfully clearing the written tests and group discussions, students are usually called for personal or technical interviews. These interviews focus on assessing the candidate\'s technical expertise, problem-solving abilities, and overall fit within the company culture.'
+      description: 'Personal or technical interviews focusing on your expertise, problem-solving, and cultural fit.'
     },
     {
       step: 5,
       title: 'Offer Letter',
-      description: 'After the interview stage, successful candidates are given an offer letter, which confirms their selection for a job. The offer may include details about the role, salary, benefits, and joining date.'
+      description: 'Successful candidates receive an official offer detailing their role, salary, and joining date.'
     }
   ];
 
@@ -269,19 +269,19 @@ const Placement = () => {
             The polytechnic campus placement process typically involves several stages. While the exact process may vary from one institute to another, it generally includes the following steps:
           </p>
           
-          <Row className="g-4">
+          <div className="roadmap-container">
             {placementProcess.map((item, index) => (
-              <Col key={index} md={6} lg={4} xs={6}>
-                <Card className="process-card h-100">
-                  <Card.Body>
-                    <div className="process-number">{item.step}</div>
-                    <h5 className="process-title">{item.title}</h5>
-                    <p className="process-description">{item.description}</p>
-                  </Card.Body>
-                </Card>
-              </Col>
+              <div key={index} className={`roadmap-step ${index % 2 === 0 ? 'left' : 'right'}`}>
+                <div className="roadmap-marker">
+                  <span className="roadmap-number">{item.step}</span>
+                </div>
+                <div className="roadmap-content">
+                  <h5 className="roadmap-title">{item.title}</h5>
+                  <p className="roadmap-description">{item.description}</p>
+                </div>
+              </div>
             ))}
-          </Row>
+          </div>
         </Container>
       </section>
 
