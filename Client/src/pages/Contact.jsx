@@ -163,11 +163,11 @@ const Contact = () => {
         >
 
           <Toast.Header>
-            <strong className="me-auto">Mission Engineering</strong>
+            <strong className="me-auto">Message sent successfully!</strong>
           </Toast.Header>
 
           <Toast.Body className="text-white">
-            ✅ Message sent successfully!
+             Thank you for reaching out! We will get back to you as soon as possible.
           </Toast.Body>
 
         </Toast>
