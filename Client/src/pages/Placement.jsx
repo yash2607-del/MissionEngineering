@@ -187,16 +187,16 @@ const Placement = () => {
       description: 'As India\'s largest automobile manufacturer, Maruti Suzuki has a well-established reputation for providing high-quality vehicles and contributing to the growth of the automotive sector in Delhi polytechnic colleges, particularly looking for mechanical, electrical, and automobile engineering students.'
     },
     {
-      name: 'Toshiba Energies',
-      description: 'Toshiba Energies is a global leader in engineering and technology services, specializing in energy and petrochemical sectors. With a presence in more than 45 countries, Toshiba Energies recruits students from polytechnic colleges in Delhi for positions in project engineering, design, and field operations.'
+      name: 'Samsung Engineering',
+      description: 'Samsung Engineering is a global engineering, procurement, and construction (EPC) company specializing in the oil & gas, power, and industrial sectors. The company actively recruits polytechnic graduates for roles in project engineering, design, and field operations.'
     },
     {
       name: 'IGL (Indraprastha Gas Limited)',
       description: 'IGL plays a critical role in the energy sector, providing natural gas to Delhi and surrounding areas. As a leading company in the distribution of natural gas, IGL offers polytechnic graduates the chance to work in infrastructure development, project management, and operations.'
     },
     {
-      name: 'Floor Design',
-      description: 'Floor Design is a company that specializes in providing comprehensive interior and exterior design solutions for the construction industry. Polytechnic graduates in Delhi offer excellent Floor David for recruitment drives, looking for talented civil engineers and architects.'
+      name: 'Fluor Daniel',
+      description: 'Fluor Daniel is a company that specializes in providing comprehensive interior and exterior design solutions for the construction industry. Polytechnic graduates in Delhi offer excellent Floor David for recruitment drives, looking for talented civil engineers and architects.'
     },
     {
       name: 'Bechtel',
@@ -225,6 +225,10 @@ const Placement = () => {
     {
       name: 'Hero Motors',
       description: 'Hero Motors, a global leader in the motorcycle and bicycle manufacturing industry, is another key recruiter in Delhi\'s polytechnic colleges. Known for its presence in the two-wheeled segment, Hero Motors hires polytechnic graduates for roles in production, design, quality control, and R&D.'
+    },
+     {
+      name: 'Atlas Copco',
+      description: 'Atlas Copco is a leading global industrial company specializing in innovative products like air compressors and industrial tools. With a focus on sustainable productivity, they hire polytechnic graduates for various roles in manufacturing, automotive, and electronics.'
     }
   ];
 
