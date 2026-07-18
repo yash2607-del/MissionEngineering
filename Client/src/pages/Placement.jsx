@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Card } from 'react-bootstrap';
 import CourseNavigation from '../components/CourseNavigation';
-import { FaCheckCircle, FaBriefcase, FaUserGraduate, FaHandshake, FaChartLine, FaAward, FaUsers, FaLightbulb } from 'react-icons/fa';
+import { FaCheckCircle, FaBriefcase, FaUserGraduate, FaHandshake, FaChartLine, FaAward, FaUsers, FaLightbulb, FaBook, FaChalkboardTeacher, FaComments, FaFileAlt } from 'react-icons/fa';
 import './Placement.css';
 import { images } from '../../data';
 
@@ -136,23 +136,33 @@ const Placement = () => {
   const missionOffers = [
     {
       title: 'Technical Skill Development',
-      description: 'Focused on core engineering subjects such as Mechanical, Civil, Electrical, Computer Science, etc.'
+      description: 'Focused on core engineering subjects such as Mechanical, Civil, Electrical, Computer Science, etc.',
+      icon: <FaLightbulb />
     },
     {
       title: 'Aptitude & Reasoning',
-      description: 'Comprehensive preparation for quantitative aptitude, logical reasoning, and verbal ability.'
+      description: 'Comprehensive preparation for quantitative aptitude, logical reasoning, and verbal ability.',
+      icon: <FaChartLine />
     },
     {
       title: 'Soft Skills',
-      description: 'Training in communication, teamwork, leadership, and time management to ensure students are ready for professional environments.'
+      description: 'Training in communication, teamwork, leadership, and time management to ensure students are ready for professional environments.',
+      icon: <FaHandshake />
     },
     {
       title: 'Group Discussion',
-      description: 'A group discussion (GD) is a common selection process used by companies to assess candidates\' communication, teamwork, and problem-solving skills. During a GD, participants discuss a given topic, share their perspectives, and collaborate to reach a conclusion.'
+      description: 'A group discussion (GD) is a common selection process used by companies to assess candidates\' communication, teamwork, and problem-solving skills. During a GD, participants discuss a given topic, share their perspectives, and collaborate to reach a conclusion.',
+      icon: <FaUsers />
     },
     {
       title: 'Interview Preparation',
-      description: 'Mock interviews, resume building, and personality development workshops to help students present their best selves.'
+      description: 'Mock interviews, resume building, and personality development workshops to help students present their best selves.',
+      icon: <FaUserGraduate />
+    },
+    {
+      title: 'Career Guidance',
+      description: 'Expert advice and continuous support to help students make informed decisions about their career paths and future opportunities.',
+      icon: <FaBriefcase />
     }
   ];
 
@@ -220,49 +230,63 @@ const Placement = () => {
 
   return (
     <div className="placement-page">
-      {/* Hero Section */}
-      <section className="placement-hero">
-        <Container>
-          <div className="hero-content">
-            <h1 className="hero-title">Polytechnic Campus Placement</h1>
-            <p className="hero-subtitle">Your Gateway to a Successful Engineering Career</p>
-          </div>
-        </Container>
-      </section>
-
-      {/* What is Polytechnic Campus Placement */}
+     
+      {/* Why Polytechnic Campus Placement Section */}
       <section className="placement-section">
         <Container>
-          <Card className="content-card">
-            <Card.Body>
-              <h2 className="section-title">What is Polytechnic Campus Placement?</h2>
-              <p>
-                Polytechnic campus placement refers to the process through which polytechnic students are recruited by companies and industries directly from their educational institution. It is an integral part of the polytechnic education system, ensuring that students can transition smoothly from academic life to the professional world. Through campus placement, companies visit polytechnic institutes to assess and select potential candidates for job roles in various sectors, including engineering, technology, manufacturing, and more.
-              </p>
-            </Card.Body>
-          </Card>
+          <h2 className="section-title">Why Polytechnic Campus Placement?</h2>
+          <Row className="g-4 mt-3">
+            <Col lg={4} md={12}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaHandshake /></div>
+                  <h5 className="benefit-title">Direct Recruitment</h5>
+                  <p className="benefit-description">Polytechnic campus placement refers to the process through which polytechnic students are recruited by companies and industries directly from their educational institution. It is an integral part of the polytechnic education system, ensuring that students can transition smoothly from academic life to the professional world. Through campus placement, companies visit polytechnic institutes to assess and select potential candidates for job roles in various sectors, including engineering, technology, manufacturing, and more.</p>
+                </Card.Body>
+              </Card>
+            </Col>
+
+            <Col lg={4} md={12}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaAward /></div>
+                  <h5 className="benefit-title">Bridge to Profession</h5>
+                  <p className="benefit-description">The main objective of polytechnic education is to equip students with the technical skills and practical knowledge required to excel in their chosen fields. Campus placement serves as the bridge between these academic accomplishments and the professional job market. It provides students with an opportunity to kickstart their careers by securing a job right after completing their course. This direct employment pathway helps students not only in their financial independence but also in gaining valuable real-world experience early in their careers.</p>
+                </Card.Body>
+              </Card>
+            </Col>
+
+            <Col lg={4} md={12}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaBriefcase /></div>
+                  <h5 className="benefit-title">Efficient Hiring</h5>
+                  <p className="benefit-description">For companies, campus placement offers an efficient way to identify fresh talent who are already equipped with the technical knowledge and skill sets needed for specific roles. Organizations benefit from hiring polytechnic graduates who are ready to work in industry-specific roles, thus reducing the time and effort needed for training.</p>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
         </Container>
       </section>
 
-      <div className="courses-heading-container">
-        <h2 className="courses-heading">Courses We Offer</h2>
-      </div>
-      <CourseNavigation />
-
-      {/* Importance Section */}
+      {/* Top Recruiters */}
       <section className="placement-section bg-light">
         <Container>
-          <h2 className="section-title">Importance of Polytechnic Placement</h2>
-          <Card className="content-card">
-            <Card.Body>
-              <p>
-                The main objective of polytechnic education is to equip students with the technical skills and practical knowledge required to excel in their chosen fields. Campus placement serves as the bridge between these academic accomplishments and the professional job market. It provides students with an opportunity to kickstart their careers by securing a job right after completing their course. This direct employment pathway helps students not only in their financial independence but also in gaining valuable real-world experience early in their careers.
-              </p>
-              <p className="mt-3">
-                For companies, campus placement offers an efficient way to identify fresh talent who are already equipped with the technical knowledge and skill sets needed for specific roles. Organizations benefit from hiring polytechnic graduates who are ready to work in industry-specific roles, thus reducing the time and effort needed for training.
-              </p>
-            </Card.Body>
-          </Card>
+          <h2 className="section-title">Top Recruiters</h2>
+          
+          <Row className="g-4">
+            {topRecruiters.map((recruiter, index) => (
+              <Col key={index} lg={4} md={6} xs={12}>
+                <Card className="recruiter-card h-100">
+                  <Card.Body>
+                    <div className="recruiter-number">{index + 1}</div>
+                    <h5 className="recruiter-name">{recruiter.name}</h5>
+                    <p className="recruiter-description">{recruiter.description}</p>
+                  </Card.Body>
+                </Card>
+              </Col>
+            ))}
+          </Row>
         </Container>
       </section>
 
@@ -270,10 +294,6 @@ const Placement = () => {
       <section className="placement-section">
         <Container>
           <h2 className="section-title">Polytechnic Campus Placement Process</h2>
-          <p className="text-center mb-4">
-            The polytechnic campus placement process typically involves several stages. While the exact process may vary from one institute to another, it generally includes the following steps:
-          </p>
-          
           <div className="roadmap-container">
             {placementProcess.map((item, index) => (
               <div key={index} className={`roadmap-step ${index % 2 === 0 ? 'left' : 'right'}`}>
@@ -334,36 +354,68 @@ const Placement = () => {
       {/* Why Choose Mission Engineering */}
       <section className="placement-section">
         <Container>
-          <Card className="content-card mission-card">
-            <Card.Body>
-              <h2 className="section-title">Why Choose Mission Engineering for Polytechnic Placement Preparation?</h2>
-              
-              <div className="mission-point">
-                <h5><FaCheckCircle className="point-icon" /> Experienced Faculty</h5>
-                <p>Our team of experienced, passionate educators are experts in their respective fields, committed to your success.</p>
-              </div>
+          <h2 className="section-title">Why Choose Mission Engineering?</h2>
+          <Row className="g-4 mt-3">
+            <Col md={4} sm={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaChalkboardTeacher /></div>
+                  <h5 className="benefit-title">Experienced Faculty</h5>
+                  <p className="benefit-description">Our team of experienced, passionate educators are experts in their respective fields, committed to your success.</p>
+                </Card.Body>
+              </Card>
+            </Col>
 
-              <div className="mission-point">
-                <h5><FaCheckCircle className="point-icon" /> Comprehensive Curriculum</h5>
-                <p>We offer a well-structured curriculum that covers every aspect of polytechnic placement exams, including technical subjects, aptitude, logical reasoning, and soft skills.</p>
-              </div>
+            <Col md={4} sm={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaBook /></div>
+                  <h5 className="benefit-title">Comprehensive Curriculum</h5>
+                  <p className="benefit-description">We offer a well-structured curriculum that covers every aspect of polytechnic placement exams, including technical subjects, aptitude, logical reasoning, and soft skills.</p>
+                </Card.Body>
+              </Card>
+            </Col>
 
-              <div className="mission-point">
-                <h5><FaCheckCircle className="point-icon" /> Personalized Coaching</h5>
-                <p>At Mission Engineering, we understand that each student has unique learning needs. Our personalized coaching ensures that you get the individual attention you deserve.</p>
-              </div>
+            <Col md={4} sm={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaUserGraduate /></div>
+                  <h5 className="benefit-title">Personalized Coaching</h5>
+                  <p className="benefit-description">At Mission Engineering, we understand that each student has unique learning needs. Our personalized coaching ensures that you get the individual attention you deserve.</p>
+                </Card.Body>
+              </Card>
+            </Col>
 
-              <div className="mission-point">
-                <h5><FaCheckCircle className="point-icon" /> Industry Exposure</h5>
-                <p>We provide students with real-world exposure through mock interviews, guest lectures from industry experts, and interaction with alumni who have successfully been placed.</p>
-              </div>
+            <Col md={4} sm={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaBriefcase /></div>
+                  <h5 className="benefit-title">Industry Exposure</h5>
+                  <p className="benefit-description">We provide students with real-world exposure through mock interviews, guest lectures from industry experts, and interaction with alumni who have successfully been placed.</p>
+                </Card.Body>
+              </Card>
+            </Col>
 
-              <div className="mission-point">
-                <h5><FaCheckCircle className="point-icon" /> Success Stories</h5>
-                <p>Our alumni have secured positions in top organizations across various industries. With a proven track record of student success, we take pride in shaping the future of polytechnic students.</p>
-              </div>
-            </Card.Body>
-          </Card>
+            <Col md={4} sm={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaChartLine /></div>
+                  <h5 className="benefit-title">Success Stories</h5>
+                  <p className="benefit-description">Our alumni have secured positions in top organizations across various industries. With a proven track record of student success, we take pride in shaping the future of polytechnic students.</p>
+                </Card.Body>
+              </Card>
+            </Col>
+
+            <Col md={4} sm={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaComments /></div>
+                  <h5 className="benefit-title">Doubt Clearing Sessions</h5>
+                  <p className="benefit-description">Regular doubt clearing sessions to ensure that no student is left behind, providing a solid foundation in all subjects.</p>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
         </Container>
       </section>
 
@@ -371,18 +423,15 @@ const Placement = () => {
       <section className="placement-section bg-light">
         <Container>
           <h2 className="section-title">What Mission Engineering Offer?</h2>
-          <p className="text-center mb-4">We offer coaching for a wide range of polytechnic placements, including:</p>
           
-          <Row className="g-4">
+          <Row className="g-4 mt-3">
             {missionOffers.map((offer, index) => (
-              <Col key={index} md={6} xs={6}>
-                <Card className="offer-card h-100">
+              <Col key={index} lg={4} md={6} xs={12}>
+                <Card className="benefit-card h-100">
                   <Card.Body>
-                    <h5 className="offer-title">
-                      <FaCheckCircle className="offer-icon" />
-                      {offer.title}
-                    </h5>
-                    <p className="offer-description">{offer.description}</p>
+                    <div className="benefit-icon">{offer.icon}</div>
+                    <h5 className="benefit-title">{offer.title}</h5>
+                    <p className="benefit-description">{offer.description}</p>
                   </Card.Body>
                 </Card>
               </Col>
@@ -391,59 +440,12 @@ const Placement = () => {
         </Container>
       </section>
 
-      {/* Mission Engineering Facilitates */}
-      <section className="placement-section">
-        <Container>
-          <h2 className="section-title">Mission Engineering Facilitates?</h2>
-          <p className="text-center mb-4">
-            At Mission Engineering, we believe in a hands-on approach to coaching. We focus on practical learning methods such as:
-          </p>
-          
-          <Row className="g-4">
-            {facilities.map((facility, index) => (
-              <Col key={index} md={4}>
-                <Card className="facility-card h-100">
-                  <Card.Body>
-                    <h5 className="facility-title">
-                      <FaCheckCircle className="facility-icon" />
-                      {facility.title}
-                    </h5>
-                    <p className="facility-description">{facility.description}</p>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
+
 
    
      
           
 
-      {/* Top Recruiters */}
-      <section className="placement-section bg-light">
-        <Container>
-          <h2 className="section-title">Top Recruiters Visit in Delhi Polytechnic Colleges for Placement</h2>
-          <p className="text-center mb-4">
-            Polytechnic education in Delhi offers students a solid foundation in engineering, technology, and applied sciences. As students near the completion of their courses, one of the most exciting milestones is the campus placement season. To bridge the gap between education and employment, many top-tier companies actively recruit from Delhi's polytechnic colleges. These companies recognize the value of polytechnic graduates who are equipped with the technical skills and practical knowledge necessary to excel in various industries. Below are some of the most prominent recruiters visiting Delhi's polytechnic colleges:
-          </p>
-          
-          <Row className="g-4">
-            {topRecruiters.map((recruiter, index) => (
-              <Col key={index} lg={6} xs={6}>
-                <Card className="recruiter-card h-100">
-                  <Card.Body>
-                    <div className="recruiter-number">{index + 1}</div>
-                    <h5 className="recruiter-name">{recruiter.name}</h5>
-                    <p className="recruiter-description">{recruiter.description}</p>
-                  </Card.Body>
-                </Card>
-              </Col>
-            ))}
-          </Row>
-        </Container>
-      </section>
     </div>
   );
 };
