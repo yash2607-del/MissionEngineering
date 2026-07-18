@@ -87,6 +87,11 @@ const Placement = () => {
     },
     {
       step: 5,
+      title: 'Medical Test',
+      description: 'A pre-employment medical examination to ensure candidates meet the health and fitness requirements of the role.'
+    },
+    {
+      step: 6,
       title: 'Offer Letter',
       description: 'Successful candidates receive an official offer detailing their role, salary, and joining date.'
     }
