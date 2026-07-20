@@ -194,16 +194,18 @@
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #0052a3;
   font-size: 0.95rem;
   font-weight: 800;
   letter-spacing: 0.35px;
   text-transform: uppercase;
   white-space: nowrap;
   padding: 0;
-  background: transparent;
   border: 0;
   box-shadow: none;
+  background: linear-gradient(90deg, #0052a3, #0099ff, #0052a3, #0099ff, #0052a3);
+  background-size: 200% auto;
+  -webkit-text-fill-color: transparent;
+  animation: sparkle 3s linear infinite;
 }
 
 .announcement-strip-divider {
@@ -221,6 +223,15 @@
 
   to {
     transform: translateX(-25%);
+  }
+}
+
+@keyframes sparkle {
+  0% {
+    background-position: 0% 50%;
+  }
+  100% {
+    background-position: 200% 50%;
   }
 }
 
