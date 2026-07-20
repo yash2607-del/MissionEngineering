@@ -202,10 +202,13 @@
   padding: 0;
   border: 0;
   box-shadow: none;
-  background: linear-gradient(90deg, #0052a3, #0099ff, #0052a3, #0099ff, #0052a3);
-  background-size: 200% auto;
+  background: linear-gradient(90deg, #ff007a, #7928ca, #0070f3, #ff007a);
+  background-size: 300% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
   -webkit-text-fill-color: transparent;
-  animation: sparkle 3s linear infinite;
+  color: transparent;
+  animation: sparkle 4s linear infinite;
 }
 
 .announcement-strip-divider {
