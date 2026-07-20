@@ -73,30 +73,59 @@ const IPULEET = () => {
 
   return (
     <div className="leet-page">
-      {/* Hero Section */}
-      <section className="leet-hero">
+      {/* Introduction Section */}
+      <section className="leet-intro py-5 mt-4">
         <Container>
-          <div className="hero-content">
-            <h1 className="hero-title">IPU LEET Exam Guide</h1>
-            <p className="hero-subtitle">Complete Guide for Indraprastha University Lateral Entry Entrance Test</p>
-          </div>
-        </Container>
-      </section>
-
-      {/* Introduction */}
-      <section id="ipu-about" className="leet-intro">
-        <Container>
-          <Card className="intro-card">
-            <Card.Body>
-              <h2 className="section-title">What is IPU LEET?</h2>
-              <p>
-                IPU LEET (Lateral Entry Entrance Test) is conducted by Guru Gobind Singh Indraprastha University (GGSIPU), Delhi, for diploma holders in engineering who wish to gain direct admission into the second year of B.Tech programs. It is one of the most prestigious lateral entry exams in India, giving access to top engineering colleges in Delhi.
-              </p>
-              <p>
-                The exam tests candidates on Mathematics, Reasoning, Mechanics, Physics, Chemistry, and Computer Awareness. Candidates who excel in this exam can secure seats in top IPU-affiliated colleges, significantly boosting their engineering career prospects.
-              </p>
-            </Card.Body>
-          </Card>
+          <h2 className="section-title text-uppercase mb-5">What is IPU LEET Exam?</h2>
+          <Row className="g-4">
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaUserGraduate /></div>
+                  <h5 className="benefit-title">Admission Pathway</h5>
+                  <p className="benefit-description">
+                    LEET is designed for diploma holders seeking direct admission into the second year of undergraduate engineering programs.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+            
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaChartLine /></div>
+                  <h5 className="benefit-title">Career Enhancement</h5>
+                  <p className="benefit-description">
+                    It serves as a crucial pathway to further your education and enhance engineering career prospects without starting from scratch.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+            
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaBook /></div>
+                  <h5 className="benefit-title">Exam Format</h5>
+                  <p className="benefit-description">
+                    The format varies by institution but generally assesses candidates on mathematics, physics, and specific engineering subjects.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+            
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaCheckCircle /></div>
+                  <h5 className="benefit-title">Assessment Goals</h5>
+                  <p className="benefit-description">
+                    Evaluates your foundational knowledge and ability to transition smoothly through multiple-choice or problem-solving questions.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
         </Container>
       </section>
 
@@ -105,41 +134,61 @@ const IPULEET = () => {
       </div>
       <CourseNavigation />
 
-      {/* Table of Contents */}
-      <section className="table-of-contents">
-        <Container>
-          <div className="toc-wrapper">
-            <h3 className="toc-title">Table Of Content</h3>
-            <div className="toc-list">
-              {tableOfContents.map((item, index) => (
-                <a key={index} href={`#${item.id}`} className="toc-item">
-                  <FaHandPointRight className="toc-icon" />
-                  <span>{item.title}</span>
-                </a>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </section>
+     
 
-      {/* Eligibility */}
+      {/* Eligibility Criteria */}
       <section id="ipu-eligibility" className="leet-section">
         <Container>
           <h2 className="section-title">IPU LEET Eligibility Criteria</h2>
-          <Card className="content-card">
-            <Card.Body>
-              <p>To be eligible for IPU LEET, candidates must satisfy the following criteria:</p>
-              <ul className="criteria-list">
-                <li>Hold a 3 or 4-year Diploma in Engineering from a recognized State Board of Technical Education or an institution recognized by AICTE/UGC.</li>
-                <li>Must have scored a minimum of <strong>60% marks</strong> (or equivalent CGPA) in the diploma.</li>
-                <li>Age Limit: Maximum <strong>21 years</strong> for General category as on 01.08.2027. Relaxation of 5 years for SC/ST/OBC candidates.</li>
-                <li>The candidate must be an Indian national.</li>
-              </ul>
-              <p className="mt-3">
-                Candidates should always refer to the official GGSIPU notification for the most accurate eligibility criteria for the current year.
-              </p>
-            </Card.Body>
-          </Card>
+          <Row className="g-4 mt-3">
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaUserGraduate /></div>
+                  <h5 className="benefit-title">Diploma Required</h5>
+                  <p className="benefit-description">
+                    Hold a 3 or 4-year Diploma in Engineering from a recognized State Board of Technical Education or an institution recognized by AICTE/UGC.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaChartLine /></div>
+                  <h5 className="benefit-title">Min. Percentage</h5>
+                  <p className="benefit-description">
+                    Must have scored a minimum of 60% marks (or equivalent CGPA) in the diploma.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaUsers /></div>
+                  <h5 className="benefit-title">Age Limitations</h5>
+                  <p className="benefit-description">
+                    Maximum 21 years for General category as on 01.08.2027. Relaxation of 5 years for SC/ST/OBC candidates.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaCheckCircle /></div>
+                  <h5 className="benefit-title">Nationality</h5>
+                  <p className="benefit-description">
+                    The candidate must be an Indian national. Refer to official notifications for any updates.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
         </Container>
       </section>
 
@@ -186,7 +235,7 @@ const IPULEET = () => {
       {/* Syllabus */}
       <section id="ipu-syllabus" className="leet-section">
         <Container>
-          <h2 className="section-title">Syllabus of IPU LEET 2027 (Delhi)</h2>
+          <h2 className="section-title">Syllabus of IPU LEET 2027</h2>
           <Card className="content-card">
             <Card.Body>
               <div className="table-responsive">
@@ -248,13 +297,12 @@ const IPULEET = () => {
       {/* Admission Process */}
       <section id="ipu-admission" className="leet-section bg-light">
         <Container>
-          <h2 className="section-title">Admission Process at IPU through Lateral Entry</h2>
-          <h4 className="text-center mb-4">Step-by-Step Guide</h4>
-          <p className="text-center mb-4">
+          <h2 className="section-title">Admission Process of IPU LEET</h2>
+          <p className="text-center mb-5">
             The admission process for Indraprastha University (IPU) is a crucial journey for students aiming to enter B.Tech programs through LEET. Follow these steps to secure your admission.
           </p>
 
-          <Row className="g-4">
+          <div className="roadmap-container">
             {[
               { step: 1, title: 'Understand Eligibility Criteria', desc: 'Ensure you hold a diploma in engineering with minimum 60% marks. Verify your age (21 years max for general category). Check the official IPU notification for current year criteria.' },
               { step: 2, title: 'Register for IPU LEET', desc: 'Visit the official IPU Admission Portal. Create an account, fill the form, upload photo/signature/certificates, and pay Rs. 1500 application fee online.' },
@@ -264,18 +312,18 @@ const IPULEET = () => {
               { step: 6, title: 'Register for Counselling', desc: 'Register online for counselling by paying Rs. 1000. Fill in your college and branch preferences. Seats are allotted based on your rank.' },
               { step: 7, title: 'Document Verification', desc: 'Attend document verification with all originals including 10th marksheet, all diploma marksheets, diploma certificate, identity proof, and category certificate if applicable.' },
               { step: 8, title: 'Confirm Admission', desc: 'Pay the admission fee after successful document verification. Complete course registration and attend orientation at your allotted college.' },
-            ].map(({ step, title, desc }) => (
-              <Col key={step} md={6} lg={4} xs={6}>
-                <Card className="step-card h-100">
-                  <Card.Body>
-                    <div className="step-number">{step}</div>
-                    <h5>{title}</h5>
-                    <p>{desc}</p>
-                  </Card.Body>
-                </Card>
-              </Col>
+            ].map((item, index) => (
+              <div key={index} className={`roadmap-step ${index % 2 === 0 ? 'left' : 'right'}`}>
+                <div className="roadmap-marker">
+                  <span className="roadmap-number">{item.step}</span>
+                </div>
+                <div className="roadmap-content">
+                  <h5 className="roadmap-title">{item.title}</h5>
+                  <p className="roadmap-description">{item.desc}</p>
+                </div>
+              </div>
             ))}
-          </Row>
+          </div>
         </Container>
       </section>
 
@@ -283,82 +331,92 @@ const IPULEET = () => {
       <section id="ipu-cutoff" className="leet-section">
         <Container>
           <h2 className="section-title">IPU LEET Cutoff Trends</h2>
-          <Card className="content-card">
-            <Card.Body>
-              <p className="highlight-text">
-                "IPU does not have a minimum passing marks criterion — all students who appear qualify. However, for admission to a good IPU-affiliated college, you need to score high. The number of available seats and competition determines your effective cutoff."
-              </p>
-              <p>Here's a look at IPU LEET cutoff trends from recent years:</p>
-
-              <Row className="mt-4">
-                <Col md={4} xs={6}>
-                  <Card className="year-card">
-                    <Card.Body>
-                      <h4 className="year-title">2026 Cut Off</h4>
-                      <div className="university-cutoff">
-                        <h6>IPU LEET 2026:</h6>
-                        <p>Rank 1 scored <strong>313 out of 400</strong>.</p>
-                        <p>Rank 2: <strong>Prabhar Nandan</strong> scored 309 out of 400.</p>
-                        <p>Top 10 range: <strong>278+ out of 400</strong>.</p>
+          <Card className="content-card border-0 bg-transparent shadow-none">
+            <Card.Body className="px-0">
+              <Row className="g-4 mb-5">
+                <Col lg={4} md={6}>
+                  <Card className="trend-card h-100 border-0 shadow-sm overflow-hidden">
+                    <div className="trend-header bg-primary text-white text-center py-3">
+                      <h2 className="mb-0 fw-bold">2026 Cut Off</h2>
+                    </div>
+                    <Card.Body className="p-4">
+                      <div className="mb-4">
+                        <h4 className="fw-bold mb-2" style={{ color: '#1e3c72' }}>IPU LEET 2026:</h4>
+                        <p className="text-muted small mb-0">Rank 1 scored <strong>313 out of 400</strong>.</p>
+                        <p className="text-muted small mb-0">Rank 2: <strong>Prabhar Nandan</strong> scored 309 out of 400.</p>
+                        <p className="text-muted small mb-0">Top 10 range: <strong>278+ out of 400</strong>.</p>
                       </div>
                     </Card.Body>
                   </Card>
                 </Col>
 
-                <Col md={4} xs={6}>
-                  <Card className="year-card">
-                    <Card.Body>
-                      <h4 className="year-title">2025 Cut Off</h4>
-                      <div className="university-cutoff">
-                        <h6>IPU LEET 2025:</h6>
-                        <p>Rank 1: <strong>Aadit Kapoor</strong> scored 342 out of 400.</p>
-                        <p>Top 10 range: <strong>305 to 342 out of 400</strong>.</p>
+                <Col lg={4} md={6}>
+                  <Card className="trend-card h-100 border-0 shadow-sm overflow-hidden">
+                    <div className="trend-header bg-primary text-white text-center py-3" style={{ opacity: 0.9 }}>
+                      <h2 className="mb-0 fw-bold">2025 Cut Off</h2>
+                    </div>
+                    <Card.Body className="p-4">
+                      <div className="mb-4">
+                        <h4 className="fw-bold mb-2" style={{ color: '#1e3c72' }}>IPU LEET 2025:</h4>
+                        <p className="text-muted small mb-0">Rank 1: <strong>Aadit Kapoor</strong> scored 342 out of 400.</p>
+                        <p className="text-muted small mb-0">Top 10 range: <strong>305 to 342 out of 400</strong>.</p>
                       </div>
                     </Card.Body>
                   </Card>
                 </Col>
 
-                <Col md={4} xs={6}>
-                  <Card className="year-card">
-                    <Card.Body>
-                      <h4 className="year-title">2024 Cut Off</h4>
-                      <div className="university-cutoff">
-                        <h6>IPU LEET 2024:</h6>
-                        <p>Students who scored <strong>290 out of 400</strong> ranked in the top 10 overall.</p>
-                        <p>Top colleges like USAR, MSIT required higher scores for preferred branches.</p>
+                <Col lg={4} md={6}>
+                  <Card className="trend-card h-100 border-0 shadow-sm overflow-hidden">
+                    <div className="trend-header bg-primary text-white text-center py-3" style={{ opacity: 0.8 }}>
+                      <h2 className="mb-0 fw-bold">2024 Cut Off</h2>
+                    </div>
+                    <Card.Body className="p-4">
+                      <div className="mb-4">
+                        <h4 className="fw-bold mb-2" style={{ color: '#1e3c72' }}>IPU LEET 2024:</h4>
+                        <p className="text-muted small mb-0">Students who scored <strong>290 out of 400</strong> ranked in the top 10 overall.</p>
+                        <p className="text-muted small mb-0">Top colleges like USAR, MSIT required higher scores for preferred branches.</p>
                       </div>
                     </Card.Body>
                   </Card>
                 </Col>
               </Row>
 
-
-              <div className="factors-section mt-4">
-                <h5>Factors Influencing IPU LEET Cut Off</h5>
-                <Row className="mt-3">
-                  <Col md={4} xs={6}>
-                    <div className="cutoff-reason">
-                      <FaChartLine className="reason-icon" />
-                      <h6>Number of Applicants</h6>
-                      <p>More applicants each year pushes cutoffs higher due to increased competition.</p>
-                    </div>
-                  </Col>
-                  <Col md={4} xs={6}>
-                    <div className="cutoff-reason">
-                      <FaUserGraduate className="reason-icon" />
-                      <h6>Seat Availability</h6>
-                      <p>The number of available seats in IPU-affiliated colleges directly affects cutoff scores.</p>
-                    </div>
-                  </Col>
-                  <Col md={4} xs={6}>
-                    <div className="cutoff-reason">
-                      <FaBook className="reason-icon" />
-                      <h6>Syllabus Changes</h6>
-                      <p>Updates to the IPU LEET syllabus can impact difficulty and thus affect cutoff trends.</p>
-                    </div>
-                  </Col>
-                </Row>
-              </div>
+              <h3 className="text-center mb-4 mt-5 fw-bold">Factors Influencing IPU LEET Cut Off</h3>
+              <Row className="g-4 text-center">
+                <Col md={4}>
+                  <Card className="reason-card h-100 border-0 shadow-sm">
+                    <Card.Body className="p-4">
+                      <div className="reason-icon-wrapper mx-auto mb-3">
+                        <FaChartLine />
+                      </div>
+                      <h5 className="fw-bold">Number of Applicants</h5>
+                      <p className="text-muted mb-0">More applicants each year pushes cutoffs higher due to increased competition.</p>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col md={4}>
+                  <Card className="reason-card h-100 border-0 shadow-sm">
+                    <Card.Body className="p-4">
+                      <div className="reason-icon-wrapper mx-auto mb-3">
+                        <FaUserGraduate />
+                      </div>
+                      <h5 className="fw-bold">Seat Availability</h5>
+                      <p className="text-muted mb-0">The number of available seats in IPU-affiliated colleges directly affects cutoff scores.</p>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col md={4}>
+                  <Card className="reason-card h-100 border-0 shadow-sm">
+                    <Card.Body className="p-4">
+                      <div className="reason-icon-wrapper mx-auto mb-3">
+                        <FaBook />
+                      </div>
+                      <h5 className="fw-bold">Syllabus Changes</h5>
+                      <p className="text-muted mb-0">Updates to the IPU LEET syllabus can impact difficulty and thus affect cutoff trends.</p>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </Row>
             </Card.Body>
           </Card>
         </Container>
@@ -368,21 +426,19 @@ const IPULEET = () => {
       <section id="ipu-preparation" className="leet-section bg-light">
         <Container>
           <h2 className="section-title">IPU LEET Preparation Tips</h2>
-          <p className="text-center mb-4">Effective preparation strategies to crack IPU LEET with a high rank:</p>
 
           <Row className="g-4">
             {[
-              { icon: <FaUserGraduate />, title: 'Join LEET Coaching', desc: 'Joining a structured coaching program like Mission Engineering helps you get expert guidance and a focused study plan for IPU LEET.' },
-              { icon: <FaBook />, title: 'Use Quality Study Materials', desc: 'Utilize classroom notes, IPU-specific practice sets, Mission Engineering App, revision guides, and previous years\' question papers.' },
-              { icon: <FaClock />, title: 'Practice Regularly', desc: 'Regular mock tests and timed practice sessions improve speed, accuracy, and exam readiness for all four sections.' },
-              { icon: <FaChartLine />, title: 'Focus on Weak Areas', desc: 'Identify sections where you lose marks — especially Mechanics and Physics/Chemistry — and dedicate extra time to improving them.' },
-              { icon: <FaUsers />, title: 'Group Study', desc: 'Study with peers for Reasoning and Mathematics topics. Group discussions help clear doubts and improve problem-solving speed.' },
-              { icon: <FaCheckCircle />, title: 'Revise Diploma Concepts', desc: 'Section C (Mechanics) is directly from your diploma syllabus. Strong revision of Applied Mechanics, SOM, and Fluid Mechanics will help a lot.' },
+              { title: 'Join LEET Coaching', desc: 'Joining a structured coaching program like Mission Engineering helps you get expert guidance and a focused study plan for IPU LEET.' },
+              { title: 'Use Quality Study Materials', desc: 'Utilize classroom notes, IPU-specific practice sets, Mission Engineering App, revision guides, and previous years\' question papers.' },
+              { title: 'Practice Regularly', desc: 'Regular mock tests and timed practice sessions improve speed, accuracy, and exam readiness for all four sections.' },
+              { title: 'Focus on Weak Areas', desc: 'Identify sections where you lose marks — especially Mechanics and Physics/Chemistry — and dedicate extra time to improving them.' },
+              { title: 'Group Study', desc: 'Study with peers for Reasoning and Mathematics topics. Group discussions help clear doubts and improve problem-solving speed.' },
+              { title: 'Revise Diploma Concepts', desc: 'Section C (Mechanics) is directly from your diploma syllabus. Strong revision of Applied Mechanics, SOM, and Fluid Mechanics will help a lot.' },
             ].map((item, i) => (
-              <Col key={i} md={6} xs={6}>
+              <Col key={i} lg={4} md={6} xs={12}>
                 <Card className="prep-card h-100">
                   <Card.Body>
-                    <div className="prep-icon">{item.icon}</div>
                     <h5>{item.title}</h5>
                     <p>{item.desc}</p>
                   </Card.Body>

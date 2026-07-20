@@ -73,30 +73,59 @@ const DTULEET = () => {
 
   return (
     <div className="leet-page">
-      {/* Hero Section */}
-      <section className="leet-hero">
+      {/* Introduction Section */}
+      <section className="leet-intro py-5 mt-4">
         <Container>
-          <div className="hero-content">
-            <h1 className="hero-title">DTU LEET Exam Guide</h1>
-            <p className="hero-subtitle">Complete Guide for Delhi Technological University Lateral Entry Entrance Test</p>
-          </div>
-        </Container>
-      </section>
-
-      {/* Introduction */}
-      <section id="dtu-about" className="leet-intro">
-        <Container>
-          <Card className="intro-card">
-            <Card.Body>
-              <h2 className="section-title">What is DTU LEET?</h2>
-              <p>
-                DTU LEET (Lateral Entry Entrance Test) is conducted by Delhi Technological University (DTU) for diploma holders who wish to secure direct admission into the second year of B.Tech programs at DTU and NSUT (Netaji Subhas University of Technology). These are among the most prestigious government-funded technical universities in Delhi with exceptional placement records.
-              </p>
-              <p>
-                The exam consists of 90 questions covering Mathematics, Reasoning, and Aptitude, to be completed in 90 minutes. DTU LEET is considered highly competitive, and achieving a high rank is essential to secure a seat in a coveted branch like Computer Science, Electronics, or Mechanical Engineering at DTU or NSUT.
-              </p>
-            </Card.Body>
-          </Card>
+          <h2 className="section-title text-uppercase mb-5">What is DTU LEET Exam?</h2>
+          <Row className="g-4">
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaUserGraduate /></div>
+                  <h5 className="benefit-title">Admission Pathway</h5>
+                  <p className="benefit-description">
+                    LEET is designed for diploma holders seeking direct admission into the second year of undergraduate engineering programs.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+            
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaChartLine /></div>
+                  <h5 className="benefit-title">Career Enhancement</h5>
+                  <p className="benefit-description">
+                    It serves as a crucial pathway to further your education and enhance engineering career prospects without starting from scratch.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+            
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaBook /></div>
+                  <h5 className="benefit-title">Exam Format</h5>
+                  <p className="benefit-description">
+                    The format varies by institution but generally assesses candidates on mathematics, physics, and specific engineering subjects.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+            
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaCheckCircle /></div>
+                  <h5 className="benefit-title">Assessment Goals</h5>
+                  <p className="benefit-description">
+                    Evaluates your foundational knowledge and ability to transition smoothly through multiple-choice or problem-solving questions.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
         </Container>
       </section>
 
@@ -105,41 +134,59 @@ const DTULEET = () => {
       </div>
       <CourseNavigation />
 
-      {/* Table of Contents */}
-      <section className="table-of-contents">
-        <Container>
-          <div className="toc-wrapper">
-            <h3 className="toc-title">Table Of Content</h3>
-            <div className="toc-list">
-              {tableOfContents.map((item, index) => (
-                <a key={index} href={`#${item.id}`} className="toc-item">
-                  <FaHandPointRight className="toc-icon" />
-                  <span>{item.title}</span>
-                </a>
-              ))}
-            </div>
-          </div>
-        </Container>
-      </section>
-
-      {/* Eligibility */}
+      {/* Eligibility Criteria */}
       <section id="dtu-eligibility" className="leet-section">
         <Container>
           <h2 className="section-title">DTU LEET Eligibility Criteria</h2>
-          <Card className="content-card">
-            <Card.Body>
-              <p>To be eligible for DTU LEET, candidates must satisfy the following criteria:</p>
-              <ul className="criteria-list">
-                <li>Hold a <strong>3-year regular Diploma</strong> in any branch of engineering from a State Board of Technical Education or an AICTE-recognized institution in Delhi.</li>
-                <li>Must have scored a minimum of <strong>60% marks</strong> (or equivalent CGPA) in the diploma.</li>
-                <li>Age Limit: Maximum <strong>21 years</strong> for General category. Age relaxation as per DTU norms for reserved categories.</li>
-                <li>Candidate must be domiciled in Delhi (Delhi candidates get priority in seat allocation).</li>
-              </ul>
-              <p className="mt-3">
-                Always check the official DTU website for the most updated eligibility norms for the current academic year.
-              </p>
-            </Card.Body>
-          </Card>
+          <Row className="g-4 mt-3">
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaUserGraduate /></div>
+                  <h5 className="benefit-title">Diploma Required</h5>
+                  <p className="benefit-description">
+                    Hold a 3-year regular Diploma in any branch of engineering from a State Board or AICTE-recognized institution in Delhi.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaChartLine /></div>
+                  <h5 className="benefit-title">Min. Percentage</h5>
+                  <p className="benefit-description">
+                    Must have scored a minimum of 60% marks (or equivalent CGPA) in the diploma.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaUsers /></div>
+                  <h5 className="benefit-title">Age Limitations</h5>
+                  <p className="benefit-description">
+                    Maximum 21 years for General category. Age relaxation as per DTU norms for reserved categories.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaCheckCircle /></div>
+                  <h5 className="benefit-title">Domicile Priority</h5>
+                  <p className="benefit-description">
+                    Candidate must be domiciled in Delhi (Delhi candidates get priority in seat allocation).
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
         </Container>
       </section>
 
@@ -178,7 +225,7 @@ const DTULEET = () => {
       {/* Syllabus */}
       <section id="dtu-syllabus" className="leet-section">
         <Container>
-          <h2 className="section-title">Syllabus of DTU LEET 2027 (Delhi)</h2>
+          <h2 className="section-title">Syllabus of DTU LEET 2027</h2>
           <Card className="content-card">
             <Card.Body>
               <div className="table-responsive">
@@ -233,13 +280,10 @@ const DTULEET = () => {
       {/* Admission Process */}
       <section id="dtu-admission" className="leet-section bg-light">
         <Container>
-          <h2 className="section-title">Admission Process at DTU through Lateral Entry</h2>
-          <h4 className="text-center mb-4">Step-by-Step Guide</h4>
-          <p className="text-center mb-4">
-            Follow this comprehensive step-by-step guide to successfully secure admission at DTU or NSUT through the DTU LEET examination.
-          </p>
+          <h2 className="section-title">Admission Process of DTU LEET</h2>
+          
 
-          <Row className="g-4">
+          <div className="roadmap-container">
             {[
               { step: 1, title: 'Check Eligibility', desc: 'Confirm you hold a 3-year regular diploma in engineering with minimum 60% marks from a recognized institution. Verify your age and domicile requirements as per DTU norms.' },
               { step: 2, title: 'Submit Application', desc: 'Visit the official DTU admissions portal. Register, fill in the application form accurately, upload required documents, and pay the application fee of Rs. 1500.' },
@@ -249,18 +293,18 @@ const DTULEET = () => {
               { step: 6, title: 'Online Counselling Registration', desc: 'Register for the official online counselling session. Pay the counselling fee and fill in your preferences for university (DTU/NSUT) and branch.' },
               { step: 7, title: 'Seat Allotment', desc: 'Seats are allotted based on rank, preferences, and availability. Multiple rounds of seat allotment may be conducted. Accept your allotted seat to proceed.' },
               { step: 8, title: 'Document Verification & Fee', desc: 'Report to the allotted college for document verification with all originals. Pay the semester fee and complete the admission formalities to confirm your seat.' },
-            ].map(({ step, title, desc }) => (
-              <Col key={step} md={6} lg={4} xs={6}>
-                <Card className="step-card h-100">
-                  <Card.Body>
-                    <div className="step-number">{step}</div>
-                    <h5>{title}</h5>
-                    <p>{desc}</p>
-                  </Card.Body>
-                </Card>
-              </Col>
+            ].map((item, index) => (
+              <div key={index} className={`roadmap-step ${index % 2 === 0 ? 'left' : 'right'}`}>
+                <div className="roadmap-marker">
+                  <span className="roadmap-number">{item.step}</span>
+                </div>
+                <div className="roadmap-content">
+                  <h5 className="roadmap-title">{item.title}</h5>
+                  <p className="roadmap-description">{item.desc}</p>
+                </div>
+              </div>
             ))}
-          </Row>
+          </div>
         </Container>
       </section>
 
@@ -268,48 +312,54 @@ const DTULEET = () => {
       <section id="dtu-cutoff" className="leet-section">
         <Container>
           <h2 className="section-title">DTU LEET Cutoff Trends</h2>
-          <Card className="content-card">
-            <Card.Body>
-              <p className="highlight-text">
+          <Card className="content-card border-0 bg-transparent shadow-none">
+            <Card.Body className="px-0">
+              <p className="highlight-text text-center mx-auto" style={{ maxWidth: '800px' }}>
                 "DTU does not have a minimum qualifying score — all candidates who appear are eligible. However, the effective cutoff for a seat in DTU or NSUT depends entirely on the number of seats and the competition. Top ranks secure the most preferred branches."
               </p>
-              <p>Here's a look at DTU LEET cutoff trends from recent years:</p>
+              <p className="text-center mb-5">Here's a look at DTU LEET cutoff trends from recent years:</p>
 
-              <Row className="mt-4">
-                <Col md={4} xs={6}>
-                  <Card className="year-card">
-                    <Card.Body>
-                      <h4 className="year-title">2026 Cut Off</h4>
-                      <div className="university-cutoff">
-                        <h6>DTU LEET 2026:</h6>
-                        <p>Rank 1: <strong>Shivam</strong> scored 302 out of 360.</p>
-                        <p>Top 10 range: <strong>210+ out of 360</strong>.</p>
+              <Row className="g-4 mb-5">
+                <Col lg={4} md={6}>
+                  <Card className="trend-card h-100 border-0 shadow-sm overflow-hidden">
+                    <div className="trend-header bg-primary text-white text-center py-3">
+                      <h2 className="mb-0 fw-bold">2026 Cut Off</h2>
+                    </div>
+                    <Card.Body className="p-4">
+                      <div className="mb-4">
+                        <h4 className="fw-bold mb-2" style={{ color: '#1e3c72' }}>DTU LEET 2026:</h4>
+                        <p className="text-muted small mb-0">Rank 1: <strong>Shivam</strong> scored 302 out of 360.</p>
+                        <p className="text-muted small mb-0">Top 10 range: <strong>210+ out of 360</strong>.</p>
                       </div>
                     </Card.Body>
                   </Card>
                 </Col>
 
-                <Col md={4} xs={6}>
-                  <Card className="year-card">
-                    <Card.Body>
-                      <h4 className="year-title">2025 Cut Off</h4>
-                      <div className="university-cutoff">
-                        <h6>DTU LEET 2025:</h6>
-                        <p>Rank 1 scored <strong>340 out of 360</strong>.</p>
-                        <p>Top 10 range: <strong>320+ out of 360</strong>.</p>
+                <Col lg={4} md={6}>
+                  <Card className="trend-card h-100 border-0 shadow-sm overflow-hidden">
+                    <div className="trend-header bg-primary text-white text-center py-3" style={{ opacity: 0.9 }}>
+                      <h2 className="mb-0 fw-bold">2025 Cut Off</h2>
+                    </div>
+                    <Card.Body className="p-4">
+                      <div className="mb-4">
+                        <h4 className="fw-bold mb-2" style={{ color: '#1e3c72' }}>DTU LEET 2025:</h4>
+                        <p className="text-muted small mb-0">Rank 1 scored <strong>340 out of 360</strong>.</p>
+                        <p className="text-muted small mb-0">Top 10 range: <strong>320+ out of 360</strong>.</p>
                       </div>
                     </Card.Body>
                   </Card>
                 </Col>
 
-                <Col md={4} xs={6}>
-                  <Card className="year-card">
-                    <Card.Body>
-                      <h4 className="year-title">2024 Cut Off</h4>
-                      <div className="university-cutoff">
-                        <h6>DTU LEET 2024:</h6>
-                        <p>Rank 1: <strong>Spandan Choudhury</strong> scored 292 out of 360 (Mission Engineering offline batch student).</p>
-                        <p>Top 10 range: <strong>270+ out of 360</strong>.</p>
+                <Col lg={4} md={6}>
+                  <Card className="trend-card h-100 border-0 shadow-sm overflow-hidden">
+                    <div className="trend-header bg-primary text-white text-center py-3" style={{ opacity: 0.8 }}>
+                      <h2 className="mb-0 fw-bold">2024 Cut Off</h2>
+                    </div>
+                    <Card.Body className="p-4">
+                      <div className="mb-4">
+                        <h4 className="fw-bold mb-2" style={{ color: '#1e3c72' }}>DTU LEET 2024:</h4>
+                        <p className="text-muted small mb-0">Rank 1: <strong>Spandan Choudhury</strong> scored 292 out of 360 (Mission Engineering offline batch student).</p>
+                        <p className="text-muted small mb-0">Top 10 range: <strong>270+ out of 360</strong>.</p>
                       </div>
                     </Card.Body>
                   </Card>
@@ -317,32 +367,42 @@ const DTULEET = () => {
               </Row>
 
 
-              <div className="factors-section mt-4">
-                <h5>Factors Influencing DTU LEET Cut Off</h5>
-                <Row className="mt-3">
-                  <Col md={4} xs={6}>
-                    <div className="cutoff-reason">
-                      <FaChartLine className="reason-icon" />
-                      <h6>Total Applicants</h6>
-                      <p>The growing popularity of DTU/NSUT drives more applicants each year, increasing competition.</p>
-                    </div>
-                  </Col>
-                  <Col md={4} xs={6}>
-                    <div className="cutoff-reason">
-                      <FaUserGraduate className="reason-icon" />
-                      <h6>Branch Preferences</h6>
-                      <p>CSE and Electronics are the most sought-after branches — their effective cutoffs are much higher than other branches.</p>
-                    </div>
-                  </Col>
-                  <Col md={4} xs={6}>
-                    <div className="cutoff-reason">
-                      <FaBook className="reason-icon" />
-                      <h6>Exam Difficulty</h6>
-                      <p>Variation in difficulty level of Mathematics section significantly affects the overall score distribution.</p>
-                    </div>
-                  </Col>
-                </Row>
-              </div>
+              <h3 className="text-center mb-4 mt-5 fw-bold">Factors Influencing DTU LEET Cut Off</h3>
+              <Row className="g-4 text-center">
+                <Col md={4}>
+                  <Card className="reason-card h-100 border-0 shadow-sm">
+                    <Card.Body className="p-4">
+                      <div className="reason-icon-wrapper mx-auto mb-3">
+                        <FaChartLine />
+                      </div>
+                      <h5 className="fw-bold">Total Applicants</h5>
+                      <p className="text-muted mb-0">The growing popularity of DTU/NSUT drives more applicants each year, increasing competition.</p>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col md={4}>
+                  <Card className="reason-card h-100 border-0 shadow-sm">
+                    <Card.Body className="p-4">
+                      <div className="reason-icon-wrapper mx-auto mb-3">
+                        <FaUserGraduate />
+                      </div>
+                      <h5 className="fw-bold">Branch Preferences</h5>
+                      <p className="text-muted mb-0">CSE and Electronics are the most sought-after branches — their effective cutoffs are much higher than other branches.</p>
+                    </Card.Body>
+                  </Card>
+                </Col>
+                <Col md={4}>
+                  <Card className="reason-card h-100 border-0 shadow-sm">
+                    <Card.Body className="p-4">
+                      <div className="reason-icon-wrapper mx-auto mb-3">
+                        <FaBook />
+                      </div>
+                      <h5 className="fw-bold">Exam Difficulty</h5>
+                      <p className="text-muted mb-0">Variation in difficulty level of Mathematics section significantly affects the overall score distribution.</p>
+                    </Card.Body>
+                  </Card>
+                </Col>
+              </Row>
             </Card.Body>
           </Card>
         </Container>
@@ -356,17 +416,16 @@ const DTULEET = () => {
 
           <Row className="g-4">
             {[
-              { icon: <FaUserGraduate />, title: 'Join Expert Coaching', desc: 'Mission Engineering has produced DTU LEET toppers including Rank 1 scorers. Join our structured DTU LEET program for focused preparation.' },
-              { icon: <FaBook />, title: 'Master Mathematics', desc: 'Section A has 40 questions worth 160 marks. Strong command over Mathematics is the key differentiator in DTU LEET scoring.' },
-              { icon: <FaClock />, title: 'Time Management', desc: '90 questions in 90 minutes requires exactly 1 minute per question. Practice timed mock tests to build the required speed and accuracy.' },
-              { icon: <FaChartLine />, title: 'Strengthen Reasoning', desc: 'Section B covers verbal, non-verbal, and analytical reasoning. Regular practice of previous year reasoning questions significantly improves performance.' },
-              { icon: <FaUsers />, title: 'Aptitude Practice', desc: 'Section C tests general knowledge and quantitative aptitude. Stay updated with current affairs and practice data interpretation problems daily.' },
-              { icon: <FaCheckCircle />, title: 'Attempt Mock Tests', desc: 'Mission Engineering provides DTU LEET-specific mock tests that simulate real exam conditions. Analyze your performance to identify and fix weak areas.' },
+              { title: 'Join Expert Coaching', desc: 'Mission Engineering has produced DTU LEET toppers including Rank 1 scorers. Join our structured DTU LEET program for focused preparation.' },
+              { title: 'Master Mathematics', desc: 'Section A has 40 questions worth 160 marks. Strong command over Mathematics is the key differentiator in DTU LEET scoring.' },
+              { title: 'Time Management', desc: '90 questions in 90 minutes requires exactly 1 minute per question. Practice timed mock tests to build the required speed and accuracy.' },
+              { title: 'Strengthen Reasoning', desc: 'Section B covers verbal, non-verbal, and analytical reasoning. Regular practice of previous year reasoning questions significantly improves performance.' },
+              { title: 'Aptitude Practice', desc: 'Section C tests general knowledge and quantitative aptitude. Stay updated with current affairs and practice data interpretation problems daily.' },
+              { title: 'Attempt Mock Tests', desc: 'Mission Engineering provides DTU LEET-specific mock tests that simulate real exam conditions. Analyze your performance to identify and fix weak areas.' },
             ].map((item, i) => (
-              <Col key={i} md={6} xs={6}>
+              <Col key={i} lg={4} md={6} xs={12}>
                 <Card className="prep-card h-100">
                   <Card.Body>
-                    <div className="prep-icon">{item.icon}</div>
                     <h5>{item.title}</h5>
                     <p>{item.desc}</p>
                   </Card.Body>

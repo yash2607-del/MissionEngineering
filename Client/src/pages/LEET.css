@@ -1193,3 +1193,37 @@ html {
   align-items: center;
   justify-content: center;
 }
+
+/* FAQ Accordion Styling inspired by Home Page cards */
+.faq-accordion-item {
+  border: none !important;
+  border-radius: 12px !important;
+  margin-bottom: 16px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+  overflow: hidden;
+}
+
+.faq-accordion-header .accordion-button {
+  font-weight: 600;
+  color: #1e3c72;
+  background-color: #fff;
+  padding: 20px;
+  border: none;
+  box-shadow: none !important;
+}
+
+.faq-accordion-header .accordion-button:not(.collapsed) {
+  background-color: #f8f9fa;
+  color: #2a5298;
+}
+
+.faq-accordion-header .accordion-button::after {
+  filter: hue-rotate(220deg);
+}
+
+.faq-accordion-body {
+  background-color: #f8f9fa;
+  padding: 20px;
+  color: #555;
+  line-height: 1.6;
+}

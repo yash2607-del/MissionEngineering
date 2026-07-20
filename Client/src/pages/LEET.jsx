@@ -374,7 +374,7 @@ const LEET = () => {
       {/* IPU LEET Syllabus */}
       <section id="ipu-syllabus" className="leet-section">
         <Container>
-          <h2 className="section-title">Syllabus for IPU LEET 2027 (Delhi)</h2>
+          <h2 className="section-title">Syllabus for IPU LEET 2027</h2>
           <Card className="content-card">
             <Card.Body>
               <div className="table-responsive">
@@ -452,17 +452,17 @@ const LEET = () => {
       {/* DTU LEET Syllabus */}
       <section id="dtu-syllabus" className="leet-section">
         <Container>
-          <h2 className="section-title">Syllabus Of DTU LEET 2027 (Delhi)</h2>
+          <h2 className="section-title">Syllabus Of DTU LEET 2027</h2>
           <Card className="content-card">
             <Card.Body>
               <div className="table-responsive">
                 <Table responsive striped bordered hover className="exam-table">
                   <thead>
                     <tr>
-                      <th>Sr. No.</th>
+                      <th>S No.</th>
                       <th>Section</th>
                       <th>Subject</th>
-                      <th>Number Of Questions</th>
+                      <th>No. of Questions</th>
                       <th>Maximum Marks</th>
                     </tr>
                   </thead>
@@ -495,7 +495,7 @@ const LEET = () => {
       {/* Admission Process */}
       <section id="admission" className="leet-section bg-light">
         <Container>
-          <h2 className="section-title">Admission Process at IP University through Lateral Entry</h2>
+          <h2 className="section-title">Admission Process of IPU LEET</h2>
           <div className="roadmap-container">
             {admissionProcess.map((item, index) => (
               <div key={index} className={`roadmap-step ${index % 2 === 0 ? 'left' : 'right'}`}>
