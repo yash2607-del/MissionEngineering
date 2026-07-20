@@ -9,17 +9,6 @@ import './LEET.css';
 const LEET = () => {
 
 
-
-
-
-
-
-
-
-
-
-
-
   const ipuSyllabus = [
     { sr: 1, section: 'Section A', syllabus: 'Mathematics', questions: 25, marks: 100 },
     { sr: 2, section: 'Section B', syllabus: 'Reasoning', questions: 25, marks: 100 },
@@ -615,11 +604,11 @@ const LEET = () => {
                 <Card.Body className="p-4">
                   <div className="mb-4">
                     <h4 className="fw-bold mb-2" style={{ color: '#1e3c72' }}>IPU:</h4>
-                    <p className="text-muted small mb-0">Students who scored 290 out of 400 ranked in the top 10.</p>
+                    <p className="cutoff-content-text mb-0">Students who scored 290 out of 400 ranked in the top 10.</p>
                   </div>
                   <div>
                     <h4 className="fw-bold mb-2" style={{ color: '#1e3c72' }}>DTU:</h4>
-                    <p className="text-muted small mb-0">Rank 1: Spandan Choudhury scored 292 out of 360. Spandan was a student of Mission Engineering offline batch LEET 2026.</p>
+                    <p className="cutoff-content-text mb-0">Rank 1: Spandan Choudhury scored 292 out of 360. Spandan was a student of Mission Engineering offline batch LEET 2026.</p>
                   </div>
                 </Card.Body>
               </Card>
@@ -633,11 +622,11 @@ const LEET = () => {
                 <Card.Body className="p-4">
                   <div className="mb-4">
                     <h4 className="fw-bold mb-2" style={{ color: '#1e3c72' }}>IPU:</h4>
-                    <p className="text-muted small mb-0">Students who scored 230 out of 400 ranked in the top 10.</p>
+                    <p className="cutoff-content-text mb-0">Students who scored 230 out of 400 ranked in the top 10.</p>
                   </div>
                   <div>
                     <h4 className="fw-bold mb-2" style={{ color: '#1e3c72' }}>DTU:</h4>
-                    <p className="text-muted small mb-0">Students who scored 220 out of 360 ranked in the top 10.</p>
+                    <p className="cutoff-content-text mb-0">Students who scored 220 out of 360 ranked in the top 10.</p>
                   </div>
                 </Card.Body>
               </Card>
@@ -651,11 +640,11 @@ const LEET = () => {
                 <Card.Body className="p-4">
                   <div className="mb-4">
                     <h4 className="fw-bold mb-2" style={{ color: '#1e3c72' }}>IPU:</h4>
-                    <p className="text-muted small mb-0">Rank 1: Md Akmal scored 267 out of 400 (Mission Engineering student). Top 10: 235+ out of 400.</p>
+                    <p className="cutoff-content-text mb-0">Rank 1: Md Akmal scored 267 out of 400 (Mission Engineering student). Top 10: 235+ out of 400.</p>
                   </div>
                   <div>
                     <h4 className="fw-bold mb-2" style={{ color: '#1e3c72' }}>DTU:</h4>
-                    <p className="text-muted small mb-0">Rank 1: Kartik Dadhwal scored 340 out of 360 (Mission Engineering student). Top 10: 280+ out of 360.</p>
+                    <p className="cutoff-content-text mb-0">Rank 1: Kartik Dadhwal scored 340 out of 360 (Mission Engineering student). Top 10: 280+ out of 360.</p>
                   </div>
                 </Card.Body>
               </Card>
@@ -706,9 +695,7 @@ const LEET = () => {
       <section id="preparation" className="leet-section">
         <Container>
           <h2 className="section-title">LEET Preparation Tips</h2>
-          <p className="text-center mb-4">
-            Effective LEET exam preparation is vital for achieving a good rank. Here are some essential strategies:
-          </p>
+          
 
           <Row className="g-4">
             <Col lg={3} md={6} xs={12}>
