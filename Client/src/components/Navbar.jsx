@@ -2,6 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { Badge, Navbar, Nav, Container, Dropdown } from 'react-bootstrap';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Bell, Megaphone, InfoCircle } from 'react-bootstrap-icons';
+import { FaPhoneAlt, FaEnvelope } from 'react-icons/fa';
 import './Navbar.css';
 import { images } from '../../data';
 
@@ -99,6 +100,20 @@ const Header = () => {
 
   return (
     <>
+      <div className="top-header-bar d-none d-md-block text-white" style={{ backgroundColor: '#003f7d', fontSize: '0.9rem' }}>
+        <Container fluid>
+          <div className="d-flex justify-content-end align-items-center py-1 pe-3">
+            <div className="contact-item d-flex align-items-center me-4">
+              <FaPhoneAlt className="me-2 text-white" />
+              <span>+91 96 439 439 14</span>
+            </div>
+            <div className="contact-item d-flex align-items-center">
+              <FaEnvelope className="me-2 text-white" />
+              <a href="mailto:missionengineering2014@gmail.com" className="text-white text-decoration-none">missionengineering2014@gmail.com</a>
+            </div>
+          </div>
+        </Container>
+      </div>
       
       <Navbar expanded={expanded} onToggle={(val) => setExpanded(val)} expand="lg" className="custom-navbar sticky-top">
         <Container fluid>
