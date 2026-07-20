@@ -19,11 +19,6 @@ export function adminDeleteNotification(token, id) {
   });
 }
 
-export function adminFetchTests(token) {
-  // kept just in case, but unused
-  return apiRequest('/api/tests', { token });
-}
-
 export function adminFetchVideos() {
   return apiRequest('/api/videos', {});
 }

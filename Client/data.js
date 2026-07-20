@@ -1,8 +1,9 @@
 export const images = {
 	hero: {
-		missionHero1: 'https://res.cloudinary.com/dxx3suwae/image/upload/v1771403579/mission_hero_1_y7qx1v.jpg',
-		missionHero2: 'https://res.cloudinary.com/dxx3suwae/image/upload/v1771403580/mission_hero_2_xsrnnk.png',
-		missionHero3: 'https://res.cloudinary.com/dxx3suwae/image/upload/v1771403580/mission_hero_3_gokds4.jpg',
+		missionHero1: '/hero-1.jpeg',
+		missionHero2: '/hero-2.jpeg',
+		missionHero3: '/hero-3.jpeg',
+		missionHero4: '/hero-4.png',
 		missionLogo: 'https://res.cloudinary.com/dxx3suwae/image/upload/v1771403582/mission_logo_ittuwn.png',
 		missionPopup: 'https://res.cloudinary.com/dxx3suwae/image/upload/v1780158721/popup_bannerimage_kxrefy.jpg'
 	},
@@ -39,7 +40,7 @@ export const images = {
 		chairman: 'https://res.cloudinary.com/dxx3suwae/image/upload/v1771403599/chairman_rgzmo8.png',
 		viceChairman: 'https://res.cloudinary.com/dxx3suwae/image/upload/v1771403602/vice-chairman_qbdghi.png',
 		ranjanSir: '/rajan-sir-image.jpeg',
-		abhishekSir: '/abhishek-sir-image-1.jpeg',
+		abhishekSir: '/abhishek-sir-image.jpeg',
 		yash: 'https://res.cloudinary.com/dxx3suwae/image/upload/v1771403603/YASH-PHOTO_vgegtf.jpg',
 	},
 	testSeriesPhone: {

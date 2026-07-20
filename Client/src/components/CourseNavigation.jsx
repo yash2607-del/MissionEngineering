@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col } from 'react-bootstrap';
 import { Link } from 'react-router-dom';
-import '../pages/Courses.css';
+import '../pages/Courses/Courses.css';
 
 const CourseNavigation = () => {
   return (

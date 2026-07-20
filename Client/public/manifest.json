@@ -21,13 +21,8 @@
       "purpose": "any maskable"
     }
   ],
-  "screenshots": [
-    {
-      "src": "/screenshot.png",
-      "sizes": "540x720",
-      "type": "image/png"
-    }
-  ],
+ 
+
   "categories": ["education", "business"],
   "prefer_related_applications": false
 }

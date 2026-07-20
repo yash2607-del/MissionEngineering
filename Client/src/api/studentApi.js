@@ -5,10 +5,6 @@ export function fetchNotifications(token) {
   return apiRequest('/api/notifications', token ? { token } : undefined);
 }
 
-export function fetchTests(token) {
-  return apiRequest('/api/tests', { token });
-}
-
 export function fetchVideos() {
   return apiRequest('/api/videos', {});
 }

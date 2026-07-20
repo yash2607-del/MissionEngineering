@@ -9,25 +9,25 @@ import {
 
 import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-import Home from './pages/Home';
-import About from './pages/About';
-import Courses from './pages/Courses';
-import ClassroomCourse from './pages/ClassroomCourse';
-import LiveOnlineCourse from './pages/LiveOnlineCourse';
-import RecordedCourse from './pages/RecordedCourse';
-import TestSeries from './pages/TestSeries';
-import Coaching from './pages/Coaching';
-import Testimonials from './pages/Testimonials';
-import Contact from './pages/Contact';
-import LEET from './pages/LEET';
-import IPULEET from './pages/IPULEET';
-import DTULEET from './pages/DTULEET';
-import Placement from './pages/Placement';
-import Polytechnic from './pages/Polytechnic';
-import FeeStructure from './pages/FeeStructure';
-import SemesterCoaching from './pages/SemesterCoaching';
-import Login from './pages/Login';
-import AdminDashboard from './pages/AdminDashboard';
+import Home from './pages/Home/Home';
+import About from './pages/About/About';
+import Courses from './pages/Courses/Courses';
+import ClassroomCourse from './pages/ClassroomCourse/ClassroomCourse';
+import LiveOnlineCourse from './pages/LiveOnlineCourse/LiveOnlineCourse';
+import RecordedCourse from './pages/RecordedCourse/RecordedCourse';
+import TestSeries from './pages/Test Series/TestSeries';
+import Coaching from './pages/Coaching/Coaching';
+import Testimonials from './pages/Testimonials/Testimonials';
+import Contact from './pages/Contact/Contact';
+import LEET from './pages/Leet/LEET';
+import IPULEET from './pages/IPU Leet/IPULEET';
+import DTULEET from './pages/DTU Leet/DTULEET';
+import Placement from './pages/Placement/Placement';
+import Polytechnic from './pages/Polytechnic/Polytechnic';
+import FeeStructure from './pages/Fee Structure/FeeStructure';
+import SemesterCoaching from './pages/Semester Coaching/SemesterCoaching';
+import Login from './pages/Login/Login';
+import AdminDashboard from './pages/AdminDashboard/AdminDashboard';
 
 import ProtectedRoute from './auth/ProtectedRoute';
 
