@@ -286,7 +286,7 @@
 /* Responsive Design */
 @media (max-width: 992px) {
   .branch-card {
-    height: 420px;
+    min-height: 420px;
   }
   
   .branch-card .card-body {
@@ -339,7 +339,7 @@
     font-size: 1.1rem;
   }
   .branch-card {
-    height: 400px;
+    min-height: 400px;
   }
   .branch-header {
     flex-direction: row;
@@ -394,7 +394,7 @@
   }
 
   .branch-card {
-    height: 380px;
+    min-height: 380px;
   }
 
   .branch-card .card-body {

@@ -323,7 +323,7 @@ const Placement = () => {
             <h4 className="subsection-title">For Students:</h4>
             <Row className="g-4 mt-3">
               {studentBenefits.map((benefit, index) => (
-                <Col key={index} md={4} xs={6}>
+                <Col key={index} md={4} sm={6} xs={12}>
                   <Card className="benefit-card h-100">
                     <Card.Body>
                       <div className="benefit-icon">{benefit.icon}</div>
@@ -340,7 +340,7 @@ const Placement = () => {
             <h4 className="subsection-title">For Employers:</h4>
             <Row className="g-4 mt-3">
               {employerBenefits.map((benefit, index) => (
-                <Col key={index} md={4} xs={6}>
+                <Col key={index} md={4} sm={6} xs={12}>
                   <Card className="benefit-card h-100">
                     <Card.Body>
                       <div className="benefit-icon">{benefit.icon}</div>
