@@ -740,8 +740,456 @@ html {
   }
 
   .step-card,
+  .faq-card{
+  font-weight: 500;
+}
+
+}
+
+/* FAQ Cards */
+.faq-accordion-item {
+  border: none;
+  margin-bottom: 15px;
+  border-radius: 10px !important;
+  overflow: hidden;
+  box-shadow: 0 3px 10px rgba(0, 0, 0, 0.1);
+  background: white;
+}
+
+.faq-accordion-item .accordion-button {
+  background: white;
+  color: #1e3c72;
+  font-weight: 600;
+  font-size: 1.05rem;
+  padding: 20px 25px;
+  border: none;
+  box-shadow: none;
+  transition: all 0.3s ease;
+}
+
+.faq-accordion-item .accordion-button:not(.collapsed) {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  box-shadow: none;
+}
+
+.faq-accordion-item .accordion-button:hover {
+  background: #e8eef5;
+}
+
+.faq-accordion-item .accordion-button:not(.collapsed):hover {
+  background: linear-gradient(135deg, #2a5298 0%, #1e3c72 100%);
+}
+
+.faq-accordion-item .accordion-button::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%231e3c72'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+  transition: transform 0.3s ease;
+}
+
+.faq-accordion-item .accordion-button:not(.collapsed)::after {
+  background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16' fill='%23ffffff'%3e%3cpath fill-rule='evenodd' d='M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z'/%3e%3c/svg%3e");
+}
+
+.faq-accordion-item .accordion-button:focus {
+  box-shadow: none;
+  border: none;
+}
+
+.faq-accordion-body {
+  padding: 20px 25px;
+  color: #666;
+  font-size: 1rem;
+  line-height: 1.8;
+  background: white;
+  text-align: justify;
+}
+
+.faq-card {
+  border: none;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  overflow: hidden;
+}
+
+.faq-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(30, 60, 114, 0.25);
+  border-top: 4px solid #2a5298;
+}
+
+.faq-icon {
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.faq-icon svg {
+  font-size: 3rem;
+  color: #2a5298;
+}
+
+.faq-question {
+  color: #1e3c72;
+  font-size: 1.1rem;
+  font-weight: 600;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+.faq-answer {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-align: justify;
+  margin-bottom: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .leet-hero {
+    padding: 50px 20px;
+  }
+
+  .hero-title {
+    font-size: 2.5rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1.2rem;
+  }
+
+  .section-title {
+    font-size: 2rem;
+  }
+
+  .toc-wrapper {
+    padding: 30px 20px;
+  }
+
+  .toc-title {
+    font-size: 1.8rem;
+  }
+
+  .toc-item {
+    padding: 12px 15px;
+    font-size: 0.95rem;
+  }
+
+  .toc-icon {
+    font-size: 1.1rem;
+    margin-right: 10px;
+  }
+
+  .coaching-card {
+    padding-left: 0;
+    padding-top: 60px;
+  }
+
+  .coaching-number {
+    width: 100%;
+    height: 60px;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: auto;
+  }
+
+  .step-card,
+  .prep-card,
+  .faq-card {
+    margin-bottom: 20px;
+  }
+}
+
+@media (max-width: 576px) {
+  .leet-hero {
+    padding: 40px 15px;
+  }
+
+  .hero-title {
+    font-size: 2rem;
+  }
+
+  .hero-subtitle {
+    font-size: 1rem;
+  }
+
+  .leet-section {
+    padding: 40px 0;
+  }
+
+  .section-title {
+    font-size: 1.75rem;
+  }
+}
+
+/* Smooth Scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Print Styles */
+@media print {
+  .leet-hero,
+  .toc-card {
+    page-break-after: always;
+  }
+
+  .step-card,
   .faq-card,
   .coaching-card {
     page-break-inside: avoid;
   }
+}
+
+/* Benefit Cards */
+.benefit-card {
+  border: none;
+  border-radius: 15px;
+  background: white;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: all 0.3s ease;
+  text-align: center;
+  padding: 20px;
+}
+
+.benefit-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 8px 25px rgba(30, 60, 114, 0.2);
+  background: linear-gradient(135deg, #f8f9fa 0%, #e8eef5 100%);
+}
+
+.benefit-icon {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  color: white;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.8rem;
+  margin: 0 auto 20px;
+  box-shadow: 0 4px 10px rgba(30, 60, 114, 0.3);
+}
+
+.benefit-icon svg,
+.benefit-icon i {
+  color: white !important;
+  fill: white !important;
+}
+
+.benefit-title {
+  color: #1e3c72;
+  font-weight: 600;
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+}
+
+.benefit-description {
+  color: #555;
+  font-size: 0.95rem;
+  line-height: 1.7;
+  text-align: center;
+  margin-bottom: 0;
+}
+
+/* Roadmap Timeline */
+.roadmap-container {
+  position: relative;
+  max-width: 900px;
+  margin: 40px auto 0;
+  padding: 20px 0;
+}
+
+.roadmap-container::after {
+  content: '';
+  position: absolute;
+  width: 4px;
+  background-color: #e2e8f0;
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2px;
+  border-radius: 4px;
+}
+
+.roadmap-step {
+  padding: 10px 40px;
+  position: relative;
+  background-color: inherit;
+  width: 50%;
+  margin-bottom: 30px;
+}
+
+.roadmap-step.left {
+  left: 0;
+}
+
+.roadmap-step.right {
+  left: 50%;
+}
+
+.roadmap-marker {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: #0052a3;
+  border: 4px solid #fff;
+  border-radius: 50%;
+  top: 15px;
+  z-index: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.15);
+}
+
+.roadmap-step.left .roadmap-marker {
+  right: -25px;
+}
+
+.roadmap-step.right .roadmap-marker {
+  left: -25px;
+}
+
+.roadmap-number {
+  color: white;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.roadmap-content {
+  padding: 25px 30px;
+  background: white;
+  position: relative;
+  border-radius: 12px;
+  box-shadow: 0 5px 20px rgba(0,0,0,0.06);
+  transition: all 0.3s ease;
+}
+
+.roadmap-content:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 82, 163, 0.12);
+}
+
+.roadmap-title {
+  color: #1a202c;
+  font-weight: 700;
+  margin-bottom: 12px;
+  font-size: 1.25rem;
+}
+
+.roadmap-description {
+  color: #4a5568;
+  line-height: 1.7;
+  margin: 0;
+  font-size: 0.95rem;
+}
+
+/* Roadmap Mobile Responsive */
+@media screen and (max-width: 768px) {
+  .roadmap-container::after {
+    left: 31px;
+  }
+  
+  .roadmap-step {
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 15px;
+  }
+  
+  .roadmap-step.left, .roadmap-step.right {
+    left: 0;
+  }
+  
+  .roadmap-step.left .roadmap-marker,
+  .roadmap-step.right .roadmap-marker {
+    left: 6px;
+    right: auto;
+  }
+}
+
+/* Enhanced Cutoff Section Styles */
+.cutoff-highlight-box {
+  background-color: #f8f9fa;
+  border-left: 4px solid #1e3c72;
+}
+
+.feature-card {
+  transition: transform 0.3s ease;
+}
+.feature-card:hover {
+  transform: translateY(-5px);
+}
+.feature-icon-wrapper {
+  width: 50px;
+  height: 50px;
+  background: rgba(30, 60, 114, 0.1);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.feature-icon {
+  font-size: 1.5rem;
+  color: #1e3c72;
+}
+
+.reason-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.reason-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 10px 25px rgba(30, 60, 114, 0.15) !important;
+}
+.reason-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 1.5rem;
+}
+
+.trend-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.trend-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1) !important;
+}
+.trend-header {
+  background: linear-gradient(135deg, #1e3c72 0%, #2a5298 100%) !important;
+}
+
+.purpose-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.purpose-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 20px rgba(30, 60, 114, 0.1) !important;
+}
+
+.coaching-feature-card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  background: white;
+}
+.coaching-feature-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(30, 60, 114, 0.15) !important;
+  border-bottom: 3px solid #2a5298 !important;
+}
+.coaching-icon-wrapper {
+  width: 60px;
+  height: 60px;
+  background: rgba(30, 60, 114, 0.05);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

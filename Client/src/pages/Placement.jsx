@@ -245,7 +245,7 @@ const Placement = () => {
                 <Card.Body>
                   <div className="benefit-icon"><FaHandshake /></div>
                   <h5 className="benefit-title">Direct Recruitment</h5>
-                  <p className="benefit-description">Polytechnic campus placement refers to the process through which polytechnic students are recruited by companies and industries directly from their educational institution. It is an integral part of the polytechnic education system, ensuring that students can transition smoothly from academic life to the professional world. Through campus placement, companies visit polytechnic institutes to assess and select potential candidates for job roles in various sectors, including engineering, technology, manufacturing, and more.</p>
+                  <p className="benefit-description">Campus placement ensures a smooth transition from academic life to the professional world. Companies directly recruit talented students from our institution for exciting roles in engineering, technology, and manufacturing.</p>
                 </Card.Body>
               </Card>
             </Col>
@@ -255,7 +255,7 @@ const Placement = () => {
                 <Card.Body>
                   <div className="benefit-icon"><FaAward /></div>
                   <h5 className="benefit-title">Bridge to Profession</h5>
-                  <p className="benefit-description">The main objective of polytechnic education is to equip students with the technical skills and practical knowledge required to excel in their chosen fields. Campus placement serves as the bridge between these academic accomplishments and the professional job market. It provides students with an opportunity to kickstart their careers by securing a job right after completing their course. This direct employment pathway helps students not only in their financial independence but also in gaining valuable real-world experience early in their careers.</p>
+                  <p className="benefit-description">Placement serves as a vital bridge between your academic accomplishments and the professional job market. It provides a direct pathway to kickstart your career, gain real-world experience, and achieve financial independence early on.</p>
                 </Card.Body>
               </Card>
             </Col>
@@ -265,7 +265,7 @@ const Placement = () => {
                 <Card.Body>
                   <div className="benefit-icon"><FaBriefcase /></div>
                   <h5 className="benefit-title">Efficient Hiring</h5>
-                  <p className="benefit-description">For companies, campus placement offers an efficient way to identify fresh talent who are already equipped with the technical knowledge and skill sets needed for specific roles. Organizations benefit from hiring polytechnic graduates who are ready to work in industry-specific roles, thus reducing the time and effort needed for training.</p>
+                  <p className="benefit-description">For organizations, campus placement offers an efficient way to identify fresh, highly-trained talent. Hiring polytechnic graduates who are already equipped with industry-specific skills significantly reduces the time needed for onboarding.</p>
                 </Card.Body>
               </Card>
             </Col>

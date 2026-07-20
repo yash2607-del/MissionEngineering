@@ -18,11 +18,7 @@ const DTULEET = () => {
     { id: 'dtu-faqs', title: 'FAQs About DTU LEET' },
   ];
 
-  const dtuPattern = [
-    { sr: 1, section: 'Section A', subject: 'Mathematics', questions: 40, marks: 160 },
-    { sr: 2, section: 'Section B', subject: 'Reasoning', questions: 25, marks: 100 },
-    { sr: 3, section: 'Section C', subject: 'Aptitude', questions: 25, marks: 100 },
-  ];
+
 
   const faqs = [
     {
@@ -154,66 +150,26 @@ const DTULEET = () => {
           <Card className="content-card">
             <Card.Body>
               <h5 className="mb-3">Essential Guidelines for DTU LEET 2027 (Delhi)</h5>
-              <div className="key-points">
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>Minimum <strong>60% marks</strong> in diploma required to appear for DTU LEET.</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>DTU LEET has <strong>three sections</strong> (Section A, B & C).</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>Section A: <strong>Mathematics (40 questions)</strong>, Section B: <strong>Reasoning (25 questions)</strong>, Section C: <strong>Aptitude (25 questions)</strong>.</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>Total duration: <strong>90 minutes</strong>.</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span><strong>Negative marking:</strong> 1 mark deducted for every wrong answer.</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>Essential Qualification: 3-year regular diploma in engineering from State Board of Technical Education / AICTE-recognized institution with 60% marks.</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>Application Fee: <strong>Rs. 1500/-</strong></span>
-                </div>
-              </div>
-
-              <div className="table-responsive mt-4">
-                <Table responsive striped bordered hover className="exam-table">
-                  <thead>
-                    <tr>
-                      <th>Sr. No.</th>
-                      <th>Section</th>
-                      <th>Subject</th>
-                      <th>Number Of Questions</th>
-                      <th>Maximum Marks</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {dtuPattern.map((row) => (
-                      <tr key={row.sr}>
-                        <td>{row.sr}</td>
-                        <td>{row.section}</td>
-                        <td>{row.subject}</td>
-                        <td>{row.questions}</td>
-                        <td>{row.marks}</td>
-                      </tr>
-                    ))}
-                    <tr className="total-row">
-                      <td colSpan="3"><strong>Total</strong></td>
-                      <td><strong>90</strong></td>
-                      <td><strong>360</strong></td>
-                    </tr>
-                  </tbody>
-                </Table>
-              </div>
+              <Row className="g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>1</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>Minimum 60% marks in diploma required to appear for DTU LEET.</p></Card.Body></Card>
+                </Col>
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>2</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>DTU LEET has three sections (Section A, B & C).</p></Card.Body></Card>
+                </Col>
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>3</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>Time limit for the DTU LEET exam will be 90 minutes.</p></Card.Body></Card>
+                </Col>
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>4</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>Negative marking - There will be a 1-mark penalty for answering a question incorrectly.</p></Card.Body></Card>
+                </Col>
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>5</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>Essential Qualification – Three years regular diploma in any engineering branch awarded by state board / AICTE with 60%.</p></Card.Body></Card>
+                </Col>
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>6</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>Application Fee – The registration fee of Rs. 1500/- is to be paid for the DTU LEET exam.</p></Card.Body></Card>
+                </Col>
+              </Row>
             </Card.Body>
           </Card>
         </Container>
@@ -233,6 +189,7 @@ const DTULEET = () => {
                       <th>Section</th>
                       <th>Subject / Topics</th>
                       <th>Number Of Questions</th>
+                      <th>Maximum Marks</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -241,28 +198,32 @@ const DTULEET = () => {
                       <td>Section A</td>
                       <td>Mathematics – Algebra, Coordinate Geometry, Calculus, Trigonometry, Matrices, Probability, Statistics</td>
                       <td>40</td>
+                      <td>160</td>
                     </tr>
                     <tr>
                       <td>2</td>
                       <td>Section B</td>
                       <td>Reasoning – Verbal Reasoning, Non-verbal Reasoning, Analytical Reasoning</td>
                       <td>25</td>
+                      <td>100</td>
                     </tr>
                     <tr>
                       <td>3</td>
                       <td>Section C</td>
                       <td>Aptitude – General Knowledge, Quantitative Aptitude, Data Interpretation</td>
                       <td>25</td>
+                      <td>100</td>
                     </tr>
                     <tr className="total-row">
                       <td colSpan="3"><strong>Total</strong></td>
                       <td><strong>90</strong></td>
+                      <td><strong>360</strong></td>
                     </tr>
                   </tbody>
                 </Table>
               </div>
-              <div className="text-center mt-3">
-                <a href={images.brochure.leet} target="_blank" rel="noopener noreferrer" className="syllabus-link">Click Here For DTU LEET Detailed Syllabus</a>
+              <div className="text-center mt-4">
+                <a href={images.brochure.leet} target="_blank" rel="noopener noreferrer" className="btn btn-primary rounded-pill px-4 py-2 fw-bold" style={{ backgroundColor: '#1e3c72', border: 'none' }}>Click Here For DTU LEET Detailed Syllabus</a>
               </div>
             </Card.Body>
           </Card>

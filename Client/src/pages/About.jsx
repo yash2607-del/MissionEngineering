@@ -236,8 +236,8 @@ const About = () => {
                     </div>
                     <div className="about-stat-card">
                       <FaUsers className="about-stat-icon" />
-                      <div className="about-stat-number">30000+</div>
-                      <div className="about-stat-text">Students Enrolled</div>
+                      <div className="about-stat-number">4.9+</div>
+                      <div className="about-stat-text"> Google Rating </div>
                     </div>
                     <div className="about-stat-card">
                       <FaStar className="about-stat-icon" />
@@ -246,7 +246,7 @@ const About = () => {
                     </div>
                     <div className="about-stat-card">
                       <FaGraduationCap className="about-stat-icon" />
-                      <div className="about-stat-number">200+</div>
+                      <div className="about-stat-number">5000+</div>
                       <div className="about-stat-text">IPU Selections</div>
                     </div>
                   </div>

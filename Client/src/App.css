@@ -76,3 +76,11 @@ ul {
     font-size: 1.3rem;
   }
 }
+
+/* Global Icon Size Constraints */
+.benefit-icon svg, .benefit-icon i, .feature-icon-wrapper svg, .feature-icon-wrapper i, .coaching-icon-wrapper svg, .coaching-icon-wrapper i, .feature-icon {
+  width: 26px !important;
+  height: 26px !important;
+  font-size: 26px !important;
+}
+

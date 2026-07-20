@@ -2,7 +2,7 @@ import React, { useEffect, useMemo, useState } from 'react';
 import { Badge, Navbar, Nav, Container, Dropdown } from 'react-bootstrap';
 import { Link, useNavigate, useLocation } from 'react-router-dom';
 import { Bell, Megaphone, InfoCircle } from 'react-bootstrap-icons';
-import './Header.css';
+import './Navbar.css';
 import { images } from '../../data';
 
 import { useAuth } from '../auth/useAuth';

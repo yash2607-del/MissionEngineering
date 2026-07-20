@@ -7,9 +7,8 @@ import {
   useLocation
 } from 'react-router-dom';
 
-import Header from './components/Header';
+import Navbar from './components/Navbar';
 import Footer from './components/Footer';
-
 import Home from './pages/Home';
 import About from './pages/About';
 import Courses from './pages/Courses';
@@ -57,7 +56,7 @@ function AppContent() {
   return (
     <div className="app-wrapper">
       <ScrollToTop />
-      {!hideHeader && <Header />}
+      {!hideHeader && <Navbar />}
 
       <main className="main-content">
         <Routes>

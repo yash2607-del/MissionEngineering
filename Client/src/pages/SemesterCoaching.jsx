@@ -250,26 +250,61 @@ const SemesterCoaching = () => {
 
   return (
     <div className="semester-coaching-page">
-      {/* Header Section */}
-      <div className="semester-header">
-        <Container>
-          <h1 className="semester-main-title">Polytechnic Semester Coaching</h1>
-        </Container>
-      </div>
-
       {/* Content Section */}
-      <div className="semester-content">
+      <section className="poly-section mt-4">
         <Container>
-          <div className="content-section">
-            <p className="content-text">
-              Polytechnic education has long been an essential path for students looking to build a strong foundation in technical fields. As you move through each semester, the pressure to perform well in exams can be daunting. However, with the right guidance and resources, you can effectively navigate your semester exams and achieve success. This is where Polytechnic semester coaching becomes indispensable.
-            </p>
-            <p className="content-text">
-              At our coaching institute, we offer dedicated Polytechnic semester coaching courses that focus on strengthening your understanding of all Polytechnic subjects. Whether you need help with Polytechnic subjects coaching online, we have tailored solutions to meet your needs. Our experienced faculty members help students at every stage of their preparation, ensuring that they are well-prepared for each exam.
-            </p>
-          </div>
+          <h2 className="section-title mb-5 text-uppercase">Polytechnic Semester Coaching</h2>
+          <Row className="g-4">
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaBook /></div>
+                  <h5 className="benefit-title">Technical Foundation</h5>
+                  <p className="benefit-description">
+                    Polytechnic education is an essential path for building a strong foundation in diverse technical fields.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+            
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaChartLine /></div>
+                  <h5 className="benefit-title">Exam Success</h5>
+                  <p className="benefit-description">
+                    As you move through each semester, we provide the right guidance and resources to navigate exams effectively.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+            
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaCog /></div>
+                  <h5 className="benefit-title">Dedicated Coaching</h5>
+                  <p className="benefit-description">
+                    We offer dedicated courses focusing on strengthening your core understanding of all major Polytechnic subjects.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+            
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaChalkboardTeacher /></div>
+                  <h5 className="benefit-title">Expert Faculty</h5>
+                  <p className="benefit-description">
+                    Our experienced faculty guide you through every stage of preparation, ensuring complete exam readiness.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
         </Container>
-      </div>
+      </section>
 
 
 

@@ -6,7 +6,7 @@ import {
 
 import {
   FaMapMarkerAlt, FaPhone, FaEnvelope,
-  
+
 } from 'react-icons/fa';
 
 import { useForm } from '@formspree/react';
@@ -167,7 +167,7 @@ const Contact = () => {
           </Toast.Header>
 
           <Toast.Body className="text-white">
-             Thank you for reaching out! We will get back to you as soon as possible.
+            Thank you for reaching out! We will get back to you as soon as possible.
           </Toast.Body>
 
         </Toast>

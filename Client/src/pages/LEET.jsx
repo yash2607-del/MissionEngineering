@@ -1,50 +1,81 @@
 import React, { useState } from 'react';
 import { Container, Row, Col, Card, Accordion, Table } from 'react-bootstrap';
+import { Link } from 'react-router-dom';
 import CourseNavigation from '../components/CourseNavigation';
-import { FaCheckCircle, FaBook, FaUserGraduate, FaChartLine, FaClock, FaQuestionCircle, FaUsers, FaHandPointRight } from 'react-icons/fa';
+import { FaCheckCircle, FaBook, FaUserGraduate, FaChartLine, FaClock, FaQuestionCircle, FaUsers, FaHandPointRight, FaSearch, FaBell, FaChair, FaTrophy, FaLightbulb } from 'react-icons/fa';
+import { images } from '../../data';
 import './LEET.css';
 
 const LEET = () => {
-  const [activeKey, setActiveKey] = useState(null);
 
-  const tableOfContents = [
-    { id: 'eligibility', title: 'LEET Eligibility Criteria' },
-    { id: 'ipu-pattern', title: 'IPU LEET Exam Pattern' },
-    { id: 'ipu-syllabus', title: 'Syllabus of IPU LEET Exam' },
-    { id: 'dtu-pattern', title: 'DTU LEET Exam Pattern' },
-    { id: 'dtu-syllabus', title: 'Syllabus of DTU LEET Exam' },
-    { id: 'admission', title: 'Admission Process: Step By Step' },
-    { id: 'cutoff', title: 'Understanding LEET Cut Off' },
-    { id: 'previous-cutoff', title: 'Analyzing Previous LEET Cut Off' },
-    { id: 'preparation', title: 'Effective LEET Exam Preparation Tips' },
-    { id: 'coaching', title: 'Importance Of LEET Coaching In Delhi' },
-    { id: 'faqs', title: 'FAQs About LEET' }
-  ];
 
-  const ipuPattern = [
-    { sr: 1, section: 'Section A', questions: 25, marks: 100 },
-    { sr: 2, section: 'Section B', questions: 25, marks: 100 },
-    { sr: 3, section: 'Section C', questions: 25, marks: 100 },
-    { sr: 4, section: 'Section D', questions: 25, marks: 100 },
-  ];
+
+
+
+
+
+
+
+
+
+
 
   const ipuSyllabus = [
-    { sr: 1, section: 'Section A', syllabus: 'Mathematics', questions: 25 },
-    { sr: 2, section: 'Section B', syllabus: 'Reasoning', questions: 25 },
-    { sr: 3, section: 'Section C', syllabus: 'Mechanics', questions: 25 },
-    { sr: 4, section: 'Section D', syllabus: 'Physics + Chemistry + Computer Awareness', questions: 25 },
+    { sr: 1, section: 'Section A', syllabus: 'Mathematics', questions: 25, marks: 100 },
+    { sr: 2, section: 'Section B', syllabus: 'Reasoning', questions: 25, marks: 100 },
+    { sr: 3, section: 'Section C', syllabus: 'Mechanics', questions: 25, marks: 100 },
+    { sr: 4, section: 'Section D', syllabus: 'Physics + Chemistry + Computer Awareness', questions: 25, marks: 100 },
   ];
 
-  const dtuPattern = [
-    { sr: 1, section: 'Section A', questions: 40, marks: 160 },
-    { sr: 2, section: 'Section B', questions: 25, marks: 100 },
-    { sr: 3, section: 'Section C', questions: 25, marks: 100 },
-  ];
+
 
   const dtuSyllabus = [
-    { sr: 1, section: 'Section A', subject: 'Mathematics', questions: 40 },
-    { sr: 2, section: 'Section B', subject: 'Reasoning', questions: 25 },
-    { sr: 3, section: 'Section C', subject: 'Aptitude', questions: 25 },
+    { sr: 1, section: 'Section A', subject: 'Mathematics', questions: 40, marks: 160 },
+    { sr: 2, section: 'Section B', subject: 'Reasoning', questions: 25, marks: 100 },
+    { sr: 3, section: 'Section C', subject: 'Aptitude', questions: 25, marks: 100 },
+  ];
+
+  const admissionProcess = [
+    {
+      step: 1,
+      title: 'Understand Eligibility Criteria',
+      description: 'Before diving into the admission process, it\'s vital to understand the LEET eligibility criteria. Candidates must possess a diploma in engineering, achieve minimum 60% marks, and meet age requirements (21 years for unreserved category).'
+    },
+    {
+      step: 2,
+      title: 'Register for LEET',
+      description: 'Visit the official IPU admission portal to complete the registration process. Fill in your details, upload required documents (photograph and signature), and pay the application fee of Rs. 1500 online.'
+    },
+    {
+      step: 3,
+      title: 'Download Admit Card',
+      description: 'Visit the official GGSIPU website, find the Admit Card section, enter required details (registration number, DOB, password), submit and download the admit card. Verify all information is correct.'
+    },
+    {
+      step: 4,
+      title: 'Take the LEET Exam',
+      description: 'Familiarize yourself with the exam center location in advance. Carry all necessary documents including admit card and valid ID proof. Stay calm and manage your time effectively during the exam.'
+    },
+    {
+      step: 5,
+      title: 'Check LEET Results',
+      description: 'Results are usually declared within a few weeks. IPU provides the answer key before the final result. Check the official IPU website for your LEET results and rank.'
+    },
+    {
+      step: 6,
+      title: 'Participate in Counselling',
+      description: 'Register online for the counselling session by submitting counselling fee of Rs. 1000. Fill in your preferences for courses and colleges. Seats will be allocated based on your rank and choices.'
+    },
+    {
+      step: 7,
+      title: 'Document Verification',
+      description: 'Attend the document verification session with all required documents including academic certificates, identity proof, and LEET scorecard. Pay the admission fee and keep the payment receipt safe.'
+    },
+    {
+      step: 8,
+      title: 'Admission Confirmation',
+      description: 'Upon successful verification and fee payment, you will receive confirmation of your admission into the chosen B.Tech program. Complete course registration and attend orientation sessions.'
+    }
   ];
 
   const faqs = [
@@ -131,149 +162,210 @@ const LEET = () => {
 
   return (
     <div className="leet-page">
-      {/* Hero Section */}
-      <section className="leet-hero">
-        <Container>
-          <div className="hero-content">
-            <h1 className="hero-title">LEET Exam Guide</h1>
-            <p className="hero-subtitle">Comprehensive Guide for Lateral Entry Entrance Test</p>
-          </div>
-        </Container>
-      </section>
-
+    
       {/* Introduction Section */}
-      <section className="leet-intro">
+      <section className="leet-intro py-5 mt-4">
         <Container>
-          <Card className="intro-card">
-            <Card.Body>
-              <h2 className="section-title">What is LEET Exam?</h2>
-              <p>
-                The Lateral Entry Entrance Test (LEET) is designed for students seeking to gain admission into the second year of undergraduate engineering programs, typically after completing a diploma in engineering or a relevant field. This test serves as a pathway for those who want to further their education and enhance their career prospects in engineering without starting from the first year. LEET is crucial for integrating diploma holders into degree programs, allowing them to build upon their existing knowledge and skills.
-              </p>
-              <p>
-                The format of the LEET varies by institution, but it generally assesses candidates on subjects relevant to their chosen engineering discipline. The exam usually covers mathematics, physics, and the specific engineering subjects related to the branch the candidate wishes to enter. The objective is to evaluate the students' foundational knowledge and their ability to transition smoothly into a more advanced curriculum. The test may consist of multiple-choice questions, problem-solving scenarios, and sometimes even practical assessments, depending on the engineering program.
-              </p>
-            </Card.Body>
-          </Card>
+          <h2 className="section-title text-uppercase mb-5">What is LEET Exam?</h2>
+          <Row className="g-4">
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaUserGraduate /></div>
+                  <h5 className="benefit-title">Admission Pathway</h5>
+                  <p className="benefit-description">
+                    LEET is designed for diploma holders seeking direct admission into the second year of undergraduate engineering programs.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+            
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaChartLine /></div>
+                  <h5 className="benefit-title">Career Enhancement</h5>
+                  <p className="benefit-description">
+                    It serves as a crucial pathway to further your education and enhance engineering career prospects without starting from scratch.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+            
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaBook /></div>
+                  <h5 className="benefit-title">Exam Format</h5>
+                  <p className="benefit-description">
+                    The format varies by institution but generally assesses candidates on mathematics, physics, and specific engineering subjects.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+            
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaCheckCircle /></div>
+                  <h5 className="benefit-title">Assessment Goals</h5>
+                  <p className="benefit-description">
+                    Evaluates your foundational knowledge and ability to transition smoothly through multiple-choice or problem-solving questions.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
         </Container>
       </section>
 
-      <div className="courses-heading-container">
-        <h2 className="courses-heading">Courses We Offer</h2>
-      </div>
-      <CourseNavigation />
-
-      {/* Table of Contents */}
-      <section className="table-of-contents">
+      {/* LEET Courses We Offer */}
+      <section className="leet-section py-5">
         <Container>
-          <div className="toc-wrapper">
-            <h3 className="toc-title">Table Of Content</h3>
-            <div className="toc-list">
-              {tableOfContents.map((item, index) => (
-                <a key={index} href={`#${item.id}`} className="toc-item">
-                  <FaHandPointRight className="toc-icon" />
-                  <span>{item.title}</span>
-                </a>
-              ))}
-            </div>
-          </div>
+          <h2 className="section-title text-uppercase mb-5">LEET Courses We Offer</h2>
+          <Row className="g-4">
+            <Col lg={3} md={6}>
+              <Link to="/classroom-course" style={{ textDecoration: 'none' }}>
+                <Card className="benefit-card h-100">
+                  <Card.Body>
+                    <div className="benefit-icon"><i className="bi bi-building"></i></div>
+                    <h5 className="benefit-title mb-0 mt-3">CLASSROOM COURSE</h5>
+                  </Card.Body>
+                </Card>
+              </Link>
+            </Col>
+            
+            <Col lg={3} md={6}>
+              <Link to="/live-online-course" style={{ textDecoration: 'none' }}>
+                <Card className="benefit-card h-100">
+                  <Card.Body>
+                    <div className="benefit-icon"><i className="bi bi-book"></i></div>
+                    <h5 className="benefit-title mb-0 mt-3">LIVE-ONLINE COURSE</h5>
+                  </Card.Body>
+                </Card>
+              </Link>
+            </Col>
+            
+            <Col lg={3} md={6}>
+              <Link to="/recorded-course" style={{ textDecoration: 'none' }}>
+                <Card className="benefit-card h-100">
+                  <Card.Body>
+                    <div className="benefit-icon"><i className="bi bi-phone"></i></div>
+                    <h5 className="benefit-title mb-0 mt-3">RECORDED COURSE</h5>
+                  </Card.Body>
+                </Card>
+              </Link>
+            </Col>
+            
+            <Col lg={3} md={6}>
+              <Link to="/test-series" style={{ textDecoration: 'none' }}>
+                <Card className="benefit-card h-100">
+                  <Card.Body>
+                    <div className="benefit-icon"><i className="bi bi-card-checklist"></i></div>
+                    <h5 className="benefit-title mb-0 mt-3">TEST SERIES</h5>
+                  </Card.Body>
+                </Card>
+              </Link>
+            </Col>
+          </Row>
         </Container>
       </section>
+
+    
 
       {/* Eligibility Criteria */}
       <section id="eligibility" className="leet-section">
         <Container>
           <h2 className="section-title">LEET Eligibility Criteria</h2>
-          <Card className="content-card">
-            <Card.Body>
-              <p>To sit for the LEET exam, candidates must meet certain LEET eligibility criteria. Generally, this includes:</p>
-              <ul className="criteria-list">
-                <li>Holding a 3- or 4-years diploma in engineering from recognized board or University.</li>
-                <li>Meeting minimum percentage requirements as specified by the conducting body.</li>
-                <li>Age limit – Some university set age limit criteria for entering through LEET exam.</li>
-              </ul>
-              <p className="mt-3">Understanding these criteria is essential for candidates to ensure they are eligible for the exam. Before applying for the LEET exam, candidates should verify their eligibility by:</p>
-              <ul className="criteria-list">
-                <li><strong>Consulting Official Websites:</strong> Always refer to the official websites of the universities or examination bodies to get the most accurate and updated information regarding eligibility criteria.</li>
-                <li><strong>Checking Notifications:</strong> Universities often release notifications regarding any changes in eligibility, so it's essential to stay updated.</li>
-              </ul>
-            </Card.Body>
-          </Card>
+          <Row className="g-4 mt-3">
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaUserGraduate /></div>
+                  <h5 className="benefit-title">Diploma Required</h5>
+                  <p className="benefit-description">
+                    Candidates must hold a 3 or 4 year diploma in engineering from a recognized board or university.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaChartLine /></div>
+                  <h5 className="benefit-title">Min. Percentage</h5>
+                  <p className="benefit-description">
+                    Candidates must meet the minimum percentage requirements as specified strictly by the conducting body.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaUsers /></div>
+                  <h5 className="benefit-title">Age Limitations</h5>
+                  <p className="benefit-description">
+                    Some universities have specific age limit criteria for candidates entering through the LEET examination.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaCheckCircle /></div>
+                  <h5 className="benefit-title">Official Updates</h5>
+                  <p className="benefit-description">
+                    Always consult official university websites and stay updated with notifications for any criteria changes.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
         </Container>
       </section>
 
-      {/* IPU LEET Exam Pattern */}
+      {/* IPU LEET Exam Guidelines */}
       <section id="ipu-pattern" className="leet-section bg-light">
         <Container>
-          <h2 className="section-title">IPU LEET Exam Pattern</h2>
+          <h2 className="section-title">IPU LEET Exam Guidelines</h2>
           <Card className="content-card">
             <Card.Body>
-              <div className="key-points">
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>Program code for the IPU LEET is 128 for diploma students requires during form filling.</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>To appear for the IPU LEET exam, you must have at least 60% marks in your diploma.</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>IPU LEET exam will have four sections (Section A, B, C & D).</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>Each section will have 25 multiple choice questions (MCQ).</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>Each question is worth 4 marks. The maximum marks for the exam are 200.</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>Time limit for the LEET exam will be 150 minutes.</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>Negative marking - There will be a 1-mark penalty for answering a question incorrectly.</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>Age Limit - The maximum age limit for the entering is 21 years for general category candidates as on 01.08.2027. For SC/ST/OBC candidates, a relaxation of 5 years shall be granted on the maximum age limit specified.</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>Application Fee – The registration fee of Rs. 1500/- is to be paid for the IPU LEET exam.</span>
-                </div>
-              </div>
+              <Row className="g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>1</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>Program code for the IPU LEET is 128 for diploma students requires during form filling.</p></Card.Body></Card>
+                </Col>
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>2</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>To appear for the IPU LEET exam, you must have at least 60% marks in your diploma.</p></Card.Body></Card>
+                </Col>
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>3</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>IPU LEET exam will have four sections (Section A, B, C & D).</p></Card.Body></Card>
+                </Col>
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>4</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>Each section will have 25 multiple choice questions (MCQ).</p></Card.Body></Card>
+                </Col>
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>5</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>Each question is worth 4 marks. The maximum marks for the exam are 200.</p></Card.Body></Card>
+                </Col>
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>6</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>Time limit for the LEET exam will be 150 minutes.</p></Card.Body></Card>
+                </Col>
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>7</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>Negative marking - There will be a 1-mark penalty for answering a question incorrectly.</p></Card.Body></Card>
+                </Col>
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>8</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>Age Limit - The maximum age limit for the entering is 21 years for general category candidates as on 01.08.2027. For SC/ST/OBC candidates, a relaxation of 5 years shall be granted.</p></Card.Body></Card>
+                </Col>
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>9</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>Application Fee – The registration fee of Rs. 1500/- is to be paid for the IPU LEET exam.</p></Card.Body></Card>
+                </Col>
+              </Row>
               
-              <div className="table-responsive mt-4">
-                <Table responsive striped bordered hover className="exam-table">
-                  <thead>
-                    <tr>
-                      <th>Sr. No.</th>
-                      <th>Section</th>
-                      <th>Number Of Questions</th>
-                      <th>Maximum Marks</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {ipuPattern.map((row) => (
-                      <tr key={row.sr}>
-                        <td>{row.sr}</td>
-                        <td>{row.section}</td>
-                        <td>{row.questions}</td>
-                        <td>{row.marks}</td>
-                      </tr>
-                    ))}
-                    <tr className="total-row">
-                      <td colSpan="2"><strong>Total</strong></td>
-                      <td><strong>100</strong></td>
-                      <td><strong>400</strong></td>
-                    </tr>
-                  </tbody>
-                </Table>
-              </div>
+
             </Card.Body>
           </Card>
         </Container>
@@ -293,6 +385,7 @@ const LEET = () => {
                       <th>Section</th>
                       <th>Syllabus</th>
                       <th>Number of Questions</th>
+                      <th>Maximum Marks</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -302,88 +395,55 @@ const LEET = () => {
                         <td>{row.section}</td>
                         <td>{row.syllabus}</td>
                         <td>{row.questions}</td>
+                        <td>{row.marks}</td>
                       </tr>
                     ))}
                     <tr className="total-row">
                       <td colSpan="3"><strong>Total</strong></td>
                       <td><strong>100</strong></td>
+                      <td><strong>400</strong></td>
                     </tr>
                   </tbody>
                 </Table>
               </div>
-              <div className="text-center mt-3">
-                <a href="#" className="syllabus-link">Click Here For IPU LEET Detailed Syllabus</a>
+              <div className="text-center mt-4">
+                <a href={images.brochure.leet} target="_blank" rel="noopener noreferrer" className="btn btn-primary rounded-pill px-4 py-2 fw-bold" style={{ backgroundColor: '#1e3c72', border: 'none' }}>Click Here For IPU LEET Detailed Syllabus</a>
               </div>
             </Card.Body>
           </Card>
         </Container>
       </section>
 
-      {/* DTU LEET Exam Pattern */}
+      {/* DTU LEET Exam Guidelines */}
       <section id="dtu-pattern" className="leet-section bg-light">
         <Container>
-          <h2 className="section-title">DTU LEET Exam Pattern</h2>
+          <h2 className="section-title">DTU LEET Exam Guidelines</h2>
           <Card className="content-card">
             <Card.Body>
               <h5 className="mb-3">Essential Guidelines for DTU LEET 2027 (Delhi)</h5>
-              <div className="key-points">
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>To appear for the DTU LEET exam, you must have at least 60% marks in your diploma.</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>DTU LEET exam will have three sections (Section A, B & C).</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>Section A consists of Mathematics, which has 40 questions, Section B consists of Reasoning, which has 25 questions and Section C consists of Reasoning which has 25 questions.</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>Time limit for the DTU LEET exam will be 90 minutes.</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>Negative marking - There will be a 1-mark penalty for answering a question incorrectly.</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>Essential Qualification – Three years regular diploma in any branch of engineering awarded by any state board of Technical Education / Diploma recognized by AICTE, Delhi with 60% marks or equivalent CGPA.</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>Application Fee – The registration fee of Rs. 1500/- is to be paid for the DTU LEET exam.</span>
-                </div>
-              </div>
+              <Row className="g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>1</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>To appear for the DTU LEET exam, you must have at least 60% marks in your diploma.</p></Card.Body></Card>
+                </Col>
               
-              <div className="table-responsive mt-4">
-                <Table responsive striped bordered hover className="exam-table">
-                  <thead>
-                    <tr>
-                      <th>Sr. No.</th>
-                      <th>Section</th>
-                      <th>Number Of Questions</th>
-                      <th>Maximum Marks</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {dtuPattern.map((row) => (
-                      <tr key={row.sr}>
-                        <td>{row.sr}</td>
-                        <td>{row.section}</td>
-                        <td>{row.questions}</td>
-                        <td>{row.marks}</td>
-                      </tr>
-                    ))}
-                    <tr className="total-row">
-                      <td colSpan="2"><strong>Total</strong></td>
-                      <td><strong>90</strong></td>
-                      <td><strong>360</strong></td>
-                    </tr>
-                  </tbody>
-                </Table>
-              </div>
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>2</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>Section A consists of Mathematics (40 Qs), Section B Reasoning (25 Qs) and Section C Reasoning (25 Qs).</p></Card.Body></Card>
+                </Col>
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>3</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>Time limit for the DTU LEET exam will be 90 minutes.</p></Card.Body></Card>
+                </Col>
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>4</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>Negative marking - There will be a 1-mark penalty for answering a question incorrectly.</p></Card.Body></Card>
+                </Col>
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>6</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>Essential Qualification – Three years regular diploma in any engineering branch awarded by state board / AICTE with 60%.</p></Card.Body></Card>
+                </Col>
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>7</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>Application Fee – The registration fee of Rs. 1500/- is to be paid for the DTU LEET exam.</p></Card.Body></Card>
+                </Col>
+              </Row>
+              
+
             </Card.Body>
           </Card>
         </Container>
@@ -403,6 +463,7 @@ const LEET = () => {
                       <th>Section</th>
                       <th>Subject</th>
                       <th>Number Of Questions</th>
+                      <th>Maximum Marks</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -412,17 +473,19 @@ const LEET = () => {
                         <td>{row.section}</td>
                         <td>{row.subject}</td>
                         <td>{row.questions}</td>
+                        <td>{row.marks}</td>
                       </tr>
                     ))}
                     <tr className="total-row">
                       <td colSpan="3"><strong>Total</strong></td>
                       <td><strong>90</strong></td>
+                      <td><strong>360</strong></td>
                     </tr>
                   </tbody>
                 </Table>
               </div>
-              <div className="text-center mt-3">
-                <a href="#" className="syllabus-link">Click Here For DTU LEET Detailed Syllabus</a>
+              <div className="text-center mt-4">
+                <a href={images.brochure.leet} target="_blank" rel="noopener noreferrer" className="btn btn-primary rounded-pill px-4 py-2 fw-bold" style={{ backgroundColor: '#1e3c72', border: 'none' }}>Click Here For DTU LEET Detailed Syllabus</a>
               </div>
             </Card.Body>
           </Card>
@@ -433,88 +496,105 @@ const LEET = () => {
       <section id="admission" className="leet-section bg-light">
         <Container>
           <h2 className="section-title">Admission Process at IP University through Lateral Entry</h2>
-          <h4 className="text-center mb-4">Step-by-Step Guide</h4>
-          <p className="text-center mb-4">
-            The admission process for Indraprastha University (IPU) is a crucial journey for students aiming to pursue higher education, especially for those looking to enter Bachelor of Technology (B.Tech) programs through the Lateral Entry Entrance Test (LEET). This comprehensive guide outlines the step-by-step process for admission into IP University, along with essential tips for successful LEET exam preparation.
-          </p>
+          <div className="roadmap-container">
+            {admissionProcess.map((item, index) => (
+              <div key={index} className={`roadmap-step ${index % 2 === 0 ? 'left' : 'right'}`}>
+                <div className="roadmap-marker">
+                  <span className="roadmap-number">{item.step}</span>
+                </div>
+                <div className="roadmap-content">
+                  <h5 className="roadmap-title">{item.title}</h5>
+                  <p className="roadmap-description">{item.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+        </Container>
+      </section>
 
-          <Row className="g-4">
-            <Col md={6} lg={4} xs={6}>
-              <Card className="step-card h-100">
+      {/* Understanding Cut Off */}
+      <section id="cutoff" className="leet-section">
+        <Container>
+          <h2 className="section-title">LEET Cut Off</h2>
+
+          <Row className="g-4 mb-5">
+            <Col lg={3} md={6}>
+              <Card className="feature-card h-100 border-0 shadow-sm text-center p-3">
                 <Card.Body>
-                  <div className="step-number">1</div>
-                  <h5>Understand Eligibility Criteria</h5>
-                  <p>Before diving into the admission process, it's vital to understand the LEET eligibility criteria. Candidates must possess a diploma in engineering, achieve minimum 60% marks, and meet age requirements (21 years for unreserved category).</p>
+                  <div className="feature-icon-wrapper mb-3 mx-auto">
+                    <FaSearch className="feature-icon" />
+                  </div>
+                  <h6 className="fw-bold">Research Past Trends</h6>
+                  <p className="text-muted small mb-0">Look into cut-off scores from previous years to set realistic goals for your preparation.</p>
                 </Card.Body>
               </Card>
             </Col>
-
-            <Col md={6} lg={4} xs={6}>
-              <Card className="step-card h-100">
+            <Col lg={3} md={6}>
+              <Card className="feature-card h-100 border-0 shadow-sm text-center p-3">
                 <Card.Body>
-                  <div className="step-number">2</div>
-                  <h5>Register for LEET</h5>
-                  <p>Visit the official IPU admission portal to complete the registration process. Fill in your details, upload required documents (photograph and signature), and pay the application fee of Rs. 1500 online.</p>
+                  <div className="feature-icon-wrapper mb-3 mx-auto">
+                    <FaBell className="feature-icon" />
+                  </div>
+                  <h6 className="fw-bold">University Notifications</h6>
+                  <p className="text-muted small mb-0">Stay informed through official websites for the latest cut-off announcements.</p>
                 </Card.Body>
               </Card>
             </Col>
-
-            <Col md={6} lg={4} xs={6}>
-              <Card className="step-card h-100">
+            <Col lg={3} md={6}>
+              <Card className="feature-card h-100 border-0 shadow-sm text-center p-3">
                 <Card.Body>
-                  <div className="step-number">3</div>
-                  <h5>Download Admit Card</h5>
-                  <p>Visit the official GGSIPU website, find the Admit Card section, enter required details (registration number, DOB, password), submit and download the admit card. Verify all information is correct.</p>
+                  <div className="feature-icon-wrapper mb-3 mx-auto">
+                    <FaChair className="feature-icon" />
+                  </div>
+                  <h6 className="fw-bold">Availability of Seats</h6>
+                  <p className="text-muted small mb-0">Keep track of the number of seats available in the participating institutions.</p>
                 </Card.Body>
               </Card>
             </Col>
-
-            <Col md={6} lg={4} xs={6}>
-              <Card className="step-card h-100">
+            <Col lg={3} md={6}>
+              <Card className="feature-card h-100 border-0 shadow-sm text-center p-3">
                 <Card.Body>
-                  <div className="step-number">4</div>
-                  <h5>Take the LEET Exam</h5>
-                  <p>Familiarize yourself with the exam center location in advance. Carry all necessary documents including admit card and valid ID proof. Stay calm and manage your time effectively during the exam.</p>
+                  <div className="feature-icon-wrapper mb-3 mx-auto">
+                    <FaTrophy className="feature-icon" />
+                  </div>
+                  <h6 className="fw-bold">Overall Performance</h6>
+                  <p className="text-muted small mb-0">Monitor the average scores of all candidates appearing for the exam.</p>
                 </Card.Body>
               </Card>
             </Col>
+          </Row>
 
-            <Col md={6} lg={4} xs={6}>
-              <Card className="step-card h-100">
-                <Card.Body>
-                  <div className="step-number">5</div>
-                  <h5>Check LEET Results</h5>
-                  <p>Results are usually declared within a few weeks. IPU provides the answer key before the final result. Check the official IPU website for your LEET results and rank.</p>
+          <h2 className="section-title">Why Understanding Cut Off is Crucial</h2>
+          <Row className="g-4 text-center">
+            <Col md={4}>
+              <Card className="reason-card h-100 border-0 shadow-sm">
+                <Card.Body className="p-4">
+                  <div className="reason-icon-wrapper mx-auto mb-3">
+                    <FaChartLine />
+                  </div>
+                  <h5 className="fw-bold">Admission Planning</h5>
+                  <p className="text-muted mb-0">Knowing the expected cut off helps candidates set realistic goals for their preparation and choose the right institutions.</p>
                 </Card.Body>
               </Card>
             </Col>
-
-            <Col md={6} lg={4} xs={6}>
-              <Card className="step-card h-100">
-                <Card.Body>
-                  <div className="step-number">6</div>
-                  <h5>Participate in Counselling</h5>
-                  <p>Register online for the counselling session by submitting counselling fee of Rs. 1000. Fill in your preferences for courses and colleges. Seats will be allocated based on your rank and choices.</p>
+            <Col md={4}>
+              <Card className="reason-card h-100 border-0 shadow-sm">
+                <Card.Body className="p-4">
+                  <div className="reason-icon-wrapper mx-auto mb-3">
+                    <FaUserGraduate />
+                  </div>
+                  <h5 className="fw-bold">Competitive Edge</h5>
+                  <p className="text-muted mb-0">Familiarity with cut off trends allows candidates to understand the competition and tailor their strategies accordingly.</p>
                 </Card.Body>
               </Card>
             </Col>
-
-            <Col md={6} lg={4} xs={6}>
-              <Card className="step-card h-100">
-                <Card.Body>
-                  <div className="step-number">7</div>
-                  <h5>Document Verification</h5>
-                  <p>Attend the document verification session with all required documents including academic certificates, identity proof, and LEET scorecard. Pay the admission fee and keep the payment receipt safe.</p>
-                </Card.Body>
-              </Card>
-            </Col>
-
-            <Col md={6} lg={4} xs={6}>
-              <Card className="step-card h-100">
-                <Card.Body>
-                  <div className="step-number">8</div>
-                  <h5>Admission Confirmation</h5>
-                  <p>Upon successful verification and fee payment, you will receive confirmation of your admission into the chosen B.Tech program. Complete course registration and attend orientation sessions.</p>
+            <Col md={4}>
+              <Card className="reason-card h-100 border-0 shadow-sm">
+                <Card.Body className="p-4">
+                  <div className="reason-icon-wrapper mx-auto mb-3">
+                    <FaBook />
+                  </div>
+                  <h5 className="fw-bold">Guiding Study Focus</h5>
                 </Card.Body>
               </Card>
             </Col>
@@ -522,226 +602,182 @@ const LEET = () => {
         </Container>
       </section>
 
-      {/* Understanding Cut Off */}
-      <section id="cutoff" className="leet-section">
-        <Container>
-          <h2 className="section-title">Understanding LEET Cut Off</h2>
-          <Card className="content-card">
-            <Card.Body>
-              <p className="highlight-text">
-                "Understanding the cut-off for the LEET exam is very important. Both IPU and DTU do not have a minimum passing marks criterion; all students who appear in the LEET examination qualify. However, for admission to a good college, the number of seats available in the respective stream and college is crucial. Only those students who score well in the LEET exam get to choose their preferred college and stream."
-              </p>
-              <p>
-                Candidates should familiarize themselves with previous years' cut-off scores to gauge the competition and set realistic targets for their exam preparation. Here's how to stay updated:
-              </p>
-              <ul className="criteria-list">
-                <li><strong>Research Past Trends:</strong> Look into cut-off scores from previous years to set realistic goals for your preparation. It is important for understanding the typical range required for admission.</li>
-                <li><strong>University Notifications:</strong> Stay informed through official university websites or coaching centers for the latest cut-off announcements for the current academic year.</li>
-                <li><strong>Availability of Seats:</strong> The number of seats available in the participating institutions.</li>
-                <li><strong>Overall Performance:</strong> The average scores of all candidates appearing for the exam.</li>
-              </ul>
-
-              <h5 className="mt-4">Understanding the LEET cut off is crucial for several reasons:</h5>
-              <Row className="mt-3">
-                <Col md={4} xs={6}>
-                  <div className="cutoff-reason">
-                    <FaChartLine className="reason-icon" />
-                    <h6>Admission Planning</h6>
-                    <p>Knowing the expected cut off helps candidates set realistic goals for their preparation and choose the right institutions.</p>
-                  </div>
-                </Col>
-                <Col md={4} xs={6}>
-                  <div className="cutoff-reason">
-                    <FaUserGraduate className="reason-icon" />
-                    <h6>Competitive Edge</h6>
-                    <p>Familiarity with cut off trends allows candidates to understand the competition and tailor their strategies accordingly.</p>
-                  </div>
-                </Col>
-                <Col md={4} xs={6}>
-                  <div className="cutoff-reason">
-                    <FaBook className="reason-icon" />
-                    <h6>Guiding Study Focus</h6>
-                    <p>Understanding subjects that impact cut off scores helps allocate study time more effectively.</p>
-                  </div>
-                </Col>
-              </Row>
-            </Card.Body>
-          </Card>
-        </Container>
-      </section>
-
       {/* Previous Cut Off */}
       <section id="previous-cutoff" className="leet-section bg-light">
         <Container>
           <h2 className="section-title">Analyzing Previous Years' LEET Cut Off Trends</h2>
-          <Card className="content-card">
-            <Card.Body>
-              <p>
-                To provide insights into the current admission landscape, let's analyze the cut off trends from the past few years. The cut off scores for institutions such as IPU and DTU can fluctuate significantly based on various factors.
-              </p>
+          <Row className="g-4 mb-5">
+            <Col lg={4} md={6}>
+              <Card className="trend-card h-100 border-0 shadow-sm overflow-hidden">
+                <div className="trend-header bg-primary text-white text-center py-3">
+                  <h2 className="mb-0 fw-bold">2026 Cut Off</h2>
+                </div>
+                <Card.Body className="p-4">
+                  <div className="mb-4">
+                    <h4 className="fw-bold mb-2" style={{ color: '#1e3c72' }}>IPU:</h4>
+                    <p className="text-muted small mb-0">Students who scored 290 out of 400 ranked in the top 10.</p>
+                  </div>
+                  <div>
+                    <h4 className="fw-bold mb-2" style={{ color: '#1e3c72' }}>DTU:</h4>
+                    <p className="text-muted small mb-0">Rank 1: Spandan Choudhury scored 292 out of 360. Spandan was a student of Mission Engineering offline batch LEET 2026.</p>
+                  </div>
+                </Card.Body>
+              </Card>
+            </Col>
 
-              <Row className="mt-4">
-                <Col md={4} xs={6}>
-                  <Card className="year-card">
-                    <Card.Body>
-                      <h4 className="year-title">2026 Cut Off</h4>
-                      <div className="university-cutoff">
-                        <h6>IPU:</h6>
-                        <p>Students who scored 290 out of 400 ranked in the top 10.</p>
-                      </div>
-                      <div className="university-cutoff">
-                        <h6>DTU:</h6>
-                        <p>Rank 1: Spandan Choudhury scored 292 out of 360. Spandan was a student of Mission Engineering offline batch LEET 2026.</p>
-                      </div>
-                    </Card.Body>
-                  </Card>
-                </Col>
+            <Col lg={4} md={6}>
+              <Card className="trend-card h-100 border-0 shadow-sm overflow-hidden">
+                <div className="trend-header bg-primary text-white text-center py-3" style={{ opacity: 0.9 }}>
+                  <h3 className="mb-0 fw-bold">2025 Cut Off</h3>
+                </div>
+                <Card.Body className="p-4">
+                  <div className="mb-4">
+                    <h4 className="fw-bold mb-2" style={{ color: '#1e3c72' }}>IPU:</h4>
+                    <p className="text-muted small mb-0">Students who scored 230 out of 400 ranked in the top 10.</p>
+                  </div>
+                  <div>
+                    <h4 className="fw-bold mb-2" style={{ color: '#1e3c72' }}>DTU:</h4>
+                    <p className="text-muted small mb-0">Students who scored 220 out of 360 ranked in the top 10.</p>
+                  </div>
+                </Card.Body>
+              </Card>
+            </Col>
 
-                <Col md={4} xs={6}>
-                  <Card className="year-card">
-                    <Card.Body>
-                      <h4 className="year-title">2025 Cut Off</h4>
-                      <div className="university-cutoff">
-                        <h6>IPU:</h6>
-                        <p>Students who scored 230 out of 400 ranked in the top 10.</p>
-                      </div>
-                      <div className="university-cutoff">
-                        <h6>DTU:</h6>
-                        <p>Students who scored 220 out of 360 ranked in the top 10.</p>
-                      </div>
-                    </Card.Body>
-                  </Card>
-                </Col>
+            <Col lg={4} md={6}>
+              <Card className="trend-card h-100 border-0 shadow-sm overflow-hidden">
+                <div className="trend-header bg-primary text-white text-center py-3" style={{ opacity: 0.8 }}>
+                  <h3 className="mb-0 fw-bold">2024 Cut Off</h3>
+                </div>
+                <Card.Body className="p-4">
+                  <div className="mb-4">
+                    <h4 className="fw-bold mb-2" style={{ color: '#1e3c72' }}>IPU:</h4>
+                    <p className="text-muted small mb-0">Rank 1: Md Akmal scored 267 out of 400 (Mission Engineering student). Top 10: 235+ out of 400.</p>
+                  </div>
+                  <div>
+                    <h4 className="fw-bold mb-2" style={{ color: '#1e3c72' }}>DTU:</h4>
+                    <p className="text-muted small mb-0">Rank 1: Kartik Dadhwal scored 340 out of 360 (Mission Engineering student). Top 10: 280+ out of 360.</p>
+                  </div>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
 
-                <Col md={4} xs={6}>
-                  <Card className="year-card">
-                    <Card.Body>
-                      <h4 className="year-title">2024 Cut Off</h4>
-                      <div className="university-cutoff">
-                        <h6>IPU:</h6>
-                        <p>Rank 1: Md Akmal scored 267 out of 400 (Mission Engineering student). Top 10: 235+ out of 400.</p>
-                      </div>
-                      <div className="university-cutoff">
-                        <h6>DTU:</h6>
-                        <p>Rank 1: Kartik Dadhwal scored 340 out of 360 (Mission Engineering student). Top 10: 280+ out of 360.</p>
-                      </div>
-                    </Card.Body>
-                  </Card>
-                </Col>
-              </Row>
+          <h3 className="text-center mb-4 mt-5 fw-bold">Factors Influencing Cut Offs</h3>
+          <Row className="g-4 text-center">
+            <Col md={4}>
+              <Card className="reason-card h-100 border-0 shadow-sm">
+                <Card.Body className="p-4">
+                  <div className="reason-icon-wrapper mx-auto mb-3">
+                    <FaUsers />
+                  </div>
+                  <h5 className="fw-bold">Increase in Candidates</h5>
+                  <p className="text-muted mb-0">Each year, more students apply for lateral entry, which can lead to higher cut off scores.</p>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={4}>
+              <Card className="reason-card h-100 border-0 shadow-sm">
+                <Card.Body className="p-4">
+                  <div className="reason-icon-wrapper mx-auto mb-3">
+                    <FaBook />
+                  </div>
+                  <h5 className="fw-bold">Changes in Curriculum</h5>
+                  <p className="text-muted mb-0">Updates to the Delhi LEET syllabus or IPU LEET syllabus can impact how candidates perform and subsequently affect the cut off.</p>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col md={4}>
+              <Card className="reason-card h-100 border-0 shadow-sm">
+                <Card.Body className="p-4">
+                  <div className="reason-icon-wrapper mx-auto mb-3">
+                    <FaChair />
+                  </div>
+                  <h5 className="fw-bold">Seat Availability</h5>
+                  <p className="text-muted mb-0">The total number of available seats in top engineering colleges heavily impacts how competitive the cut off will be.</p>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
 
-              <div className="factors-section mt-4">
-                <h5>Factors Influencing Cut Offs</h5>
-                <ul className="criteria-list">
-                  <li><strong>Increase in Candidates:</strong> Each year, more students apply for lateral entry, which can lead to higher cut off scores.</li>
-                  <li><strong>Changes in Curriculum:</strong> Updates to the Delhi LEET syllabus or IPU LEET syllabus can impact how candidates perform and subsequently affect the cut off.</li>
-                </ul>
-              </div>
-            </Card.Body>
-          </Card>
         </Container>
       </section>
 
       {/* Preparation Tips */}
       <section id="preparation" className="leet-section">
         <Container>
-          <h2 className="section-title">Effective LEET Exam Preparation Tips</h2>
+          <h2 className="section-title">LEET Preparation Tips</h2>
           <p className="text-center mb-4">
             Effective LEET exam preparation is vital for achieving a good rank. Here are some essential strategies:
           </p>
 
           <Row className="g-4">
-            <Col md={6} xs={6}>
+            <Col lg={3} md={6} xs={12}>
               <Card className="prep-card h-100">
                 <Card.Body>
-                  <div className="prep-icon">
-                    <FaUserGraduate />
-                  </div>
-                  <h5>Join LEET Classes</h5>
+                  <h5>Expert Coaching</h5>
                   <p>Joining LEET classes helps students gain structured knowledge. Mission Engineering provides best LEET classes for both IPU LEET and DTU LEET preparations.</p>
                 </Card.Body>
               </Card>
             </Col>
 
-            <Col md={6} xs={6}>
+            <Col lg={3} md={6} xs={12}>
               <Card className="prep-card h-100">
                 <Card.Body>
-                  <div className="prep-icon">
-                    <FaBook />
-                  </div>
-                  <h5>Use Quality Study Materials</h5>
+                  <h5>Study Materials</h5>
                   <p>Utilize classroom notes, practice sets, check list books, Mission Engineering APP, books, revision guide, mock tests and previous years question papers.</p>
                 </Card.Body>
               </Card>
             </Col>
 
-            <Col md={6} xs={6}>
+            <Col lg={3} md={6} xs={12}>
               <Card className="prep-card h-100">
                 <Card.Body>
-                  <div className="prep-icon">
-                    <FaClock />
-                  </div>
-                  <h5>Practice Regularly</h5>
+                  <h5>Regular Practice</h5>
                   <p>Consistent practice is key to success. Regular practice through mock tests can significantly enhance students' confidence, exam readiness and familiarity with the exam format.</p>
                 </Card.Body>
               </Card>
             </Col>
 
-            <Col md={6} xs={6}>
+            <Col lg={3} md={6} xs={12}>
               <Card className="prep-card h-100">
                 <Card.Body>
-                  <div className="prep-icon">
-                    <FaChartLine />
-                  </div>
-                  <h5>Focus on Weak Areas</h5>
+                  <h5>Focus Areas</h5>
                   <p>Identify and focus on areas that require more attention. Personalized coaching can help students tackle their weaknesses effectively.</p>
                 </Card.Body>
               </Card>
             </Col>
 
-            <Col md={6} xs={6}>
+            <Col lg={3} md={6} xs={12}>
               <Card className="prep-card h-100">
                 <Card.Body>
-                  <div className="prep-icon">
-                    <FaUsers />
-                  </div>
                   <h5>Group Study</h5>
                   <p>Studying with peers can provide different perspectives and facilitate better understanding. It's also a great way to stay motivated.</p>
                 </Card.Body>
               </Card>
             </Col>
 
-            <Col md={6} xs={6}>
+            <Col lg={3} md={6} xs={12}>
               <Card className="prep-card h-100">
                 <Card.Body>
-                  <div className="prep-icon">
-                    <FaCheckCircle />
-                  </div>
-                  <h5>Take Care of Your Health</h5>
+                  <h5>Health & Wellness</h5>
                   <p>Maintain a healthy lifestyle with a balanced diet and regular exercise. Mental and physical well-being are crucial during exam preparation.</p>
                 </Card.Body>
               </Card>
             </Col>
 
-            <Col md={6} xs={6}>
+            <Col lg={3} md={6} xs={12}>
               <Card className="prep-card h-100">
                 <Card.Body>
-                  <div className="prep-icon">
-                    <FaCheckCircle />
-                  </div>
                   <h5>Active Participation</h5>
                   <p>Engage actively during classes, asking questions and participating in discussions. Take thorough notes during lectures for revision.</p>
                 </Card.Body>
               </Card>
             </Col>
 
-            <Col md={6} xs={6}>
+            <Col lg={3} md={6} xs={12}>
               <Card className="prep-card h-100">
                 <Card.Body>
-                  <div className="prep-icon">
-                    <FaCheckCircle />
-                  </div>
-                  <h5>Develop a Study Plan</h5>
+                  <h5>Study Plan</h5>
                   <p>A well-structured study plan is essential. Set clear goals, manage time effectively, allocate specific time slots for different subjects, and divide topics into smaller segments.</p>
                 </Card.Body>
               </Card>
@@ -754,58 +790,45 @@ const LEET = () => {
       <section className="leet-section bg-light">
         <Container>
           <h2 className="section-title">Understanding the LEET Exam for Diploma Holders</h2>
-          <Card className="content-card">
-            <Card.Body>
-              <p>
-                The Lateral Entry Entrance Test (LEET) is a crucial examination for diploma holders in engineering, enabling them to gain admission into direct second year of Bachelor of Technology (B.Tech) programs at various institutions across India. Lateral entry in B.Tech programs is particularly beneficial for diploma holders. This pathway not only saves time by allowing students to enter the second year of a B.Tech program but also helps them leverage their existing skills and knowledge.
-              </p>
+        
 
-              <h5 className="mt-4">Purpose of LEET Exam</h5>
-              <Row className="mt-3">
-                <Col md={6} xs={6}>
-                  <div className="purpose-item">
-                    <FaCheckCircle className="purpose-icon" />
-                    <div>
-                      <h6>Standardized Assessment</h6>
-                      <p>Provides a standardized method to assess the aptitude and knowledge of diploma holders in engineering disciplines.</p>
-                    </div>
-                  </div>
-                </Col>
-                <Col md={6} xs={6}>
-                  <div className="purpose-item">
-                    <FaCheckCircle className="purpose-icon" />
-                    <div>
-                      <h6>Facilitating Admission</h6>
-                      <p>By passing the LEET exam, candidates can secure admission to reputable engineering colleges, enhancing their career prospects.</p>
-                    </div>
-                  </div>
-                </Col>
-                <Col md={6} xs={6}>
-                  <div className="purpose-item">
-                    <FaCheckCircle className="purpose-icon" />
-                    <div>
-                      <h6>Streamlining Lateral Entry</h6>
-                      <p>The exam is specifically designed for lateral entry into B.Tech programs, allowing students to continue their education without repeating the first year.</p>
-                    </div>
-                  </div>
-                </Col>
-                <Col md={6} xs={6}>
-                  <div className="purpose-item">
-                    <FaCheckCircle className="purpose-icon" />
-                    <div>
-                      <h6>Broader Career Opportunities</h6>
-                      <p>A B.Tech degree often opens up more job opportunities and potentially higher salaries compared to a diploma.</p>
-                    </div>
-                  </div>
-                </Col>
-              </Row>
+          <h4 className="text-center mb-4 fw-bold">Purpose of LEET Exam</h4>
+          <Row className="g-4 mb-5">
+            <Col lg={3} md={6}>
+              <Card className="purpose-card border-0 shadow-sm h-100">
+                <Card.Body className="p-4">
+                  <h5 className="fw-bold mb-3">Standardized Assessment</h5>
+                  <p className="text-muted mb-0">Provides a standardized method to assess the aptitude and knowledge of diploma holders in engineering disciplines.</p>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col lg={3} md={6}>
+              <Card className="purpose-card border-0 shadow-sm h-100">
+                <Card.Body className="p-4">
+                  <h5 className="fw-bold mb-3">Facilitating Admission</h5>
+                  <p className="text-muted mb-0">By passing the LEET exam, candidates can secure admission to reputable engineering colleges, enhancing their career prospects.</p>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col lg={3} md={6}>
+              <Card className="purpose-card border-0 shadow-sm h-100">
+                <Card.Body className="p-4">
+                  <h5 className="fw-bold mb-3">Streamlining Lateral Entry</h5>
+                  <p className="text-muted mb-0">The exam is specifically designed for lateral entry into B.Tech programs, allowing students to continue their education without repeating the first year.</p>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col lg={3} md={6}>
+              <Card className="purpose-card border-0 shadow-sm h-100">
+                <Card.Body className="p-4">
+                  <h5 className="fw-bold mb-3">Broader Career Opportunities</h5>
+                  <p className="text-muted mb-0">A B.Tech degree often opens up more job opportunities and potentially higher salaries compared to a diploma.</p>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
 
-              <h5 className="mt-4">Who Should Take LEET?</h5>
-              <p>
-                LEET is designed specifically for diploma holders in engineering fields, such as civil, mechanical, electrical, electronics and computer engineering. It opens up opportunities for lateral entry into B.Tech programs, making it an excellent choice for diploma students looking to advance their education and skills. There is no common LEET exam for all University and all state of India. In some states, the technical board conducts the LEET exam for all universities and colleges, while some universities conduct their own exams separately. Here we will discuss specially about IPU LEET and DTU LEET exam.
-              </p>
-            </Card.Body>
-          </Card>
+         l
         </Container>
       </section>
 
@@ -813,33 +836,111 @@ const LEET = () => {
       <section id="coaching" className="leet-section">
         <Container>
           <h2 className="section-title">Importance Of LEET Coaching In Delhi</h2>
-          <Card className="content-card mb-4">
-            <Card.Body>
-              <p>
-                Many students opt for LEET coaching in Delhi to enhance their chances of success in the exam. They join LEET exam tuition to get personalized attention, clarify doubts and support in their studies. This approach can be especially beneficial for students who may struggle in certain subjects or require additional guidance. Good coaching centres offer tailored programs with a structured environment that helps students focus on key concepts and exam strategies.
-              </p>
+          <h4 className="text-center mb-4 fw-bold">Good coaching centres often provide:</h4>
+          <Row className="g-4 mb-5">
+            <Col lg={4} md={6}>
+              <Card className="coaching-feature-card h-100 border-0 shadow-sm p-3 text-center">
+                <Card.Body>
+                  <div className="coaching-icon-wrapper mx-auto mb-3 text-primary">
+                    <FaUserGraduate size={32} />
+                  </div>
+                  <h6 className="fw-bold">Expert Faculty</h6>
+                  <p className="text-muted small mb-0">Experienced instructors who are familiar with the LEET exam pattern and can guide students effectively. They have good command in their respective subjects.</p>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col lg={4} md={6}>
+              <Card className="coaching-feature-card h-100 border-0 shadow-sm p-3 text-center">
+                <Card.Body>
+                  <div className="coaching-icon-wrapper mx-auto mb-3 text-primary">
+                    <FaBook size={32} />
+                  </div>
+                  <h6 className="fw-bold">Comprehensive Study Materials</h6>
+                  <p className="text-muted small mb-0">Well-curated resources that align with the LEET syllabus, ensuring thorough coverage of topics.</p>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col lg={4} md={6}>
+              <Card className="coaching-feature-card h-100 border-0 shadow-sm p-3 text-center">
+                <Card.Body>
+                  <div className="coaching-icon-wrapper mx-auto mb-3 text-primary">
+                    <FaChartLine size={32} />
+                  </div>
+                  <h6 className="fw-bold">Practice Tests</h6>
+                  <p className="text-muted small mb-0">Regular mock tests to help students assess their preparedness and improve their time management skills.</p>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col lg={4} md={6}>
+              <Card className="coaching-feature-card h-100 border-0 shadow-sm p-3 text-center">
+                <Card.Body>
+                  <div className="coaching-icon-wrapper mx-auto mb-3 text-primary">
+                    <FaChair size={32} />
+                  </div>
+                  <h6 className="fw-bold">Structured Learning Environment</h6>
+                  <p className="text-muted small mb-0">Coaching centers provide a systematic approach to studying, ensuring that students cover all necessary topics in line with the Delhi LEET syllabus.</p>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col lg={4} md={6}>
+              <Card className="coaching-feature-card h-100 border-0 shadow-sm p-3 text-center">
+                <Card.Body>
+                  <div className="coaching-icon-wrapper mx-auto mb-3 text-primary">
+                    <FaSearch size={32} />
+                  </div>
+                  <h6 className="fw-bold">Focused Preparation</h6>
+                  <p className="text-muted small mb-0">With specialized LEET exam tuition, students can focus on their weaknesses and develop strengths in key areas relevant to the IPU LEET and DTU LEET syllabus.</p>
+                </Card.Body>
+              </Card>
+            </Col>
+            <Col lg={4} md={6}>
+              <Card className="coaching-feature-card h-100 border-0 shadow-sm p-3 text-center">
+                <Card.Body>
+                  <div className="coaching-icon-wrapper mx-auto mb-3 text-primary">
+                    <FaUsers size={32} />
+                  </div>
+                  <h6 className="fw-bold">Motivation and Discipline</h6>
+                  <p className="text-muted small mb-0">A classroom setting fosters a sense of community and accountability, encouraging students to stay committed to their study schedules.</p>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
 
-              <h5 className="mt-4">Good coaching centres often provide:</h5>
-              <ul className="criteria-list">
-                <li><strong>Expert Faculty:</strong> Experienced instructors who are familiar with the LEET exam pattern and can guide students effectively. They have good command in their respective subjects.</li>
-                <li><strong>Comprehensive Study Materials:</strong> Well-curated resources that align with the LEET syllabus, ensuring thorough coverage of topics.</li>
-                <li><strong>Practice Tests:</strong> Regular mock tests to help students assess their preparedness and improve their time management skills.</li>
-                <li><strong>Structured Learning Environment:</strong> Coaching centers provide a systematic approach to studying, ensuring that students cover all necessary topics in line with the Delhi LEET syllabus.</li>
-                <li><strong>Focused Preparation:</strong> With specialized LEET exam tuition, students can focus on their weaknesses and develop strengths in key areas relevant to the IPU LEET and DTU LEET syllabus.</li>
-                <li><strong>Motivation and Discipline:</strong> A classroom setting fosters a sense of community and accountability, encouraging students to stay committed to their study schedules.</li>
-              </ul>
-            </Card.Body>
-          </Card>
-
-          <h3 className="text-center mb-4">Top 5 LEET Coaching Centers in Delhi</h3>
-          <Row className="g-4">
-            {coachingCenters.map((center, index) => (
-              <Col key={index} lg={index === 0 ? 12 : 6} xs={index === 0 ? 12 : 6}>
-                <Card className={`coaching-card ${index === 0 ? 'featured-coaching-card' : ''}`}>
-                  <Card.Body>
-                    <div className="coaching-number">{index + 1}</div>
-                    <h5>{center.name}</h5>
-                    <p>{center.description}</p>
+          <div className="mt-5 pt-5">
+            <h2 className="section-title mb-5">Top 3 LEET Coaching Centers in Delhi</h2>
+          </div>
+          
+          <Row className="g-4 row-cols-1 row-cols-md-3 row-cols-lg-3 justify-content-center">
+            {coachingCenters.slice(0, 3).map((center, index) => (
+              <Col key={index}>
+                <Card 
+                  className="coaching-card h-100 border-0 shadow-sm text-center" 
+                  style={{ 
+                    transition: 'transform 0.3s ease', 
+                    background: '#fff',
+                    border: 'none'
+                  }}
+                >
+                  <Card.Body className="p-4 d-flex flex-column align-items-center">
+                    <div 
+                      className="mx-auto mb-4 shadow-sm flex-shrink-0" 
+                      style={{ 
+                        width: '40px', 
+                        height: '40px', 
+                        fontSize: '1.2rem', 
+                        fontWeight: 'bold',
+                        background: '#1e3c72', 
+                        color: '#fff', 
+                        display: 'flex', 
+                        alignItems: 'center', 
+                        justifyContent: 'center', 
+                        borderRadius: '8px'
+                      }}
+                    >
+                      {index + 1}
+                    </div>
+                    <h5 className="fw-bold mb-3" style={{ color: '#1e3c72' }}>{center.name}</h5>
+                    <p className="text-muted mb-0 flex-grow-1" style={{ lineHeight: '1.6', fontSize: '0.95rem' }}>{center.description}</p>
                   </Card.Body>
                 </Card>
               </Col>
@@ -852,7 +953,6 @@ const LEET = () => {
       <section id="faqs" className="leet-section bg-light">
         <Container>
           <h2 className="section-title">FAQs About LEET</h2>
-          <p className="text-center mb-4">Common Questions about the LEET Exam and Admission Process</p>
           
           <Accordion>
             {faqs.map((faq, index) => (

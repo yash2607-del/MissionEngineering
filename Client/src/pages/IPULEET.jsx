@@ -18,12 +18,7 @@ const IPULEET = () => {
     { id: 'ipu-faqs', title: 'FAQs About IPU LEET' },
   ];
 
-  const ipuPattern = [
-    { sr: 1, section: 'Section A', subject: 'Mathematics', questions: 25, marks: 100 },
-    { sr: 2, section: 'Section B', subject: 'Reasoning', questions: 25, marks: 100 },
-    { sr: 3, section: 'Section C', subject: 'Mechanics', questions: 25, marks: 100 },
-    { sr: 4, section: 'Section D', subject: 'Physics + Chemistry + Computer Awareness', questions: 25, marks: 100 },
-  ];
+
 
   const faqs = [
     {
@@ -154,74 +149,35 @@ const IPULEET = () => {
           <h2 className="section-title">IPU LEET Exam Pattern</h2>
           <Card className="content-card">
             <Card.Body>
-              <div className="key-points">
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>Program code for IPU LEET is <strong>128</strong> (required during form filling).</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>Minimum <strong>60% marks</strong> in diploma required to appear for IPU LEET.</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>IPU LEET has <strong>four sections</strong> (Section A, B, C & D).</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>Each section has <strong>25 Multiple Choice Questions (MCQs)</strong>.</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>Each question carries <strong>4 marks</strong>. Maximum marks: <strong>400</strong>.</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>Total duration: <strong>150 minutes</strong>.</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span><strong>Negative marking:</strong> 1 mark deducted for every wrong answer.</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>Age Limit: Maximum <strong>21 years</strong> for General category; 5-year relaxation for SC/ST/OBC.</span>
-                </div>
-                <div className="key-point">
-                  <FaCheckCircle className="point-icon" />
-                  <span>Application Fee: <strong>Rs. 1500/-</strong></span>
-                </div>
-              </div>
-
-              <div className="table-responsive mt-4">
-                <Table responsive striped bordered hover className="exam-table">
-                  <thead>
-                    <tr>
-                      <th>Sr. No.</th>
-                      <th>Section</th>
-                      <th>Subject</th>
-                      <th>Number Of Questions</th>
-                      <th>Maximum Marks</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    {ipuPattern.map((row) => (
-                      <tr key={row.sr}>
-                        <td>{row.sr}</td>
-                        <td>{row.section}</td>
-                        <td>{row.subject}</td>
-                        <td>{row.questions}</td>
-                        <td>{row.marks}</td>
-                      </tr>
-                    ))}
-                    <tr className="total-row">
-                      <td colSpan="3"><strong>Total</strong></td>
-                      <td><strong>100</strong></td>
-                      <td><strong>400</strong></td>
-                    </tr>
-                  </tbody>
-                </Table>
-              </div>
+              <Row className="g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>1</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>Program code for IPU LEET is 128 (required during form filling).</p></Card.Body></Card>
+                </Col>
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>2</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>Minimum 60% marks in diploma required to appear for IPU LEET.</p></Card.Body></Card>
+                </Col>
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>3</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>IPU LEET has four sections (Section A, B, C & D).</p></Card.Body></Card>
+                </Col>
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>4</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>Each section has 25 Multiple Choice Questions (MCQs).</p></Card.Body></Card>
+                </Col>
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>5</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>Each question carries 4 marks. Maximum marks: 400.</p></Card.Body></Card>
+                </Col>
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>6</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>Total duration: 150 minutes.</p></Card.Body></Card>
+                </Col>
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>7</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>Negative marking: 1 mark deducted for every wrong answer.</p></Card.Body></Card>
+                </Col>
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>8</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>Age Limit: Maximum 21 years for General category; 5-year relaxation for SC/ST/OBC.</p></Card.Body></Card>
+                </Col>
+                <Col>
+                  <Card className="h-100 border-0 shadow-sm"><Card.Body className="p-4 d-flex align-items-start"><div className="flex-shrink-0 me-3 shadow-sm" style={{ width: '28px', height: '28px', background: '#1e3c72', color: '#fff', borderRadius: '6px', display: 'flex', alignItems: 'center', justifyContent: 'center', fontSize: '0.9rem', fontWeight: 'bold' }}>9</div><p className="mb-0" style={{ fontSize: '1rem', lineHeight: '1.5', color: '#000' }}>Application Fee: Rs. 1500/-</p></Card.Body></Card>
+                </Col>
+              </Row>
             </Card.Body>
           </Card>
         </Container>
@@ -241,6 +197,7 @@ const IPULEET = () => {
                       <th>Section</th>
                       <th>Syllabus / Subject</th>
                       <th>Number of Questions</th>
+                      <th>Maximum Marks</th>
                     </tr>
                   </thead>
                   <tbody>
@@ -249,34 +206,39 @@ const IPULEET = () => {
                       <td>Section A</td>
                       <td>Mathematics (Algebra, Calculus, Geometry, Trigonometry)</td>
                       <td>25</td>
+                      <td>100</td>
                     </tr>
                     <tr>
                       <td>2</td>
                       <td>Section B</td>
                       <td>Reasoning (Verbal, Non-verbal, Analytical) & Quantitative Aptitude</td>
                       <td>25</td>
+                      <td>100</td>
                     </tr>
                     <tr>
                       <td>3</td>
                       <td>Section C</td>
                       <td>Mechanics (Applied Mechanics, Strength of Material, Fluid Mechanics)</td>
                       <td>25</td>
+                      <td>100</td>
                     </tr>
                     <tr>
                       <td>4</td>
                       <td>Section D</td>
                       <td>Physics + Chemistry + Computer Awareness</td>
                       <td>25</td>
+                      <td>100</td>
                     </tr>
                     <tr className="total-row">
                       <td colSpan="3"><strong>Total</strong></td>
                       <td><strong>100</strong></td>
+                      <td><strong>400</strong></td>
                     </tr>
                   </tbody>
                 </Table>
               </div>
-              <div className="text-center mt-3">
-                <a href={images.brochure.leet} target="_blank" rel="noopener noreferrer" className="syllabus-link">Click Here For IPU LEET Detailed Syllabus</a>
+              <div className="text-center mt-4">
+                <a href={images.brochure.leet} target="_blank" rel="noopener noreferrer" className="btn btn-primary rounded-pill px-4 py-2 fw-bold" style={{ backgroundColor: '#1e3c72', border: 'none' }}>Click Here For IPU LEET Detailed Syllabus</a>
               </div>
             </Card.Body>
           </Card>
