@@ -9,7 +9,7 @@ import './Home.css';
 
 
 const missionLogo = images.hero.missionLogo;
-const missionPopup= images.hero.missionPopup;
+const missionPopup = images.hero.missionPopup;
 const dtuLogo = images.testSeriesLogos.dtu;
 const ipuLogo = images.testSeriesLogos.ipu;
 const cuetLogo = images.testSeriesLogos.cuet;
@@ -43,7 +43,7 @@ const Home = () => {
     if (!hasSeenPopup) {
       setShowPopup(true);
     }
-    
+
     fetchVideos().then(res => {
       if (res && res.videos) {
         setVideos(res.videos);
@@ -103,10 +103,10 @@ const Home = () => {
       </section>
 
       {/* Sticky WhatsApp Button */}
-      <a 
-        href="https://wa.me/919643943914" 
-        target="_blank" 
-        rel="noopener noreferrer" 
+      <a
+        href="https://wa.me/919643943914"
+        target="_blank"
+        rel="noopener noreferrer"
         className="whatsapp-sticky"
         aria-label="Chat with us on WhatsApp"
       >
@@ -171,10 +171,10 @@ const Home = () => {
                     <Card className="h-100 video-card border-0 shadow-sm">
                       <Card.Body className="p-3">
                         <div className="ratio ratio-16x9 mb-3">
-                          <iframe 
-                            src={getEmbedUrl(video.youtubeUrl)} 
-                            title={video.title || 'YouTube Video'} 
-                            allowFullScreen 
+                          <iframe
+                            src={getEmbedUrl(video.youtubeUrl)}
+                            title={video.title || 'YouTube Video'}
+                            allowFullScreen
                             style={{ borderRadius: '8px' }}
                           ></iframe>
                         </div>
@@ -668,7 +668,7 @@ const Home = () => {
       <section id="testimonials" className="testimonials-home-section py-5">
         <Container fluid>
           <h2 className="text-center mb-5 home-section-heading">TESTIMONIALS</h2>
-          
+
           {/* LEET Exam Row */}
           <div className="testimonial-row mb-5">
             <h3 className="testimonial-category-title">LEET EXAM</h3>
@@ -908,14 +908,14 @@ const Home = () => {
                 Mission Engineering was established on 26 March 2014. Since then, we have been helping thousands of students achieve success in LEET (B.Tech Lateral Entry), Polytechnic Entrance, Polytechnic Semester Exams, and Campus Placement preparation through quality education and expert guidance.
               </Accordion.Body>
             </Accordion.Item>
-            
+
             <Accordion.Item eventKey="1">
               <Accordion.Header>2. Where is Mission Engineering located?</Accordion.Header>
               <Accordion.Body>
                 Mission Engineering is conveniently located in front of Metro Gate No. 2, Uttam Nagar East Metro Station, New Delhi, just a 2-minute walk from Uttam Nagar Bus Terminal. Our prime location makes us easily accessible for students from Delhi, Noida, Gurugram, Ghaziabad, Faridabad, and nearby areas.
               </Accordion.Body>
             </Accordion.Item>
-            
+
             <Accordion.Item eventKey="2">
               <Accordion.Header>3. Which courses are offered at Mission Engineering?</Accordion.Header>
               <Accordion.Body>
@@ -930,7 +930,7 @@ const Home = () => {
                 <p>Our courses are designed to help students secure admission into top engineering colleges like DTU, NSUT, IGDTUW, DSEU, GGSIPU, and other reputed institutions.</p>
               </Accordion.Body>
             </Accordion.Item>
-            
+
             <Accordion.Item eventKey="3">
               <Accordion.Header>4. How can I contact Mission Engineering?</Accordion.Header>
               <Accordion.Body>
@@ -944,14 +944,14 @@ const Home = () => {
                 <p>Our team is always available to assist you with admissions, counselling, batch details, and course information.</p>
               </Accordion.Body>
             </Accordion.Item>
-            
+
             <Accordion.Item eventKey="4">
               <Accordion.Header>5. Is a demo class available before admission?</Accordion.Header>
               <Accordion.Body>
                 Yes. We provide 2 FREE Demo Classes so students can experience our teaching methodology, faculty, classroom environment, and learning approach before taking admission.
               </Accordion.Body>
             </Accordion.Item>
-            
+
             <Accordion.Item eventKey="5">
               <Accordion.Header>6. How can I take admission at Mission Engineering?</Accordion.Header>
               <Accordion.Body>
@@ -964,7 +964,7 @@ const Home = () => {
                 <p>For admission assistance, simply call or WhatsApp our admission team.</p>
               </Accordion.Body>
             </Accordion.Item>
-            
+
             <Accordion.Item eventKey="6">
               <Accordion.Header>7. Is online coaching available?</Accordion.Header>
               <Accordion.Body>
@@ -980,7 +980,7 @@ const Home = () => {
                 <p>This allows students from anywhere in India to prepare effectively.</p>
               </Accordion.Body>
             </Accordion.Item>
-            
+
             <Accordion.Item eventKey="7">
               <Accordion.Header>8. Do you provide study material?</Accordion.Header>
               <Accordion.Body>
@@ -996,7 +996,7 @@ const Home = () => {
                 <p>Our study material is regularly updated according to the latest exam pattern.</p>
               </Accordion.Body>
             </Accordion.Item>
-            
+
             <Accordion.Item eventKey="8">
               <Accordion.Header>9. Why is Mission Engineering considered one of the best LEET coaching institutes in Delhi?</Accordion.Header>
               <Accordion.Body>
@@ -1014,7 +1014,7 @@ const Home = () => {
                 <p>Our focus is not just on completing the syllabus but on helping every student achieve their dream engineering college.</p>
               </Accordion.Body>
             </Accordion.Item>
-            
+
             <Accordion.Item eventKey="9">
               <Accordion.Header>10. Are Previous Year Question Papers (PYQs) discussed in class?</Accordion.Header>
               <Accordion.Body>
@@ -1030,7 +1030,7 @@ const Home = () => {
                 <p>Practicing PYQs significantly improves exam confidence and accuracy.</p>
               </Accordion.Body>
             </Accordion.Item>
-            
+
             <Accordion.Item eventKey="10">
               <Accordion.Header>11. How is student performance monitored?</Accordion.Header>
               <Accordion.Body>
@@ -1046,7 +1046,7 @@ const Home = () => {
                 <p>Parents can also receive updates regarding their child's academic progress whenever required.</p>
               </Accordion.Body>
             </Accordion.Item>
-            
+
             <Accordion.Item eventKey="11">
               <Accordion.Header>12. Does Mission Engineering provide counselling and admission guidance after the results?</Accordion.Header>
               <Accordion.Body>
@@ -1062,7 +1062,7 @@ const Home = () => {
                 <p>We help students make informed decisions and secure admission into the best engineering colleges.</p>
               </Accordion.Body>
             </Accordion.Item>
-            
+
             <Accordion.Item eventKey="12">
               <Accordion.Header>13. Can parents meet the faculty to discuss their child's progress?</Accordion.Header>
               <Accordion.Body>
@@ -1078,7 +1078,7 @@ const Home = () => {
                 <p>We believe that parent involvement plays an important role in student success.</p>
               </Accordion.Body>
             </Accordion.Item>
-            
+
             <Accordion.Item eventKey="13">
               <Accordion.Header>14. How can I stay updated about admissions, new batches, and important announcements?</Accordion.Header>
               <Accordion.Body>
@@ -1090,7 +1090,7 @@ const Home = () => {
                 <p>You will receive timely updates, preparation tips, and important announcements.</p>
               </Accordion.Body>
             </Accordion.Item>
-            
+
             <Accordion.Item eventKey="14">
               <Accordion.Header>15. Why should I join coaching instead of preparing through self-study?</Accordion.Header>
               <Accordion.Body>

@@ -34,21 +34,21 @@ const Header = () => {
   }, [notifications, lastSeenKey]);
 
   useEffect(() => {
-  let cancelled = false;
+    let cancelled = false;
 
-  (async () => {
-    try {
-    setNotifError('');
-    const data = await fetchNotifications(token);
-    if (!cancelled) setNotifications(data.notifications || []);
-    } catch (err) {
-    if (!cancelled) setNotifError(err?.message || 'Failed to load notifications');
-    }
-  })();
+    (async () => {
+      try {
+        setNotifError('');
+        const data = await fetchNotifications(token);
+        if (!cancelled) setNotifications(data.notifications || []);
+      } catch (err) {
+        if (!cancelled) setNotifError(err?.message || 'Failed to load notifications');
+      }
+    })();
 
-  return () => {
-    cancelled = true;
-  };
+    return () => {
+      cancelled = true;
+    };
   }, [token]);
 
   const handleOpenNotifications = () => {
@@ -79,7 +79,7 @@ const Header = () => {
 
   const handleTestimonialsClick = (e) => {
     e.preventDefault();
-    
+
     if (location.pathname === '/') {
       // Already on home page, just scroll
       const testimonialsSection = document.getElementById('testimonials');
@@ -114,7 +114,7 @@ const Header = () => {
           </div>
         </Container>
       </div>
-      
+
       <Navbar expanded={expanded} onToggle={(val) => setExpanded(val)} expand="lg" className="custom-navbar sticky-top">
         <Container fluid>
           <Navbar.Brand as={Link} to="/" className="brand-name d-flex align-items-center">
@@ -122,7 +122,7 @@ const Header = () => {
             <span className="d-none d-lg-inline">Mission Engineering</span>
             <img src={missionLogo} alt="Mission Engineering" className="brand-logo d-lg-none" />
           </Navbar.Brand>
-          
+
           {/* Mobile Notification Icon - Outside Hamburger */}
           <div className="mobile-notification-wrapper d-lg-none">
             <Dropdown align="end" onToggle={(isOpen) => isOpen && handleOpenNotifications()}>

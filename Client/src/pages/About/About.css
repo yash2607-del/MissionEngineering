@@ -6,7 +6,7 @@
 /* Team Header Section */
 .team-header-section {
   background: #f8f9fa;
-  padding: 80px 0 60px;
+  padding: 30px 0 30px;
   text-align: center;
 }
 
@@ -26,7 +26,7 @@
 .team-main-title {
   font-size: 3rem;
   font-weight: 700;
-  color: #0052a3;
+  color: #000000;
   margin-bottom: 20px;
 }
 
@@ -36,6 +36,7 @@
   line-height: 1.8;
   max-width: 800px;
   margin: 0 auto 30px;
+  text-align: left;
 }
 
 .team-buttons {
@@ -90,7 +91,7 @@
 
 /* Team Member Section */
 .team-member-section {
-  padding: 80px 0;
+  padding: 40px 0;
   background: white;
 }
 
@@ -250,14 +251,14 @@
   padding: 90px 0;
 }
 
-/* Left panel */
 .about-stats-panel {
   color: #1a202c;
+  text-align: center;
 }
 
 .about-stats-label {
-  font-size: 0.78rem;
-  font-weight: 700;
+  font-size: 2rem;
+  font-weight: 900;
   letter-spacing: 3px;
   color: #0052a3;
   text-transform: uppercase;
@@ -277,37 +278,37 @@
 }
 
 .about-stats-sub {
-  font-size: 1rem;
-  color: #4a5568;
+  font-size: 1.15rem;
+  color: #000000;
   line-height: 1.7;
   margin-bottom: 36px;
 }
 
 .about-stats-grid {
   display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 16px;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
 }
 
 .about-stat-card {
-  background: #f8f9fa;
-  border: 1.5px solid #e2e8f0;
+  background: linear-gradient(135deg, #0052a3 0%, #003d7a 100%);
+  border: none;
   border-radius: 14px;
   padding: 22px 18px;
   text-align: center;
   transition: all 0.3s ease;
+  box-shadow: 0 5px 15px rgba(0, 82, 163, 0.2);
 }
 
 .about-stat-card:hover {
-  background: #eff6ff;
-  border-color: #0052a3;
-  transform: translateY(-4px);
-  box-shadow: 0 8px 24px rgba(0, 82, 163, 0.1);
+  background: linear-gradient(135deg, #003d7a 0%, #002855 100%);
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px rgba(0, 82, 163, 0.3);
 }
 
 .about-stat-icon {
   font-size: 1.6rem;
-  color: #0052a3;
+  color: #ffd700;
   margin-bottom: 10px;
   display: block;
 }
@@ -315,14 +316,14 @@
 .about-stat-number {
   font-size: 1.8rem;
   font-weight: 800;
-  color: #1a202c;
+  color: #ffffff;
   line-height: 1;
   margin-bottom: 6px;
 }
 
 .about-stat-text {
-  font-size: 0.8rem;
-  color: #6b7280;
+  font-size: 0.85rem;
+  color: #e2e8f0;
   font-weight: 500;
   letter-spacing: 0.5px;
 }
@@ -332,12 +333,12 @@
   background: transparent;
   border: none;
   border-radius: 0;
-  padding: 250px 0 20px;
+  padding: 0 0 20px;
 }
 
 .about-content-panel .about-mission-text {
-  font-size: 1rem;
-  color: #4a5568;
+  font-size: 1.15rem;
+  color: #000000;
   line-height: 1.85;
   margin-bottom: 18px;
   text-align: left;
@@ -389,8 +390,8 @@
 }
 
 .why-choose-subtitle {
-  font-size: 1rem;
-  color: #9ca3af;
+  font-size: 1.15rem;
+  color: #000000;
   text-align: center;
   margin-bottom: 50px;
 }
@@ -473,5 +474,17 @@
   .member-subtitle,
   .member-name {
     font-size: 1rem;
+  }
+}
+
+@media (max-width: 992px) {
+  .about-stats-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 576px) {
+  .about-stats-grid {
+    grid-template-columns: 1fr;
   }
 }

@@ -1,27 +1,33 @@
 .contact-page .page-header {
-  background: linear-gradient(135deg, #0a4d8c 0%, #0d5ba6 100%);
-  padding: 40px 0;
-  color: white;
+  background: transparent;
+  padding: 60px 0 20px;
   text-align: center;
-  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
 }
 
 .contact-page .page-header h1 {
   font-size: 3rem;
   font-weight: 700;
   margin: 0 0 15px 0;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+  color: #000000;
 }
 
 .contact-page .page-header .lead {
-  font-size: 1.3rem;
-  opacity: 0.95;
+  font-size: 1.15rem;
+  font-weight: bolder;
+  color: #161617;
   margin: 0;
 }
 
 .contact-content {
   background: linear-gradient(to bottom, #f8f9fa 0%, #ffffff 100%);
   min-height: 500px;
+}
+
+.contact-section-title {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #000000;
+  margin-bottom: 20px;
 }
 
 .contact-info-card {

@@ -50,10 +50,9 @@ const About = () => {
       {/* Team Section Header */}
       <section className="team-header-section">
         <Container>
-          <div className="section-badge">OUR TEAM</div>
           <h1 className="team-main-title">Meet Our Leadership</h1>
           <p className="team-subtitle">
-            Unlock success with Mission Engineering! Elevate your academic journey with expert coaching in Leet, Polytechnic, Semester Coaching and Campus Placements. Meet our leadership for personalized guidance today.
+            Unlock your true potential with Mission Engineering. We provide expert coaching for LEET, Polytechnic, Semester Exams, and Campus Placements. Meet our visionary leadership team, dedicated to guiding you towards academic excellence and a successful career.
           </p>
           <div className="team-buttons">
             <Button as={Link} to="/contact" className="btn-contact">
@@ -216,56 +215,46 @@ const About = () => {
       <section className="about-mission-section">
         <div className="about-mission-bg">
           <Container>
-            <Row className="align-items-center g-5">
+            {/* Section Header Centered in Body */}
+            <div className="text-center mb-5">
+              <div className="about-stats-label">MISSION ENGINEERING</div>
+              <p className="about-stats-sub mx-auto" style={{ maxWidth: '700px' }}>
+                India's most trusted destination for Polytechnic, LEET, and Campus Placements.
+              </p>
+            </div>
 
-              {/* Left: Stats Panel */}
-              <Col lg={5} md={12}>
-                <div className="about-stats-panel">
-                  <div className="about-stats-label">MISSION ENGINEERING</div>
-                  <h2 className="about-stats-heading">
-                    Shaping <span className="about-stats-accent">Future</span> Engineers
-                  </h2>
-                  <p className="about-stats-sub">
-                    India's most trusted coaching destination for Polytechnic Coaching, Leet Coaching and Campus Placements.
-                  </p>
-                  <div className="about-stats-grid">
-                    <div className="about-stat-card">
-                      <FaTrophy className="about-stat-icon" />
-                      <div className="about-stat-number">12+</div>
-                      <div className="about-stat-text">Years of Excellence</div>
-                    </div>
-                    <div className="about-stat-card">
-                      <FaUsers className="about-stat-icon" />
-                      <div className="about-stat-number">4.9+</div>
-                      <div className="about-stat-text"> Google Rating </div>
-                    </div>
-                    <div className="about-stat-card">
-                      <FaStar className="about-stat-icon" />
-                      <div className="about-stat-number">98%</div>
-                      <div className="about-stat-text">Success Rate</div>
-                    </div>
-                    <div className="about-stat-card">
-                      <FaGraduationCap className="about-stat-icon" />
-                      <div className="about-stat-number">5000+</div>
-                      <div className="about-stat-text">IPU Selections</div>
-                    </div>
-                  </div>
-                </div>
-              </Col>
-
-              {/* Right: Text + Highlights */}
-              <Col lg={7} md={12}>
-                <div className="about-content-panel">
+            <Row className="justify-content-center mb-5">
+              <Col lg={10}>
+                <div className="about-content-panel text-center">
                   <p className="about-mission-text">
-                    Welcome to <strong>Mission Engineering</strong> — where we offer top-notch coaching to students who want to pursue careers in government service, polytechnic education and Leet Coaching. Our main objective is to give pupils the knowledge and abilities needed to perform well on entrance tests.
-                  </p>
-                  <p className="about-mission-text">
-                    We believe that every student is unique, and therefore, we provide personalized attention to each and every student. Our coaching methodology combines traditional and modern teaching techniques, making learning fun and interactive.
+                    Welcome to <strong>Mission Engineering</strong>, where we offer top-notch coaching to students who want to pursue careers in government service, polytechnic education and Leet Coaching. Our main objective is to give pupils the knowledge and abilities needed to perform well on entrance tests. We believe that every student is unique, and therefore, we provide personalized attention to each and every student. Our coaching methodology combines traditional and modern teaching techniques, making learning fun and interactive.
                   </p>
                 </div>
               </Col>
-
             </Row>
+
+            <div className="about-stats-grid">
+              <div className="about-stat-card">
+                <FaTrophy className="about-stat-icon mx-auto" />
+                <div className="about-stat-number">12+</div>
+                <div className="about-stat-text">Years of Excellence</div>
+              </div>
+              <div className="about-stat-card">
+                <FaUsers className="about-stat-icon mx-auto" />
+                <div className="about-stat-number">4.9+</div>
+                <div className="about-stat-text"> Google Rating </div>
+              </div>
+              <div className="about-stat-card">
+                <FaStar className="about-stat-icon mx-auto" />
+                <div className="about-stat-number">98%</div>
+                <div className="about-stat-text">Success Rate</div>
+              </div>
+              <div className="about-stat-card">
+                <FaGraduationCap className="about-stat-icon mx-auto" />
+                <div className="about-stat-number">5000+</div>
+                <div className="about-stat-text">IPU Selections</div>
+              </div>
+            </div>
           </Container>
         </div>
       </section>

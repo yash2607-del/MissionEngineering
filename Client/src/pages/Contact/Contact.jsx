@@ -43,7 +43,7 @@ const Contact = () => {
       <section className="page-header">
         <Container>
           <h1>Contact Us</h1>
-          <p className="lead">We'd love to hear queries from you. Get in touch with us today and we'll help you to land in your dream ipu and dtu college!</p>
+          <p className="lead">Get in touch with us today and we'll help you land in your dream college!</p>
         </Container>
       </section>
 
@@ -53,9 +53,8 @@ const Contact = () => {
 
             {/* LEFT SIDE */}
             <Col lg={5} md={5} xs={12}>
+              <h2 className="contact-section-title">Get In Touch</h2>
               <div className="contact-info-card">
-
-                <h2>Get In Touch</h2>
 
                 <div className="info-item">
                   <FaMapMarkerAlt size={30} className="contact-icon me-3" />
@@ -86,10 +85,8 @@ const Contact = () => {
 
             {/* RIGHT SIDE FORM */}
             <Col lg={7} md={7} xs={12}>
-
+              <h2 className="contact-section-title">Send Us a Message</h2>
               <div className="contact-form">
-
-                <h2>Send Us a Message</h2>
 
                 <Form ref={formRef} onSubmit={handleFormSubmit}>
 
