@@ -805,6 +805,98 @@ const Home = () => {
         </Container>
       </section>
 
+      {/* Success Keys Section */}
+      <section className="success-keys-section py-5">
+        <Container>
+          <h1 className="text-center mb-4 success-keys-title fs-1">Our  Pillars of Excellence</h1>
+          <Row className="g-4">
+            {/* Key 1 */}
+            <Col lg={3} md={6}>
+              <Card className="success-card h-100 text-center">
+                <Card.Body>
+                  <div className="icon-wrapper mb-3">
+                    <div className="icon-circle">
+                      <FaUserTie size={28} className="success-icon icon-blue" />
+                    </div>
+                  </div>
+                  <Card.Title>Expert &amp; Dedicated Faculty</Card.Title>
+                  <ul className="text-start mt-3">
+                    <li>Industry-Proven Teaching Methods</li>
+                    <li>Strong Foundation &amp; Concept Clarity</li>
+                    <li>Personalized Attention to Every Student</li>
+                    <li>Regular Doubt-Clearing Sessions</li>
+                    <li>Motivational &amp; Result-Driven Approach</li>
+                  </ul>
+                </Card.Body>
+              </Card>
+            </Col>
+
+            {/* Key 2 */}
+            <Col lg={3} md={6}>
+              <Card className="success-card h-100 text-center">
+                <Card.Body>
+                  <div className="icon-wrapper mb-3">
+                    <div className="icon-circle">
+                      <FaLayerGroup size={28} className="success-icon icon-purple" />
+                    </div>
+                  </div>
+                  <Card.Title>Premium Study Material &amp; Assessments</Card.Title>
+                  <ul className="text-start mt-3">
+                    <li>Thoroughly Researched &amp; Updated Content</li>
+                    <li>Topic-wise Practice Question Banks</li>
+                    <li>Previous Year Papers with Solutions</li>
+                    <li>Regular Performance-Based Tests</li>
+                    <li>Aligned with Latest Exam Patterns</li>
+                  </ul>
+                </Card.Body>
+              </Card>
+            </Col>
+
+            {/* Key 3 */}
+            <Col lg={3} md={6}>
+              <Card className="success-card h-100 text-center">
+                <Card.Body>
+                  <div className="icon-wrapper mb-3">
+                    <div className="icon-circle">
+                      <FaGraduationCap size={28} className="success-icon icon-teal" />
+                    </div>
+                  </div>
+                  <Card.Title>Student-First Learning Environment</Card.Title>
+                  <ul className="text-start mt-3">
+                    <li>Recorded Backup for Missed Classes</li>
+                    <li>State-of-the-Art Infrastructure</li>
+                    <li>Exam-Focused Daily Schedule</li>
+                    <li>Dedicated Career Guidance Team</li>
+                    <li>Live Progress Tracking &amp; Reports</li>
+                  </ul>
+                </Card.Body>
+              </Card>
+            </Col>
+
+            {/* Key 4 */}
+            <Col lg={3} md={6}>
+              <Card className="success-card h-100 text-center">
+                <Card.Body>
+                  <div className="icon-wrapper mb-3">
+                    <div className="icon-circle">
+                      <FaMedal size={28} className="success-icon icon-orange" />
+                    </div>
+                  </div>
+                  <Card.Title>Placement &amp; Personality Training</Card.Title>
+                  <ul className="text-start mt-3">
+                    <li>Structured Written Test Preparation</li>
+                    <li>GD &amp; Group Activity Practice</li>
+                    <li>Mock Interviews with Industry Experts</li>
+                    <li>Personality &amp; Communication Development</li>
+                    <li>Campus Placement Drive Support</li>
+                  </ul>
+                </Card.Body>
+              </Card>
+            </Col>
+          </Row>
+        </Container>
+      </section>
+
       {/* FAQ Section */}
       <section className="faq-section py-5">
         <Container>
@@ -1021,97 +1113,6 @@ const Home = () => {
         </Container>
       </section>
 
-      {/* Success Keys Section */}
-      <section className="success-keys-section py-5">
-        <Container>
-          <h1 className="text-center mb-4 success-keys-title fs-1">Our  Pillars of Excellence</h1>
-          <Row className="g-4">
-            {/* Key 1 */}
-            <Col lg={3} md={6}>
-              <Card className="success-card h-100 text-center">
-                <Card.Body>
-                  <div className="icon-wrapper mb-3">
-                    <div className="icon-circle">
-                      <FaUserTie size={28} className="success-icon icon-blue" />
-                    </div>
-                  </div>
-                  <Card.Title>Expert &amp; Dedicated Faculty</Card.Title>
-                  <ul className="text-start mt-3">
-                    <li>Industry-Proven Teaching Methods</li>
-                    <li>Strong Foundation &amp; Concept Clarity</li>
-                    <li>Personalized Attention to Every Student</li>
-                    <li>Regular Doubt-Clearing Sessions</li>
-                    <li>Motivational &amp; Result-Driven Approach</li>
-                  </ul>
-                </Card.Body>
-              </Card>
-            </Col>
-
-            {/* Key 2 */}
-            <Col lg={3} md={6}>
-              <Card className="success-card h-100 text-center">
-                <Card.Body>
-                  <div className="icon-wrapper mb-3">
-                    <div className="icon-circle">
-                      <FaLayerGroup size={28} className="success-icon icon-purple" />
-                    </div>
-                  </div>
-                  <Card.Title>Premium Study Material &amp; Assessments</Card.Title>
-                  <ul className="text-start mt-3">
-                    <li>Thoroughly Researched &amp; Updated Content</li>
-                    <li>Topic-wise Practice Question Banks</li>
-                    <li>Previous Year Papers with Solutions</li>
-                    <li>Regular Performance-Based Tests</li>
-                    <li>Aligned with Latest Exam Patterns</li>
-                  </ul>
-                </Card.Body>
-              </Card>
-            </Col>
-
-            {/* Key 3 */}
-            <Col lg={3} md={6}>
-              <Card className="success-card h-100 text-center">
-                <Card.Body>
-                  <div className="icon-wrapper mb-3">
-                    <div className="icon-circle">
-                      <FaGraduationCap size={28} className="success-icon icon-teal" />
-                    </div>
-                  </div>
-                  <Card.Title>Student-First Learning Environment</Card.Title>
-                  <ul className="text-start mt-3">
-                    <li>Recorded Backup for Missed Classes</li>
-                    <li>State-of-the-Art Infrastructure</li>
-                    <li>Exam-Focused Daily Schedule</li>
-                    <li>Dedicated Career Guidance Team</li>
-                    <li>Live Progress Tracking &amp; Reports</li>
-                  </ul>
-                </Card.Body>
-              </Card>
-            </Col>
-
-            {/* Key 4 */}
-            <Col lg={3} md={6}>
-              <Card className="success-card h-100 text-center">
-                <Card.Body>
-                  <div className="icon-wrapper mb-3">
-                    <div className="icon-circle">
-                      <FaMedal size={28} className="success-icon icon-orange" />
-                    </div>
-                  </div>
-                  <Card.Title>Placement &amp; Personality Training</Card.Title>
-                  <ul className="text-start mt-3">
-                    <li>Structured Written Test Preparation</li>
-                    <li>GD &amp; Group Activity Practice</li>
-                    <li>Mock Interviews with Industry Experts</li>
-                    <li>Personality &amp; Communication Development</li>
-                    <li>Campus Placement Drive Support</li>
-                  </ul>
-                </Card.Body>
-              </Card>
-            </Col>
-          </Row>
-        </Container>
-      </section>
     </div>
   );
 };

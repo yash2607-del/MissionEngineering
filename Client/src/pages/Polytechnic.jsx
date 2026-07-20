@@ -11,57 +11,57 @@ const Polytechnic = () => {
     {
       title: 'Delhi Polytechnic',
       points: [
-        'DSEIJ Conducts Delhi Polytechnic Entrance Exam.',
-        'Eligibility Criteria for Delhi Polytechnic is 10th Standard.'
+        'DSEU conducts the Delhi Polytechnic CET.',
+        'Eligibility Criteria: 10th Standard or equivalent.'
       ]
     },
     {
       title: 'UP Polytechnic',
       points: [
-        'DSEIJ Conducts Delhi Polytechnic Entrance Exam.',
-        'Eligibility Criteria for Delhi Polytechnic is 10th Standard.'
+        'JEECUP conducts the UP Polytechnic Entrance Exam.',
+        'Eligibility Criteria: 10th Standard with min 35% marks.'
       ]
     },
     {
       title: 'Bihar Polytechnic',
       points: [
-        'DSEIJ Conducts Delhi Polytechnic Entrance Exam.',
-        'Eligibility Criteria for Delhi Polytechnic is 10th Standard.'
+        'BCECEB conducts the Bihar Polytechnic (PE) Exam.',
+        'Eligibility Criteria: 10th Standard with min 35% marks.'
       ]
     },
     {
       title: 'Jharkhand Polytechnic',
       points: [
-        'DSEIJ Conducts Delhi Polytechnic Entrance Exam.',
-        'Eligibility Criteria for Delhi Polytechnic is 10th Standard.'
+        'JCECEB conducts the Jharkhand Polytechnic Exam.',
+        'Eligibility Criteria: 10th Standard with min 35% marks.'
       ]
     },
     {
       title: 'Uttarakhand Polytechnic',
       points: [
-        'DSEIJ Conducts Delhi Polytechnic Entrance Exam.',
-        'Eligibility Criteria for Delhi Polytechnic is 10th Standard.'
+        'UBTER conducts the Uttarakhand JEEP.',
+        'Eligibility Criteria: 10th Standard with min 35% marks.'
       ]
     },
     {
       title: 'MP Polytechnic',
       points: [
-        'DSEIJ Conducts Delhi Polytechnic Entrance Exam.',
-        'Eligibility Criteria for Delhi Polytechnic is 10th Standard.'
+        'MP PEB conducts the MP PPT Entrance Exam.',
+        'Eligibility Criteria: 10th Standard with min 35% marks.'
       ]
     },
     {
       title: 'Himachal Polytechnic',
       points: [
-        'DSEIJ Conducts Delhi Polytechnic Entrance Exam.',
-        'Eligibility Criteria for Delhi Polytechnic is 10th Standard.'
+        'HPTSB conducts the Himachal PAT Entrance Exam.',
+        'Eligibility Criteria: 10th Standard with min 35% marks.'
       ]
     },
     {
       title: 'Haryana Polytechnic',
       points: [
-        'DSEIJ Conducts Delhi Polytechnic Entrance Exam.',
-        'Eligibility Criteria for Delhi Polytechnic is 10th Standard.'
+        'HSTES conducts the Haryana DET Entrance Exam.',
+        'Eligibility Criteria: 10th Standard or equivalent.'
       ]
     }
   ];
@@ -144,7 +144,7 @@ const Polytechnic = () => {
                         <li key={idx}>{point}</li>
                       ))}
                     </ul>
-                    re
+                    
                   </Card.Body>
                 </Card>
               </Col>
