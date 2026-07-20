@@ -236,8 +236,8 @@ const FeeStructure = () => {
                             <td>2</td>
                             <td>Online (Live + Recorded)</td>
                             <td>1000</td>
-                            <td>21000</td>
                             <td>22000</td>
+                            <td>23000</td>
                             <td>2</td>
                           </tr> 
                           <tr>
