@@ -74,7 +74,7 @@ const Polytechnic = () => {
       {/* What is Polytechnic */}
       <section className="poly-section">
         <Container>
-          <h2 className="section-title">What is Polytechnic?</h2>
+          <h2 className="section-title">What is Polytechnic Exam?</h2>
           <Row className="g-4 mt-3">
             <Col lg={3} md={6}>
               <Card className="benefit-card h-100">
@@ -103,10 +103,10 @@ const Polytechnic = () => {
             <Col lg={3} md={6}>
               <Card className="benefit-card h-100">
                 <Card.Body>
-                  <div className="benefit-icon"><FaUsers /></div>
-                  <h5 className="benefit-title">Our Role</h5>
+                  <div className="benefit-icon"><FaClipboardList /></div>
+                  <h5 className="benefit-title">Industry-Ready Skills</h5>
                   <p className="benefit-description">
-                    Your ultimate destination for Polytechnic coaching in Delhi to help you secure admission into top-tier institutes.
+                    The curriculum is designed to impart practical, industry-relevant skills, making graduates highly employable.
                   </p>
                 </Card.Body>
               </Card>
@@ -116,9 +116,9 @@ const Polytechnic = () => {
               <Card className="benefit-card h-100">
                 <Card.Body>
                   <div className="benefit-icon"><FaBook /></div>
-                  <h5 className="benefit-title">Expert Preparation</h5>
+                  <h5 className="benefit-title">Pathway to B.Tech</h5>
                   <p className="benefit-description">
-                    We provide top-notch exam preparation with tailored study plans, expert guidance, and a highly student-centric approach.
+                    Offers a lateral entry option for diploma holders to directly secure admission into the second year of a B.Tech program.
                   </p>
                 </Card.Body>
               </Card>

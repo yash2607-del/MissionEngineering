@@ -253,7 +253,7 @@ const SemesterCoaching = () => {
       {/* Content Section */}
       <section className="poly-section mt-4">
         <Container>
-          <h2 className="section-title mb-5 text-uppercase">Polytechnic Semester Coaching</h2>
+          <h2 className="section-title mb-5 text-uppercase"> Why Polytechnic Semester Coaching?</h2>
           <Row className="g-4">
             <Col lg={3} md={6}>
               <Card className="benefit-card h-100">
@@ -270,34 +270,34 @@ const SemesterCoaching = () => {
             <Col lg={3} md={6}>
               <Card className="benefit-card h-100">
                 <Card.Body>
+                  <div className="benefit-icon"><FaWrench /></div>
+                  <h5 className="benefit-title">Practical Application</h5>
+                  <p className="benefit-description">
+                    Bridges the gap between theoretical concepts and practical applications, preparing you for real-world engineering challenges.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+            
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
+                  <div className="benefit-icon"><FaLaptopCode /></div>
+                  <h5 className="benefit-title">Skill Development</h5>
+                  <p className="benefit-description">
+                    Focuses on developing core technical skills specific to your engineering branch to make you industry-ready.
+                  </p>
+                </Card.Body>
+              </Card>
+            </Col>
+            
+            <Col lg={3} md={6}>
+              <Card className="benefit-card h-100">
+                <Card.Body>
                   <div className="benefit-icon"><FaChartLine /></div>
-                  <h5 className="benefit-title">Exam Success</h5>
+                  <h5 className="benefit-title">Academic Excellence</h5>
                   <p className="benefit-description">
-                    As you move through each semester, we provide the right guidance and resources to navigate exams effectively.
-                  </p>
-                </Card.Body>
-              </Card>
-            </Col>
-            
-            <Col lg={3} md={6}>
-              <Card className="benefit-card h-100">
-                <Card.Body>
-                  <div className="benefit-icon"><FaCog /></div>
-                  <h5 className="benefit-title">Dedicated Coaching</h5>
-                  <p className="benefit-description">
-                    We offer dedicated courses focusing on strengthening your core understanding of all major Polytechnic subjects.
-                  </p>
-                </Card.Body>
-              </Card>
-            </Col>
-            
-            <Col lg={3} md={6}>
-              <Card className="benefit-card h-100">
-                <Card.Body>
-                  <div className="benefit-icon"><FaChalkboardTeacher /></div>
-                  <h5 className="benefit-title">Expert Faculty</h5>
-                  <p className="benefit-description">
-                    Our experienced faculty guide you through every stage of preparation, ensuring complete exam readiness.
+                    Consistent effort during semesters helps maintain a strong academic record, which is crucial for higher studies and placements.
                   </p>
                 </Card.Body>
               </Card>

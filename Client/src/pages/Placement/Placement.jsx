@@ -245,7 +245,7 @@ const Placement = () => {
                 <Card.Body>
                   <div className="benefit-icon"><FaHandshake /></div>
                   <h5 className="benefit-title">Direct Recruitment</h5>
-                  <p className="benefit-description">Campus placement ensures a smooth transition from academic life to the professional world. Companies directly recruit talented students from our institution for exciting roles in engineering, technology, and manufacturing.</p>
+                  <p className="benefit-description">Campus placement ensures a smooth transition from academic life to the professional world. Companies directly recruit talented polytechnic students for exciting roles in engineering, technology, and manufacturing.</p>
                 </Card.Body>
               </Card>
             </Col>
