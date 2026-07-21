@@ -119,7 +119,7 @@ const Header = () => {
         <Container fluid>
           <Navbar.Brand as={Link} to="/" className="brand-name d-flex align-items-center">
             <img src={missionLogo} alt="Mission Engineering Logo" className="brand-logo d-none d-lg-block me-2" style={{ height: '45px', width: 'auto' }} />
-            <span className="d-none d-lg-inline">Mission Engineering</span>
+            <span className="d-none d-lg-inline">Mission Engineering<sup style={{ fontSize: '0.75em', fontFamily: 'Arial, sans-serif', marginLeft: '2px' }}>&reg;</sup></span>
             <img src={missionLogo} alt="Mission Engineering" className="brand-logo d-lg-none" />
           </Navbar.Brand>
 
