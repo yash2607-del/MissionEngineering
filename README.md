@@ -12,11 +12,12 @@ The project uses a reliable and modern set of tools to ensure the website is fas
 
 ### Frontend
 - **React**: Used for building a smooth and interactive user interface.
-- **React Router**: Handles navigation between different pages of the site.
 - **Bootstrap**: Ensures the website looks good on all devices, including mobile phones.
-- **GSAP**: Used for adding smooth animations to make the site feel more dynamic.
-- **Formspree**: Manages the contact forms so students can easily reach out.
+- **Formspree**: Manages the contact forms so students and parents can easily reach out.
 
+### Backend
+- **Node.js & Express**: Provides a robust and scalable server-side infrastructure.
+- **MongoDB**: A NoSQL database for securely storing user data, resources, and notifications.
 
 ### Deployment and Hosting
 - **Vercel**: Used for deploying the frontend to ensure fast loading times.
@@ -24,6 +25,8 @@ The project uses a reliable and modern set of tools to ensure the website is fas
 
 ## Main Features
 
-- **Course Search**: A simple way for students to explore available coaching and courses.
-- **User Dashboards**: Private areas for users to manage their profiles and access specific content.
-- **Direct Contact**: A built-in system to allow students to communicate directly with their mentors.
+- **Comprehensive Course Catalog**: Detailed information covering diverse programs including Polytechnic, LEET (IPU & DTU), Semester Coaching, and Campus Placement preparation.
+- **Structured Coaching Modes**: Flexible learning options including Classroom Courses, Live Online Courses, Recorded Courses, and Test Series tailored to student needs.
+- **Admin Dashboard**: A centralized management panel allowing administrators to securely manage live notifications, announcements, and curate YouTube video resources.
+- **Seamless Contact & Enquiry**: Integrated contact forms powered by Formspree, allowing students and parents to effortlessly reach out for admission and general inquiries.
+- **Responsive & Modern UI**: A fully responsive, modern web interface built with React and Bootstrap, ensuring a seamless experience across mobile, tablet, and desktop devices.
