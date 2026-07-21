@@ -448,6 +448,15 @@
     border-radius: 12px;
   }
 
+  .portrait-frame--cropped {
+    max-height: none;
+  }
+
+  .portrait-frame--cropped .team-photo {
+    height: auto;
+    object-position: center top;
+  }
+
   .about-mission-title,
   .why-choose-title {
     font-size: 1.8rem;

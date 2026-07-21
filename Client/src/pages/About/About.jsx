@@ -69,7 +69,7 @@ const About = () => {
       <section className="team-member-section">
         <Container>
           <Row className="align-items-center">
-            <Col lg={6} md={12} xs={12} className="team-content-col">
+            <Col lg={6} md={12} xs={12} className="team-content-col order-2 order-lg-1">
               <div className="team-content">
                 <h2 className="member-title">CHAIRMAN</h2>
                 <h3 className="member-subtitle">"YOU CAN'T HAVE TO BE GREAT TO START YOUR DREAMS"</h3>
@@ -81,7 +81,7 @@ const About = () => {
                 </p>
               </div>
             </Col>
-            <Col lg={6} md={12} xs={12} className="team-photo-col">
+            <Col lg={6} md={12} xs={12} className="team-photo-col order-1 order-lg-2">
               <div className="team-photo-wrapper">
               <div class="portrait-frame">
                   <img src={chairmanPhoto} alt="Chairman" className="team-photo" />
@@ -96,14 +96,14 @@ const About = () => {
       <section className="team-member-section alternate">
         <Container>
           <Row className="align-items-center">
-            <Col lg={6} md={12} xs={12} className="team-photo-col order-lg-1 order-2">
+            <Col lg={6} md={12} xs={12} className="team-photo-col">
               <div className="team-photo-wrapper">
                 <div className="portrait-frame">
                   <img src={viceChairmanPhoto} alt="Vice Chairman" className="team-photo" />
                 </div>
               </div>
             </Col>
-            <Col lg={6} md={12} xs={12} className="team-content-col order-lg-2 order-1">
+            <Col lg={6} md={12} xs={12} className="team-content-col">
               <div className="team-content">
                 <h2 className="member-title">VICE CHAIRMAN</h2>
                 <h3 className="member-subtitle">"EDUCATION IS THE MOST POWERFUL WEAPON WHICH YOU CAN USE TO CHANGE THE WORLD"</h3>
@@ -126,7 +126,7 @@ const About = () => {
       <section className="team-member-section">
         <Container>
           <Row className="align-items-center">
-            <Col lg={6} md={12} xs={12} className="team-content-col">
+            <Col lg={6} md={12} xs={12} className="team-content-col order-2 order-lg-1">
               <div className="team-content">
                 <h2 className="member-title">DIRECTOR</h2>
                 <h3 className="member-name">Ranjan Shrivastav</h3>
@@ -138,7 +138,7 @@ const About = () => {
                 </p>
               </div>
             </Col>
-            <Col lg={6} md={12} xs={12} className="team-photo-col">
+            <Col lg={6} md={12} xs={12} className="team-photo-col order-1 order-lg-2">
               <div className="team-photo-wrapper">
                 <div className="portrait-frame portrait-frame--contain">
                   <img src={ranjanSirPhoto} alt="Ranjan Shrivastav - Director" className="team-photo" />
@@ -153,14 +153,14 @@ const About = () => {
       <section className="team-member-section alternate">
         <Container>
           <Row className="align-items-center">
-            <Col lg={6} md={12} xs={12} className="team-photo-col order-lg-1 order-2">
+            <Col lg={6} md={12} xs={12} className="team-photo-col">
               <div className="team-photo-wrapper">
                 <div className="portrait-frame portrait-frame--contain">
                   <img src={abhishekSirPhoto} alt="Abhishek Shrivastav - Director" className="team-photo" />
                 </div>
               </div>
             </Col>
-            <Col lg={6} md={12} xs={12} className="team-content-col order-lg-2 order-1">
+            <Col lg={6} md={12} xs={12} className="team-content-col">
               <div className="team-content">
                 <h2 className="member-title">DIRECTOR</h2>
                 <h3 className="member-name">Abhishek Shrivastav</h3>
@@ -180,7 +180,7 @@ const About = () => {
       <section className="team-member-section">
         <Container>
           <Row className="align-items-center">
-            <Col lg={6} md={12} xs={12} className="team-content-col">
+            <Col lg={6} md={12} xs={12} className="team-content-col order-2 order-lg-1">
               <div className="team-content">
                 <h3 className="member-name">Yash Raj</h3>
                 <h2 className="member-title">FULL STACK WEB DEVELOPER</h2>
@@ -200,7 +200,7 @@ const About = () => {
                 </p>
               </div>
             </Col>
-            <Col lg={6} md={12} xs={12} className="team-photo-col">
+            <Col lg={6} md={12} xs={12} className="team-photo-col order-1 order-lg-2">
               <div className="team-photo-wrapper">
                 <div className="portrait-frame portrait-frame--cropped">
                   <img src={yashPhoto} alt="Yash Raj - Lead Web Developer" className="team-photo" />
