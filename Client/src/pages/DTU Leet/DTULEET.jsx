@@ -190,10 +190,10 @@ const DTULEET = () => {
         </Container>
       </section>
 
-      {/* Exam Pattern */}
+      {/* Exam Guidelines*/}
       <section id="dtu-pattern" className="leet-section bg-light">
         <Container>
-          <h2 className="section-title">DTU LEET Exam Pattern</h2>
+          <h2 className="section-title">DTU LEET Exam Guidelines</h2>
           <Card className="content-card">
             <Card.Body>
               <h5 className="mb-3">Essential Guidelines for DTU LEET 2027 (Delhi)</h5>

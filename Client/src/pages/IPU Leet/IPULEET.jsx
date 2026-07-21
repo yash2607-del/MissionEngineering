@@ -192,10 +192,10 @@ const IPULEET = () => {
         </Container>
       </section>
 
-      {/* Exam Pattern */}
+      {/* Exam Guidelines */}
       <section id="ipu-pattern" className="leet-section bg-light">
         <Container>
-          <h2 className="section-title">IPU LEET Exam Pattern</h2>
+          <h2 className="section-title">IPU LEET Exam Guidelines</h2>
           <Card className="content-card">
             <Card.Body>
               <Row className="g-4 row-cols-1 row-cols-md-2 row-cols-lg-3">
