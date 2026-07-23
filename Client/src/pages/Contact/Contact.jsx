@@ -47,7 +47,7 @@ const Contact = () => {
         </Container>
       </section>
 
-      <section className="contact-content py-5">
+      <section className="contact-content py-3">
         <Container>
           <Row className="g-4">
 
@@ -90,7 +90,7 @@ const Contact = () => {
 
                 <Form ref={formRef} onSubmit={handleFormSubmit}>
 
-                  <Form.Group className="mb-3">
+                  <Form.Group className="mb-2">
                     <Form.Label>Name <span className="text-danger">*</span></Form.Label>
                     <Form.Control
                       type="text"
@@ -100,7 +100,7 @@ const Contact = () => {
                     />
                   </Form.Group>
 
-                  <Form.Group className="mb-3">
+                  <Form.Group className="mb-2">
                     <Form.Label>Email <span className="text-danger">*</span></Form.Label>
                     <Form.Control
                       type="email"
@@ -110,7 +110,7 @@ const Contact = () => {
                     />
                   </Form.Group>
 
-                  <Form.Group className="mb-3">
+                  <Form.Group className="mb-2">
                     <Form.Label>Phone</Form.Label>
                     <Form.Control
                       type="tel"
@@ -119,11 +119,11 @@ const Contact = () => {
                     />
                   </Form.Group>
 
-                  <Form.Group className="mb-4">
+                  <Form.Group className="mb-2">
                     <Form.Label>Message <span className="text-danger">*</span></Form.Label>
                     <Form.Control
                       as="textarea"
-                      rows={3}
+                      rows={2}
                       name="message"
                       placeholder="Enter your message"
                       required
@@ -145,6 +145,21 @@ const Contact = () => {
             </Col>
 
           </Row>
+        </Container>
+      </section>
+
+      {/* MAP SECTION */}
+      <section className="map-section mt-5" style={{ lineHeight: 0 }}>
+        <Container fluid className="p-0 m-0">
+          <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3502.1752593501446!2d77.06152277528875!3d28.62450897566908!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d03a8dee41d31%3A0xcbffdd0e76470236!2sMission%20Engineering%20%7C%20LEET%20Coaching%20in%20Delhi%20%7C%20B.tech%20Entrance%20Coaching%20%7C%20LEET%20Coaching%20after%20Diploma!5e0!3m2!1sen!2sin!4v1784796282164!5m2!1sen!2sin" 
+            width="100%" 
+            height="450" 
+            style={{ border: 0, display: 'block', width: '100%' }} 
+            allowFullScreen="" 
+            loading="lazy" 
+            referrerPolicy="strict-origin-when-cross-origin"
+          ></iframe>
         </Container>
       </section>
 

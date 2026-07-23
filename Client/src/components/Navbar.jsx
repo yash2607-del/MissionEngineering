@@ -100,16 +100,16 @@ const Header = () => {
 
   return (
     <>
-      <div className="top-header-bar d-none d-md-block text-white" style={{ backgroundColor: '#003f7d', fontSize: '0.9rem' }}>
+      <div className="top-header-bar text-white" style={{ backgroundColor: '#003f7d', fontSize: '0.85rem' }}>
         <Container fluid>
-          <div className="d-flex justify-content-end align-items-center py-1 pe-3">
-            <div className="contact-item d-flex align-items-center me-4">
-              <FaPhoneAlt className="me-2 text-white" />
-              <span>+91 96 439 439 14</span>
+          <div className="d-flex flex-wrap justify-content-end align-items-center py-1 pe-md-3">
+            <div className="contact-item d-flex align-items-center me-3 mb-1 mb-md-0">
+              <FaPhoneAlt className="me-1 me-md-2 text-white" />
+              <span className="text-nowrap">+91 96 439 439 14</span>
             </div>
-            <div className="contact-item d-flex align-items-center">
-              <FaEnvelope className="me-2 text-white" />
-              <a href="mailto:support@missionengineering.in" className="text-white text-decoration-none">support@missionengineering.in</a>
+            <div className="contact-item d-flex align-items-center mb-1 mb-md-0">
+              <FaEnvelope className="me-1 me-md-2 text-white" />
+              <a href="mailto:support@missionengineering.in" className="text-white text-decoration-none text-nowrap">support@missionengineering.in</a>
             </div>
           </div>
         </Container>
